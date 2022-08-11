@@ -1,0 +1,28 @@
+.podcastHeader {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+  }
+  /* .podcast-header img, */
+  .podcastHeader span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+  }
+  .podcastHeader h3 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 20px 30px;
+    background: rgba(18, 18, 18, 0.71);
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 57px;
+    color: #ffffff;
+    width: 100%;
+    margin: 0;
+  }

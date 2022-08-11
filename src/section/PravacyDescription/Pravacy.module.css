@@ -1,0 +1,30 @@
+.pravacyDescription {
+}
+.pravacyDescription h4 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 42px;
+  color: #121212;
+}
+.pravacyDescription p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 37px;
+  /* or 206% */
+
+  color: #5c5656;
+}
+.pravacyDescription p b {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 37px;
+  /* or 185% */
+
+  color: #5c5656;
+}

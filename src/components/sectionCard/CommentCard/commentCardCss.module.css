@@ -1,0 +1,38 @@
+.commentCard {
+  display: grid;
+  grid-template-columns: 10% 90%;
+  margin-top: 20px;
+}
+.commenterNameDesc h5 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 15px;
+  letter-spacing: 0.18px;
+  color: #000000;
+  margin: 0;
+}
+.commenterNameDesc p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 25px;
+  letter-spacing: 0.18px;
+  color: #7c7c7c;
+  margin: 0;
+}
+.commentLIkebtn button {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 25px;
+  letter-spacing: 0.18px;
+  color: #5e92ff;
+  border: none;
+  margin-right: 20px;
+  background: transparent;
+  cursor: pointer;
+}

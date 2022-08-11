@@ -8,49 +8,51 @@ import Trendings from '../../src/section/Trendings';
 import MoreNews from '../../src/section/MoreNews';
 import PageNewsSection from '../../src/section/PageNewsSection';
 import NewsTab from '../../src/section/NewsTap';
+import NflTeam from "../../src/section/NflTeam";
 
 function NFL({ posts }) {
-   
-    return (
-        <div className='_nfl'>
-            <Layout navheader={ true }>
-            <NFLSlider />
-            <NewsTab />
 
-            <div className="nfl_con">
-                <div className='nfl_hr_line'></div>
-            </div>
+  return (
+    <div className='_nfl'>
+      <Layout navheader={true}>
+        <NFLSlider />
+        <NewsTab />
 
-            <PageNewsSection title="NFL News" />
-            <ArticleSection />
-            <Trendings />
-
-            <div className="nfl_con">
-                <div className='nfl_hr_line'></div>
-            </div>
-
-            <MoreNews posts={ posts } />
-
-            <div className="nfl_con">
-                <div className='nfl_hr_line'></div>
-            </div>
-            </Layout>
+        <div className="nfl_con">
+          <div className='nfl_hr_line'></div>
         </div>
-    )
+
+        <PageNewsSection title="NFL News" />
+        <ArticleSection />
+        <Trendings />
+
+        <div className="nfl_con">
+          <div className='nfl_hr_line'></div>
+        </div>
+
+        <MoreNews posts={posts} />
+
+        <div className="nfl_con">
+          <div className='nfl_hr_line'></div>
+        </div>
+        <NflTeam />
+      </Layout>
+    </div>
+  )
 }
 
 export default NFL;
 
 export async function getServerSideProps() {
-  
+
   await db.connect();
   const posts = await Post.find()
-      .lean()
-      .limit(50);
+    .lean()
+    .limit(50);
 
-    const players = await Player.find()
-        .lean()
-        .limit(50);
+  const players = await Player.find()
+    .lean()
+    .limit(50);
 
   await db.disconnect();
 

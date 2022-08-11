@@ -16,6 +16,17 @@ h5 {
   letter-spacing: -0.04em;
   color: #000000;
 }
+h6 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 15px;
+  letter-spacing: 0.18px;
+  color: #000000;
+  margin: 0;
+  padding: 0;
+}
 p {
   font-family: "Poppins";
   font-style: normal;
@@ -23,6 +34,12 @@ p {
   font-size: 20px;
   line-height: 37px;
   color: #5c5656;
+}
+
+.nfl_con,
+.container-fluid2 {
+  width: 95%;
+  margin: 0 auto;
 }
 
 .bg-black {
@@ -682,35 +699,6 @@ a {
 PodcastPage
 =======================*/
 
-.podcast-header {
-  position: relative;
-  width: 100%;
-  height: 50vh;
-}
-.podcast-header img,
-.podcast-header span {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-.podcast-header h3 {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  padding: 20px 30px;
-  background: rgba(18, 18, 18, 0.71);
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 38px;
-  line-height: 57px;
-  color: #ffffff;
-  width: 100%;
-  margin: 0;
-}
-
 .featured-text {
   padding-left: 40px;
 }
@@ -1040,3 +1028,165 @@ Dashboard profile
 /*======================
 End Dashboard profile
 =======================*/
+/*======================
+Newsfeed
+=======================*/
+.profile-card {
+  background: #f4f4f4;
+  border-radius: 5px;
+  padding: 20px;
+}
+.profile-card-img-name {
+  display: grid;
+  grid-template-columns: 22% 60%;
+  column-gap: 10%;
+  align-items: center;
+}
+.profile-card-img-name p {
+  margin: 0;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 15px;
+  letter-spacing: 0.18px;
+  color: #000000;
+  margin-top: 12px;
+}
+.profile-post-and-following {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  border-top: 1px solid #dedede;
+  border-bottom: 1px solid #dedede;
+  margin-top: 25px;
+}
+.profile-post-and-following div {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 10px 0;
+  padding-left: 16px;
+}
+.profile-post-and-following div:first-child {
+  border-right: 1px solid #dedede;
+}
+.profile-post-and-following p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 15px;
+  letter-spacing: 0.18px;
+  color: #000000;
+  margin: 0;
+  margin-left: 3px;
+}
+.profile-menu {
+}
+.profile-menu ul {
+  list-style: none;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  z-index: 9;
+  padding: 12px 0;
+  margin-top: 28px;
+}
+.profile-menu ul:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 40px;
+  border-radius: 20px;
+  background: #111;
+  z-index: -1;
+}
+.profile-menu ul li a {
+  display: grid;
+  align-items: center;
+  padding: 13px 11px;
+  grid-template-columns: 8% 75%;
+}
+.profile-menu ul li h5 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 15px;
+  letter-spacing: 0.18px;
+  margin: 0;
+  padding: 0;
+  color: #999999;
+  margin-left: 25px;
+}
+.profile-menu ul li.active h5 {
+  color: #000000;
+}
+
+.card2 {
+  padding: 20px 20px;
+}
+.card,
+.card2 {
+  background: #ffffff;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+}
+.follow-player-search-input {
+  position: relative;
+  background: #ededed;
+  border: 1px solid #d7d7d7;
+  border-radius: 39px;
+  height: 48px;
+}
+.follow-player-search-input input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 39px;
+  border: 0;
+  background: transparent;
+  padding: 0 40px;
+}
+.follow-player-search-input i {
+  position: absolute;
+  top: 50%;
+  left: 8%;
+  transform: translate(0%, -48%);
+}
+.follow-player-search-input input:focus {
+  outline: none;
+}
+
+.search-player-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 20px;
+}
+.search-player-list li a {
+  display: flex;
+  margin-top: 5px;
+}
+.search-player-list li a span {
+  border-radius: 50%;
+}
+.search-player-list h5 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 42px;
+  color: #121212;
+  margin: 0;
+  margin-left: 20px;
+}
+
+/*======================
+End Newsfeed
+=======================*/
+

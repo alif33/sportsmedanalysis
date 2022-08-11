@@ -1,15 +1,12 @@
 import Image from "next/image";
 import PodcastCard from "../../src/components/sectionCard/PodcastCard";
 import Layout from "../../src/components/Layout";
+import HeaderSection from "../../src/section/HeaderSection";
 
 const PodcastPage = () => {
     return (
         <Layout>
-            <div className="podcast-header">
-                {/* <img src="/images/podcast/header-bg.png" alt="" /> */}
-                <Image height="400" width="1000" src="/images/podcast/header-bg.png" alt="" />
-                <h3>Sports Meds Analytics Podcasts</h3>
-            </div>
+           <HeaderSection img="/images/podcast/header-bg.png" title="Sports Meds Analytics Podcasts" />
 
 
             <div className="featured-podcast my-4">

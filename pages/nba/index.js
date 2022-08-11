@@ -9,6 +9,7 @@ import MoreNews from '../../src/section/MoreNews';
 import NbaNews from '../../src/section/NbaNews';
 import PlayerSection from '../../src/section/PlayerSection';
 import TopPicks from '../../src/section/TopPicks';
+import NflTeam from '../../src/section/NflTeam';
 
 const NBA = ({ posts, players }) => {
 
@@ -21,6 +22,7 @@ const NBA = ({ posts, players }) => {
               <BettingFantasy title="Trendings" />
               <PlayerSection />
               <MoreNews posts={ posts } />
+              <NflTeam />
             </Layout>
         </div>
     );
