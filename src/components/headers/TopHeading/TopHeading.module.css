@@ -24,7 +24,7 @@
   font-size: 20px;
 }
 ._smd_border_right {
-  border-right: 2px solid #fff;
+  border-right: 2px solid #494949;
 }
 
 ._smd_top_social {
@@ -99,8 +99,6 @@
 .menu_item:hover {
   color: #2980b9;
 }
-
-
 
 .dropdown {
   position: relative;
