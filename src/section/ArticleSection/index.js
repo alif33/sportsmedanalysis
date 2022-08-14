@@ -1,9 +1,10 @@
 import Article2 from "../../components/sectionCard/Article2.js";
+import style from './Article.module.css';
 
 
 const ArticleSection = () => {
     return (
-        <div className="nfl_sec_four">
+        <div className={style.nfl_sec_four}>
             <div className="nfl_con">
                 <div className="row g-2 m-0">
                     {[1, 1, 1, 1].map((item, i) => <div key={i} className="col-lg-3 col-md-6">

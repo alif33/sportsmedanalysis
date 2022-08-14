@@ -1,16 +1,23 @@
 import React from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+import style from './Article2.module.css';
 
-const Article2 = ({ img, title, name}) => {
+const Article2 = ({ img, title, name }) => {
     return (
-        <a href="#!">
-            <div className='position-relative'>
-                <img src={img} className='w-100' alt="" />
-                <p className='nfl_Article'>{name}</p>
-                <div className='nfl_S4_overlay'>
-                    <p>{title}</p>
-                </div>
-            </div>
-        </a>
+        <div>
+            <Link href="/" >
+                <a>
+                    <div className={`position-relative ${style.article2}`}>
+                        <Image height="222" width="323" src={img} alt="" />
+                        <p className={style.nfl_Article}>{name}</p>
+                        <div className={style.nfl_S4_overlay}>
+                            <p>{title}</p>
+                        </div>
+                    </div>
+                </a>
+            </Link>
+        </div>
     );
 };
 

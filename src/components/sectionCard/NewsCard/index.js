@@ -1,14 +1,16 @@
+import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
+import style from './NewsCard.module.css';
 
 const NewsCard = ({ img, title, description }) => {
     return (
-
-        <a href="/">
-            <img src={img} alt="" className="w-100" />
-            <h3>{title}</h3>
-            <p>{description}</p>
-        </a>
+        <Link href="/">
+            <a className={style.news_card}>
+                <Image height="340" width="380" src={img} alt="" />
+                <h3>{title}</h3>
+                <p>{description}</p>
+            </a>
+        </Link>
     );
 };
 

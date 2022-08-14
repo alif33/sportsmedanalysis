@@ -1,0 +1,26 @@
+
+.nfl_nav {
+    background-color: #d6d6d6;
+    overflow: auto;
+  }
+  
+  .nfl_nav_ul {
+    margin-bottom: 0px;
+    width: max-content;
+  }
+  
+  .nfl_nav_ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 20px 15px;
+  }
+  
+  .nfl_nav_ul a {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #121212;
+  }
+  

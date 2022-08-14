@@ -1,0 +1,101 @@
+.nfl_sec_one {
+  position: relative;
+}
+
+.nfl_sec_one_img {
+  position: relative;
+  filter: brightness(0.7);
+  height: 360px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.nfl_sec_one_img::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(6, 21, 57, 0.98);
+}
+.nfl_sec_one_img span {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.nfl_sec_one_overlay {
+  background: rgba(0, 0, 0, 0.61);
+  padding: 15px 20px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items:center !important;
+}
+
+.nfl_sec_one_overlay h3 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 38px;
+  line-height: 32px;
+  letter-spacing: -0.04em;
+  color: #ffffff;
+}
+
+.nfl_sec_one_overlay p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32px;
+  letter-spacing: -0.04em;
+  color: #ffffff;
+  margin: 0;
+}
+/* .nfl_video_icon span {
+  width: 100% !important;
+  height: 100% !important;
+} */
+
+.nfl_video_icon {
+  object-fit: contain;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 760px) {
+  .nfl_sec_one_img {
+    height: 260px;
+  }
+  .nfl_sec_one_overlay h3 {
+    font-size: 20px;
+  }
+
+  .nfl_sec_one_overlay p {
+    font-size: 13px;
+    line-height: 20px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .nfl_sec_one_img {
+    height: 260px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .nfl_sec_one_overlay h3 {
+    font-size: 30px;
+  }
+
+  .nfl_sec_one_overlay p {
+    font-size: 15px;
+  }
+
+  .nfl_video_icon {
+    width: 50px;
+  }
+}

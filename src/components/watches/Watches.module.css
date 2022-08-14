@@ -1,0 +1,52 @@
+
+.nfl_card_title2 {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    display: inline-block;
+    line-height: 32px;
+    letter-spacing: -0.04em;
+    color: #000000;
+    position: relative;
+  }
+
+  ._smd_watch_live_title {
+    margin-bottom: 20px;
+  }
+  ._smd_live_btn {
+    font-size: 21px;
+    line-height: 32px;
+    height: 32px;
+    margin-left: 30px;
+  }
+  .nfl_title1 {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 23px;
+    line-height: 33px;
+    color: #121212;
+  }
+      
+._smd_card_desc {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    color: #121212;
+  }
+  
+.nfl_para1 {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 37px;
+    color: #5c5656;
+  }
+  .nfl_s2_img span{
+    width: 100% !important;
+    /* height: ; */
+  }

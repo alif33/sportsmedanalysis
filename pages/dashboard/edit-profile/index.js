@@ -1,5 +1,6 @@
 import React from 'react';
 import DashboardLayout from '../../../src/components/DashboardLayout';
+import style from './EditProfile.module.css';
 
 const EditProfile = () => {
     return (
@@ -11,11 +12,11 @@ const EditProfile = () => {
                         <h5 className="mt-1">Login Info</h5>
                     </div>
                 </div>
-                <form className="w-100 _smd_login_card d-block">
+                <form className={`w-100 ${style._smd_login_card} d-block`}>
                     <div className="row mt-1">
                         <div className="col-md-6">
 
-                            <div className="_smd_form_group">
+                            <div className={style._smd_form_group}>
                                 <label htmlFor="email">Username</label>
                                 <input
                                     type="email"
@@ -28,7 +29,7 @@ const EditProfile = () => {
                         </div>
                         <div className="col-md-6">
 
-                            <div className="_smd_form_group">
+                            <div className={style._smd_form_group}>
                                 <label htmlFor="email">Email</label>
                                 <input
                                     type="email"
@@ -43,7 +44,7 @@ const EditProfile = () => {
                     <div className="row mt-1">
                         <div className="col-md-6">
 
-                            <div className="_smd_form_group">
+                            <div className={style._smd_form_group}>
                                 <label htmlFor="full-name">Full Name</label>
                                 <input
                                     type="text"
@@ -56,7 +57,7 @@ const EditProfile = () => {
                         </div>
                         <div className="col-md-6">
 
-                            <div className="_smd_form_group">
+                            <div className={style._smd_form_group}>
                                 <label htmlFor="fanduel-username">Fanduel Username</label>
                                 <input
                                     type="text"
@@ -72,7 +73,7 @@ const EditProfile = () => {
                     <div className="row mt-1">
                         <div className="col-md-12">
 
-                            <div className="_smd_form_group">
+                            <div className={style._smd_form_group}>
                                 <label htmlFor="fanduel-username">DraftKings Username</label>
                                 <input
                                     type="text"
@@ -87,7 +88,7 @@ const EditProfile = () => {
                     </div>
                     <div className="row mt-4">
                         <div className="col-md-6">
-                            <button className="bg-black text-center justify-content-center">Save Changes</button>
+                            <button  className="bg-black text-center justify-content-center">Save Changes</button>
                         </div>
                         <div className="col-md-6 ">
                             <button className="text-center justify-content-center" >Cancel</button>

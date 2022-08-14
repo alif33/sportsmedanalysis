@@ -1,0 +1,53 @@
+.podcast_card {
+  border: 1px solid #d9dbde;
+  padding: 20px;
+}
+.podcast_card img {
+  width: 100%;
+}
+.podcast_card span {
+  background: #000000;
+  border-radius: 0px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 11px;
+  color: #ffffff;
+  margin: 26px 0;
+  display: inline-block;
+  padding: 10px 7px;
+}
+.podcast_card h4 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 38px;
+  /* or 147% */
+
+  color: #121212;
+}
+.podcast_card a {
+  border: 1px solid #d9dbde;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 47px;
+  letter-spacing: 0.2px;
+  color: #121212 !important;
+  display: block;
+  width: 100%;
+  padding: 9px 0;
+  text-align: center;
+  box-sizing: border-box;
+  margin-top: 35px;
+}
+
+.podcast_card_img {
+  width: 100% !important;
+}
+.podcast_card_img span {
+  width: 100% !important;
+}

@@ -1,0 +1,51 @@
+._smd_nbahero {
+  background: #111;
+  color: #fff;
+  display: grid;
+  grid-template-columns: 37% 37% 26%;
+}
+._smd_nbahero_card {
+  position: relative;
+}
+._smd_nbahero_card h2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(17, 17, 17, 0.541);
+  color: #fff;
+  margin: 0;
+  padding: 10px 0;
+}
+
+._smd_nbanav_news {
+  display: grid;
+  grid-template-rows: 50% 50%;
+  height: 418px;
+}
+
+._smd_nbanews_list {
+  padding: 15px 10px 10px 15px;
+}
+._smd_nbanews_list ul {
+}
+._smd_nbanews_list ul li {
+}
+._smd_nbanews_list ul li h3 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  letter-spacing: 0.18px;
+  color: #ffffff;
+}
+._smd_nbanews_list ul li p {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 15px;
+  letter-spacing: 0.18px;
+  color: #5c5656;
+}

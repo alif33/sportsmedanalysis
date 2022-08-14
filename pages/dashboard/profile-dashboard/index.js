@@ -1,5 +1,6 @@
 import React from 'react';
 import DashboardLayout from '../../../src/components/DashboardLayout';
+import style from './ProfileDashboard.module.css';
 
 const ProfileDashboard = () => {
   return (
@@ -15,7 +16,7 @@ const ProfileDashboard = () => {
         <div className="row mt-1">
           <div className="col-md-6">
 
-            <div className="_smd_form_group">
+            <div className={style._smd_form_group}>
               <label htmlFor="email">Username</label>
               <input
                 type="email"
@@ -29,7 +30,7 @@ const ProfileDashboard = () => {
           </div>
           <div className="col-md-6">
 
-            <div className="_smd_form_group">
+            <div className={style._smd_form_group}>
               <label htmlFor="email">Email</label>
               <input
                 type="email"
@@ -49,7 +50,7 @@ const ProfileDashboard = () => {
           </div>
           <div className="col-md-6">
 
-            <div className="_smd_login_card w-100 mt-1">
+            <div className={`${style._smd_login_card} w-100 mt-1`}>
               <button>
                 <div className="text-center">Change my email  preferences</div>
               </button>

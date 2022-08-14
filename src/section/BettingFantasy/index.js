@@ -1,13 +1,14 @@
 import React from 'react';
 import NewsCard6 from '../../components/sectionCard/NewsCard6';
+import style from './Betting.module.css';
 
-const BettingFantasy = ({title}) => {
+const BettingFantasy = ({ title }) => {
     return (
         <div className="container-fluid py-2" style={{ background: '#000' }}>
 
-            <h1 className="nfl_card_title2 text-white bf_title mb-4">{title}</h1>
+            <h1 className={`${style.nfl_card_title2} text-white bf_title mb-4`} >{title}</h1>
 
-            <div className="_smd_bf_grid_main">
+            <div className={style._smd_bf_grid_main}>
 
 
 

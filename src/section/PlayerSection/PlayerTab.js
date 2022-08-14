@@ -1,8 +1,9 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import Card from './Card';
+import style from './PlayerSection.module.css';
 
-const PlayerSection = ({ players }) => {
+const PlayerTab = ({ players }) => {
 
     const [toggleState, setToggleState] = useState(1);
     const titles = ['NFL', 'NBA', 'MLB'];
@@ -12,28 +13,28 @@ const PlayerSection = ({ players }) => {
     }
 
     return (
-        
+
         <div>
             <div className='d-flex'>
                 {
-                    titles.map((item, index)=>{
-                        return(
-                        <h3 
-                            key={ index }
-                            className={ toggleState === index+1 ? 'nfl_3rd_title_active nfl_3rd_title' : 'nfl_3rd_title' }
-                            onClick={ () => toggleTab(index+1) }
-                        >{ item }</h3>
+                    titles.map((item, index) => {
+                        return (
+                            <h3
+                                key={index}
+                                className={toggleState === index + 1 ? `${style.nfl_3rd_title_active} ${style.nfl_3rd_title}` : style.nfl_3rd_title}
+                                onClick={() => toggleTab(index + 1)}
+                            >{item}</h3>
                         )
                     })
                 }
             </div>
 
             {
-                titles.map((item, index)=>{
-                    return(
-                        <div key={ index } className={ toggleState === index+1 ? 'd-block' : 'd-none' }>
+                titles.map((item, index) => {
+                    return (
+                        <div key={index} className={toggleState === index + 1 ? 'd-block' : 'd-none'}>
                             <Card />
-                            <Link href={`/${item.toLowerCase()}`}><a className='see_all_news'>See All News</a></Link>
+                            <Link href={`/${item.toLowerCase()}`}><a className={style.see_all_news}>See All News</a></Link>
                         </div>
                     )
                 })
@@ -42,6 +43,6 @@ const PlayerSection = ({ players }) => {
     );
 };
 
-export default PlayerSection;
+export default PlayerTab;
 
 

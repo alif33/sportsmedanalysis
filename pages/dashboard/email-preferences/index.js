@@ -1,5 +1,6 @@
 import React from 'react';
 import DashboardLayout from '../../../src/components/DashboardLayout';
+import style from './EmailPreferences.module.css';
 
 const EmailPreferences = () => {
     return (
@@ -12,7 +13,7 @@ const EmailPreferences = () => {
                         <p className="mt-1 mb-1">We want to provide you with the most useful and timely advice. Let us know what you’d like to hear about below.</p>
                     </div>
                 </div>
-                <form className="w-100 _smd_login_card d-block text-start">
+                <form className={`w-100 ${style._smd_login_card} d-block text-start`}>
 
                     <div className="row">
                         <div className="col-md-12"><h5>Weekly Newsletter</h5></div>
@@ -20,68 +21,68 @@ const EmailPreferences = () => {
                         <div className="col-md-12">
                             <div className="row mt-1">
                                 <div className="col-md-2">
-                                    <div className="input-check">
+                                    <div className={style.input_check}>
                                         <label>NFL
                                             <input type="checkbox" />
-                                            <span className="checkmark"></span>
+                                            <span className={style.checkmark}></span>
                                         </label>
                                     </div>
                                 </div>
                                 <div className="col-md-2">
-                                    <div className="input-check">
+                                    <div className={style.input_check}>
                                         <label>MLB
                                             <input type="checkbox" />
-                                            <span className="checkmark"></span>
+                                            <span className={style.checkmark}></span>
                                         </label>
                                     </div>
                                 </div>
                                 <div className="col-md-2">
-                                    <div className="input-check">
+                                    <div className={style.input_check}>
                                         <label>NBA
                                             <input type="checkbox" />
-                                            <span className="checkmark"></span>
+                                            <span className={style.checkmark}></span>
                                         </label>
                                     </div>
                                 </div>
                                 <div className="col-md-2">
-                                    <div className="input-check">
+                                    <div className={style.input_check}>
                                         <label>NHL
                                             <input type="checkbox" />
-                                            <span className="checkmark"></span>
+                                            <span className={style.checkmark}></span>
                                         </label>
                                     </div>
                                 </div>
                                 <div className="col-md-2">
-                                    <div className="input-check">
+                                    <div className={style.input_check}>
                                         <label>DFS
                                             <input type="checkbox" />
-                                            <span className="checkmark"></span>
+                                            <span className={style.checkmark}></span>
                                         </label>
                                     </div>
                                 </div>
                                 <div className="col-md-2">
-                                    <div className="input-check">
+                                    <div className={style.input_check}>
                                         <label>PGA
                                             <input type="checkbox" />
-                                            <span className="checkmark"></span>
+                                            <span className={style.checkmark}></span>
                                         </label>
                                     </div>
                                 </div>
 
 
                                 <div className="col-md-3 mt-1">
-                                    <div className="input-check">
+                                    <div className={style.input_check}>
                                         <label>Sports Betting
                                             <input type="checkbox" />
-                                            <span className="checkmark"></span>
+                                            <span className={style.checkmark}></span>
                                         </label>
                                     </div>
                                 </div>
                                 <div className="col-md-2 mt-1">
-                                    <div className="input-check">
+                                    <div className={style.input_check}>
                                         <label>eSports
                                             <input type="checkbox" />
-                                            <span className="checkmark"></span>
+                                            <span className={style.checkmark}></span>
                                         </label>
                                     </div>
                                 </div>
@@ -95,18 +96,18 @@ const EmailPreferences = () => {
                         <div className="col-md-12">
                             <div className="row mt-1">
                                 <div className="col-md-2">
-                                    <div className="input-check">
+                                    <div className={style.input_check}>
                                         <label>NFL Daily
                                             <input type="checkbox" />
-                                            <span className="checkmark"></span>
+                                            <span className={style.checkmark}></span>
                                         </label>
                                     </div>
                                 </div>
                                 <div className="col-md-2">
-                                    <div className="input-check">
+                                    <div className={style.input_check}>
                                         <label>MLB Daily
                                             <input type="checkbox" />
-                                            <span className="checkmark"></span>
+                                            <span className={style.checkmark}></span>
                                         </label>
                                     </div>
                                 </div>
@@ -121,10 +122,10 @@ const EmailPreferences = () => {
                         <div className="col-md-12">
                             <div className="row mt-1">
                                 <div className="col-md-6">
-                                    <div className="input-check">
+                                    <div className={style.input_check}>
                                         <label>Remove me from all email lists*
                                             <input type="checkbox" />
-                                            <span className="checkmark"></span>
+                                            <span className={style.checkmark}></span>
                                         </label>
                                     </div>
                                 </div>

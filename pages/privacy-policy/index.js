@@ -2,7 +2,7 @@
 import React from 'react';
 import Layout from '../../src/components/Layout';
 import HeaderSection from '../../src/section/HeaderSection';
-import PlayerTab from '../../src/section/NewsTap/PlayerTab';
+import PlayerTab from '../../src/section/PlayerSection/PlayerTab';
 import PravacyDescription from '../../src/section/PravacyDescription';
 import TableOFContents from '../../src/section/TableOFContents';
 

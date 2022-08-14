@@ -2,7 +2,8 @@ import React from 'react';
 import Layout from '../../src/components/Layout';
 import DisclaimerDescription from '../../src/section/DisclaimerDescription';
 import HeaderSection from '../../src/section/HeaderSection';
-import PlayerTab from '../../src/section/NewsTap/PlayerTab';
+
+import PlayerTab from '../../src/section/PlayerSection/PlayerTab';
 
 const Disclaimer = () => {
     return (

@@ -1,0 +1,21 @@
+.nfl_para1 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 37px;
+  color: #5c5656;
+}
+
+._smd_bf_card_desc {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 21px;
+  line-height: 29px;
+  letter-spacing: -0.04em;
+  color: #ffffff;
+}
+.newscard6 span {
+  width: 100% !important;
+}

@@ -8,6 +8,7 @@ import FollowingPlayersCard from "../../src/components/FollowingPlayersCard";
 import PostCard from "../../src/components/PostCard";
 import PlayerList from "../../src/section/PlayerList";
 import NewsListCard from "../../src/components/sectionCard/NewsListCard";
+import BorderLine from "../../src/components/BorderLine";
 
 
 const Newsfeed = ({ posts }) => {
@@ -35,7 +36,7 @@ const Newsfeed = ({ posts }) => {
 
 
             <div className="nfl_con">
-                <div className='nfl_hr_line'></div>
+               <BorderLine />
             </div>
             <NflTeam />
         </Layout>

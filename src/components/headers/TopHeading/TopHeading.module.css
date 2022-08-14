@@ -1,0 +1,128 @@
+/* top nabar */
+/* ._smd_top_heading {
+    display: flex;
+    justify-content: space-between;
+  }
+  ._smd_top_heading ._smd_top_heading_section {
+  } */
+._smd_top_heading_section ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+._smd_top_heading_section ul li {
+  display: inline-block;
+  font-weight: 500;
+  font-size: 20px;
+  color: #fff;
+}
+._smd_top_heading_section ul li a {
+  display: inline-block;
+  margin: 0 15px;
+  color: #fff !important;
+  font-weight: 500;
+  font-size: 20px;
+}
+._smd_border_right {
+  border-right: 2px solid #fff;
+}
+
+._smd_top_social {
+  width: 15%;
+}
+._smd_top_social ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+._smd_top_middle {
+  width: 60%;
+}
+._smd_top_reg {
+  width: 25%;
+}
+._smd_top_reg ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+._smd_top_reg ul li {
+  text-align: center;
+}
+
+._smd_top_reg ul li img {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+/* end top nabar */
+
+/*navbar dropdown*/
+.user_dropdown_btn {
+  cursor: pointer;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+  display: inline-block;
+}
+.user_dropdown {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  box-shadow: 0px 0px 15px rgba(123, 123, 123, 0.25);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.user_dropdown li a {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 32px;
+  letter-spacing: -0.04em;
+  color: #000000 !important;
+  text-decoration: none;
+  border-bottom: 1px solid #d9d9d9;
+  width: 100%;
+  display: block;
+  padding: 10px 20px;
+}
+.user_dropdown li a svg {
+  margin-right: 7px;
+}
+
+.menu_item:hover {
+  color: #2980b9;
+}
+
+
+
+.dropdown {
+  position: relative;
+}
+.dropdown:hover .dropdown_items {
+  visibility: visible;
+  opacity: 1;
+}
+.dropdown_items {
+  position: absolute;
+  background: #fff;
+  color: #111;
+  flex-direction: column;
+  top: 100%;
+  left: 0;
+  z-index: 999;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.dropdown_items li {
+  color: #111 !important;
+  display: block;
+}
+/*end navbar dropdown*/

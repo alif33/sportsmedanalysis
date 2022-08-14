@@ -7,6 +7,7 @@ import { showErr } from "../../../__lib__/helpers/ErrHandler";
 import { postData } from "../../../__lib__/helpers/HttpService";
 import toast from "react-hot-toast";
 import { useRouter } from "next/router";
+import style from './Register.module.css';
 
 const Register = () => {
     const [disable, setDisable] = useState(false);
@@ -36,7 +37,7 @@ const Register = () => {
 
     return (
         <AuthLayout>
-            <div className="_smd_login_card">
+            <div className={style._smd_login_card}>
                 <h3>Create your account</h3>
                 <div className="w-100 text-start mb-2 ">
                     <Link href="/">
@@ -50,27 +51,27 @@ const Register = () => {
                 >
                     <div className="w-100">
                         <div className="row">
-                            <div className="col-md-6"><div className="_smd_form_group">
+                            <div className="col-md-6"><div className={style._smd_form_group}>
                                 <label htmlFor="email">First Name</label>
                                 <input type="email" placeholder="First Name" />
                             </div></div>
-                            <div className="col-md-6"><div className="_smd_form_group">
+                            <div className="col-md-6"><div className={style._smd_form_group}>
                                 <label htmlFor="email">Last Name</label>
                                 <input type="email" placeholder="Last Name" />
                             </div></div>
                         </div>
                     </div>
 
-                    <div className="_smd_form_group">
+                    <div className={style._smd_form_group}>
                         <label htmlFor="email">Email Address</label>
                         <input type="email" placeholder="Email Address" />
                     </div>
-                    <div className="_smd_form_group">
+                    <div className={style._smd_form_group}>
                         <label htmlFor="email">Password</label>
                         <input type="email" placeholder="Password" />
                     </div>
 
-                    <button className="bg-black text-center justify-content-center  mt-3 mb-4"> Create Account</button>
+                    <button style={{ color: "#fff" }} className="bg-black text-center justify-content-center  mt-3 mb-4"> Create Account</button>
                 </form>
                 <Link href="/">
                     <a className="mt-1 mb-2">Already have an account? Login</a>

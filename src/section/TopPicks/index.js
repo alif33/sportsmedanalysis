@@ -1,12 +1,13 @@
 import NewsCard from '../../components/sectionCard/NewsCard';
 import NewsCard3 from '../../components/sectionCard/NewsCard3';
+import style from './TopPicks.module.css';
 
 const TopPicks = () => {
 
 
     return (
         <div className="container-fluid py-3">
-            <h1 className="nfl_card_title2">Top Picks</h1>
+            <h1 className={style.nfl_card_title2}>Top Picks</h1>
             <div className="row m-0 mt-2">
                 <div className="col-lg-7">
 

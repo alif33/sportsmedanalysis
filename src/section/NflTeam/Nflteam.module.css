@@ -1,0 +1,47 @@
+.nfl_S7 {
+  padding: 40px 0px;
+}
+
+.nfl_card_title2 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  display: inline-block;
+  line-height: 32px;
+  letter-spacing: -0.04em;
+  color: #000000;
+  position: relative;
+}
+
+.nfl_S7_container {
+  width: 75%;
+  margin: 0 auto;
+}
+
+.nfl_S7_title {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 15px;
+  letter-spacing: 0.225px;
+  text-transform: uppercase;
+  color: #c4c4bc;
+}
+
+.nfl_S7_ul li {
+  margin-top: 15px;
+}
+.nfl_S7_ul li a {
+  color: #6e6b7b !important;
+  display: flex;
+  align-items: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .nfl_S7_container {
+    width: 90%;
+    margin: 0 auto;
+  }
+}

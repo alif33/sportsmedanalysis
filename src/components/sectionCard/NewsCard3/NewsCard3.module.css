@@ -1,0 +1,8 @@
+
+.nfl_comment_num::before {
+    position: relative;
+    top: 2px;
+    margin-right: 5px;
+    margin-left: 20px;
+  }
+  

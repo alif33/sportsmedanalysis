@@ -1,7 +1,7 @@
 import Navbar from "../src/components/headers/Navbar";
 import TopHeading from "../src/components/headers/TopHeading";
-import ScoreSlider from "../src/components/ScoreSlider";
-import ArticleCard from "../src/components/sectionCard/Article";
+import ScoreSlider from "../src/section/ScoreSlider";
+import ArticleCard from "../src/components/sectionCard/ArticleCard";
 import SMDFooter from "../src/components/SMDFooter";
 import db from "../utils/db";
 import _ from "lodash";
@@ -15,6 +15,8 @@ import RecentStories from "../src/section/RecentStories";
 import Featured from "../src/section/Featured";
 import Fannation from "../src/section/Fannation";
 import Layout from "../src/components/Layout";
+import Article from "../src/section/Article";
+import BorderLine from "../src/components/BorderLine";
 
 
 const LandingPage = ({ posts, players }) => {
@@ -25,35 +27,24 @@ const LandingPage = ({ posts, players }) => {
         <div className="_LandingPage">
             <Layout>
 
-                <div className="bg-black container-fluid py-1">
-                    <div className="d-flex _smd_headers_article flex-column flex-md-row gap-2 gap-md-0">
-                        {
-                            posts.slice(0, 4).map((item, index) => <ArticleCard key={index}
-                                post={item}
-                            />)
-                        }
-                    </div>
-                </div>
+                <Article posts={posts} />
 
 
                 <ScoreSlider />
-
-
                 <div className="container-fluid">
-                    <div className='nfl_hr_line'></div>
+                    <BorderLine />
                 </div>
-
 
                 <TopStory />
 
                 <div className="container-fluid">
-                    <div className='nfl_hr_line'></div>
+                    <BorderLine />
                 </div>
 
                 <PlayerSection players={players} />
 
                 <div className="container-fluid">
-                    <div className='nfl_hr_line'></div>
+                    <BorderLine />
                 </div>
 
                 {/* Top Picks */}

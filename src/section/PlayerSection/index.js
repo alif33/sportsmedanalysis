@@ -2,6 +2,7 @@ import { useState } from 'react';
 import NewsCard3 from '../../components/sectionCard/NewsCard3';
 import NewsCard4 from '../../components/sectionCard/NewsCard4';
 import PlayerTab from './PlayerTab';
+import style from './PlayerSection.module.css';
 
 
 const PlayerSection = ({ players }) => {
@@ -9,8 +10,8 @@ const PlayerSection = ({ players }) => {
 
     return (
         <div className="container-fluid py-3">
-            <h1 className="nfl_card_title2">Player News</h1>
-            <div className="_smd_player_news_main">
+            <h1 className={style.nfl_card_title2}>Player News</h1>
+            <div className={style._smd_player_news_main}>
                 <div>
 
                     <NewsCard3 img="/images/landing_Page/palyer_news_card_img1.png" title="Who profited most from transfer portal?" name="John Holinger" comment="541" link='#!' />

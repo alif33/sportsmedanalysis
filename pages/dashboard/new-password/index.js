@@ -1,5 +1,6 @@
 import React from 'react';
 import DashboardLayout from '../../../src/components/DashboardLayout';
+import style from './NewPassword.module.css';
 
 const NewPassword = () => {
     return (
@@ -13,11 +14,11 @@ const NewPassword = () => {
                         </p>
                     </div>
                 </div>
-                <form className="w-100 _smd_login_card new-password-form">
+                <form className={`w-100 ${style._smd_login_card} ${style.new_password_form}`}>
                     <div className="row">
                         <div className="col-md-6">
 
-                            <div className="_smd_form_group">
+                            <div className={style._smd_form_group}>
                                 <label htmlFor="Password">Password</label>
                                 <input
                                     type="Password"
@@ -30,7 +31,7 @@ const NewPassword = () => {
                         </div>
                         <div className="col-md-6">
 
-                            <div className="_smd_form_group">
+                            <div className={style._smd_form_group}>
                                 <label htmlFor="Confirm-Password">Confirm Password</label>
                                 <input
                                     type="password"

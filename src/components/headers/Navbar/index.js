@@ -2,6 +2,7 @@ import Link from 'next/link';
 import SearchIcon from '../../svg/SearchIcon';
 import { useRouter } from "next/router";
 import Image from 'next/image';
+import style from './Navbar.module.css';
 
 const Navbar = () => {
 
@@ -10,7 +11,7 @@ const Navbar = () => {
 
     return (
         <>
-            <nav className="navbar navbar-expand-lg navbar-dark bg-black _smd_navbar_border _smd_navbar">
+            <nav className={`navbar navbar-expand-lg navbar-dark bg-black pt-0 pb-0 ${style._smd_navbar_border}`}>
                 <div className="container-fluid">
                     <Link href="/">
                         <a className="navbar-brand">
@@ -25,11 +26,11 @@ const Navbar = () => {
                     <div className="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
                         <ul className="navbar-nav mr-auto">
                             {
-                                navMenus.map((menu, index)=>{
-                                    return(
-                                        <li key={ index } className={`nav-item _smd_nav_item ${ router.pathname.split('/')[1] === menu.toLocaleLowerCase() ? 'active': '' }`}>
-                                            <Link href={`/${ menu.toLocaleLowerCase() }`}>
-                                                <a className="nav-link">{ menu }
+                                navMenus.map((menu, index) => {
+                                    return (
+                                        <li key={index} className={`nav-item ${style._smd_nav_item} ${router.pathname.split('/')[1] === menu.toLocaleLowerCase() ? style.active : ''}`}>
+                                            <Link href={`/${menu.toLocaleLowerCase()}`}>
+                                                <a className="nav-link">{menu}
                                                 </a>
                                             </Link>
                                         </li>

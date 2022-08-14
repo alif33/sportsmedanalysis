@@ -1,37 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600&display=swap");
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Poppins", sans-serif;
-  overflow-x: hidden;
-  display: flex;
-  flex-direction: column;
-  width: 100vw;
-  min-height: 100vh;
-  background: #fff !important;
-}
-
-#nba,
-#mlb,
-#nfl,
-#fullpage,
-#watch,
-#about,
-#disclaimer,
-#podcast,
-#login,
-#playPodCast {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  background: #000;
-}
 
 /*=================
 _smd_scoreSlider
@@ -88,28 +55,6 @@ _smd_scoreSlider
   width: 10%;
 }
 
-._smd_scoreSlider_dropdown_btn {
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 17px;
-  color: #000000;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-right: 15px;
-  border: 0;
-  border-right: 0px solid !important;
-  background: transparent;
-}
-
-._smd_nfl_scroe_card {
-  display: grid;
-  grid-template-columns: 1fr 84px;
-}
-
 ._smd_nfl_Score_text1 {
   font-family: "Helvetica";
   font-style: normal;
@@ -121,64 +66,12 @@ _smd_scoreSlider
   color: #202121;
 }
 
-._smd_inner_table {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-}
-
-._smd_nfl_scroe_card_inner {
-  width: auto;
-}
-
-._smd_nfl_scroe_card_child2 {
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-start;
-}
-
-._smd_inner_table p {
-  margin: 0;
-  margin-left: 10px;
-  font-size: 10px;
-}
 
 ._smd_date {
   margin-left: 26px !important;
 }
 
-._tex_num_one::before {
-  content: "";
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
-  background: #d70404;
-  margin-right: 5px;
-}
 
-._tex_num_two::before {
-  content: "";
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
-  background-color: transparent;
-  margin-right: 5px;
-}
-
-._smd_squreShape {
-  width: 28px;
-}
-
-._smd_top_story_main {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  grid-gap: 60px;
-}
 
 .smd_border_bottom::after {
   content: "";
@@ -214,13 +107,6 @@ _smd_scoreSlider
   color: #ffffff;
   background: #d70404;
   padding: 10px;
-}
-
-._smd_player_news_main {
-  padding: 20px 0px;
-  display: grid;
-  grid-template-columns: 5fr 4fr 3fr;
-  grid-gap: 30px;
 }
 
 ._smd_player_news_main {
@@ -719,31 +605,6 @@ _smd_scoreSlider
 /* ------------------------------------------- */
 /* nfl css end */
 
-.vertical_slider {
-  height: 600px;
-  background: #f5f5f5;
-}
-
-.vertical_slider .swiper-button-prev {
-  top: 4% !important;
-  left: 50% !important;
-  transform: rotate(90deg);
-}
-
-.vertical_slider .swiper-button-next {
-  top: auto !important;
-  bottom: 4% !important;
-  left: 50% !important;
-  transform: rotate(90deg);
-}
-
-.vertical_slider .swiper-button-prev:after {
-  color: #000 !important;
-}
-
-.vertical_slider .swiper-button-next:after {
-  color: #000 !important;
-}
 
 .v_s_div {
   background: rgba(255, 255, 255, 0.81);
@@ -762,65 +623,6 @@ _smd_scoreSlider
   left: 0;
 }
 
-.vertical_slider .swiper-wrapper {
-  z-index: -1 !important;
-}
-
-.vertical_slider .swiper-button-prev::after {
-  font-size: 30px !important;
-  font-weight: 900;
-}
-
-.vertical_slider .swiper-button-next::after {
-  font-size: 30px !important;
-  font-weight: 900;
-}
-
-.scoreSlider .swiper-button-prev {
-  background: #d9d9d9;
-  height: 124px;
-  top: 0;
-  left: 0;
-  width: 40px;
-}
-
-.scoreSlider {
-  max-width: 70vw !important;
-  background: #f5f5f5;
-  padding: 10px 0px !important;
-}
-
-.scoreSlider .swiper-button-next {
-  background: #d9d9d9;
-  height: 124px;
-  top: 0;
-  right: 0;
-  width: 40px;
-}
-
-.scoreSlider .swiper-button-prev::after {
-  font-size: 20px;
-  font-weight: 900;
-  color: #000 !important;
-}
-
-.scoreSlider .swiper-button-next::after {
-  font-size: 20px;
-  font-weight: 900;
-  color: #000 !important;
-}
-
-.scoreSlider .swiper-slide {
-  border-left: 3px solid rgba(0, 0, 0, 0.17);
-  display: flex;
-  justify-content: center;
-}
-
-._smd_scoreSlider_n {
-  display: grid;
-  grid-template-columns: 143px 1fr;
-  align-items: center;
-}
 
 /* responsive start */
 @media only screen and (max-width: 1024px) {
@@ -1040,3 +842,456 @@ _smd_scoreSlider
 }
 
 /* responsive end */
+
+/*=================
+_smd_scoreSlider
+===================*/
+._smd_scoreSlider {
+  display: flex;
+}
+._smd_scoreSlider_date {
+  width: 10%;
+}
+._smd_scoreSlider_date h3 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 25px;
+  letter-spacing: -0.04em;
+  color: #131313;
+}
+._smd_scoreSlider_date p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 25px;
+  letter-spacing: -0.04em;
+  color: #131313;
+}
+._smd_scoreSlider_section {
+  height: 56px;
+  width: 90%;
+  background: #f5f5f5;
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+}
+._smd_scoreSlider_dropdown {
+  height: 100%;
+  width: 10%;
+}
+._smd_scoreSlider_dropdown_btn {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+  height: 100%;
+  border-right: 3px solid rgba(0, 0, 0, 0.17);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+._smd_newCard {
+}
+._smd_newCard h2 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 32px;
+  letter-spacing: -0.04em;
+  color: #121212;
+  position: relative;
+  margin-bottom: 70px;
+}
+._smd_newCard h2::after {
+  position: absolute;
+  content: "";
+  width: 205px;
+  height: 5px;
+  top: 140%;
+  left: 0%;
+  background: #121212;
+}
+._smd_newCard a {
+}
+._smd_newCard a img {
+  width: 590px;
+}
+._smd_newCard a h3 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 23px;
+  line-height: 42px;
+  color: #121212;
+}
+._smd_newCard a p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 42px;
+  color: #5c5656;
+}
+
+
+.dropdown {
+  position: relative;
+}
+.dropdown-btn {
+}
+.dropdown:hover .dropdown-items {
+  visibility: visible;
+  opacity: 1;
+}
+.dropdown-items {
+  position: absolute;
+  background: #fff;
+  color: #111;
+  flex-direction: column;
+  top: 100%;
+  left: 0;
+  z-index: 999;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.dropdown-items li {
+  color: #111 !important;
+  display: block;
+}
+/*=========================
+_smd_nbahero
+===========================*/
+
+
+._smd_live_watch_bg ._smd_live_btn {
+  position: absolute;
+  top: 8%;
+  left: 3%;
+}
+._smd_live_btn {
+  width: 128px;
+  height: 42.13px;
+  background: #d70404;
+  border-radius: 3px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 39px;
+  color: #ffffff;
+  border: none;
+}
+.nfl_card_title2 ._smd_live_btn {
+  font-size: 21px;
+  line-height: 32px;
+  height: 32px;
+  margin-left: 30px;
+}
+._smd_watch_live_title {
+  margin-bottom: 20px;
+}
+
+._smd_live_video_tilte {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #111111ba;
+  color: #fff !important;
+  padding: 18px 15px;
+  padding-right: 34px;
+  display: grid;
+  grid-template-columns: 6% 94%;
+  align-items: center;
+}
+._smd_live_video_tilte h2 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 37px;
+  letter-spacing: -0.04em;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+._smd_watch_system {
+  display: flex;
+  align-items: center;
+  padding: 20px 20px;
+}
+._smd_watch_system p {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 14px;
+  text-align: center;
+  color: #c2c4c7;
+  margin: 0;
+}
+._smd_watch_system ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-left: 20px;
+}
+._smd_watch_system ul li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+._smd_card_title {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 23px;
+  line-height: 22px;
+  color: #202121;
+}
+._smd_card_desc {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+  color: #121212;
+}
+
+._smd_login_card {
+  /* background: rgba(0, 0, 0, 0.432); */
+  width: 51%;
+  margin: auto;
+  margin-top: 19px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+._smd_login_card h3 {
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 35px;
+  line-height: 61px;
+  color: #121212;
+}
+._smd_login_card button {
+  width: 100%;
+  border: 1px solid #d9d9d9;
+  background: #fff;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 19px;
+  line-height: 28px;
+  color: #121212;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin: 15px 0;
+}
+._smd_login_card button div {
+  width: 100%;
+}
+._smd_or_line {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px 0;
+}
+._smd_or_line div {
+  background: #5c5656;
+  width: 45%;
+  height: 1px;
+}
+._smd_or_line p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 28px;
+  color: #5c5656;
+  width: 10%;
+  padding: 0;
+  margin: 0;
+}
+
+._smd_login_card .bg-black {
+  color: #fff;
+}
+._smd_form_group {
+  width: 100%;
+}
+._smd_form_group label {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 26px;
+  color: #121212;
+  width: 100%;
+  margin: 10px 0;
+  text-align: left;
+}
+._smd_form_group input {
+  height: 55px;
+  border: 1px solid #d9d9d9;
+  width: 100%;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 26px;
+  color: rgba(92, 86, 86, 0.32);
+  padding: 0px 25px;
+}
+._smd_form_group p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: #606060;
+  text-align: left;
+  margin: 0;
+}
+
+._smd_login_card a {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  color: #121212;
+}
+
+/*======================
+PodcastPage
+=======================*/
+
+/*======================
+podcast-card
+=======================*/
+
+/*======================
+End podcast-card
+=======================*/
+
+.forget-password-desc {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 33px;
+  color: #121212;
+}
+.forget-password-desc a {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  color: #121212 !important;
+}
+/*======================
+End PodcastPage
+=======================*/
+/*======================
+Dashboard sidebar
+======================*/
+
+
+.sidebar-link {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.sidebar-link li.sidebar-navlink {
+}
+.sidebar-link li.sidebar-navlink a {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 32px;
+  letter-spacing: -0.04em;
+  color: #ffffff !important;
+  display: flex;
+  align-items: center;
+  padding: 12px 0px;
+  padding-left: 36px;
+  position: relative;
+}
+
+.sidebar-link li.sidebar-navlink a:hover,
+.sidebar-link li.sidebar-navlink.active a {
+  background: #292929;
+}
+.sidebar-link li.sidebar-navlink a:hover::after,
+.sidebar-link li.sidebar-navlink.active a::after {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 3px;
+  background: #fff;
+  border-radius: 5px;
+  top: 0;
+  left: 0;
+}
+.sidebar-link li a h4 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 32px;
+  letter-spacing: -0.04em;
+  color: #ffffff !important;
+  margin: 0;
+  padding: 0;
+  margin-left: 20px !important;
+}
+
+/*======================
+End Dashboard sidebar
+=======================*/
+
+/*======================
+Dashboard profile
+=======================*/
+.dashboard-main {
+  min-height: 100vh;
+}
+
+/* end new password form */
+/*======================
+End Dashboard profile
+=======================*/
+/*======================
+Newsfeed
+=======================*/
+
+
+.card2 {
+  padding: 20px 20px;
+}
+.card,
+.card2 {
+  background: #ffffff;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+}
+/*======================
+End Newsfeed
+=======================*/
+

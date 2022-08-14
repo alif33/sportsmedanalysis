@@ -1,13 +1,15 @@
 import React from 'react';
+import Image from 'next/image';
+import style from './MoreNewsCard.module.css';
 
-const MoreNewsCard = ({ img, title}) => {
+const MoreNewsCard = ({ img, title }) => {
     return (
-        <div className="more-news-card" >
-        <a href="#!">
-            <img src={img} className="w-100" alt="" />
-            <p className='nfl_card_Desc'>{title}</p>
-        </a>
-    </div>
+        <div className={style.more_news_card} >
+            <a href="#!">
+                <Image height="162" width="200" src="/images/landing_page/nfl_six.png" alt="" />
+                <p className={style.nfl_card_Desc}>{title}</p>
+            </a>
+        </div>
     );
 };
 

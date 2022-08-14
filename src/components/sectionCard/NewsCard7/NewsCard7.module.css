@@ -1,0 +1,36 @@
+.nfl_sec_two_middle:first-child {
+  margin-top: 0px;
+}
+
+.nfl_sec_two_middle {
+  margin-top: 20px;
+  /* align-items: center; */
+  gap: 10px;
+}
+
+@media only screen and (max-width: 760px) {
+  .nfl_sec_two_middle {
+    flex-direction: column-reverse;
+  }
+}
+
+.nfl_card_title1 {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: 0.18px;
+    color: #000000;
+  }
+  
+.nfl_card_Desc {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 15px;
+    letter-spacing: 0.18px;
+    color: #5c5656;
+    margin-top: 10px;
+  }

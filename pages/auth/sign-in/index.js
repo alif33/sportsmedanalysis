@@ -7,6 +7,7 @@ import Cookies from 'universal-cookie';
 import AuthLayout from '../../../src/components/AuthLayout';
 import { showErr } from '../../../__lib__/helpers/ErrHandler';
 import { postData } from '../../../__lib__/helpers/HttpService';
+import style from './SignIn.module.css';
 
 const SignIn = () => {
 
@@ -34,7 +35,7 @@ const SignIn = () => {
     }
     return (
         <AuthLayout>
-            <div className="_smd_login_card">
+            <div className={style._smd_login_card}>
                 <h3>Log in to your account</h3>
                 <button>
                     <Image height='30' width="30" src="/images/icon/google-icon.png" alt="" />
@@ -50,7 +51,7 @@ const SignIn = () => {
                 </button>
 
 
-                <div className="_smd_or_line">
+                <div className={style._smd_or_line}>
                     <div></div>
                     <p>OR</p>
                     <div></div>
@@ -59,7 +60,7 @@ const SignIn = () => {
                     onSubmit={handleSubmit(onSubmit, onError)}
                     className="w-100"
                 >
-                    <div className="_smd_form_group">
+                    <div className={style._smd_form_group}>
                         <label htmlFor="email">Email Address</label>
                         <input
                             type="email"
@@ -71,7 +72,7 @@ const SignIn = () => {
                             placeholder="Email Address"
                         />
                     </div>
-                    <div className="_smd_form_group">
+                    <div className={style._smd_form_group}>
                         <label htmlFor="email">Password</label>
                         <input
                             type="password"
@@ -83,7 +84,7 @@ const SignIn = () => {
                             )}
                         />
                     </div>
-                    <button
+                    <button style={{ color: '#fff' }}
                         className="bg-black text-center justify-content-center mt-3 mb-4"
                     >LOGIN</button>
                 </form>

@@ -7,6 +7,7 @@ import { showErr } from "../../../__lib__/helpers/ErrHandler";
 import { postData } from "../../../__lib__/helpers/HttpService";
 import toast from "react-hot-toast";
 import { useRouter } from "next/router";
+import style from './SignUp.module.css';
 
 const Signup = () => {
     const [disable, setDisable] = useState(false);
@@ -38,7 +39,7 @@ const Signup = () => {
 
     return (
         <AuthLayout>
-            <div className="_smd_login_card">
+            <div className={style._smd_login_card}>
                 <h3>Create your account</h3>
                 <button>
                     <Image height='30' width="30" src="/images/icon/google-icon.png" alt="" />
@@ -53,7 +54,7 @@ const Signup = () => {
                     <div className="text-center">Continue with Facebook</div>
                 </button>
 
-                <div className="_smd_or_line">
+                <div className={style._smd_or_line}>
                     <div></div>
                     <p>OR</p>
                     <div></div>
@@ -63,7 +64,7 @@ const Signup = () => {
                     className="w-100"
                     onSubmit={handleSubmit(onSubmit, onError)}
                 >
-                    <div className="_smd_form_group">
+                    <div className={style._smd_form_group}>
                         <label htmlFor="email">Email Address</label>
                         <input
                             type="email"
@@ -73,7 +74,7 @@ const Signup = () => {
                             })}
                         />
                     </div>
-                    <button className="bg-black text-center justify-content-center  mt-3 mb-4"> Continue</button>
+                    <button style={{ color: "#fff" }} className="bg-black text-center justify-content-center  mt-3 mb-4"> Continue</button>
                 </form>
 
                 <Link href="/auth/sign-in">

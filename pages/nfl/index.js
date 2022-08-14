@@ -9,6 +9,7 @@ import MoreNews from '../../src/section/MoreNews';
 import PageNewsSection from '../../src/section/PageNewsSection';
 import NewsTab from '../../src/section/NewsTap';
 import NflTeam from "../../src/section/NflTeam";
+import BorderLine from '../../src/components/BorderLine'
 
 function NFL({ posts }) {
 
@@ -16,25 +17,29 @@ function NFL({ posts }) {
     <div className='_nfl'>
       <Layout navheader={true}>
         <NFLSlider />
+
         <NewsTab />
 
         <div className="nfl_con">
-          <div className='nfl_hr_line'></div>
+          <BorderLine />
         </div>
 
         <PageNewsSection title="NFL News" />
+
         <ArticleSection />
+
         <Trendings />
 
         <div className="nfl_con">
-          <div className='nfl_hr_line'></div>
+          <BorderLine />
         </div>
 
         <MoreNews posts={posts} />
 
         <div className="nfl_con">
-          <div className='nfl_hr_line'></div>
+          <BorderLine />
         </div>
+        
         <NflTeam />
       </Layout>
     </div>

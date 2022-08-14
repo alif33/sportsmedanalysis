@@ -1,0 +1,112 @@
+
+._smd_login_card {
+    /* background: rgba(0, 0, 0, 0.432); */
+    width: 51%;
+    margin: auto;
+    margin-top: 19px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  ._smd_login_card button {
+    width: 100%;
+    border: 1px solid #d9d9d9;
+    background: #fff;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 19px;
+    line-height: 28px;
+    color: #121212;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin: 15px 0;
+  }
+  ._smd_login_card button div {
+    width: 100%;
+  }
+  
+  
+/* form checkbox */
+.input_check label {
+}
+/* The container */
+.input_check label {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 26px;
+  color: #121212;
+
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.input_check label input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.input_check label .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  border: 1px solid #111;
+  background-color: #fff;
+}
+
+/* On mouse-over, add a grey background color */
+/* .input_check label:hover input ~ .checkmark {
+  background-color: #111;
+} */
+
+/* When the checkbox is checked, add a blue background */
+.input_check label input:checked ~ .checkmark {
+  background-color: #111;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.input_check label .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.input_check label input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.input_check label .checkmark:after {
+  left: 9px;
+  top: 2px;
+  width: 6px;
+  height: 14px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* end form checkbox */
