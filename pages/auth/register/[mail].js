@@ -22,27 +22,31 @@ const Register = () => {
 
 
     const onSubmit = (data) => {
+        const { mail } = router.query
         setDisable(true);
-        postData("/user/register", data, setDisable).then((res) => {
-            if (res?.success) {
+
+        console.log({ ...data, email: mail });
+        postData("/user/register", { ...data, email: mail }, setDisable).then((res) => {
+        
+            if(res?.exists){
                 toast.success(`${res.message}`);
+            }
+    
+            if(res?.success){
                 reset();
                 router.push({
-                    pathname: "/login",
+                  pathname: "/auth/sign-in",
                 });
             }
         });
-    };
-
+      };
 
     return (
         <AuthLayout>
             <div className={style._smd_login_card}>
                 <h3>Create your account</h3>
                 <div className="w-100 text-start mb-2 ">
-                    <Link href="/">
-                        <a className="d-flex align-items-center justify-content-start"><Image height='24' width="24" src="/images/icon/chevron-left.png" alt="" />Back</a>
-                    </Link>
+                    <button onClick={ ()=>router.back() } className="d-flex align-items-center justify-content-start"><Image height='24' width="24" src="/images/icon/chevron-left.png" alt="" />Back</button>
                 </div>
 
                 <form
@@ -53,22 +57,54 @@ const Register = () => {
                         <div className="row">
                             <div className="col-md-6"><div className={style._smd_form_group}>
                                 <label htmlFor="email">First Name</label>
-                                <input type="email" placeholder="First Name" />
+                                <input 
+                                    type="text" 
+                                    placeholder="First Name" 
+                                    {...register("firstName",
+                                        {
+                                            required: 'First name is required.'
+                                        }
+                                    )} 
+                                />
                             </div></div>
                             <div className="col-md-6"><div className={style._smd_form_group}>
                                 <label htmlFor="email">Last Name</label>
-                                <input type="email" placeholder="Last Name" />
+                                <input 
+                                    type="text" 
+                                    placeholder="Last Name" 
+                                    {...register("lastName",
+                                        {
+                                            required: 'Last name is required.'
+                                        }
+                                     )}  
+                                />
                             </div></div>
                         </div>
                     </div>
 
                     <div className={style._smd_form_group}>
-                        <label htmlFor="email">Email Address</label>
-                        <input type="email" placeholder="Email Address" />
+                        <label htmlFor="email">Password</label>
+                        <input 
+                            type="password" 
+                            placeholder="password"
+                            {...register("password",
+                                {
+                                    required: 'First name is required.'
+                                }
+                            )}  
+                        />
                     </div>
                     <div className={style._smd_form_group}>
-                        <label htmlFor="email">Password</label>
-                        <input type="email" placeholder="Password" />
+                        <label htmlFor="email">Confirm Password</label>
+                        <input 
+                            type="password" 
+                            placeholder="confirm password"
+                            {...register("confirmPassword",
+                                {
+                                    required: 'Confirm Password is required.'
+                                }
+                            )}  
+                        />
                     </div>
 
                     <button style={{ color: "#fff" }} className="bg-black text-center justify-content-center  mt-3 mb-4"> Create Account</button>

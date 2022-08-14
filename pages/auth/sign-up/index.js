@@ -29,7 +29,7 @@ const Signup = () => {
                 if (res?.success) {
                     reset();
                     router.push({
-                        pathname: `auth/register/${data.email}`,
+                        pathname: `/auth/register/${data.email}`,
                     });
                 }
             })
