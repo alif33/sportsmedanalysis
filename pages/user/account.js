@@ -1,3 +1,12 @@
+
+
+const Comp = () => {
+    return (
+        <></>
+    )
+}
+export default Comp;
+
 // import Layout from "../../src/components/Layout";
 
 // const account = () => {

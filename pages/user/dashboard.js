@@ -1,3 +1,12 @@
+const Comp = () => {
+    return (
+        <></>
+    )
+}
+export default Comp;
+
+
+
 // import React from "react";
 // import Layout from "../../src/components/Layout";
 // import Sidebar from "../../src/components/user/Sidebar";

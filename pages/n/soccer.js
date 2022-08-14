@@ -1,3 +1,10 @@
+const Comp = () => {
+    return (
+        <></>
+    )
+}
+export default Comp;
+
 // import Navbar from '../../src/components/headers/Navbar';
 // import NavHeaders from '../../src/components/headers/NavHeader';
 // import TopHeading from '../../src/components/headers/TopHeading';

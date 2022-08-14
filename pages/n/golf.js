@@ -1,3 +1,10 @@
+const Comp = () => {
+    return (
+        <h1></h1>
+    )
+}
+export default Comp;
+
 // import Navbar from "../../src/components/headers/Navbar";
 // import TopHeading from "../../src/components/headers/TopHeading";
 // import ScoreSlider from "../../src/components/ScoreSlider";

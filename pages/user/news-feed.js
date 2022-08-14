@@ -1,3 +1,10 @@
+const Comp = () => {
+    return (
+        <></>
+    )
+}
+
+export default Comp;
 // import React, { useEffect, useState } from "react";
 // import Layout from "../../src/components/Layout";
 // import NewsCard from "../../src/components/user/NewsCard";
