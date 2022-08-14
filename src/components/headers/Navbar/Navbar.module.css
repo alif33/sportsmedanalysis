@@ -5,8 +5,8 @@ _smd_navbar
 
 
 ._smd_navbar_border {
-    border-top: 1px solid;
-    border-bottom: 1px solid;
+    border-top: 1px solid #494949;
+    border-bottom: 1px solid #494949;
   }
   ._smd_navbar {
     padding-top: 0;

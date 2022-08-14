@@ -92,9 +92,9 @@ const SignIn = () => {
                 <Link href="/auth/forget-password">
                     <a>Forgot your password?</a>
                 </Link>
-                <Link href="/auth/sign-up">
-                    <a className="mt-1 mb-2">Don’t have an account? Sign up</a>
-                </Link>
+                <a className="mt-1 mb-2">Don’t have an account? <Link href="/auth/sign-up">
+                    <a> Sign up</a>
+                </Link></a>
             </div>
 
         </AuthLayout>

@@ -107,3 +107,20 @@
   line-height: 30px;
   color: #121212 !important;
 }
+
+.forget_password_desc {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 33px;
+    color: #121212;
+  }
+  .forget_password_desc a {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    color: #121212 !important;
+  }

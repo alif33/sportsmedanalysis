@@ -1,10 +1,11 @@
 import Link from 'next/link';
 import AuthLayout from "../../../src/components/AuthLayout";
+import style from './Forget.module.css';
 
 const ForgetPassword = () => {
     return (
         <AuthLayout>
-            <div className="_smd_login_card">
+            <div className={style._smd_login_card}>
                 <h3>Reset Your Password</h3>
 
                 {/* <div className="w-100 text-start mb-2 ">
@@ -14,12 +15,12 @@ const ForgetPassword = () => {
                 </div> */}
             </div>
 
-            <h6 className="my-2 text-center forget-password-desc" >Enter your email adress below and we’ll send you a link with instructions</h6>
+            <h6 className={`my-2 text-center ${style.forget_password_desc}`} >Enter your email adress below and we’ll send you a link with instructions</h6>
 
-            <div className="_smd_login_card">
+            <div className={style._smd_login_card}>
                 <form className="w-100">
 
-                    <div className="_smd_form_group">
+                    <div className={style._smd_form_group}>
                         <label htmlFor="email">Email</label>
                         <input
                             type="emai"
@@ -29,10 +30,12 @@ const ForgetPassword = () => {
 
                     <button className="bg-black text-center justify-content-center  mt-3 mb-4"> Submit</button>
                 </form>
-                <Link href="//auth/sign-in">
-                    <a className="mt-1 mb-2">Remember your password? Login</a>
-                </Link>
-                <h6 className="my-1 text-center forget-password-desc" >
+                <a className="mt-1 mb-2">Remember your password?
+                    <Link href="//auth/sign-in">
+                        <a> Login</a>
+                    </Link>
+                </a>
+                <h6 className={`my-1 text-center ${style.forget_password_desc}`} >
                     <Link href="/auth/sign-in"><a>Need Help | FAQ</a></Link>
                 </h6>
             </div>

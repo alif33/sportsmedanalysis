@@ -77,9 +77,11 @@ const Signup = () => {
                     <button style={{ color: "#fff" }} className="bg-black text-center justify-content-center  mt-3 mb-4"> Continue</button>
                 </form>
 
-                <Link href="/auth/sign-in">
-                    <a className="mt-1 mb-3">Already have an account? Login</a>
-                </Link>
+                <a className="mt-1 mb-3">Already have an account?
+                    <Link href="/auth/sign-in">
+                        <a> Login</a>
+                    </Link>
+                </a>
             </div>
         </AuthLayout>
     );
