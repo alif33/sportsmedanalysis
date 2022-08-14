@@ -15,13 +15,13 @@ const TopHeading = () => {
             ${style._smd_top_social}
             ${style._smd_border_right}`}>
                 <ul className='text-center'>
-                    <li><Link href="#?">
-                        <Image height="18.75" width="9.73" src="/images/icon/facebook.png" alt="" />
+                    <li><Link href="/">
+                      <a>  <Image height="18.75" width="9.73" src="/images/icon/facebook.png" alt="" /></a>
                     </Link></li>
 
-                    <li><Link href="/"><Image height="22.92" width="22.92" src="/images/icon/instragram.png" alt="" /></Link></li>
+                    <li><Link href="/"><a><Image height="22.92" width="22.92" src="/images/icon/instragram.png" alt="" /></a></Link></li>
 
-                    <li><Link href="/"><Image height="16.68" width="18.81" src="/images/icon/twtter.png" alt="" /></Link></li>
+                    <li><Link href="/"><a><Image height="16.68" width="18.81" src="/images/icon/twtter.png" alt="" /></a></Link></li>
                 </ul>
             </div>
             <div className={`${style._smd_top_heading_section} ${style._smd_top_middle}`}>

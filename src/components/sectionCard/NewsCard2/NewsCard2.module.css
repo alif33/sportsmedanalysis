@@ -1,0 +1,23 @@
+.nfl_s2_img span{
+    width: 100% !important;
+    height: auto !important; 
+}
+
+
+.nfl_para1 {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 37px;
+    color: #5c5656;
+  }
+  
+._smd_card_desc {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    color: #121212;
+  }
