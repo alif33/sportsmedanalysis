@@ -25,7 +25,7 @@ const PageNewsSection = ({ title }) => {
                         <p className={style.nfl_para1}>
                             What happened to Andrew Luck? Our new series goes inside his rise, shocking retirement
                         </p>
-                        <p>Scott Wheeler <span style={{ content: 'url(/images/landing_Page/comment.svg)' }} className={style.nfl_comment_num}>377</span></p>
+                        <p className={style.writer_name}>Scott Wheeler <span style={{ content: 'url(/images/landing_Page/comment.svg)' }} className={style.nfl_comment_num}></span> <span className={style.writer_name}>377</span></p>
                     </a>
                 </div>
 

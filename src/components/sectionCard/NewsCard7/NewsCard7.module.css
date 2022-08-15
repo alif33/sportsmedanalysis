@@ -24,13 +24,12 @@
     color: #000000;
   }
   
-.nfl_card_Desc {
-    font-family: "Poppins";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 15px;
-    letter-spacing: 0.18px;
-    color: #5c5656;
-    margin-top: 10px;
+.nfl_card_desc {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 15px;
+  letter-spacing: 0.18px;
+  color: #5C5656;
   }

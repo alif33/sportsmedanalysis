@@ -4,7 +4,7 @@ import DashboardLayout from '../../../src/components/DashboardLayout';
 const PasswordResetEmail = () => {
     return (
         <DashboardLayout>
-            <div className="container ps-1 pe-2 mt-2 mb-5">
+            <div className="container ps-1 pe-2 mt-2 mb-5 vh-100">
                 <div className="w-100 d-flex justify-content-between align-items-center">
                     <div className="profile-text mt-3">
                         <h3>Password reset email sent</h3>

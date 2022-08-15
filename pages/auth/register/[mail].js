@@ -109,7 +109,7 @@ const Register = () => {
 
                     <button style={{ color: "#fff" }} className="bg-black text-center justify-content-center  mt-3 mb-4"> Create Account</button>
                 </form>
-                <Link href="/">
+                <Link href="/auth/sign-in">
                     <a className="mt-1 mb-2">Already have an account? Login</a>
                 </Link>
 

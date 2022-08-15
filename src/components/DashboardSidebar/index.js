@@ -6,7 +6,7 @@ import style from './Dashboard.module.css';
 const DashboardSidebar = () => {
     return (
         <div className={`bg-black ${style._smd_dashboard_sidebar} h-100`}>
-            <h4>Account Links</h4>
+            <h4 className="ms-2 py-2">Account Links</h4>
             <ul className={style.sidebar_link}>
                 <li className={`${style.sidebar_navlink} ${style.active}`}>
                     <Link href="/dashboard/profile-dashboard"><a><Image height="22" width="18" src="/images/icon/user.png" alt="" /> <h4>My Account</h4></a></Link>

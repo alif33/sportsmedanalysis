@@ -13,7 +13,7 @@ const NewsCard3 = ({ img, title, comment, name, link }) => {
                     <Image height="132" width="218" src={img} alt="" />
                     <div>
                         <h4 style={{ color: '#121212' }}>{title}</h4>
-                        <p className="mt-2">{name} <span style={{ content: 'url(/images/landing_Page/comment.svg)' }} className={style.nfl_comment_num}>{comment}</span></p>
+                        <p className="mt-2">{name} <span style={{ content: 'url(/images/landing_Page/comment.svg)' }} className={style.nfl_comment_num}></span> <span>{comment}</span> </p>
                     </div>
                 </div>
             </a>

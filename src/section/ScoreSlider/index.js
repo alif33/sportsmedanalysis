@@ -21,7 +21,7 @@ const ScoreSlider = () => {
             </div>
 
 
-            <div className="d-flex w-100 align-items-center flex-column flex-md-row gap-2 gap-md-0">
+            <div className={`${swiperStyle.scoreSlider} d-flex w-100 align-items-center flex-column flex-md-row gap-2 gap-md-0`}>
                 <div>
                     {/* <select name="" id="" className="_smd_scoreSlider_dropdown_btn">
                         <option value="">NFL SCORE <img src="/images/icon/arrow-down-black.png" alt="" /></option>
@@ -59,7 +59,7 @@ const ScoreSlider = () => {
                             spaceBetween: 20,
                         },
                     }}
-                    className={`${swiperStyle.scoreSlider}`}
+                    className={swiperStyle.sliderPart}
                 >
 
                     <SwiperSlide>

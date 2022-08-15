@@ -32,8 +32,9 @@
     padding: 18px 15px;
     padding-right: 34px;
     display: grid;
-    grid-template-columns: 6% 94%;
+    grid-template-columns: 6% 91%;
     align-items: center;
+    column-gap: 4%;
   }
   ._smd_live_video_tilte h2 {
     font-family: "Poppins";

@@ -29,7 +29,7 @@ const ProfileCard = () => {
 
             <div className={style.profile_menu}>
                 <ul>
-                    <li className="active"> <Link href="/"><a><Image height="15" width="15" src="/images/icon/newsfeed.png" alt="" /> <h5>News Feed</h5></a></Link> </li>
+                    <li className={style.active}> <Link href="/"><a><Image height="15" width="15" src="/images/icon/newsfeed.png" alt="" /> <h5>News Feed</h5></a></Link> </li>
                     <li> <Link href="/"><a><Image height="15" width="20" src="/images/icon/players.png" alt="" /> <h5>Following Players</h5></a></Link> </li>
                     <li> <Link href="/"><a><Image height="15" width="15" src="/images/icon/right.png" alt="" /> <h5>Saved</h5></a></Link> </li>
                     <li> <Link href="/"><a><Image height="15" width="15" src="/images/icon/logout.png" alt="" /> <h5>Logout</h5></a></Link> </li>

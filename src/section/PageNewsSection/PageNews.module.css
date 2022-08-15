@@ -43,7 +43,7 @@
   color: #5c5656;
 }
 
-.nfl_comment_num::before {
+.nfl_comment_num {
   position: relative;
   top: 2px;
   margin-right: 5px;
@@ -95,6 +95,27 @@
 .nfl_S3__ul li {
   margin-bottom: 30px;
 }
+.nfl_S3__ul li a{
+  font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 23px;
+letter-spacing: 0.18px;
+color: #5C5656;
+
+}
+
+.writer_name{font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 15px;
+  /* identical to box height, or 107% */
+  
+  letter-spacing: 0.18px;
+  
+  color: #5C5656;}
 
 @media only screen and (max-width: 992px) {
   .nfl_sec_grid {

@@ -1,17 +1,40 @@
-
 .nfl_S5_middle_card {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.54);
-    padding-top: 20px;
-  }
-  
-  .nfl_S5_middle_card:last-child {
-    border-bottom: 0px solid rgba(0, 0, 0, 0.54);
-  }
+  border-bottom: 1px solid rgba(0, 0, 0, 0.54);
+  padding-top: 20px;
+}
 
-  
+.nfl_S5_middle_card:last-child {
+  border-bottom: 0px solid rgba(0, 0, 0, 0.54);
+}
+.nfl_S5_middle_card h4 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+  /* or 119% */
+
+  color: #121212;
+}
+.nfl_S5_middle_card p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 15px;
+  /* identical to box height, or 107% */
+
+  letter-spacing: 0.18px;
+
+  color: #5c5656;
+}
+
+.nfl_comment_num {
+  margin-left: 20px;
+}
 .nfl_comment_num::before {
-    position: relative;
-    top: 2px;
-    margin-right: 5px;
-    margin-left: 20px;
-  }
+  position: relative;
+  top: 2px;
+  margin-right: 5px;
+  margin-left: 20px;
+}
