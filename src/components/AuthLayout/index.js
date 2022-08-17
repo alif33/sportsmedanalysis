@@ -10,9 +10,11 @@ export default function Layout({ children }) {
                 reverseOrder={false}
             />
             <div className="d-flex bg-black justify-content-center align-items-center">
-                <Link href='/'>
-                    <a> <Image src="/images/UltimateLogo.png" alt="" height='95' width="100" /></a>
-                </Link>
+                <a>
+                    <Link href='/'>
+                        <Image src="/images/UltimateLogo.png" alt="" height='95' width="100" />
+                    </Link>
+                </a>
             </div>
             <main>{children}</main>
         </>

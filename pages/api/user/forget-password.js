@@ -20,7 +20,7 @@ handler.post(async (req, res) => {
                 to: email,
                 subject: `Recovery your password`,
                 text: 'test text',
-                html: `<h1>Reset your password. <a href=${'http://localhost:3000/new-password/'+token}>link</a></h1>`
+                html: `<h1>Reset your password. <a href=${'http://localhost:3000/auth/new-password/'+token}>link</a></h1>`
             });
             return res.send({
                 success: true,
