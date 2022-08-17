@@ -1,8 +1,12 @@
 import React from 'react';
+import { useRouter } from 'next/router';
 import AuthLayout from "../../../src/components/AuthLayout";
 import style from './NewPassword.module.css';
 
 const NewPassword = () => {
+
+    const router = useRouter();
+    
     return (
         <AuthLayout>
             <div className="ps-1 pe-2 mt-2 mb-2 h-100">
@@ -48,7 +52,11 @@ const NewPassword = () => {
                             <button className="bg-black text-center justify-content-center">Save Password</button>
                         </div>
                         <div className="col-md-6 ">
-                            <button className="text-center justify-content-center" >Cancel</button>
+                            <button 
+                                type="button" 
+                                onClick={ ()=>router.push('/') } 
+                                className="text-center justify-content-center" 
+                            >Cancel</button>
                         </div>
                     </div>
                 </form>
