@@ -1,5 +1,6 @@
 import React from 'react';
 import DashboardLayout from '../../src/components/DashboardLayout';
+import { userAuth } from '../../__lib__/helpers/requireAuthentication';
 import style from './ProfileDashboard.module.css';
 
 const ProfileDashboard = () => {
@@ -16,7 +17,7 @@ const ProfileDashboard = () => {
         <div className="row mt-1">
           <div className="col-md-6">
 
-            <div className={style._smd_form_group}>
+            <div className={ style._smd_form_group }>
               <label htmlFor="email">Username</label>
               <input
                 type="email"
@@ -64,3 +65,10 @@ const ProfileDashboard = () => {
 };
 
 export default ProfileDashboard;
+
+
+export const getServerSideProps = userAuth((context) => {
+  return {
+    props: {},
+  };
+});

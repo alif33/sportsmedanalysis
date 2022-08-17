@@ -5,10 +5,10 @@ export function userAuth(gssp) {
         const { req, res } = context
         if (req.headers.cookie) {
             const cookies = cookie.parse(req.headers.cookie)
-            if (!cookies._info) {
+            if (!cookies.__u__) {
                 return {
                     redirect: {
-                        destination: '/login',
+                        destination: '/auth/sign-in',
                     }
                 }
             }
@@ -16,33 +16,7 @@ export function userAuth(gssp) {
         } else {
             return {
                 redirect: {
-                    destination: '/login',
-
-                }
-            }
-        }
-        return await gssp(context)
-    }
-}
-
-export function adminAuth(gssp) {
-    return async (context) => {
-        const { req, res } = context
-        if (req.headers.cookie) {
-            const cookies = cookie.parse(req.headers.cookie)
-            if (!cookies._admin) {
-                return {
-                    redirect: {
-                        destination: '/admin/login',
-
-                    }
-                }
-            }
-
-        } else {
-            return {
-                redirect: {
-                    destination: '/admin/login',
+                    destination: '/auth/sign-in',
 
                 }
             }

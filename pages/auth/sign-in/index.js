@@ -22,13 +22,13 @@ const SignIn = () => {
         postData('/user/login', data, setDisable)
             .then(res => {
                 if (res?.success) {
-                    cookies.set("_info", JSON.stringify({
+                    cookies.set("__u__", JSON.stringify({
                         token: res.token,
                         user: res.user
                     }), { path: '/' });
                     reset();
                     router.push({
-                        pathname: '/'
+                        pathname: '/dashboard'
                     })
                 }
             })
