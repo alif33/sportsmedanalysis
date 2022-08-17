@@ -13,7 +13,7 @@ const SMDFooter = () => {
                         <div className="row m-0 g-2">
                             <div className="col-md-2">
                                 <div className="_footer_logo">
-                                    <Link href="/">
+                                    <Link href="#">
                                         <a>
                                             <Image height="112" width="109" src="/images/icon/logo.png" alt="" />
                                         </a>
