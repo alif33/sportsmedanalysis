@@ -26,7 +26,7 @@ const ForgetPassword = () => {
 
         postData('/user/forget-password', data, setDisable)
             .then(res => {
-                console.log(res);
+
                 if (res?.success) {
                     router.push({
                         pathname: `/auth/password-reset-email/${ cryptr.encrypt(data.email) }`
@@ -46,12 +46,6 @@ const ForgetPassword = () => {
         <AuthLayout>
             <div className={style._smd_login_card}>
                 <h3>Reset Your Password</h3>
-
-                {/* <div className="w-100 text-start mb-2 ">
-                    <Link href="/">
-                        <a className="d-flex align-items-center justify-content-start"><Image height='24' width="24" src="/images/icon/chevron-left.png" alt="" />Back</a>
-                    </Link>
-                </div> */}
             </div>
 
             <h6 className={`my-2 text-center ${style.forget_password_desc}`} >Enter your email adress below and we’ll send you a link with instructions</h6>
@@ -65,6 +59,7 @@ const ForgetPassword = () => {
                     <div className={style._smd_form_group}>
                         <label htmlFor="email">Email</label>
                         <input
+                            id="email"
                             type="email"
                             placeholder="Email Address"
                             {...register("email",
@@ -79,11 +74,11 @@ const ForgetPassword = () => {
                 </form>
                 <a className="mt-1 mb-2">Remember your password?
                     <Link href="/auth/sign-in">
-                        <a> Login</a>
+                        Login
                     </Link>
                 </a>
                 <h6 className={`my-1 text-center ${style.forget_password_desc}`} >
-                    <Link href="/auth/sign-in"><a>Need Help | FAQ</a></Link>
+                    <Link href="/auth/sign-in">Need Help | FAQ</Link>
                 </h6>
             </div>
         </AuthLayout>
