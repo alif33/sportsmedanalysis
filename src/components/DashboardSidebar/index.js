@@ -9,10 +9,10 @@ const DashboardSidebar = () => {
             <h4 className="ms-2 py-2">Account Links</h4>
             <ul className={style.sidebar_link}>
                 <li className={`${style.sidebar_navlink} ${style.active}`}>
-                    <Link href="/dashboard/profile-dashboard"><a><Image height="22" width="18" src="/images/icon/user.png" alt="" /> <h4>My Account</h4></a></Link>
+                    <Link href="/dashboard"><a><Image height="22" width="18" src="/images/icon/user.png" alt="" /> <h4>My Account</h4></a></Link>
                 </li>
                 <li className={`${style.sidebar_navlink}`}>
-                    <Link href="/dashboard/profile-dashboard"><a><Image height="20" width="20" src="/images/icon/message.png" alt="" /> <h4>Email Preferences</h4></a></Link>
+                    <Link href="/dashboard/email-preferences"><a><Image height="20" width="20" src="/images/icon/message.png" alt="" /> <h4>Email Preferences</h4></a></Link>
                 </li>
             </ul>
         </div>

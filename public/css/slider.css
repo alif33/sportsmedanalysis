@@ -74,6 +74,6 @@
 }
 
 .swiper-backface-hidden .swiper-slide {
-  padding: 25px 24px !important;
+  padding: 0 24px !important;
   box-sizing: border-box !important;
 }
