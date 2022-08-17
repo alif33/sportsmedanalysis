@@ -68,8 +68,8 @@
   position: absolute;
   top: 0;
   left: 0;
-  height: 25px;
-  width: 25px;
+  height: 20px;
+  width: 20px;
   border: 1px solid #111;
   background-color: #fff;
 }
@@ -98,10 +98,10 @@
 
 /* Style the checkmark/indicator */
 .input_check label .checkmark:after {
-  left: 9px;
-  top: 2px;
+  left: 7px;
+  top: 1px;
   width: 6px;
-  height: 14px;
+  height: 11px;
   border: solid white;
   border-width: 0 2px 2px 0;
   -webkit-transform: rotate(45deg);
