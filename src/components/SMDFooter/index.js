@@ -14,9 +14,9 @@ const SMDFooter = () => {
                             <div className="col-md-2">
                                 <div className="_footer_logo">
                                     <Link href="/">
-                                       <a>
-                                       <Image height="112" width="109" src="/images/icon/logo.png" alt="" />
-                                       </a>
+                                        <a>
+                                            <Image height="112" width="109" src="/images/icon/logo.png" alt="" />
+                                        </a>
                                     </Link>
                                 </div>
                             </div>
@@ -49,7 +49,7 @@ const SMDFooter = () => {
                             <div className="col-md-5">
                                 <div className={`${footerStyle._smd_news_alerts}`}>
                                     <h3>GET NEWSLETTERS & ALERTS</h3>
-                                    <button>SIGN UP</button>
+                                    <Link href="/auth/sign-up"><a><button>SIGN UP</button></a></Link>
                                 </div>
                             </div>
                         </div>
@@ -63,22 +63,22 @@ const SMDFooter = () => {
                                 <div className="col-md-4">
                                     <ul className={`${footerStyle._smd_footer_menu}`}>
                                         <li>
-                                            <Link href="/">
+                                            <Link href="/hfl">
                                                 <a>NFL</a>
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link href="/">
+                                            <Link href="/nbl">
                                                 <a>NBL</a>
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link href="/">
+                                            <Link href="/mlb">
                                                 <a>MLB</a>
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link href="/">
+                                            <Link href="/watch">
                                                 <a>WATCH</a>
                                             </Link>
                                         </li>
@@ -142,7 +142,7 @@ const SMDFooter = () => {
                         <div className="col-md-12">
                             <ul className={`${footerStyle._smd_footer_menu}  ${footerStyle._smd_footer_nav_menu}`}>
                                 <li>
-                                    <Link href="/">
+                                    <Link href="/privacy-policy">
                                         <a>Privacy</a>
                                     </Link>
                                 </li>
@@ -152,7 +152,7 @@ const SMDFooter = () => {
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="/">
+                                    <Link href="/terms-of-use">
                                         <a>Terms</a>
                                     </Link>
                                 </li>
@@ -192,7 +192,7 @@ const SMDFooter = () => {
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="/">
+                                    <Link href="/auth/sign-in">
                                         <a>Login</a>
                                     </Link>
                                 </li>

@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 import DashboardLayout from '../../src/components/DashboardLayout';
 import style from './ProfileDashboard.module.css';
@@ -11,7 +12,9 @@ const ProfileDashboard = () => {
             <h3>Profile</h3>
             <h5 className="mt-1">Login Info</h5>
           </div>
-          <button className="main-btn">Edit Profile</button>
+          <Link href="/dashboard/edit-profile"><a>
+            <button className="main-btn">Edit Profile</button>
+          </a></Link>
         </div>
         <div className="row mt-1">
           <div className="col-md-6">
@@ -26,7 +29,9 @@ const ProfileDashboard = () => {
               // })}
               />
             </div>
-            <button className="bg-black text-center justify-content-center  mt-2 mb-4 main-btn w-100"> Change Password</button>
+            <Link href="/dashboard/new-password"><a>
+              <button className="bg-black text-center justify-content-center  mt-2 mb-4 main-btn w-100"> Change Password</button>
+            </a></Link>
           </div>
           <div className="col-md-6">
 
@@ -51,9 +56,12 @@ const ProfileDashboard = () => {
           <div className="col-md-6">
 
             <div className={`${style._smd_login_card} w-100 mt-1`}>
-              <button>
-                <div className="text-center">Change my email  preferences</div>
-              </button>
+              <Link href="/dashboard/email-preferences"><a>
+                <button>
+                  <div className="text-center">Change my email  preferences</div>
+                </button>
+              </a></Link>
+
             </div>
 
           </div>
