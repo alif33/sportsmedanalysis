@@ -39,50 +39,54 @@ const ForgetPassword = () => {
     }
 
     return (
-        <div>
-            <div className={style._smd_login_card}>
-                <h3>Reset Your Password</h3>
-            </div>
+        <AuthLayout>
 
-            <h6 className={`my-2 text-center ${style.forget_password_desc}`} >Enter your email adress below and we&apos;ll send you a link with instructions</h6>
 
-            <div className={style._smd_login_card}>
-                <form
-                    className="w-100"
-                    onSubmit={handleSubmit(onSubmit, onError)}
-                >
-
-                    <div className={style._smd_form_group}>
-                        <label htmlFor="email">Email</label>
-                        <input
-                            id="email"
-                            type="email"
-                            placeholder="Email Address"
-                            {...register("email",)}
-                        />
-                    </div>
-
-                    <button type="submit" className="bg-black text-center justify-content-center  mt-3 mb-4"> Submit</button>
-                </form>
-
-                <div>
-                    <h6 className={`mt-1 mb-2 text-center ${style.forget_password_desc}`}>
-                        Remember your password?
-                        <Link href="/auth/sign-in">
-                            <a>Login</a>
-                        </Link>
-                    </h6>
+            <div>
+                <div className={style._smd_login_card}>
+                    <h3>Reset Your Password</h3>
                 </div>
 
+                <h6 className={`my-2 text-center ${style.forget_password_desc}`} >Enter your email adress below and we&apos;ll send you a link with instructions</h6>
 
-                <Link href="/auth/sign-in">
-                    <a className={`my-1 text-center ${style.forget_password_desc}`}>
-                        Need Help | FAQ
+                <div className={style._smd_login_card}>
+                    <form
+                        className="w-100"
+                        onSubmit={handleSubmit(onSubmit, onError)}
+                    >
 
-                    </a>
-                </Link>
+                        <div className={style._smd_form_group}>
+                            <label htmlFor="email">Email</label>
+                            <input
+                                id="email"
+                                type="email"
+                                placeholder="Email Address"
+                                {...register("email",)}
+                            />
+                        </div>
+
+                        <button type="submit" className="bg-black text-center justify-content-center  mt-3 mb-4"> Submit</button>
+                    </form>
+
+                    <div>
+                        <h6 className={`mt-1 mb-2 text-center ${style.forget_password_desc}`}>
+                            Remember your password?
+                            <Link href="/auth/sign-in">
+                                <a>Login</a>
+                            </Link>
+                        </h6>
+                    </div>
+
+
+                    <Link href="/auth/sign-in">
+                        <a className={`my-1 text-center ${style.forget_password_desc}`}>
+                            Need Help | FAQ
+
+                        </a>
+                    </Link>
+                </div>
             </div>
-        </div>
+        </AuthLayout>
     );
 };
 
