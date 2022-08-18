@@ -89,11 +89,14 @@ const SignIn = () => {
                     >LOGIN</button>
                 </form>
 
-                <Link href="/auth/forget-password">
-                    <a>Forgot your password?</a>
-                </Link>
+                <a>
+                    <Link href="/auth/forget-password">
+                        Forgot your password?
+                    </Link>
+                </a>
+                
                 <a className="mt-1 mb-2">Don’t have an account? <Link href="/auth/sign-up">
-                    <a> Sign up</a>
+                     Sign up
                 </Link></a>
             </div>
 
