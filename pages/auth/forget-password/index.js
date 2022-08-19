@@ -1,14 +1,3 @@
-// import { useState } from 'react';
-// import Link from 'next/link';
-// import style from './Forget.module.css';
-// import { useRouter } from 'next/router';
-// import AuthLayout from '../../../src/components/AuthLayout';
-// import { useForm } from 'react-hook-form';
-// import { showErr } from '../../../__lib__/helpers/ErrHandler';
-// import { postData } from '../../../__lib__/helpers/HttpService';
-// import toast from 'react-hot-toast';
-// import { cryptr } from '../../../__lib__/helpers/Hashing';
-
 import { useState } from 'react';
 import Link from 'next/link';
 import style from './Forget.module.css';
@@ -18,13 +7,9 @@ import { useForm } from 'react-hook-form';
 import { showErr } from '../../../__lib__/helpers/ErrHandler';
 import { postData } from '../../../__lib__/helpers/HttpService';
 import toast from 'react-hot-toast';
-// import { cryptr } from '../../../__lib__/helpers/Hashing';
 import Cookies from 'universal-cookie';
 
-
-
 const ForgetPassword = () => {
-
 
     const [disable, setDisable] = useState(false);
     const { register, reset, handleSubmit, formState: { errors } } = useForm();
