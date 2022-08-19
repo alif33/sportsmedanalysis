@@ -75,7 +75,6 @@ const ForgetPassword = () => {
                         </h6>
                     </div>
 
-
                     <Link href="/auth/sign-in">
                         <a className={`my-1 text-center ${style.forget_password_desc}`}>
                             Need Help | FAQ
