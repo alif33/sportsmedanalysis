@@ -2,7 +2,7 @@
 // import Link from 'next/link';
 // import style from './Forget.module.css';
 // import { useRouter } from 'next/router';
-// import AuthLayout from "../../../src/components/AuthLayout";
+// import AuthLayout from '../../../src/components/AuthLayout';
 // import { useForm } from 'react-hook-form';
 // import { showErr } from '../../../__lib__/helpers/ErrHandler';
 // import { postData } from '../../../__lib__/helpers/HttpService';
