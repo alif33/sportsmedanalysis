@@ -1,8 +1,19 @@
-
 .nfl_comment_num {
-    position: relative;
-    top: 2px;
-    margin-right: 5px;
-    margin-left: 20px;
-  }
-  
+  position: relative;
+  top: 2px;
+  margin-right: 5px;
+  margin-left: 20px;
+}
+
+.newscard3 p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 42px;
+  /* identical to box height, or 233% */
+
+  letter-spacing: -0.04em;
+
+  color: #5c5656;
+}
