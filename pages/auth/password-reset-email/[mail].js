@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import AuthLayout from "../../../src/components/AuthLayout";
-import { cryptr } from '../../../__lib__/helpers/Hashing';
 
 const PasswordResetEmail = () => {
 
@@ -25,7 +24,7 @@ const PasswordResetEmail = () => {
                     <div className="w-100 d-flex justify-content-between align-items-center">
                         <div className="profile-text mt-3">
                             <h3>Password reset email sent</h3>
-                            <p className="mt-2">We have just sent a password reset link to <b>{ cryptr.decrypt(router.query.mail) }</b>. Please double-check that this is the email associated with your account. If you do not receive an email within the next few minutes, this may not be the email address for your account.</p>
+                            <p className="mt-2">We have just sent a password reset link to <b>{ router.query.mail }</b>. Please double-check that this is the email associated with your account. If you do not receive an email within the next few minutes, this may not be the email address for your account.</p>
                         </div>
                     </div>
                 </div>
