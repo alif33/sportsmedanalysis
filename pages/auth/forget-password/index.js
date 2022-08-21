@@ -74,13 +74,11 @@ const ForgetPassword = () => {
                             </Link>
                         </h6>
                     </div>
-
-                    <Link href="/auth/sign-in">
                         <a className={`my-1 text-center ${style.forget_password_desc}`}>
-                            Need Help | FAQ
-
+                            <Link href="/auth/sign-in">
+                                Need Help | FAQ
+                            </Link>
                         </a>
-                    </Link>
                 </div>
             </div>
         </AuthLayout>
