@@ -86,6 +86,7 @@ const ForgetPassword = () => {
                     </Link>
                 </div>
             </div>
+            
         </AuthLayout>
     );
 };
