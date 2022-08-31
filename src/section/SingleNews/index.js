@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import React from 'react';
 import PostComment from '../../components/PostComment';
+import SimilarNews from '../../components/SimiliarNews';
+import SinglePageComment from '../../components/SinglePageComment';
 import style from './SingleNews.module.css';
 
 const SingleNews = () => {
@@ -45,7 +47,10 @@ const SingleNews = () => {
                 </p>
             </div>
             <PostComment />
-
+            <SinglePageComment />
+            <SinglePageComment />
+            <SinglePageComment />
+            <SimilarNews />
         </>
     );
 };

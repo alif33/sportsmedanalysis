@@ -1,4 +1,8 @@
 .postComment {
+  display: grid;
+  grid-template-columns: 7% 90%;
+  margin-top: 64px;
+  margin-bottom: 40px;
 }
 .userImage {
   border-radius: 50%;
@@ -19,11 +23,11 @@
   color: #9a9ab0;
   width: 100%;
   height: 160px;
+  padding: 15px 34px;
 }
 .textareaPart button {
   background: #d70404;
   border-radius: 5px;
-
   font-family: "Poppins";
   font-style: normal;
   font-weight: 500;
@@ -34,4 +38,5 @@
   color: #ffffff;
   padding: 16px 24px;
   border: none;
+  margin-top: 10px;
 }

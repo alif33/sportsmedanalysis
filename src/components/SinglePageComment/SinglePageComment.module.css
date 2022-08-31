@@ -1,0 +1,55 @@
+.singlePageComment {
+  display: grid;
+  grid-template-columns: 7% 90%;
+  margin-bottom: 26px;
+}
+.commentImage span {
+  border-radius: 50%;
+}
+.content h4 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 120%;
+  /* or 19px */
+
+  letter-spacing: 0.005em;
+
+  /* Light/Text Color/Title */
+
+  color: #11142d;
+  margin: 0;
+  margin-top: 10px;
+}
+.content h4 span {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  /* or 19px */
+
+  letter-spacing: 0.005em;
+
+  /* Light/Text Color/Body 2 */
+
+  color: #9a9ab0;
+  margin-left: 10px;
+}
+.content p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 125%;
+  /* or 20px */
+
+  letter-spacing: 0.005em;
+
+  /* Light/Text Color/Body 1 */
+
+  color: #515151;
+  margin: 0;
+  margin-top: 10px;
+}
