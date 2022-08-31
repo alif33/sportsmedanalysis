@@ -7,11 +7,10 @@ import { useForm } from 'react-hook-form';
 import { showErr } from '../../../__lib__/helpers/ErrHandler';
 import { postData } from '../../../__lib__/helpers/HttpService';
 import toast from 'react-hot-toast';
-import { cryptr } from '../../../__lib__/helpers/Hashing';
 import Cookies from 'universal-cookie';
+import jwt from 'jsonwebtoken';
 
 const ForgetPassword = () => {
-
 
     const [disable, setDisable] = useState(false);
     const { register, reset, handleSubmit, formState: { errors } } = useForm();
@@ -19,15 +18,16 @@ const ForgetPassword = () => {
     const cookies = new Cookies();
     const router = useRouter();
 
-    const onSubmit = data => {
+    const onSubmit = async data => {
         setDisable(true);
+        const signMail = await jwt.sign({ email: data.email }, 'cryptr', { expiresIn: '30d', });
 
         postData('/user/forget-password', data, setDisable)
             .then(res => {
 
                 if (res?.success) {
                     router.push({
-                        pathname: `/auth/password-reset-email/${cryptr.encrypt(data.email)}`
+                        pathname: `/auth/password-reset-email/${ signMail }`
                     })
                 }
 
@@ -76,14 +76,11 @@ const ForgetPassword = () => {
                             </Link>
                         </h6>
                     </div>
-
-
-                    <Link href="/auth/sign-in">
                         <a className={`my-1 text-center ${style.forget_password_desc}`}>
-                            Need Help | FAQ
-
+                            <Link href="/auth/sign-in">
+                                Need Help | FAQ
+                            </Link>
                         </a>
-                    </Link>
                 </div>
             </div>
             
