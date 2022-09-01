@@ -3,12 +3,14 @@ import Featured from '../Featured';
 import RecentStories from '../RecentStories';
 import style from './Fannation.module.css';
 
-const Fannation = () => {
+const Fannation = ({ recentStories }) => {
     return (
         <div className="container-fluid py-3">
             <div className="row m-0 g-2">
                 <div className="col-lg-5 col-md-6">
-                    <RecentStories />
+                    <RecentStories 
+                        posts={ recentStories }
+                    />
                 </div>
 
                 <div className="col-lg-3 col-md-3">

@@ -7,7 +7,7 @@ const handler = nc();
 handler.get(async (req, res) => {
     await db.connect();
     const posts = await Post.find({ 
-        playersName: { $in: [ "Mitu" ] } 
+        playersName: { $in: [ "" ] } 
     }, 
         { _id: 0 }
     );

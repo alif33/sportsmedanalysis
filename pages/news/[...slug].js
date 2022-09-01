@@ -12,7 +12,7 @@ const Single = ({ post }) => {
                 <LiveBtn name="live" />
             </div>
             <div className="container">
-                <SingleNews />
+                <SingleNews post={ post } />
             </div>
         </Layout>
     );

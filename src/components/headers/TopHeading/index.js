@@ -26,9 +26,9 @@ const TopHeading = () => {
             </div>
             <div className={`${style._smd_top_heading_section} ${style._smd_top_middle}`}>
                 <ul className='text-center text-lg-start my-1 my-md-0'>
-                    <li><Link href="/">
+                    {/* <li><Link href="/">
                         <a>chonasportsmed@gmail.com</a>
-                    </Link></li>
+                    </Link></li> */}
                 </ul>
             </div>
             <div className={`${style._smd_top_heading_section} ${style._smd_top_reg} text-end`} >

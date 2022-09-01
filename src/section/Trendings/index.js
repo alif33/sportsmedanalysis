@@ -4,13 +4,21 @@ import NewsCard7 from '../../components/sectionCard/NewsCard7';
 import NewsCard9 from '../../components/sectionCard/NewsCard9';
 import style from './Trendings.module.css';
 
-const Trendings = () => {
+const Trendings = ({ trendings }) => {
     return (
         <div className="nfl_con">
             <h4 className={`${style.nfl_card_title2} mt-3`}>Trendings</h4>
             <div className={`${style.nfl_sec5_grid} mt-3`}>
+                {
+                    trendings && <NewsCard 
+                        _id={ trendings[0]._id }
+                        slug={ trendings[0].slug }
+                        title={ trendings[0].title }
+                        img={ trendings[0].image }
+                        description="  Follow here for signings, trades, rumors and analysis from The Athletic's staff as the" 
+                    />
 
-                <NewsCard img="/images/landing_Page/nfl_S5.png" title="  NBA free agency 2022 live tracker: News, rumors, trades, signings, as the offseason rolls on" description="  Follow here for signings, trades, rumors and analysis from The Athletic's staff as the" />
+                }
 
                 <div>
                     {[1, 1, 1, 1].map((item, i) => <NewsCard9 key={i} title="Hollinger: The 5 Kevin Durant trades that make" description="Scott Wheeler" comment="377" />)}

@@ -19,9 +19,9 @@ import Article from "../src/section/Article";
 import BorderLine from "../src/components/BorderLine";
 
 
-const LandingPage = ({ posts, players }) => {
+const LandingPage = ({ posts, topPosts, players, topPicks, bettings }) => {
 
-    console.log(posts);
+    // console.log(posts);
     return (
 
         <div className="_LandingPage">
@@ -35,7 +35,9 @@ const LandingPage = ({ posts, players }) => {
                     <BorderLine />
                 </div>
 
-                <TopStory />
+                <TopStory 
+                    topPosts={ topPosts }
+                />
 
                 <div className="container-fluid">
                     <BorderLine />
@@ -48,17 +50,24 @@ const LandingPage = ({ posts, players }) => {
                 </div>
 
                 {/* Top Picks */}
-                <TopPicks />
+                <TopPicks
+                    topPicks={ topPicks }
+                />
                 {/* Top Picks */}
 
                 {/* Betting & Fantasy */}
 
-                <BettingFantasy title="Betting & Fantasy" />
+                <BettingFantasy
+                    title="Betting & Fantasy" 
+                    bettings={ bettings }
+                />
 
                 {/* Betting & Fantasy */}
 
                 {/* recent,feature,fannation */}
-                <Fannation />
+                <Fannation 
+                    recentStories={ posts.slice(5, 10) }
+                />
                 {/* recent,feature,fannation */}
 
             </Layout>
@@ -76,17 +85,39 @@ export async function getServerSideProps() {
         .lean()
         .limit(50);
 
+    const topPosts = await Post.find()
+        .sort({"views": -1})
+        .lean()
+        .limit(50);
+
     const players = await Player.find()
         .lean()
         .limit(50);
-    await db.disconnect();
-    // console.log(posts);
+        
+    const topPicks = await Post.find({ 
+            tags: { $in: [ "top_picks" ] } 
+        })
+        .lean()
+        .limit(50);
 
+    const bettings = await Post.find({ 
+            tags: { $in: [ "betting" ] } 
+        })
+        .lean()
+        .limit(50);
+
+    await db.disconnect();
+
+
+    console.log(topPosts);
     return {
         props: {
             // adress: ['ismail', 'alif', 'hosen'],
             posts: posts.map(db.convertDocToObj),
+            topPosts: topPosts.map(db.convertDocToObj),
             players: players.map(db.convertDocToObj),
+            topPicks: topPicks.map(db.convertDocToObj),
+            bettings: bettings.map(db.convertDocToObj),
             // mlbs,
         },
     };
