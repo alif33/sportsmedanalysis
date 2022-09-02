@@ -1,5 +1,5 @@
-import db from '../../../../../utils/db';
-import Post from '../../../../../models/Post';
+import db from '../../../../utils/db';
+import Post from '../../../../models/Post';
 
 handler.get(async (req, res) => {
   const { _id } = req.query;
