@@ -111,3 +111,17 @@ a {
 .featuredPodcasts .slick-next:before {
   color: #111 !important;
 }
+.slick-prev,
+.slick-next {
+  width: 50px !important;
+  height: 50px !important;
+  top: 42%;
+  z-index: 1;
+}
+.slick-prev:before,
+.slick-next:before {
+  width: 50px !important;
+  height: 50px !important;
+  font-size: 38px;
+  opacity: 1 !important;
+}
