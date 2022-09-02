@@ -1,0 +1,15 @@
+.title {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 32px;
+  letter-spacing: -0.04em;
+  color: #000000;
+}
+.moreStoris {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  column-gap: 22px;
+  margin-top: 22px;
+}

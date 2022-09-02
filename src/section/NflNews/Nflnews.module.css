@@ -1,0 +1,66 @@
+.nflNews {
+  width: 100%;
+  margin: auto;
+}
+.mainNewsCard {
+}
+.mainNewsCard h3 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 32px;
+  /* identical to box height, or 89% */
+
+  letter-spacing: -0.04em;
+
+  /* main */
+
+  color: #000000;
+}
+.nflNewsCard {
+  position: relative;
+}
+.nflNewsCard span {
+  width: 100% !important;
+}
+.nflNewsCardContent {
+  position: absolute;
+  position: absolute;
+  bottom: 12px;
+  left: 44px;
+  right: 74px;
+}
+.nflNewsCardContent p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 42px;
+  letter-spacing: -0.04em;
+  color: #ffffff;
+}
+.nflNewsCardContent h4 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 42px;
+  /* or 140% */
+
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+
+  color: #ffffff;
+}
+.latestNews {
+}
+.latestNews h5 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 32px;
+  letter-spacing: -0.04em;
+  color: #000000;
+}

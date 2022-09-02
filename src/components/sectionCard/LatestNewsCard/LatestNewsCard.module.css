@@ -1,0 +1,37 @@
+.latestNewsCard {
+  display: grid;
+  grid-template-columns: 30% 64%;
+  column-gap: 6%;
+  margin-bottom: 22px;
+  margin-top: 15px;
+}
+.latestNewsCard span {
+  width: 100% !important;
+}
+
+.latestNewsContent {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.54);
+}
+.latestNewsContent h3 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+  color: #121212;
+}
+.latestNewsContent p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 15px;
+  /* identical to box height, or 107% */
+
+  letter-spacing: 0.18px;
+
+  color: #5c5656;
+}
+.latestNewsContent p span {
+  color: #000000;
+}

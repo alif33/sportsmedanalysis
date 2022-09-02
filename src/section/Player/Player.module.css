@@ -1,0 +1,70 @@
+.player {
+  width: 60%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+.playerImage {
+}
+.playerContent {
+  padding-top: 54px;
+}
+.playerContent h2 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 53px;
+  /* or 110% */
+
+  letter-spacing: -0.04em;
+
+  color: #000000;
+}
+.playerContent h6 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 53px;
+  /* identical to box height, or 221% */
+
+  letter-spacing: -0.04em;
+
+  color: #d70404;
+  display: flex;
+  align-items: center;
+}
+.playerContent p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 27px;
+  /* or 193% */
+
+  letter-spacing: -0.04em;
+
+  color: #000000;
+}
+.playerContent button {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 53px;
+  /* or 331% */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: -0.04em;
+
+  color: #ffffff;
+  background: #d70404;
+  border: none;
+  width: 126px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

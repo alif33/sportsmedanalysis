@@ -12,7 +12,6 @@ body {
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
-  width: 100vw;
   min-height: 100vh;
   background: #fff !important;
 }
@@ -103,3 +102,12 @@ a {
   margin: 15px 0;
 }
 
+.top-players-slider .slick-prev:before,
+.top-players-slider .slick-next:before {
+  color: #111 !important;
+}
+
+.featuredPodcasts .slick-prev:before,
+.featuredPodcasts .slick-next:before {
+  color: #111 !important;
+}
