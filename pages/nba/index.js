@@ -11,15 +11,20 @@ import PlayerSection from '../../src/section/PlayerSection';
 import TopPicks from '../../src/section/TopPicks';
 import NflTeam from '../../src/section/NflTeam';
 
-const NBA = ({ posts, players }) => {
+const NBA = ({ posts, players, topPicks, bettings }) => {
 
     return (
         <div>
             <Layout navheader={ true }>
               <NbaHero />
               <NbaNews title="NBA News" />
-              <TopPicks />
-              <BettingFantasy title="Trendings" />
+              <TopPicks 
+                topPicks={ topPicks }
+              />
+              <BettingFantasy 
+                title="Trendings"
+                bettings={ bettings }
+              />
               <PlayerSection />
               <MoreNews posts={ posts } />
               <NflTeam />
@@ -37,15 +42,29 @@ export async function getServerSideProps() {
         .lean()
         .limit(50);
 
+    const topPicks = await Post.find({ 
+          tags: { $in: [ "top_picks" ] } 
+      })
+      .lean()
+      .limit(50);
+
     const players = await Player.find()
         .lean()
         .limit(50);
+
+    const bettings = await Post.find({ 
+          tags: { $in: [ "betting" ] } 
+      })
+      .lean()
+      .limit(50);
 
     await db.disconnect();
   
     return {
       props: {
         posts: posts.map(db.convertDocToObj),
+        topPicks: topPicks.map(db.convertDocToObj),
+        bettings: bettings.map(db.convertDocToObj),
         players: players.map(db.convertDocToObj)
       },
     };

@@ -2,13 +2,13 @@ import Image from 'next/image';
 import React from 'react';
 import style from './NewsCard4.module.css';
 
-const NewsCard4 = ({ img, title, name, comment, description }) => {
+const NewsCard4 = ({ _id, slug, title, name, img, comment, description }) => {
     return (
-        <a href="#!">
+        <a href={`/news/${ slug }/${ _id }`}>
             <div className={style.newsCard4}>
                 <div className="w-100">
 
-                    <Image height="209" width="440" src={img} alt="" />
+                    <Image height="209" width="440" src={img} alt={ title } />
 
                 </div>
 

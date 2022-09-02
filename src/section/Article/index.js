@@ -6,8 +6,9 @@ const Article = ({posts}) => {
         <div className="bg-black container-fluid py-1">
         <div className="d-flex _smd_headers_article flex-column flex-md-row gap-2 gap-md-0">
             {
-                posts.slice(0, 4).map((item, index) => <ArticleCard key={index}
-                    post={item}
+                posts.slice(0, 4).map((item, index) => <ArticleCard 
+                    index={ index }
+                    post={ item }
                 />)
             }
         </div>

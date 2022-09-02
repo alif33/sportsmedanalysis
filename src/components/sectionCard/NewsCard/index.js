@@ -2,9 +2,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 import style from './NewsCard.module.css';
 
-const NewsCard = ({ img, title, description }) => {
+const NewsCard = ({ _id, slug, title, img, description }) => {
     return (
-        <Link href="/">
+        <Link href={`news/${slug}/${_id}`}>
             <a className={style.news_card}>
                 <Image height="340" width="380" src={img} alt="" />
                 <h3>{title}</h3>
