@@ -4,17 +4,34 @@ import NewsCard7 from '../../components/sectionCard/NewsCard7';
 import PlayerTab from '../PlayerSection/PlayerTab';
 import style from './NewsTap.module.css';
 
-const NewsTab = () => {
+const NewsTab = ({ posts }) => {
 
     return (
-        <div className={style.nfl_con}>
-            <div className={style.nfl_sec_two}>
-                <div>
-                    <NewsCard4 img="/images/landing_Page/nfl_s2_img.png" title="Russell Wilson, Broncos need efficient run game to excel. Will they have one?" description="Follow here for signings, trades, rumors and analysis from The Athletic's staff as the" name="John Holinger" comment="541" />
-                </div>
+        <div className={ style.nfl_con }>
+            <div className={ style.nfl_sec_two }>
+                {
+                    posts &&  <div>
+                        <NewsCard4
+                            _id={ posts[0]._id } 
+                            slug={ posts[0].slug }
+                            title={ posts[0].title } 
+                            img={ posts[0].image }  
+                            description="Follow here for signings, trades, rumors and analysis from The Athletic's staff as the" 
+                            name="John Holinger" 
+                            comment={ posts[0]?.comments? posts[0]?.comments.length: "0" } 
+                        />
+                    </div>
+                }
+
                 <div>
                     {
-                    [1, 1, 1].map((item, i) => <NewsCard7 key={i} title="'Luck,' episode 3: The Colts' top pick bursts onto the scene and exceeds the hype" description="The Athletic NFL Staff" img="/images/landing_Page/cardImg1.png" />)
+                      posts && posts.slice(1, 4).map(( item ) => <NewsCard7 
+                            _id={ item._id }
+                            slug={ item.slug }
+                            title={ item.title }
+                            description="The Athletic NFL Staff" 
+                            img={ item.image }
+                        />)
                     }
                 </div>
 

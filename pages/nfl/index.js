@@ -18,13 +18,18 @@ function NFL({ posts, trendings }) {
       <Layout navheader={true}>
         <NFLSlider />
 
-        <NewsTab />
+        <NewsTab 
+          posts={ posts }
+        />
 
         <div className="nfl_con">
           <BorderLine />
         </div>
 
-        <PageNewsSection title="NFL News" />
+        <PageNewsSection 
+          title="NFL News" 
+          posts={ posts }
+        />
 
         <ArticleSection 
             posts={ posts }
