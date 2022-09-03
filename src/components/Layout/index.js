@@ -5,6 +5,8 @@ import Navbar from '../headers/Navbar';
 import NavHeader from '../headers/NavHeader';
 import SMDFooter from '../SMDFooter';
 import MobileFooter from '../../section/MobileFooter';
+import style from './Layout.module.css'
+import MobileNavbar from '../../section/MobileNavbar';
 
 const Layout = ({ children, navheader }) => {
     return (
@@ -13,8 +15,11 @@ const Layout = ({ children, navheader }) => {
                 position="top-center"
                 reverseOrder={false}
             />
-            <TopHeading />
+           <div className={style.navbar}>
+           <TopHeading />
             <Navbar />
+           </div>
+           <MobileNavbar/>
             {
                 navheader && <NavHeader />
             }

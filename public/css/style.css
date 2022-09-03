@@ -125,3 +125,16 @@ a {
   font-size: 38px;
   opacity: 1 !important;
 }
+.slick-prev {
+  left: 0px !important; 
+}
+.slick-next {
+  right: 0px !important; 
+}
+@media (max-width: 420px) {
+  .slick-prev,
+  .slick-next {
+    width: 24px !important;
+    height: 24px !important;
+  }
+}
