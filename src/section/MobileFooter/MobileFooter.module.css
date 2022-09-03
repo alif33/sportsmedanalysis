@@ -1,0 +1,66 @@
+@media (min-width: 421px) {
+  ._smd_mobile_footer {
+    display: none;
+  }
+}
+.tilte {
+  font-family: "Bebas Neue";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 86px;
+  /* or 538% */
+
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+
+  color: #ffffff;
+}
+.description {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 15px;
+
+  color: #cacaca;
+}
+
+._smd_footer_follow_menu {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}
+._smd_footer_follow_menu li {
+  display: inline-block;
+}
+._smd_footer_follow_menu li a {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 17px;
+  color: #ffffff !important;
+}
+
+._smd_footer_menu {
+  list-style: none;
+}
+._smd_footer_menu li {
+  margin-bottom: 28px !important;
+}
+._smd_footer_menu li a {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 17px;
+  /* identical to box height, or 142% */
+
+  color: #cacaca;
+}
+.newsLatterInput{}
+.newsLatterInput h3{}

@@ -21,7 +21,7 @@ const SwiperSlideCard = () => {
                     <p className='_tex_num_two'>5</p>
                 </div>
                 <div className={style._smd_inner_table}>
-                    <p className='_smd_date'>8th, 0 Outs</p>
+                    <small className={style._smd_date}>8th, 0 Outs</small>
                 </div>
             </div>
             <div className={style._smd_nfl_scroe_card_child2}>

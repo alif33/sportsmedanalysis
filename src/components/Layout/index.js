@@ -4,6 +4,7 @@ import TopHeading from '../headers/TopHeading';
 import Navbar from '../headers/Navbar';
 import NavHeader from '../headers/NavHeader';
 import SMDFooter from '../SMDFooter';
+import MobileFooter from '../../section/MobileFooter';
 
 const Layout = ({ children, navheader }) => {
     return (
@@ -19,6 +20,7 @@ const Layout = ({ children, navheader }) => {
             }
             <main>{children}</main>
             <SMDFooter />
+            <MobileFooter/>
         </>
     );
 };

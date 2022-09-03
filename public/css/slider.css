@@ -77,3 +77,21 @@
   padding: 0 24px !important;
   box-sizing: border-box !important;
 }
+
+@media (max-width: 420px) {
+  .smd-scoreSlider-n .swiper-button-prev,
+  .smd-scoreSlider-n .swiper-button-next {
+    background: #d9d9d9;
+    width: 20px !important;
+  }
+
+  .vertical_slider .swiper-button-prev::after,
+  .vertical_slider .swiper-button-next::after {
+    font-size: 16px !important;
+  }
+  .swiper-backface-hidden .swiper-slide {
+    padding: 0 0px !important;
+    box-sizing: border-box !important;
+    padding-left: 23px !important;
+  }
+}

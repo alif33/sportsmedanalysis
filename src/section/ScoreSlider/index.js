@@ -21,8 +21,9 @@ const ScoreSlider = () => {
             </div>
 
 
-            <div className={`${swiperStyle.scoreSlider} d-flex w-100 align-items-center flex-column flex-md-row gap-2 gap-md-0`}>
-                <div>
+            <div className={`${swiperStyle.scoreSlider} d-flex w-100 align-items-center  flex-row gap-md-2   gap-0 gap-md-0`}>
+
+                <div className={swiperStyle._smd_scoreSlider_dropdown}>
                     {/* <select name="" id="" className="_smd_scoreSlider_dropdown_btn">
                         <option value="">NFL SCORE <img src="/images/icon/arrow-down-black.png" alt="" /></option>
                     </select> */}
@@ -38,9 +39,12 @@ const ScoreSlider = () => {
                 <Swiper
                     navigation={true}
                     slidesPerView="auto"
-                    spaceBetween={20}
                     modules={[Navigation]}
                     breakpoints={{
+                        0: {
+                            slidesPerView: 2,
+                            spaceBetween: 0,
+                        },
                         640: {
                             slidesPerView: 2,
                             spaceBetween: 20,
