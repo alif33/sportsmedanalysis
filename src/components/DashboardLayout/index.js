@@ -6,7 +6,7 @@ import NavHeader from '../headers/NavHeader';
 import SMDFooter from '../SMDFooter';
 import DashboardSidebar from '../DashboardSidebar';
 
-const DashboardLayout = ({ children, navheader }) => {
+const DashboardLayout = ({ children, navheader, stutas }) => {
     return (
         <>
             <Toaster
@@ -21,7 +21,7 @@ const DashboardLayout = ({ children, navheader }) => {
             <div className="dashboard-section">
                 <div className="row">
                     <div className="col-md-3">
-                        <DashboardSidebar />
+                        <DashboardSidebar stutas={stutas} />
                     </div>
                     <div className="col-md-9 ps-0 pe-2">
                         <main className="dashboard-main">{children}</main>
