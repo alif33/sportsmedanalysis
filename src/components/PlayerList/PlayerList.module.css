@@ -1,0 +1,36 @@
+.playerListTitle {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.04em;
+
+  color: #d70404;
+}
+
+.playerList {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+.playerList div {
+  display: flex;
+  align-items: center;
+  margin-top: 12px
+}
+.playerList div span {
+  border-radius: 50%;
+}
+.playerList div h4 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 53px;
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.04em;
+  color: #000000;
+  margin-left: 12px;
+}

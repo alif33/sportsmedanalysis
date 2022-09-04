@@ -1,0 +1,20 @@
+.topPlayersSliderCard {
+    padding: 0 7px;
+}
+.topPlayersSliderCard span {
+  width: 100% !important;
+}
+.topPlayersSliderCard h3 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 25px;
+  letter-spacing: -0.04em;
+  color: #000000;
+  text-align: center;
+}
+h3.active {
+  background: #d70404;
+  color: #fff;
+}

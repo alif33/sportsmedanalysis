@@ -2,16 +2,21 @@
 _smd article
 ===========================*/
 ._smd_article_card {
-  width: 25%;
   position: relative;
   height: 150px;
   margin: 0 10px;
   border-radius: 4px !important;
+  width: 100% !important;
 }
-._smd_article_card span {
+._smd_article_card_img {
   position: absolute;
   top: 0;
   left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 4px !important;
+}
+._smd_article_card_img span {
   width: 100% !important;
   height: 100% !important;
   border-radius: 4px !important;

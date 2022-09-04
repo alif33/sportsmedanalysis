@@ -1,12 +1,9 @@
-
-
 .scoreSlider {
   max-width: 86vw !important;
   background: #f5f5f5;
   padding-left: 10px;
- 
 }
-.sliderPart{
+.sliderPart {
   /* max-width: 76vw !important; */
   background: #f5f5f5;
   padding: 10px 0px !important;
@@ -51,10 +48,28 @@
   grid-template-columns: 2fr 1fr;
 }
 
+._smd_date {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 9px;
+  line-height: 10px;
+  /* identical to box height, or 111% */
+
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  color: #757678;
+}
 ._smd_nfl_scroe_card_child2 {
   display: flex;
   justify-content: flex-end;
   align-items: flex-start;
+}
+
+._smd_inner_table span {
+  width: 7.86px !important;
+  height: 8.93px !important;
 }
 
 ._smd_inner_table p {
@@ -116,6 +131,92 @@
     display: grid;
     grid-template-columns: 1fr 70px;
     padding: 0px 22px;
+  }
+}
+@media (max-width: 420px) {
+  ._smd_scoreSlider_dropdown_btn {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 8px;
+    line-height: 17px;
+    /* or 212% */
+
+    display: flex;
+    align-items: center;
+
+    color: #000000;
+  }
+
+  ._smd_scoreSlider_date_n h3 {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 15px;
+    /* or 150% */
+
+    letter-spacing: -0.04em;
+
+    color: #131313;
+  }
+  ._smd_scoreSlider_date_n p {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 15px;
+    /* or 150% */
+
+    letter-spacing: -0.04em;
+
+    color: #131313;
+  }
+  ._smd_scoreSlider_n {
+    grid-template-columns: 18% 80%;
+    align-items: center;
+    column-gap: 2%;
+  }
+
+  ._smd_inner_table span {
+    width: 7.86px !important;
+    height: 8.93px !important;
+  }
+
+  ._smd_inner_table p {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 12px;
+    /* or 150% */
+
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+
+    color: #202121;
+  }
+  ._smd_date {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 4px;
+    line-height: 10px;
+    /* or 200% */
+
+    display: flex;
+    align-items: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    color: #757678;
+  }
+  ._smd_nfl_scroe_card {
+    display: grid;
+    grid-template-columns: 70% 25%;
+    padding: 0px 0;
   }
 }
 /*end slider card */

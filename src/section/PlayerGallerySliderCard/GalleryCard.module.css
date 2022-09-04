@@ -1,0 +1,45 @@
+.galleryCard {
+  padding: 0 7px;
+}
+.galleryCard span {
+  width: 100% !important;
+}
+.galleryCard small {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  /* identical to box height, or 125% */
+
+  letter-spacing: 0.18px;
+  text-transform: uppercase;
+
+  color: #ffffff;
+}
+.galleryCard h6 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  /* or 125% */
+
+  letter-spacing: 0.18px;
+  text-transform: uppercase;
+
+  color: #ffffff;
+}
+.galleryCard p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  /* or 125% */
+
+  letter-spacing: 0.18px;
+  text-transform: uppercase;
+
+  color: #ffffff;
+}

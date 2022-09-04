@@ -1,0 +1,14 @@
+.topPlayersTilte {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.topPlayersTilte h4 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 32px;
+  letter-spacing: -0.04em;
+  color: #000000;
+}

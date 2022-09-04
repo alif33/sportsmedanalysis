@@ -34,13 +34,15 @@ const LandingPage = ({ posts, topPosts, players, topPicks, bettings }) => {
                 <Article posts={posts} />
 
 
+
+
                 <ScoreSlider />
                 <div className="container-fluid">
                     <BorderLine />
                 </div>
 
-                <TopStory 
-                    topPosts={ topPosts }
+                <TopStory
+                    topPosts={topPosts}
                 />
 
                 <div className="container-fluid">
@@ -53,26 +55,16 @@ const LandingPage = ({ posts, topPosts, players, topPicks, bettings }) => {
                     <BorderLine />
                 </div>
 
-                {/* Top Picks */}
                 <TopPicks
-                    topPicks={ topPicks }
+                    topPicks={topPicks}
                 />
-                {/* Top Picks */}
-
-                {/* Betting & Fantasy */}
-
                 <BettingFantasy
-                    title="Betting & Fantasy" 
-                    bettings={ bettings }
+                    title="Betting & Fantasy"
+                    bettings={bettings}
                 />
-
-                {/* Betting & Fantasy */}
-
-                {/* recent,feature,fannation */}
-                <Fannation 
-                    recentStories={ posts.slice(5, 10) }
+                <Fannation
+                    recentStories={posts.slice(5, 10)}
                 />
-                {/* recent,feature,fannation */}
 
             </Layout>
         </div>
@@ -90,23 +82,23 @@ export async function getServerSideProps() {
         .limit(50);
 
     const topPosts = await Post.find()
-        .sort({"views": -1})
+        .sort({ "views": -1 })
         .lean()
         .limit(50);
 
     const players = await Player.find()
         .lean()
         .limit(50);
-        
-    const topPicks = await Post.find({ 
-            tags: { $in: [ "top_picks" ] } 
-        })
+
+    const topPicks = await Post.find({
+        tags: { $in: ["top_picks"] }
+    })
         .lean()
         .limit(50);
 
-    const bettings = await Post.find({ 
-            tags: { $in: [ "betting" ] } 
-        })
+    const bettings = await Post.find({
+        tags: { $in: ["betting"] }
+    })
         .lean()
         .limit(50);
 

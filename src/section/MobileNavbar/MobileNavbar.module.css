@@ -1,0 +1,104 @@
+/*==========================
+_smd_navbar
+===========================*/
+
+._smd_navbar_border {
+  border-top: 1px solid #494949;
+  border-bottom: 1px solid #494949;
+}
+._smd_navbar {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+._smd_nav_item a {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 15px;
+  color: #f5f5f5 !important;
+  height: 43px;
+  padding: 0 8px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px 5px 0px 0px;
+  position: relative;
+}
+._smd_nav_item a:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 6px;
+  background: #fff;
+  border-radius: 5px;
+  transition: all 0.4s ease-in-out;
+}
+._smd_nav_item.active a:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: #fff;
+  border-radius: 5px;
+}
+
+._smd_nav_item.active a {
+  background: #ffffff2b;
+}
+
+/*==========================
+  end _smd_navbar
+  ===========================*/
+
+/*==========================
+_smd_navbar
+===========================*/
+.navMenu {
+    width: 80%;
+  align-items: center;
+}
+.signBtn i{
+    margin-right: 4px;
+}
+.signBtn {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 120%;
+  text-align: center;
+  letter-spacing: 0.005em;
+  color: #ffffff !important;
+  text-transform: uppercase;
+}
+
+.navMenu ul {
+  flex-direction: row;
+}
+.formInline {
+}
+.formInline button {
+  margin: 1px 0;
+  border: none;
+  padding: 0;
+  background: transparent;
+  width: 15px;
+  height: 15px;
+}
+.formInline button svg {
+  margin: 0;
+  border: none;
+  padding: 0;
+  background: transparent;
+  width: 15px;
+  height: 15px;
+}
+
+/*==========================
+end _smd_navbar
+===========================*/

@@ -1,0 +1,58 @@
+.ballcontrol {
+  width: 38%;
+  margin: auto;
+  margin-top: 55px;
+}
+.ballcontrol div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ballcontrol div h2 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 53px;
+  letter-spacing: -0.04em;
+  color: #d70404;
+  margin: 0 30px;
+}
+.ballcontrol div button {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 53px;
+  /* or 331% */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: -0.04em;
+
+  color: #ffffff;
+  background: #d70404;
+  border: none;
+  padding: 0 30px;
+}
+
+.ballcontrol p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 27px;
+  /* or 193% */
+
+  text-align: center;
+  letter-spacing: -0.04em;
+
+  color: #000000;
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+
+.teamImage span {
+  width: 100% !important;
+}
