@@ -1,6 +1,11 @@
 /*==========================
 _smd_navbar
 ===========================*/
+@media (min-width: 768px) {
+  ._smd_navbar_border {
+    display: none !important;
+  }
+}
 
 ._smd_navbar_border {
   border-top: 1px solid #494949;
@@ -59,11 +64,11 @@ _smd_navbar
 _smd_navbar
 ===========================*/
 .navMenu {
-    width: 80%;
+  width: 80%;
   align-items: center;
 }
-.signBtn i{
-    margin-right: 4px;
+.signBtn i {
+  margin-right: 4px;
 }
 .signBtn {
   font-family: "Poppins";

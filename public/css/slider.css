@@ -78,7 +78,7 @@
   box-sizing: border-box !important;
 }
 
-@media (max-width: 420px) {
+@media (max-width: 768px) {
   .smd-scoreSlider-n .swiper-button-prev,
   .smd-scoreSlider-n .swiper-button-next {
     background: #d9d9d9;

@@ -81,7 +81,7 @@ _smd_footer
   text-decoration: none;
 }
 
-@media (max-width: 420px) {
+@media (max-width: 768px) {
   ._smd_footer {
     display: none;
   }

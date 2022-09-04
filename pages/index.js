@@ -29,9 +29,6 @@ const LandingPage = ({ posts, topPosts, players, topPicks, bettings }) => {
 
                 <Article posts={posts} />
 
-
-
-
                 <ScoreSlider />
                 <div className="container-fluid">
                     <BorderLine />

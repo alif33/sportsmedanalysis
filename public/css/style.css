@@ -113,25 +113,23 @@ a {
 }
 .slick-prev,
 .slick-next {
-  width: 50px !important;
-  height: 50px !important;
   top: 42%;
   z-index: 1;
 }
 .slick-prev:before,
 .slick-next:before {
-  width: 50px !important;
-  height: 50px !important;
-  font-size: 38px;
+  font-size: 44px !important;
   opacity: 1 !important;
+  border-radius: 50%;
+  color: rgb(71, 71, 71) !important;
 }
 .slick-prev {
-  left: 0px !important; 
+  left: 0px !important;
 }
 .slick-next {
-  right: 0px !important; 
+  right: 9px !important;
 }
-@media (max-width: 420px) {
+@media (max-width: 768px) {
   .slick-prev,
   .slick-next {
     width: 24px !important;
