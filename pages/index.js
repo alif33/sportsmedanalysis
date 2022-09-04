@@ -17,9 +17,13 @@ import Fannation from "../src/section/Fannation";
 import Layout from "../src/components/Layout";
 import Article from "../src/section/Article";
 import BorderLine from "../src/components/BorderLine";
+import { useSelector } from "react-redux";
 
 
 const LandingPage = ({ posts, topPosts, players, topPicks, bettings }) => {
+
+    const { user } = useSelector(state=>state);
+    console.log(user);
 
     // console.log(posts);
     return (
