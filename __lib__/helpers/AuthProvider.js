@@ -1,11 +1,11 @@
 const cookie = require('cookie');
 
-export function userAuth(gssp) {
+export function __Auth(gssp) {
     return async (context) => {
         const { req, res } = context
         if (req.headers.cookie) {
             const cookies = cookie.parse(req.headers.cookie)
-            if (!cookies.__u__) {
+            if (!cookies.__t__) {
                 return {
                     redirect: {
                         destination: '/auth/sign-in',

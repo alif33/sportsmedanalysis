@@ -1,12 +1,17 @@
-// import '../styles/bootstrap.min.css';
-// import '../styles/accordion.css';
-// import '../styles/slider.css';
-// import '../styles/style.css';
-
 import '../styles/globals.css';
+import { createWrapper } from 'next-redux-wrapper';
+import { Provider } from 'react-redux';
+import { PersistGate } from 'redux-persist/integration/react';
+import { persistor, store } from '../store';
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return (
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
+        <Component {...pageProps} />
+      </PersistGate>
+    </Provider>
+  )
 }
 
-export default MyApp
+export default createWrapper(()=>store).withRedux(MyApp);

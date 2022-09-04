@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import React from 'react';
 import DashboardLayout from '../../src/components/DashboardLayout';
-import { userAuth } from '../../__lib__/helpers/requireAuthentication';
+import { __Auth } from '../../__lib__/helpers/AuthProvider';
 import style from './ProfileDashboard.module.css';
 
 const ProfileDashboard = () => {
@@ -75,7 +75,7 @@ const ProfileDashboard = () => {
 export default ProfileDashboard;
 
 
-export const getServerSideProps = userAuth((context) => {
+export const getServerSideProps = __Auth((context) => {
   return {
     props: {},
   };

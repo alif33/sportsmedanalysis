@@ -3,29 +3,33 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useForm } from 'react-hook-form';
-import Cookies from 'universal-cookie';
+// import Cookies from 'universal-cookie';
 import AuthLayout from '../../../src/components/AuthLayout';
 import { showErr } from '../../../__lib__/helpers/ErrHandler';
 import { postData } from '../../../__lib__/helpers/HttpService';
 import style from './SignIn.module.css';
+import { useDispatch } from 'react-redux';
+import { logedIn } from '../../../store/user/actions';
 
 const SignIn = () => {
 
     const [disable, setDisable] = useState(false);
     const { register, reset, handleSubmit, formState: { errors } } = useForm();
     const onError = err => showErr(err);
-    const cookies = new Cookies();
+    // const cookies = new Cookies();
     const router = useRouter();
+    const dispatch = useDispatch();
 
     const onSubmit = data => {
         setDisable(true)
         postData('/user/login', data, setDisable)
             .then(res => {
                 if (res?.success) {
-                    cookies.set("__u__", JSON.stringify({
-                        token: res.token,
-                        user: res.user
-                    }), { path: '/' });
+                    const { token, info } = res;
+                    dispatch(logedIn({
+                        token,
+                        info
+                    }))
                     reset();
                     router.push({
                         pathname: '/dashboard'
