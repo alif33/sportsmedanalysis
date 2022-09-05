@@ -35,7 +35,7 @@ const LandingPage = ({ posts, topPosts, players, topPicks, bettings }) => {
                 </div>
 
                 <TopStory
-                    topPosts={topPosts}
+                    topPosts={ JSON.parse(topPosts) }
                 />
 
                 <div className="container-fluid">
@@ -106,10 +106,10 @@ export async function getServerSideProps() {
     return {
         props: {
             posts: JSON.stringify(posts),
-            topPosts: topPosts.map(db.convertDocToObj),
+            topPosts: JSON.stringify(topPosts),
             players: players.map(db.convertDocToObj),
-            topPicks: topPicks.map(db.convertDocToObj),
-            bettings: bettings.map(db.convertDocToObj),
+            topPicks: JSON.stringify(topPicks),
+            bettings: JSON.stringify(bettings),
         },
     };
 }
