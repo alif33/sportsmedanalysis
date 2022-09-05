@@ -19,6 +19,7 @@ const Section = ({ title, live, lists }) => {
                                     live ? <LiveCard
                                         item={item}
                                     /> : <Card
+                                        key={ index }
                                         item={item}
                                     />
                                 }
