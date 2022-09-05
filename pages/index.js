@@ -56,11 +56,11 @@ const LandingPage = ({ posts, topPosts, players, topPicks, bettings }) => {
                 </div>
 
                 <TopPicks
-                    topPicks={ topPicks }
+                    topPicks={ posts }
                 />
                 <BettingFantasy
                     title="Betting & Fantasy"
-                    bettings={ bettings }
+                    bettings={ posts }
                 />
                 <Fannation
                     recentStories={ posts.slice(5, 10) }

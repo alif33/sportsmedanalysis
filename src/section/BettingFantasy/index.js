@@ -10,7 +10,7 @@ const BettingFantasy = ({ title, bettings }) => {
 
             <div className={style._smd_bf_grid_main}>
                 {
-                    bettings && bettings.map((item, index)=>{
+                    bettings && bettings.slice(0, 5).map((item, index)=>{
                         return(
                             <NewsCard6 
                                 key={ index } 

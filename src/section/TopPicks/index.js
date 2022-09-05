@@ -8,34 +8,31 @@ const TopPicks = ({ topPicks }) => {
         <div className="container-fluid py-3">
             <h1 className={style.nfl_card_title2}>Top Picks</h1>
             <div className="row m-0 mt-2">
-                {
-                    topPicks && topPicks.map((item, index)=>{
-                        return(
-                           <>
-                                <div className={`col-lg-${index===0? "7": "5"}`}>
-                                    {
-                                        index===0 ? <NewsCard 
-                                            img="/images/landing_Page/top_picks_img1.png" 
-                                            title="  Who profited most from transfer portal? Illinois, Creighton among big winners" 
-                                            description='  Our college basketball experts pick the teams that helped themselves the most during the transfer shopping season.' 
-                                        />: <NewsCard3 
-                                            img="/images/landing_Page/palyer_news_card_img1.png" 
-                                            title="Who profited most from transfer portal?"
-                                            name="John Holinger" 
-                                            comment="541" 
-                                            link='#!' 
-                                        />
-                                    }
-                                </div>
-                                {/* <div className="col-lg-5">
-                                    <NewsCard3 img="/images/landing_Page/palyer_news_card_img1.png" title="Who profited most from transfer portal?" name="John Holinger" comment="541" link='#!' />
-                                    <NewsCard3 img="/images/landing_Page/palyer_news_card_img1.png" title="Who profited most from transfer portal?" name="John Holinger" comment="541" link='#!' />
-                                </div> */}
-                           </>
-                        )
-                    })
-                }
 
+                <div className="col-lg-7">
+                    <NewsCard
+                        _id={ topPicks[0]._id } 
+                        slug={ topPicks[0]?.slug }
+                        title={ topPicks[0]?.title } 
+                        img={ topPicks[0]?.image }
+                        description='  Our college basketball experts pick the teams that helped themselves the most during the transfer shopping season.' 
+                    />
+                </div>
+                
+                <div className="col-lg-5">
+                    {   topPicks && topPicks.slice(1, 4).map((item, index)=>{
+                        return(
+                            <NewsCard3 
+                                _id={ item._id } 
+                                slug={ item?.slug }
+                                title={ item?.title } 
+                                img={ item?.image }
+                                description='Our college basketball experts pick the teams that helped themselves the most during the transfer shopping season.' 
+                                comment={ item?.comments ? item.comments: "0" }
+                            />
+                        )
+                    })} 
+                </div>
             </div>
         </div>
     );
