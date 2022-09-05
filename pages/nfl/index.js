@@ -36,14 +36,16 @@ function NFL({ posts, trendings }) {
         />
 
         <Trendings 
-            trendings={ trendings }
+            trendings={ posts }
         />
 
         <div className="nfl_con">
           <BorderLine />
         </div>
 
-        <MoreNews posts={posts} />
+        <MoreNews 
+          posts={posts} 
+        />
 
         <div className="nfl_con">
           <BorderLine />
