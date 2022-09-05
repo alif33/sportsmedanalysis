@@ -13,7 +13,7 @@ const NewsCard7 = ({ _id, slug, title, img, description }) => {
             <p className={style.nfl_card_desc}>{description}</p>
           </div>
           <div className="w-75">
-            <Image width="112" height="109" src={img} alt={item.title} />
+            <Image width="112" height="109" src={ img } alt={ title } />
           </div>
         </div>
       </a>
