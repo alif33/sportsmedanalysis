@@ -16,6 +16,12 @@ const NavHeader = () => {
                 <li><Link href="/"><a>FANNATION</a></Link></li>
                 <li><Link href="/"><a>FUTURES</a></Link></li>
             </ul>
+            <ul className={style.nfl_nav_ul_mobile}>
+                <li><Link href="/"><a>NEWS</a></Link></li>
+                <li><Link href="/"><a>PLAYERS</a></Link></li>
+                <li><Link href="/"><a>TEAMS</a></Link></li>
+                <li><Link href="/"><a>MY LIST</a></Link></li>
+            </ul>
         </div>
     );
 };

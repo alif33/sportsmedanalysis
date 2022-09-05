@@ -11,19 +11,20 @@ const PlayerSection = ({ posts, players }) => {
     return (
         <div className="container-fluid py-3">
             <h1 className={style.nfl_card_title2}>Player News</h1>
-            <div className={style._smd_player_news_main}>
-                <div>
-                    {   
-                        posts && posts.slice(0, 3).map((item, index)=>{
-                            return(
+            <div className="row mt-2">
+
+                <div className="col-12 col-md-6 col-lg-5">
+                    {
+                        posts && posts.slice(0, 3).map((item, index) => {
+                            return (
                                 <NewsCard3
-                                    key={ index } 
-                                    _id={ item._id }
-                                    slug={ item.slug }
-                                    title={ item.title }
-                                    img={ item.image }
-                                    name="John Holinger" 
-                                    comment={ item?.comments ? item?.comments: "0" }
+                                    key={index}
+                                    _id={item._id}
+                                    slug={item.slug}
+                                    title={item.title}
+                                    img={item.image}
+                                    name="John Holinger"
+                                    comment={item?.comments ? item?.comments : "0"}
                                 />
                             )
                         })
@@ -31,30 +32,26 @@ const PlayerSection = ({ posts, players }) => {
                 </div>
 
 
-                <div>
-                    {   
-                        posts && posts.slice(3, 5).map((item, index)=>{
-                            return(
+                <div className="col-12 col-md-6 col-lg-4">
+                    {
+                        posts && posts.slice(3, 5).map((item, index) => {
+                            return (
                                 <NewsCard4
-                                    key={ index } 
-                                    _id={ item._id }
-                                    slug={ item.slug }
-                                    title={ item.title }
-                                    img={ item.image }
-                                    name="John Holinger" 
-                                    comment={ item?.comments ? item?.comments: "0" }
+                                    key={index}
+                                    _id={item._id}
+                                    slug={item.slug}
+                                    title={item.title}
+                                    img={item.image}
+                                    name="John Holinger"
+                                    comment={item?.comments ? item?.comments : "0"}
                                 />
                             )
                         })
                     }
                 </div>
-
-                {/* <div>
-
-                    <NewsCard4 img="/images/landing_Page/player_news_img2.png" title="Who profited most from transfer portal?" name="John Holinger" comment="541" />
-                    <NewsCard4 img="/images/landing_Page/player_news_img2.png" title="Who profited most from transfer portal?" name="John Holinger" comment="541" />
-                </div> */}
-                <PlayerTab players={ players } />
+                <div className="col-12 col-md-6  mx-auto col-lg-3">
+                    <PlayerTab players={players} />
+                </div>
             </div>
         </div>
     );

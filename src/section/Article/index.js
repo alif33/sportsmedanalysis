@@ -47,18 +47,6 @@ const Article = ({ posts }) => {
                         post={item}
                     /></div>)
                 }
-                {
-                    posts.slice(0, 4).map((item, index) => <div key={index}><ArticleCard
-                        index={index}
-                        post={item}
-                    /></div>)
-                }
-                {
-                    posts.slice(0, 4).map((item, index) => <div key={index}><ArticleCard
-                        index={index}
-                        post={item}
-                    /></div>)
-                }
 
             </Slider>
         </div>

@@ -133,7 +133,7 @@
     padding: 0px 22px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1137px) {
   ._smd_scoreSlider_dropdown_btn {
     font-family: "Poppins";
     font-style: normal;

@@ -22,3 +22,34 @@
   width: 155px !important;
   height: 130px !important;
 }
+.newscard3content {
+  margin-left: 20px;
+}
+
+@media (max-width: 376px) {
+  .newscard3 {
+    flex-direction: column;
+  }
+  .newscard3Image span {
+    width: 100% !important;
+    height: 250px !important;
+  }
+  .newscard3content {
+    margin-left: 0px;
+    margin-top: 10px;
+  }
+  .newscard3content h4 {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    /* or 144% */
+
+    color: #121212;
+  }
+  .newscard3 p {
+    font-size: 10px;
+    margin-top: 10px !important;
+  }
+}

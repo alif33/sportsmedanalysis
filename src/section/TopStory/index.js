@@ -10,8 +10,8 @@ const TopStory = ({ topPosts }) => {
     return (
         <>
             <div className="container-fluid py-3">
-                <div className={style._smd_top_story_main}>
-                    <div>
+                <div className="row">
+                    <div className="col-12 col-md-6 col-lg-4">
                         <div className={style._smd_newCard}>
                             <h2>Top Story</h2>
                             <NewsCard
@@ -23,7 +23,7 @@ const TopStory = ({ topPosts }) => {
                             />
                         </div>
                     </div>
-                    <div>
+                    <div className="col-12 col-md-6 col-lg-4">
                         <h4 className={`${style.nfl_card_title2} mb-4 ${style.smd_border_bottom_Headlines}`}>Headlines</h4>
                         {topPosts && topPosts?.slice(1, 5).map((item, i) => <MiddleTitleCard
                             key={i}
@@ -34,7 +34,7 @@ const TopStory = ({ topPosts }) => {
                             comment={item?.comments ? item?.comments.length : "0"}
                         />)}
                     </div>
-                    <div>
+                    <div className="col-12 mx-auto col-lg-4">
                         <h1 className={style._smd_Upcoming_events}>Upcoming events</h1>
                         <TopStoryVerticalSlider />
                     </div>

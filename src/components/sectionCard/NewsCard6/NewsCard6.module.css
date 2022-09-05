@@ -19,3 +19,7 @@
 .newscard6 span {
   width: 100% !important;
 }
+
+.newscard6{
+  margin: 0 10px;
+}

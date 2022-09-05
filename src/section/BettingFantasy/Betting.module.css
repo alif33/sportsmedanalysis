@@ -11,22 +11,3 @@
     position: relative;
   }
   
-._smd_bf_grid_main {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-gap: 30px;
-  }
-
-  
-@media only screen and (max-width: 992px) {
-    ._smd_bf_grid_main {
-      grid-template-columns: 1fr 1fr 1fr;
-    }
-}  
-
-
-@media only screen and (max-width: 600px) {
-    ._smd_bf_grid_main {
-      grid-template-columns: 1fr;
-    }
-}  

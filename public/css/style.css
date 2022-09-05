@@ -121,14 +121,26 @@ a {
   font-size: 44px !important;
   opacity: 1 !important;
   border-radius: 50%;
-  color: rgb(71, 71, 71) !important;
+  color: #fff !important;
+  position: absolute;
 }
+
 .slick-prev {
   left: 0px !important;
 }
 .slick-next {
-  right: 9px !important;
+  right: 0px !important;
 }
+
+.slick-prev:before {
+  top: 0 !important;
+  left: 0 !important;
+}
+.slick-next:before {
+  top: 0 !important;
+  right: 0 !important;
+}
+
 @media (max-width: 768px) {
   .slick-prev,
   .slick-next {

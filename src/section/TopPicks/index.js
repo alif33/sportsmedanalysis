@@ -11,27 +11,28 @@ const TopPicks = ({ topPicks }) => {
 
                 <div className="col-lg-7">
                     <NewsCard
-                        _id={ topPicks[0]._id } 
-                        slug={ topPicks[0]?.slug }
-                        title={ topPicks[0]?.title } 
-                        img={ topPicks[0]?.image }
-                        description='  Our college basketball experts pick the teams that helped themselves the most during the transfer shopping season.' 
+                        _id={topPicks[0]._id}
+                        slug={topPicks[0]?.slug}
+                        title={topPicks[0]?.title}
+                        img={topPicks[0]?.image}
+                        description='  Our college basketball experts pick the teams that helped themselves the most during the transfer shopping season.'
                     />
                 </div>
-                
+
                 <div className="col-lg-5">
-                    {   topPicks && topPicks.slice(1, 4).map((item, index)=>{
-                        return(
-                            <NewsCard3 
-                                _id={ item._id } 
-                                slug={ item?.slug }
-                                title={ item?.title } 
-                                img={ item?.image }
-                                description='Our college basketball experts pick the teams that helped themselves the most during the transfer shopping season.' 
-                                comment={ item?.comments ? item.comments: "0" }
+                    {topPicks && topPicks.slice(1, 4).map((item, index) => {
+                        return (
+                            <NewsCard3
+                                key={index}
+                                _id={item._id}
+                                slug={item?.slug}
+                                title={item?.title}
+                                img={item?.image}
+                                description='Our college basketball experts pick the teams that helped themselves the most during the transfer shopping season.'
+                                comment={item?.comments ? item.comments : "0"}
                             />
                         )
-                    })} 
+                    })}
                 </div>
             </div>
         </div>
