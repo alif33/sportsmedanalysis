@@ -1,16 +1,18 @@
+import { useRouter } from 'next/router';
 import React from 'react';
 import DashboardLayout from '../../../src/components/DashboardLayout';
 import style from './EmailPreferences.module.css';
 
 const EmailPreferences = () => {
+    const router = useRouter();
     return (
-        <DashboardLayout>
+        <DashboardLayout stutas="email-preferences" >
             <div className="container ps-1 pe-2 mt-2 mb-5">
                 <div className="w-100 d-flex justify-content-between align-items-center">
                     <div className="profile-text">
                         <h3>Change Email Preferences</h3>
                         <h5 className="mt-1">Email address: johndoe@gmail.com</h5>
-                        <p className="mt-1 mb-1">We want to provide you with the most useful and timely advice. Let us know what you’d like to hear about below.</p>
+                        <p className="mt-1 mb-1">We want to provide you with the most useful and timely advice. Let us know what you&apos;d like to hear about below.</p>
                     </div>
                 </div>
                 <form className={`w-100 ${style._smd_login_card} d-block text-start`}>
@@ -138,15 +140,18 @@ const EmailPreferences = () => {
 
                     <div className="row mt-4">
                         <div className="col-md-6">
-                            <button className="bg-black text-center justify-content-center">Save Changes</button>
+                            <button type="submit" className="bg-black text-center justify-content-center">Save Changes</button>
                         </div>
                         <div className="col-md-6 ">
-                            <button className="text-center justify-content-center" >Cancel</button>
+                            <button type="button"
+                                onClick={() => router.back()}
+                                className="text-center justify-content-center" >Cancel</button>
                         </div>
                     </div>
                 </form>
-            </div>
-        </DashboardLayout>
+
+            </div >
+        </DashboardLayout >
     );
 };
 

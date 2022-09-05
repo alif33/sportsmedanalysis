@@ -6,7 +6,7 @@ import style from './ProfileDashboard.module.css';
 
 const ProfileDashboard = () => {
   return (
-    <DashboardLayout>
+    <DashboardLayout stutas="my-account">
       <div className="container ps-1 pe-2 mt-2 mb-5">
         <div className="w-100 d-flex justify-content-between align-items-center">
           <div className="profile-text">
@@ -20,7 +20,7 @@ const ProfileDashboard = () => {
         <div className="row mt-1">
           <div className="col-md-6">
 
-            <div className={ style._smd_form_group }>
+            <div className={style._smd_form_group}>
               <label htmlFor="email">Username</label>
               <input
                 type="email"

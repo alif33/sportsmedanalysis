@@ -136,7 +136,7 @@ const EditProfile = () => {
                             <button   
                                 className="text-center justify-content-center"
                                 type="button"
-                                onClick={ ()=>router.back() } 
+                                onClick={ ()=> router.back() } 
                             >Cancel</button>
                         </div>
                     </div>
