@@ -10,9 +10,9 @@ const EmailPreferences = () => {
             <div className="container ps-1 pe-2 mt-2 mb-5">
                 <div className="w-100 d-flex justify-content-between align-items-center">
                     <div className="profile-text">
-                        <h3>Change Email Preferences</h3>
-                        <h5 className="mt-1">Email address: johndoe@gmail.com</h5>
-                        <p className="mt-1 mb-1">We want to provide you with the most useful and timely advice. Let us know what you&apos;d like to hear about below.</p>
+                        <h3 className="mt-2">Change Email Preferences</h3>
+                        <h5 className="mt-3">Email address: johndoe@gmail.com</h5>
+                        <p className="mt-3 mb-1">We want to provide you with the most useful and timely advice. Let us know what you&apos;d like to hear about below.</p>
                     </div>
                 </div>
                 <form className={`w-100 ${style._smd_login_card} d-block text-start`}>
