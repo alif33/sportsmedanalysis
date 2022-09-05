@@ -4,7 +4,7 @@ import NewsCard7 from '../../components/sectionCard/NewsCard7';
 import PlayerTab from '../PlayerSection/PlayerTab';
 import style from './NewsTap.module.css';
 
-const NewsTab = ({ posts }) => {
+const NewsTab = ({ posts, players }) => {
 
     return (
         <div className={ style.nfl_con }>
@@ -35,7 +35,7 @@ const NewsTab = ({ posts }) => {
                     }
                 </div>
 
-                <PlayerTab />
+                <PlayerTab players={ players } />
             </div>
         </div>
     );

@@ -5,7 +5,7 @@ import NewsCard5 from '../../components/sectionCard/PlayerCard';
 import PlayerTab from '../PlayerSection/PlayerTab';
 import style from './NbaNews.module.css';
 
-const NbaNews = ({ title }) => {
+const NbaNews = ({ title, players }) => {
 
     return (
         <div className="nfl_con">
@@ -21,7 +21,9 @@ const NbaNews = ({ title }) => {
 
 
                 </div>
-                <PlayerTab />
+                <PlayerTab 
+                    players={ players }
+                />
             </div>
         </div>
     );

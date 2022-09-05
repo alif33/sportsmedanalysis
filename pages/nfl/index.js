@@ -11,7 +11,7 @@ import NewsTab from '../../src/section/NewsTap';
 import NflTeam from "../../src/section/NflTeam";
 import BorderLine from '../../src/components/BorderLine'
 
-function NFL({ posts, trendings }) {
+function NFL({ posts, players, trendings }) {
 
   return (
     <div className='_nfl'>
@@ -20,6 +20,7 @@ function NFL({ posts, trendings }) {
 
         <NewsTab 
           posts={ posts }
+          players={ players }
         />
 
         <div className="nfl_con">

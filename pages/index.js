@@ -78,6 +78,7 @@ export async function getServerSideProps() {
 
     await db.connect();
     const posts = await Post.find()
+        .sort()
         .lean()
         .limit(50);
 

@@ -17,15 +17,21 @@ const NBA = ({ posts, players, topPicks, bettings }) => {
         <div>
             <Layout navheader={ true }>
               <NbaHero />
-              <NbaNews title="NBA News" />
+              <NbaNews 
+                title="NBA News" 
+                players={ players }
+              />
               <TopPicks 
-                topPicks={ topPicks }
+                topPicks={ posts }
               />
               <BettingFantasy 
                 title="Trendings"
-                bettings={ bettings }
+                bettings={ posts }
               />
-              <PlayerSection />
+              <PlayerSection 
+                posts={ posts }
+                players={ players }
+              />
               <MoreNews posts={ posts } />
               <NflTeam />
             </Layout>
