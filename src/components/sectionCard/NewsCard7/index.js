@@ -6,14 +6,14 @@ import Link from "next/link";
 const NewsCard7 = ({ _id, slug, title, img, description }) => {
   return (
     <Link key={_id} href={`news/${slug}/${_id}`}>
-      <a>
+      <a className="mb-1">
         <div className={`d-flex ${style.nfl_sec_two_middle}`}>
-          <div>
+          <div className="w-75">
             <p className={style.nfl_card_title1}>{title}</p>
             <p className={style.nfl_card_desc}>{description}</p>
           </div>
-          <div className="w-75">
-            <Image width="112" height="109" src={ img } alt={ title } />
+          <div className="w-25">
+            <Image width="112" height="109" src={img} alt={title} />
           </div>
         </div>
       </a>

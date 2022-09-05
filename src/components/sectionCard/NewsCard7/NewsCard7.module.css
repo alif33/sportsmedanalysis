@@ -7,29 +7,32 @@
   /* align-items: center; */
   gap: 10px;
 }
-
+.nfl_sec_two_middle span {
+  width: 100% !important;
+}
+/* 
 @media only screen and (max-width: 760px) {
   .nfl_sec_two_middle {
     flex-direction: column-reverse;
   }
-}
+} */
 
 .nfl_card_title1 {
-    font-family: "Poppins";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 30px;
-    letter-spacing: 0.18px;
-    color: #000000;
-  }
-  
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: 0.18px;
+  color: #000000;
+}
+
 .nfl_card_desc {
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 15px;
   letter-spacing: 0.18px;
-  color: #5C5656;
-  }
+  color: #5c5656;
+}

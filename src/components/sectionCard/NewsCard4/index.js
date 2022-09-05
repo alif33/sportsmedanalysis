@@ -10,7 +10,7 @@ const NewsCard4 = ({ _id, slug, title, name, img, comment, description }) => {
       <a>
         <div className={style.newsCard4}>
           <div className="w-100">
-            <Image height="209" width="440" src={img} alt={title} />
+            <Image height="360" width="440" src={img} alt={title} />
           </div>
 
           <h3 style={{ color: "#121212" }} className="mt-2">
