@@ -142,3 +142,10 @@ const Signup = () => {
 };
 
 export default Signup;
+
+
+export async function getStaticProps(context) {
+    return {
+      props: {},
+    }
+}
