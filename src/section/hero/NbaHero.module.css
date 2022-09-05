@@ -4,10 +4,12 @@
   display: grid;
   grid-template-columns: 37% 37% 26%;
 }
-._smd_nbahero_card {
+._smd_nbahero_card,
+._smd_nbahero_card_main {
   position: relative;
 }
-._smd_nbahero_card h2 {
+._smd_nbahero_card h2,
+._smd_nbahero_card_main h2 {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -48,4 +50,53 @@
   line-height: 15px;
   letter-spacing: 0.18px;
   color: #5c5656;
+}
+
+@media (max-width: 768px) {
+  ._smd_nbahero {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  ._smd_nbahero_card_main {
+    width: 50%;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 50%;
+  }
+  ._smd_nbanav_news {
+    width: 50%;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 50%;
+  }
+  ._smd_nbanav_news {
+    height: auto !important;
+  }
+  ._smd_nbahero_card_main span,
+  ._smd_nbahero_card span {
+    width: 100% !important;
+    height: 100% !important;
+  }
+  ._smd_nbahero_card h2,
+  ._smd_nbahero_card_main h2 {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    padding: 3px 4px;
+    line-height: 14px !important;
+  }
+  ._smd_nbanews_list {
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
 }

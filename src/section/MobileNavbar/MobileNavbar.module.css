@@ -1,7 +1,7 @@
 /*==========================
 _smd_navbar
 ===========================*/
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   ._smd_navbar_border {
     display: none !important;
   }
@@ -66,6 +66,7 @@ _smd_navbar
 .navMenu {
   width: 80%;
   align-items: center;
+  flex-wrap: wrap;
 }
 .signBtn i {
   margin-right: 4px;
@@ -84,6 +85,7 @@ _smd_navbar
 
 .navMenu ul {
   flex-direction: row;
+  flex-wrap: wrap;
 }
 .formInline {
 }
