@@ -38,7 +38,7 @@ const PlayerTab = ({ players }) => {
                 titles.map((item, index) => {
                     return (
                         <div key={index} className={toggleState === index + 1 ? 'd-block' : 'd-none'}>
-                            <Card players={ plyrs[item] } />
+                            <Card key={ index } players={ plyrs[item] } />
                             <Link href={`/${item.toLowerCase()}`}><a className={style.see_all_news}>See All News</a></Link>
                         </div>
                     )

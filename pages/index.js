@@ -1,8 +1,4 @@
-import Navbar from "../src/components/headers/Navbar";
-import TopHeading from "../src/components/headers/TopHeading";
 import ScoreSlider from "../src/section/ScoreSlider";
-import ArticleCard from "../src/components/sectionCard/ArticleCard";
-import SMDFooter from "../src/components/SMDFooter";
 import db from "../utils/db";
 import _ from "lodash";
 import Post from "../models/Post";
@@ -25,13 +21,13 @@ const LandingPage = ({ posts, topPosts, players, topPicks, bettings }) => {
     const { user } = useSelector(state=>state);
     console.log(user);
 
-    // console.log(posts);
+    // console.log(JSON.parse(post));
     return (
 
         <div className="_LandingPage">
             <Layout>
 
-                <Article posts={posts} />
+                <Article posts={ JSON.parse(posts) } />
 
                 <ScoreSlider />
                 <div className="container-fluid">
@@ -47,7 +43,7 @@ const LandingPage = ({ posts, topPosts, players, topPicks, bettings }) => {
                 </div>
 
                 <PlayerSection 
-                    posts={ posts }
+                    posts={ JSON.parse(posts) }
                     players={ players }
                 />
 
@@ -56,14 +52,14 @@ const LandingPage = ({ posts, topPosts, players, topPicks, bettings }) => {
                 </div>
 
                 <TopPicks
-                    topPicks={ posts }
+                    topPicks={ JSON.parse(posts) }
                 />
                 <BettingFantasy
                     title="Betting & Fantasy"
-                    bettings={ posts }
+                    bettings={ JSON.parse(posts) }
                 />
                 <Fannation
-                    recentStories={ posts.slice(5, 10) }
+                    recentStories={ JSON.parse(posts).slice(5, 10) }
                 />
 
             </Layout>
@@ -109,13 +105,11 @@ export async function getServerSideProps() {
     console.log(topPosts);
     return {
         props: {
-            // adress: ['ismail', 'alif', 'hosen'],
-            posts: posts.map(db.convertDocToObj),
+            posts: JSON.stringify(posts),
             topPosts: topPosts.map(db.convertDocToObj),
             players: players.map(db.convertDocToObj),
             topPicks: topPicks.map(db.convertDocToObj),
             bettings: bettings.map(db.convertDocToObj),
-            // mlbs,
         },
     };
 }
