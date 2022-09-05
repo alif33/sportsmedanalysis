@@ -21,13 +21,29 @@ const Trendings = ({ trendings }) => {
                 }
 
                 <div>
-                    {[1, 1, 1, 1].map((item, i) => <NewsCard9 key={i} title="Hollinger: The 5 Kevin Durant trades that make" description="Scott Wheeler" comment="377" />)}
-
-
-
+                    { trendings && trendings.slice(1, 4).map((item, index) =>{
+                        return(
+                            <NewsCard9 
+                                key={ index }
+                                _id={ item._id } 
+                                slug={ item.slug }
+                                title={ item.title } 
+                                description="Scott Wheeler" 
+                                comment={ item?.comments? item.comments: "0" } 
+                            />
+                        )
+                    })}
                 </div>
+
                 <div className='position-relative'>
-                    {[1, 1, 1].map((item, i) => <NewsCard7 key={i} title="'Luck,' episode 3: The Colts' top pick bursts onto the scene and exceeds the hype" description="The Athletic NFL Staff" img="/images/landing_Page/cardImg1.png" />)}
+                    { trendings && trendings.slice(4, 7).map((item, index) => <NewsCard7 
+                        key={ index } 
+                        _id={ item._id }
+                        slug= { item.slug }
+                        title={ item.title }
+                        img={ item.image }
+                        description="The Athletic NFL Staff" 
+                    />)}
                 </div>
             </div>
         </div>
