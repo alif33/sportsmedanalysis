@@ -1,14 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useRouter } from 'next/router';
 import DashboardLayout from '../../../src/components/DashboardLayout';
 import style from './EditProfile.module.css';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useForm } from 'react-hook-form';
 import { __Auth } from '../../../__lib__/helpers/AuthProvider';
+import { updateData } from '../../../__lib__/helpers/HttpService';
+import { logedIn } from '../../../store/user/actions';
+import toast from 'react-hot-toast';
 
 const EditProfile = () => {
+    const [ disable, setDisable ] = useState(false);
     const { register, handleSubmit, formState: { errors } } = useForm();
     const router = useRouter();
+    const dispatch = useDispatch();
     const { user } = useSelector(state=>state);
     const { __u__ } = user;
     const { info } = __u__;
@@ -16,32 +21,25 @@ const EditProfile = () => {
 
     const onSubmit = data => {
 
-        // console.log(data);
-        // setDisable(true);
-        // postData(`/${""}/signin`, data)
-        //     .then(res => {
-        //         setDisable(false);
-        //         if (res.success) {
-        //             const { token, info, role, status } = res;
-        //             if(status==="REJECTED"){
-        //                 toast.error("Account is restricted")
-        //             }else{
-        //                 dispatch(logedIn({
-        //                     token,
-        //                     info,
-        //                     role,
-        //                     status
-        //                 }))
-        //                 if(role==="AUTHOR"){
-        //                     navigate("/school");
-        //                 }
-        //             }
-
-        //         }
-        //     })
-        //     .catch(err=>{
-        //         setDisable(false);
-        //     })
+        setDisable(true);
+        updateData("/user/profile", data, __u__.token)
+            .then(res => {
+                setDisable(false);
+                console.log(res);
+                if (res.success) {
+                    toast.success("Profile updated successfully");
+                    const { token, info } = res;
+                    dispatch(
+                      logedIn({
+                        token,
+                        info,
+                      })
+                    );
+                }
+            })
+            .catch(err=>{
+                setDisable(false);
+            })
     };
 
     return (

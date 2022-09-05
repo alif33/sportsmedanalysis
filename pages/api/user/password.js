@@ -9,18 +9,15 @@ handler.use(isAuth);
 
 handler.put(async (req, res) => {
   const { _id } = req.user;
-  const { fullName, fanduelUsername, draftKingsUsername } = req.body;
+  const { password } = req.body;
+
+  const salt = await bcrypt.genSalt(10);
+  const _password = await bcrypt.hash(password, salt);
+
   await db.connect();
-
-  const updates = {
-    fullName, 
-    fanduelUsername, 
-    draftKingsUsername
-  };
-
   User.findOneAndUpdate(
     { _id }, 
-    { $set: updates },
+    { $set: { password: _password } },
     { returnOriginal: false },
     (err, user)=>{
         if(err){

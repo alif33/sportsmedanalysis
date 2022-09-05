@@ -11,7 +11,7 @@ handler.post(async (req, res) => {
   const user = await User.findOne({ email: req.body.email });
   await db.disconnect();
   if (user && bcrypt.compareSync(req.body.password, user.password)) {
-    const { _id, name, email, tags } = user;
+    const { _id, name, email, tags, userName, fullName, fanduelUsername, draftKingsUsername } = user;
     const token = signToken(user);
     res.send({
       success: true,
@@ -20,7 +20,11 @@ handler.post(async (req, res) => {
         _id,
         name,
         email,
-        tags
+        tags,
+        userName, 
+        fullName, 
+        fanduelUsername, 
+        draftKingsUsername
       }
     });
   } else {
