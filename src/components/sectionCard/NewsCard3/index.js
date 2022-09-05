@@ -3,11 +3,11 @@ import Link from 'next/link';
 import React from 'react';
 import style from './NewsCard3.module.css';
 
-const NewsCard3 = ({ img, title, comment, name, link }) => {
+const NewsCard3 = ({ _id, slug, title, img,  comment, name, link }) => {
 
     return (
 
-        <Link href="#!">
+        <Link href={`/news/${ slug }/${ _id }`}>
             <a className="mb-2 d-inline-block">
                 <div className={`d-flex gap-2 ${style.newscard3}`}>
                     <Image height="132" width="218" src={img} alt="" />

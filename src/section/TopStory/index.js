@@ -37,7 +37,6 @@ const TopStory = ({ topPosts }) => {
                     <div>
                         <h1 className={style._smd_Upcoming_events}>Upcoming events</h1>
                         <TopStoryVerticalSlider />
-
                     </div>
                 </div>
             </div>

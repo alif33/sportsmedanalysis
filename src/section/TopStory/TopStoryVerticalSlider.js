@@ -1,16 +1,10 @@
 import React from "react";
-// Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/navigation";
-
-// Import Swiper styles
 import "swiper/css";
-
-// import required modules
 import { Mousewheel, Navigation } from "swiper";
 import SliderCard from "./SliderCard";
-
-import style from './TopStorySliderCss.module.css'
+import style from "./TopStorySliderCss.module.css";
 
 function TopStoryVerticalSlider() {
     return (

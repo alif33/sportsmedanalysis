@@ -46,21 +46,24 @@ const LandingPage = ({ posts, topPosts, players, topPicks, bettings }) => {
                     <BorderLine />
                 </div>
 
-                <PlayerSection players={players} />
+                <PlayerSection 
+                    posts={ posts }
+                    players={ players }
+                />
 
                 <div className="container-fluid">
                     <BorderLine />
                 </div>
 
                 <TopPicks
-                    topPicks={topPicks}
+                    topPicks={ topPicks }
                 />
                 <BettingFantasy
                     title="Betting & Fantasy"
-                    bettings={bettings}
+                    bettings={ bettings }
                 />
                 <Fannation
-                    recentStories={posts.slice(5, 10)}
+                    recentStories={ posts.slice(5, 10) }
                 />
 
             </Layout>
