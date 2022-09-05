@@ -19,7 +19,11 @@
   font-family: "Poppins";
   font-style: normal;
   font-weight: 600;
-  font-size: 60px;
+  font-size: 37px;
+  line-height: 120%;
+  letter-spacing: 0.003em;
+  color: #11142d;
+  margin: 25px 0;
   line-height: 120%;
   letter-spacing: 0.003em;
   color: #11142d;

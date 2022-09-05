@@ -5,7 +5,7 @@ import articleStyle from './Article.module.css';
 
 const ArticleCard = ({ index, post }) => {
     return (
-        <div className={`${articleStyle._smd_article_card} w-100`}>
+        <div className={`${articleStyle._smd_article_card} w-100 px-2`}>
             <Link key={index} href={`/news/${post.slug}/${post._id}`}>
                 <a>
 

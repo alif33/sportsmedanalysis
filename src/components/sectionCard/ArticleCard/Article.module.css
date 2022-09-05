@@ -12,7 +12,7 @@ _smd article
   position: absolute;
   top: 0;
   left: 0;
-  width: 100% !important;
+  width: 94% !important;
   height: 100% !important;
   border-radius: 4px !important;
 }
@@ -25,7 +25,7 @@ _smd article
 ._smd_article_card h4 {
   position: absolute;
   top: 5%;
-  right: 6%;
+  right: 9%;
   color: #fff;
   width: 73px;
   height: 23.87px;

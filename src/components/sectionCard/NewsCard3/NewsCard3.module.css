@@ -17,3 +17,8 @@
 
   color: #5c5656;
 }
+
+.newscard3Image span {
+  width: 155px !important;
+  height: 130px !important;
+}
