@@ -7,8 +7,8 @@ const FeaturedPodcast = () => {
         <div className="featured-podcast my-4">
         <div className="container-fluid">
             <div className="row">
-                <div className="col-md-4">
-                   <div className="w-100 pt-2">
+                <div className="col-md-5">
+                   <div className={`w-100 pt-2 ${style.podcatsImage}`}>
                    <Image width="489"
                         height="312" src="/images/podcast/featured.png" alt="" />
                    </div>

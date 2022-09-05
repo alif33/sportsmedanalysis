@@ -4,9 +4,8 @@ import style from './NbaHero.module.css';
 const NbaHero = () => {
     return (
         <div className={style._smd_nbahero}>
-            <div className={style._smd_nbahero_card}>
-                <Image src="/images/nba/header-img1.png" alt="" height='
-418' width="500" />
+            <div className={style._smd_nbahero_card_main}>
+                <Image src="/images/nba/header-img1.png" alt="" height='418' width="500" />
                 <h2>Five Underrated NBA free
                     agent signings</h2>
             </div>

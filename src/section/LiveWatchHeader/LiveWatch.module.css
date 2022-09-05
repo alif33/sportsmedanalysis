@@ -22,55 +22,97 @@
   border: none;
 }
 
-
 ._smd_live_video_tilte {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background: #111111ba;
-    color: #fff !important;
-    padding: 18px 15px;
-    padding-right: 34px;
-    display: grid;
-    grid-template-columns: 6% 91%;
-    align-items: center;
-    column-gap: 4%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #111111ba;
+  color: #fff !important;
+  padding: 18px 15px;
+  padding-right: 34px;
+  display: grid;
+  grid-template-columns: 6% 91%;
+  align-items: center;
+  column-gap: 4%;
+}
+._smd_live_video_tilte h2 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 37px;
+  letter-spacing: -0.04em;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+._smd_watch_system {
+  display: flex;
+  align-items: center;
+  padding: 20px 20px;
+}
+._smd_watch_system p {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 14px;
+  text-align: center;
+  color: #c2c4c7;
+  margin: 0;
+}
+._smd_watch_system ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-left: 20px;
+}
+._smd_watch_system ul li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+@media (max-width: 768px) {
+  ._smd_live_video_tilte {
+    padding: 7px 7px;
   }
   ._smd_live_video_tilte h2 {
     font-family: "Poppins";
     font-style: normal;
-    font-weight: 500;
-    font-size: 28px;
-    line-height: 37px;
-    letter-spacing: -0.04em;
-    color: #ffffff;
-    margin: 0;
-    padding: 0;
-  }
-
-  ._smd_watch_system {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 20px;
     display: flex;
     align-items: center;
-    padding: 20px 20px;
+    color: #ffffff;
+  }
+  ._smd_live_btn {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 15px;
+    width: 49px;
+    height: 19px;
+  }
+  ._smd_watch_system {
+    padding: 10px 7px;
   }
   ._smd_watch_system p {
-    font-family: "Helvetica";
-    font-style: normal;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 8px;
     line-height: 14px;
-    text-align: center;
-    color: #c2c4c7;
-    margin: 0;
+    width: 164px;
   }
   ._smd_watch_system ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    margin-left: 20px;
+    margin-left: 5px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
   }
   ._smd_watch_system ul li {
-    display: inline-block;
-    margin: 0 10px;
+    margin: 0 2px;
   }
-    
+  ._smd_watch_system ul li span {
+    width: 100% !important;
+  }
+}

@@ -104,3 +104,38 @@
   line-height: 30px;
   color: #121212 !important;
 }
+
+
+@media (max-width: 768px) {
+  ._smd_login_card {
+    width: 95%;
+    box-sizing: border-box;
+  }
+}
+@media (max-width: 481px) {
+  ._smd_login_card button {
+    font-size: 15px;
+    line-height: 20px;
+    padding: 15px 15px;
+  }
+  ._smd_login_card button div {
+    width: 100%;
+    text-align: left !important;
+    margin-left: 30px;
+  }
+  ._smd_login_card h3 {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 37px;
+    display: flex;
+    align-items: center;
+    color: #121212;
+  }
+  ._smd_login_card a {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}

@@ -1,67 +1,65 @@
-
 ._smd_login_card {
-    /* background: rgba(0, 0, 0, 0.432); */
-    width: 51%;
-    margin: auto;
-    margin-top: 19px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-  ._smd_login_card h3 {
-    font-family: "Montserrat";
-    font-weight: 600;
-    font-size: 35px;
-    line-height: 61px;
-    color: #121212;
-  }
-  ._smd_login_card button {
-    width: 100%;
-    border: 1px solid #d9d9d9;
-    background: #fff;
-    font-family: "Poppins";
-    font-style: normal;
-    font-weight: 600;
-    font-size: 19px;
-    line-height: 28px;
-    color: #121212;
-    padding: 15px 40px;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    margin: 15px 0;
-  }
-  ._smd_login_card button div {
-    width: 100%;
-  }
-  
-._smd_or_line {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 15px 0;
-  }
-  ._smd_or_line div {
-    background: #5c5656;
-    width: 45%;
-    height: 1px;
-  }
-  ._smd_or_line p {
-    font-family: "Poppins";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 19px;
-    line-height: 28px;
-    color: #5c5656;
-    width: 10%;
-    padding: 0;
-    margin: 0;
-  }
+  /* background: rgba(0, 0, 0, 0.432); */
+  width: 51%;
+  margin: auto;
+  margin-top: 19px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+._smd_login_card h3 {
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 35px;
+  line-height: 61px;
+  color: #121212;
+}
+._smd_login_card button {
+  width: 100%;
+  border: 1px solid #d9d9d9;
+  background: #fff;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 19px;
+  line-height: 28px;
+  color: #121212;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin: 15px 0;
+}
+._smd_login_card button div {
+  width: 100%;
+}
 
-  
+._smd_or_line {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px 0;
+}
+._smd_or_line div {
+  background: #5c5656;
+  width: 45%;
+  height: 1px;
+}
+._smd_or_line p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 28px;
+  color: #5c5656;
+  width: 10%;
+  padding: 0;
+  margin: 0;
+}
+
 ._smd_form_group {
   width: 100%;
 }
@@ -106,4 +104,38 @@
   font-size: 20px;
   line-height: 30px;
   color: #121212 !important;
+}
+
+@media (max-width: 768px) {
+  ._smd_login_card {
+    width: 95%;
+    box-sizing: border-box;
+  }
+}
+@media (max-width: 481px) {
+  ._smd_login_card button {
+    font-size: 15px;
+    line-height: 20px;
+    padding: 15px 15px;
+  }
+  ._smd_login_card button div {
+    width: 100%;
+    text-align: left !important;
+    margin-left: 30px;
+  }
+  ._smd_login_card h3 {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 37px;
+    display: flex;
+    align-items: center;
+    color: #121212;
+  }
+  ._smd_login_card a {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+  }
 }

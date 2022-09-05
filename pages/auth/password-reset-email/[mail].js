@@ -4,39 +4,39 @@ import AuthLayout from "../../../src/components/AuthLayout";
 import jwt from 'jsonwebtoken';
 
 const PasswordResetEmail = () => {
-    const [ email, setEmail ] = useState();
+    const [email, setEmail] = useState();
     const router = useRouter();
 
-    useEffect(()=>{
-        jwt.verify(router.query.mail, 'cryptr', (err, decoded)=>{
-            setEmail(decoded.email);
+    useEffect(() => {
+        jwt.verify(router.query.mail, 'cryptr', (err, decoded) => {
+            setEmail(decoded?.email);
             // console.log(decoded);
         })
 
-        if(router.query.mail){
+        if (router.query.mail) {
             console.log(router.query.mail);
-        }else{
+        } else {
             router.push('/');
-            
+
             // setEmail(cryptr.decrypt(router.query.mail));
         }
         // console.log(router.query?.mail);
     }, [])
 
-    if(router.query.mail){
+    if (router.query.mail) {
         return (
             <AuthLayout>
                 <div className="container ps-1 pe-2 mt-2 mb-5 vh-100">
                     <div className="w-100 d-flex justify-content-between align-items-center">
                         <div className="profile-text mt-3">
                             <h3>Password reset email sent</h3>
-                            <p className="mt-2">We have just sent a password reset link to <b>{ email }</b>. Please double-check that this is the email associated with your account. If you do not receive an email within the next few minutes, this may not be the email address for your account.</p>
+                            <p className="mt-2">We have just sent a password reset link to <b>{email}</b>. Please double-check that this is the email associated with your account. If you do not receive an email within the next few minutes, this may not be the email address for your account.</p>
                         </div>
                     </div>
                 </div>
             </AuthLayout>
         );
-    }else{
+    } else {
         <></>
     }
 
