@@ -68,7 +68,7 @@ const LandingPage = ({ posts, topPosts, players, topPicks, bettings }) => {
 export default LandingPage;
 
 
-export async function getServerSideProps() {
+export async function getStaticProps(context) {
 
     await db.connect();
     const posts = await Post.find({}, { _comments: 0 })
@@ -109,6 +109,7 @@ export async function getServerSideProps() {
             topPicks: JSON.stringify(topPicks),
             bettings: JSON.stringify(bettings),
         },
+        revalidate: 60,
     };
 }
 
