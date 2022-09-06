@@ -5,7 +5,7 @@ import Link from "next/link";
 const NewsCard9 = ({ _id, slug, title, description, comment }) => {
   return (
     <div className={style.nfl_S5_middle_card}>
-        <Link href={`/news/${ slug }/${ _id }`}>
+        <Link href={`/${ slug }/${ _id }`}>
             <a >
                 <h4>{title}</h4>
                 <p>
