@@ -11,7 +11,7 @@ const Card = ({ players }) => {
                 players && players.map((item, index) => {
                     return (
                         <div className={`${style.nfl_S2_3rd_card} mt-2 d-block `} key={index} >
-                            <Link href={`/new/`}>
+                            <Link href={`/player/${ item.firstName + "-" + item.lastName }/${ item._id }`}>
                                 <a className='d-flex align-items-center p-1'>
                                     <Image height={50} width={50} src={item.image} alt="" />
                                     <div>

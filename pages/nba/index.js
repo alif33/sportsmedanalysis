@@ -44,23 +44,23 @@ export default NBA;
 export async function getServerSideProps() {
   
     await db.connect();
-    const posts = await Post.find()
+    const posts = await Post.find({}, { _comments: 0 })
         .lean()
         .limit(50);
 
     const topPicks = await Post.find({ 
           tags: { $in: [ "top_picks" ] } 
-      })
+      }, { _comments: 0 })
       .lean()
       .limit(50);
 
-    const players = await Player.find()
+    const players = await Player.find({}, { _comments: 0 })
         .lean()
         .limit(50);
 
     const bettings = await Post.find({ 
           tags: { $in: [ "betting" ] } 
-      })
+      }, { _comments: 0 })
       .lean()
       .limit(50);
 
