@@ -73,7 +73,7 @@ export async function getServerSideProps() {
     .lean()
     .limit(50);
 
-  const players = await Player.find({}, { _comments: 0 })
+  const players = await Player.find()
     .lean()
     .limit(50);
 
