@@ -7,8 +7,6 @@ import TopStory from "../src/section/TopStory";
 import PlayerSection from "../src/section/PlayerSection";
 import TopPicks from "../src/section/TopPicks";
 import BettingFantasy from "../src/section/BettingFantasy";
-import RecentStories from "../src/section/RecentStories";
-import Featured from "../src/section/Featured";
 import Fannation from "../src/section/Fannation";
 import Layout from "../src/components/Layout";
 import Article from "../src/section/Article";
