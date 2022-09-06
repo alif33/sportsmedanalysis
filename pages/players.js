@@ -2,6 +2,7 @@ import React from 'react';
 import Player from '../models/Player';
 import Layout from '../src/components/Layout';
 import PlayersFollowing from '../src/section/PlayersFollowing';
+import db from '../utils/db';
 
 const Players = ({ players }) => {
     return (
