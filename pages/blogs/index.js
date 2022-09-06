@@ -41,7 +41,7 @@ export async function getStaticProps(context) {
       props: {
         blogs: JSON.stringify(blogs)
       },
-      revalidate: 10, // will be passed to the page component as props
+      revalidate: 60, // will be passed to the page component as props
     }
   }
 // export const getServerSideProps = __Auth((context) => {
