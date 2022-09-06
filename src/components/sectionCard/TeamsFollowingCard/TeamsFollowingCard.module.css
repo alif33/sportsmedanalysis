@@ -8,6 +8,7 @@
   margin-top: 30px;
   padding: 12px 31px;
 }
+
 .imageAndName {
   display: flex;
   align-items: center;
@@ -64,4 +65,34 @@
   color: #ffffff;
   border: none;
   padding: 10px 28px;
+}
+
+@media (max-width: 768px) {
+  .teamsFollowingCard {
+    padding: 10px 4px;
+    box-sizing: border-box;
+  }
+  .imageAndName div h4 {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 10px;
+  }
+  .imageAndName div p {
+    font-weight: 400;
+    font-size: 8px;
+  }
+  .buttonSide p {
+    font-weight: 600;
+    font-size: 8px;
+    margin-right: 5px;
+  }
+  .buttonSide button {
+    font-size: 8px;
+    padding: 8px 12px;
+  }
+  .cardImage span {
+    width: 75px !important;
+    height: 46px;
+  }
 }

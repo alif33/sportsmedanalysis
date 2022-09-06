@@ -13,7 +13,7 @@ const ProfileDashboard = () => {
   return (
     <DashboardLayout stutas="my-account">
       <div className="container ps-1 pe-2 mt-2 mb-5">
-        <div className="w-100 d-flex justify-content-between align-items-center">
+        <div className="w-100 d-flex justify-content-between align-items-center mt-3">
           <div className="profile-text">
             <h3>Profile</h3>
             <h5 className="mt-1">Login Info</h5>

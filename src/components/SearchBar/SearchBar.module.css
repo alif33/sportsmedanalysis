@@ -22,3 +22,16 @@
 .topPlayersSearchBar input:placeholder {
   color: #8d8d8d;
 }
+
+@media (max-width: 768px) {
+  .topPlayersSearchBar input {
+    padding: 7px 0;
+    font-size: 8px;
+    padding-left: 23px !important;
+  }
+  .topPlayersSearchBar i {
+    left: 7px;
+    transform: translate(0%, -50%);
+    width: 10px;
+  }
+}

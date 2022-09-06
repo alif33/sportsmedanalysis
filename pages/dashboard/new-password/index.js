@@ -40,9 +40,9 @@ const NewPassword = () => {
     };
 
   return (
-    <DashboardLayout>
+    <DashboardLayout stutas="new-password" >
       <div className="ps-1 pe-2 mt-2 mb-2 h-100">
-        <div className="w-100 d-flex justify-content-between align-items-center">
+        <div className="w-100 d-flex justify-content-between align-items-center mt-2">
           <div className="profile-text">
             <h3>Set New Password</h3>
             <p className="mt-1 mb-1">

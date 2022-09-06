@@ -12,9 +12,20 @@ const DashboardSidebar = ({ stutas }) => {
                 <li className={`${style.sidebar_navlink} ${stutas === 'my-account' ? style.active : ""}`}>
                     <Link href="/dashboard"><a><Image height="22" width="18" src="/images/icon/user.png" alt="" /> <h4>My Account</h4></a></Link>
                 </li>
-                
+
                 <li className={`${style.sidebar_navlink} ${stutas === 'email-preferences' ? style.active : ""}`}>
                     <Link href="/dashboard/email-preferences"><a><Image height="20" width="20" src="/images/icon/message.png" alt="" /> <h4>Email Preferences</h4></a></Link>
+                </li>
+
+
+                <li className={`${style.sidebar_navlink} ${stutas === 'edit-profile' ? style.active : ""}`}>
+                    <Link href="/dashboard/edit-profile"><a><Image height="20" width="20" src="/images/icon/message.png" alt="" /> <h4>Edit Profile</h4></a></Link>
+                </li>
+                <li className={`${style.sidebar_navlink} ${stutas === 'new-password' ? style.active : ""}`}>
+                    <Link href="/dashboard/new-password"><a><Image height="20" width="20" src="/images/icon/message.png" alt="" /> <h4>New Password</h4></a></Link>
+                </li>
+                <li className={`${style.sidebar_navlink} ${stutas === 'password-reset-email' ? style.active : ""}`}>
+                    <Link href="/dashboard/password-reset-email"><a><Image height="20" width="20" src="/images/icon/message.png" alt="" /> <h4>Password Reset Email</h4></a></Link>
                 </li>
             </ul>
         </div>

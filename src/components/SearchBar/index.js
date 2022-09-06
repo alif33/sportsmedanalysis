@@ -7,7 +7,6 @@ const SearchBar = () => {
         <div className={style.topPlayersSearchBar}>
             <input type="text" placeholder="Search for Player" />
             <i> <Image height="15" width="15" src="/images/icon/search-icon2.png" alt="" /></i>
-
         </div>
     );
 };

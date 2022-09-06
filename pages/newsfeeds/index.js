@@ -17,6 +17,7 @@ const Newsfeeds = () => {
             <div className="container-fluid my-2">
                 <MoreStoris title="More Stories" />
             </div>
+            
             <div className="container-fluid my-2">
                 <div className="row">
                     <div className="col-md-7 m-auto">

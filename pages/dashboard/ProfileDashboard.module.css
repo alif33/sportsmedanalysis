@@ -1,69 +1,73 @@
-
 ._smd_form_group {
-    width: 100%;
-  }
-  ._smd_form_group label {
-    font-family: "Poppins";
-    font-style: normal;
-    font-weight: 600;
-    font-size: 17px;
-    line-height: 26px;
-    color: #121212;
-    width: 100%;
-    margin: 10px 0;
-    text-align: left;
-  }
-  ._smd_form_group input {
-    height: 55px;
-    border: 1px solid #d9d9d9;
-    width: 100%;
-    font-family: "Poppins";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 15px;
-    line-height: 26px;
-    color: #111;
-    padding: 0px 25px;
-  }
-  ._smd_form_group p {
-    font-family: "Poppins";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 21px;
-    color: #606060;
-    text-align: left;
-    margin: 0;
-  }
-  
+  width: 100%;
+}
+._smd_form_group label {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 26px;
+  color: #121212;
+  width: 100%;
+  margin: 10px 0;
+  text-align: left;
+}
+._smd_form_group input {
+  height: 55px;
+  border: 1px solid #d9d9d9;
+  width: 100%;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 26px;
+  color: #111;
+  padding: 0px 25px;
+}
+._smd_form_group p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: #606060;
+  text-align: left;
+  margin: 0;
+}
+
 ._smd_login_card {
-    /* background: rgba(0, 0, 0, 0.432); */
-    width: 51%;
-    margin: auto;
-    margin-top: 19px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
+  /* background: rgba(0, 0, 0, 0.432); */
+  width: 51%;
+  margin: auto;
+  margin-top: 19px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+._smd_login_card button {
+  width: 100%;
+  border: 1px solid #d9d9d9;
+  background: #fff;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 19px;
+  line-height: 28px;
+  color: #121212;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin: 15px 0;
+}
+._smd_login_card button div {
+  width: 100%;
+}
+@media (max-width: 768px) {
   ._smd_login_card button {
-    width: 100%;
-    border: 1px solid #d9d9d9;
-    background: #fff;
-    font-family: "Poppins";
-    font-style: normal;
-    font-weight: 600;
-    font-size: 19px;
-    line-height: 28px;
-    color: #121212;
-    padding: 15px 40px;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    margin: 15px 0;
+    font-size: 14px !important;
+    padding: 8px 23px !important;
   }
-  ._smd_login_card button div {
-    width: 100%;
-  }
-  
+}
