@@ -1,28 +1,29 @@
 import React from 'react';
 import MoreStorisCard from '../../components/sectionCard/MoreStorisCard';
-import style from './MoreStoris.module.css'
+import style from '../MoreStorisMobile/MoreStoris.module.css'
 
-const MoreStoris = ({ title}) => {
+const MoreStoris = ({ title }) => {
     return (
-        <>
-            <div className="row w-100">
-                <div className={`col-md-12 ${style.title}`}>
-                    <h3>{title}</h3>
+        <div className="d-md-block d-none">
+            <>
+                <div className="row w-100 mb-3 mt-3 ">
+                    <div className={`col-md-12 ${style.title}`}>
+                        <h3>{title}</h3>
+                    </div>
                 </div>
-            </div>
-            <div className={style.moreStoris}>
-                <MoreStorisCard />
-                <MoreStorisCard />
-                <MoreStorisCard />
-                <MoreStorisCard />
-                <MoreStorisCard />
-                <MoreStorisCard />
-                <MoreStorisCard />
-                <MoreStorisCard />
-                <MoreStorisCard />
-                <MoreStorisCard />
-            </div>
-        </>
+                <div className="row">
+                    <div className="col-md-3">  <MoreStorisCard /></div>
+                    <div className="col-md-3">  <MoreStorisCard /></div>
+                    <div className="col-md-3">  <MoreStorisCard /></div>
+                    <div className="col-md-3">  <MoreStorisCard /></div>
+
+                    <div className="col-md-3">  <MoreStorisCard /></div>
+                    <div className="col-md-3">  <MoreStorisCard /></div>
+                    <div className="col-md-3">  <MoreStorisCard /></div>
+                    <div className="col-md-3">  <MoreStorisCard /></div>
+                </div>
+            </>
+        </div>
     );
 };
 

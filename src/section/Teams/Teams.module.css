@@ -56,3 +56,30 @@
 .teamImage span {
   width: 100% !important;
 }
+.ballcontrol h4 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 53px;
+  /* or 331% */
+
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.04em;
+
+  color: #d70404;margin: 0 20px;
+}
+@media (max-width: 768px) {
+  .ballcontrol{
+    width: 100%;
+  }
+  .ballcontrol div h2 {
+    display: none;
+  }
+}
+@media (min-width: 769px) {
+  .ballcontrol div h4 {
+    display: none;
+  }
+}

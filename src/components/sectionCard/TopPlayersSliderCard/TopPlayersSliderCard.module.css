@@ -1,5 +1,5 @@
 .topPlayersSliderCard {
-    padding: 0 7px;
+  padding: 0 7px;
 }
 .topPlayersSliderCard span {
   width: 100% !important;
@@ -17,4 +17,21 @@
 h3.active {
   background: #d70404;
   color: #fff;
+}
+@media (max-width: 768px) {
+  .topPlayersSliderCard h3 {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 8px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.04em;
+    color: #000000;
+  }
+  h3.active {
+    background: #d70404;
+    color: #fff;
+  }
 }

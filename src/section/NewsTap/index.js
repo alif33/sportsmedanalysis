@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import NewsCard4 from '../../components/sectionCard/NewsCard4';
+import NewsCard10 from '../../components/sectionCard/NewsCard10';
 import NewsCard7 from '../../components/sectionCard/NewsCard7';
 import PlayerTab from '../PlayerSection/PlayerTab';
 import style from './NewsTap.module.css';
@@ -11,7 +11,7 @@ const NewsTab = ({ posts, players }) => {
             <div className="row mt-3">
                 {
                     posts && <div className="col-lg-5 col-md-6 ">
-                        <NewsCard4
+                        <NewsCard10
                             _id={posts[0]._id}
                             slug={posts[0].slug}
                             title={posts[0].title}

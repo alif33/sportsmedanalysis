@@ -12,7 +12,7 @@ const PlayerGallery = ({ title }) => {
             </div>
 
             <div className="bg-black">
-                <div className="container-fluid2 py-2">
+                <div className="container-fluid2 py-2 player-gallery-slider ">
                     <PlayerGallerySlider />
                 </div>
             </div>

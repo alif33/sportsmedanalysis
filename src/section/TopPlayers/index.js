@@ -9,7 +9,9 @@ const TopPlayers = ({ title }) => {
         <>
             <div className={style.topPlayersTilte}>
                 <h4>{title}</h4>
-                <SearchBar />
+                <div className="d-none d-lg-block">
+                    <SearchBar />
+                </div>
             </div>
             <div className="mt-2"></div>
             <div className="top-players-slider">

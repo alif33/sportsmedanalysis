@@ -6,13 +6,13 @@ const PlayerGallerySlider = () => {
     var settings = {
         className: "center",
         centerMode: true,
-        centerPadding: "0px",
+        centerPadding: "200px",
         dots: true,
         infinite: false,
         speed: 500,
-        slidesToShow: 3,
+        slidesToShow: 2,
         slidesToScroll: 1,
-        initialSlide: 0,
+        initialSlide: 2,
         arrow: true,
         responsive: [
             {
@@ -47,7 +47,6 @@ const PlayerGallerySlider = () => {
                 <PlayerGallerySliderCard title="oshua Primo was the youngest player in the NBA" p="
 this season. Drafted by the San Antonio Spurs with the 12th overall pick in the 2021 draft, " img="/images/card-img/gallery-img.png" mark="2/10" />
             </div>
-
             <div>
                 <PlayerGallerySliderCard title="oshua Primo was the youngest player in the NBA" p="
 this season. Drafted by the San Antonio Spurs with the 12th overall pick in the 2021 draft, " img="/images/card-img/gallery-img.png" mark="2/10" />
