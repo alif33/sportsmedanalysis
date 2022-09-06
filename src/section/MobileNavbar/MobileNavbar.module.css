@@ -1,11 +1,6 @@
 /*==========================
 _smd_navbar
 ===========================*/
-@media (min-width: 992px) {
-  ._smd_navbar_border {
-    display: none !important;
-  }
-}
 
 ._smd_navbar_border {
   border-top: 1px solid #494949;
@@ -19,11 +14,11 @@ _smd_navbar
   font-family: "Poppins";
   font-style: normal;
   font-weight: 500;
-  font-size: 10px;
-  line-height: 15px;
+  font-size: 20px;
+  line-height: 24px;
   color: #f5f5f5 !important;
   height: 43px;
-  padding: 0 8px !important;
+  padding: 0 20px !important;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -64,48 +59,176 @@ _smd_navbar
 _smd_navbar
 ===========================*/
 .navMenu {
-  width: 80%;
+  width: 92%;
   align-items: center;
   flex-wrap: wrap;
 }
 .signBtn i {
-  margin-right: 4px;
+  margin-right: 10px;
+  width: 20px;
 }
 .signBtn {
   font-family: "Poppins";
   font-style: normal;
   font-weight: 500;
-  font-size: 10px;
+  font-size: 20px;
   line-height: 120%;
   text-align: center;
   letter-spacing: 0.005em;
   color: #ffffff !important;
   text-transform: uppercase;
+  margin: 0 30px;
 }
 
 .navMenu ul {
   flex-direction: row;
   flex-wrap: wrap;
 }
-.formInline {
-}
 .formInline button {
   margin: 1px 0;
   border: none;
   padding: 0;
   background: transparent;
-  width: 15px;
-  height: 15px;
+  width: 30px;
+  height: 30px;
 }
 .formInline button svg {
   margin: 0;
   border: none;
   padding: 0;
   background: transparent;
-  width: 15px;
-  height: 15px;
+  width: 30px;
+  height: 30px;
 }
 
 /*==========================
 end _smd_navbar
 ===========================*/
+
+/*navbar dropdown*/
+.user_dropdown_btn {
+  cursor: pointer;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+  display: inline-block;
+}
+.user_dropdown {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  box-shadow: 0px 0px 15px rgba(123, 123, 123, 0.25);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.user_dropdown li a {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 32px;
+  letter-spacing: -0.04em;
+  color: #000000 !important;
+  text-decoration: none;
+  border-bottom: 1px solid #d9d9d9;
+  width: 100%;
+  display: block;
+  padding: 10px 20px;
+}
+.user_dropdown li a svg {
+  margin-right: 7px;
+}
+
+.menu_item:hover {
+  color: #2980b9;
+}
+
+.leangBtn {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.dropdown {
+  position: relative;
+}
+.dropdown:hover .dropdown_items {
+  visibility: visible;
+  opacity: 1;
+}
+.dropdown_items {
+  position: absolute;
+  background: #fff;
+  color: #111;
+  flex-direction: column;
+  top: 100%;
+  right: 0;
+  z-index: 999;
+  visibility: hidden;
+  opacity: 0;
+  padding: 0;
+}
+
+.dropdown_items li {
+  color: #111 !important;
+  display: block;
+  padding: 10px 20px;
+  text-align: center;
+  border-bottom: 1px solid #111;
+}
+/*end navbar dropdown*/
+
+@media (max-width: 768px) {
+  ._smd_nav_item a {
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 15px;
+    height: 43px;
+    padding: 0 8px !important;
+  }
+  .navMenu {
+    width: 92%;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .signBtn i {
+    margin-right: 4px;
+  }
+  .signBtn {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 120%;
+    text-align: center;
+    letter-spacing: 0.005em;
+    color: #ffffff !important;
+    text-transform: uppercase;
+  }
+
+  .navMenu ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .formInline button {
+    margin: 1px 0;
+    border: none;
+    padding: 0;
+    background: transparent;
+    width: 15px;
+    height: 15px;
+  }
+  .formInline button svg {
+    margin: 0;
+    border: none;
+    padding: 0;
+    background: transparent;
+    width: 15px;
+    height: 15px;
+  }
+}

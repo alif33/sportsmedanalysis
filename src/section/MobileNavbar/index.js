@@ -27,7 +27,7 @@ const MobileNavbar = () => {
                         </a>
                     </Link>
 
-                    <div className={`d-flex  justify-content-between ${style.navMenu}`}>
+                    <div className={`d-flex  justify-content-between align-items-center ${style.navMenu}`}>
                         <ul className={`d-flex navbar-nav mr-auto `}>
                             {
                                 navMenus.map((menu, index) => {
@@ -45,16 +45,29 @@ const MobileNavbar = () => {
                             }
                         </ul>
 
-                        <form className={style.formInline}>
-                            <button type="submit"><SearchIcon /></button>
-                        </form>
+                        <div className={`d-flex  justify-content-between align-items-center`} >
+                            <form className={style.formInline}>
+                                <button type="submit"><SearchIcon /></button>
+                            </form>
 
-                        <Link href="">
-                            <a className={style.signBtn}>
-                                <i> <Image width="14" height="14" src="/images/icon/user-icon.png" alt="" /></i>
-                                SIGN IN
-                            </a>
-                        </Link>                    </div>
+                            <Link href="">
+                                <a className={style.signBtn}>
+                                    <i> <Image width="14" height="14" src="/images/icon/user-icon.png" alt="" /></i>
+                                    SIGN IN
+                                </a>
+                            </Link>
+                            <ul className={style.leangBtn}>
+                                <li className={`d-flex align-items-center dropdown ${style.dropdown}`}>
+                                    <div className="dropdown-btn"><Image height="6" width="12" src="/images/icon/arrow-down.png" alt="" />En</div>
+                                    <ul className={`dropdown-items ${style.dropdown_items}`}>
+                                        <li>bn</li>
+                                        <li>en</li>
+                                    </ul>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </nav>
         </>

@@ -1,26 +1,18 @@
-@media (min-width: 769px) {
-  ._smd_mobile_footer {
-    display: none;
-  }
-}
 .tilte {
-  font-family: "Bebas Neue";
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
-  display: flex;
-  align-items: center;
+  font-size: 36px;
+  line-height: 40px;
   text-transform: uppercase;
-
   color: #ffffff;
 }
 .description {
   font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
-  font-size: 10px;
-  line-height: 15px;
-
+  font-size: 14px;
+  line-height: 32px;
   color: #cacaca;
 }
 
@@ -56,18 +48,26 @@
   font-family: "Poppins";
   font-style: normal;
   font-weight: 500;
-  font-size: 12px;
+  font-size: 16px;
   line-height: 17px;
-  color: #fff;
+  color: #cacaca;
 }
-.newsLatter {
+.newsLatter label {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #cacaca;
+  margin-top: 20px;
 }
+
 .newsLatter h3 {
   font-family: "Poppins";
   font-style: normal;
   font-weight: 600;
-  font-size: 12px;
-  line-height: 15px;
+  font-size: 16px;
+  line-height: 43px;
   font-feature-settings: "pnum" on, "lnum" on;
   color: #ffffff;
 }
@@ -80,18 +80,11 @@
   font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
-  font-size: 10px;
+  font-size: 12px;
   line-height: 24px;
-  /* or 240% */
-
-  display: flex;
-  align-items: center;
-
-  /* Text/Default in Field */
-
   color: #111;
   width: 100%;
-  padding: 5px 10px;
+  padding: 8px 14px;
 }
 .newsLatterInput input:placeholder {
   color: #999999;
@@ -120,4 +113,20 @@
 }
 .selectLang option {
   color: #111;
+}
+
+.borderTop {
+  border-top: 1px solid #fff;
+  padding-top: 20px;
+}
+.copy_right a{
+  font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 32px;
+color: #CACACA;
+}
+
+@media (max-width: 768px) {
 }

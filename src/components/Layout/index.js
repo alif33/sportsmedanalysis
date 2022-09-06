@@ -15,16 +15,19 @@ const Layout = ({ children, navheader }) => {
                 position="top-center"
                 reverseOrder={false}
             />
-           <div className={style.navbar}>
+
+           {/* <div className={style.navbar}>
            <TopHeading />
             <Navbar />
-           </div>
+           </div> */}
+
            <MobileNavbar/>
+
             {
                 navheader && <NavHeader />
             }
             <main>{children}</main>
-            <SMDFooter />
+            {/* <SMDFooter /> */}
             <MobileFooter/>
         </>
     );
