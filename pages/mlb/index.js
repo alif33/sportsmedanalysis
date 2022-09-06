@@ -11,7 +11,7 @@ import PageNewsSection from '../../src/section/PageNewsSection';
 import NewsTab from '../../src/section/NewsTap';
 import BorderLine from '../../src/components/BorderLine';
 
-const MLB = ({ posts }) => {
+const MLB = ({ posts, players }) => {
   const [toggleState, setToggleState] = useState(1);
 
   const toggleTab = (index) => {
@@ -22,7 +22,10 @@ const MLB = ({ posts }) => {
     <div className='_nfl'>
       <Layout navheader={true}>
         <NFLSlider />
-        <NewsTab />
+        <NewsTab
+          posts={ posts } 
+          players={ players }
+        />
         <div className="nfl_con">
           <BorderLine />
         </div>
@@ -49,7 +52,7 @@ export default MLB;
 export async function getServerSideProps() {
 
   await db.connect();
-  const posts = await Post.find()
+  const posts = await Post.find({}, { _comments: 0 })
     .lean()
     .limit(50);
 

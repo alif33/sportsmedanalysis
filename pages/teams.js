@@ -4,7 +4,7 @@ import TeamsFollowing from '../src/section/TeamsFollowing';
 
 const Teams = () => {
     return (
-        <Layout>
+        <Layout navheader={ true }>
             <div className="container-fluid2 mt-3">
                 <h3>Team Lists</h3>
             </div>
