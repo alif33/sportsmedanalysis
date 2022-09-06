@@ -5,43 +5,23 @@ import Layout from '../../src/components/Layout';
 import LiveBtn from '../../src/components/LiveBtn';
 import SingleNews from '../../src/section/SingleNews';
 
-const Single = ({ post }) => {
+const Single = ({ post, _comments }) => {
     return (
         <Layout>
             <div className="container-fluid my-2">
                 <LiveBtn name="live" />
             </div>
             <div className="container">
-                <SingleNews post={ post } />
+                <SingleNews 
+                    post={ post } 
+                    _comments={ JSON.parse(_comments) }
+                    />
             </div>
         </Layout>
     );
 };
 
 export default Single;
-
-
-
-
-
-
-// import { useEffect } from "react";
-
-
-// const News = ({ post }) => {
-
-//     useEffect(()=>{
-
-//     }, [])
-//     return (
-//         <>
-//             <h1>This is the most important news</h1>
-//         </>
-//     )
-// }
-
-// export default News;
-
 
 
 export async function getServerSideProps(context) {
@@ -54,18 +34,28 @@ export async function getServerSideProps(context) {
                         "views": 1
                     }});
     await db.disconnect();
+
+    const { _id, title, image, description, league, playersName, views, tags, comments, _comments, createdAt, updatedAt } = _doc;
     
     return {
         props: {
-
             post :  {
-                ..._doc,
-                _id: _doc._id.toString(),
-                createdAt: _doc.createdAt.toString(),
-                updatedAt: _doc.updatedAt.toString()
-            }
+                _id: _id.toString(),
+                title, 
+                image, 
+                description, 
+                league, 
+                playersName, 
+                views, 
+                tags,
+                createdAt: createdAt.toString(),
+                updatedAt: updatedAt.toString()
+            },
+            _comments: JSON.stringify(_comments)
         }
 
     };
 }
+
+
 

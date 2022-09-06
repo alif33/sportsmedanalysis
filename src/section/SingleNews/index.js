@@ -1,13 +1,16 @@
 import Image from 'next/image';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import PostComment from '../../components/PostComment';
 import SimilarNews from '../../components/SimiliarNews';
 import SinglePageComment from '../../components/SinglePageComment';
 import style from './SingleNews.module.css';
 
-const SingleNews = ({ post }) => {
+const SingleNews = ({ post, _comments }) => {
+    const [ comments, _setComments ] = useState();
 
-    
+    useEffect(()=>{
+        _setComments(_comments)
+    }, [])
     return (
         <>
             <ul className={style.newsCateHour}>
@@ -34,9 +37,13 @@ const SingleNews = ({ post }) => {
                 </p>
             </div>
             <PostComment />
-            <SinglePageComment />
-            <SinglePageComment />
-            <SinglePageComment />
+            {
+                comments && comments.map((item, index)=><SinglePageComment 
+                    key={ index }
+                    fullName={ item.fullName }
+                    comment={ item.comment }
+                />)
+            }
             <SimilarNews />
         </>
     );

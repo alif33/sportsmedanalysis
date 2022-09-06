@@ -71,7 +71,7 @@ export default LandingPage;
 export async function getServerSideProps() {
 
     await db.connect();
-    const posts = await Post.find()
+    const posts = await Post.find({}, { _comments: 0 })
         .sort()
         .lean()
         .limit(50);

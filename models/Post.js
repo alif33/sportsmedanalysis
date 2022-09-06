@@ -13,7 +13,7 @@ const commentSchema = new mongoose.Schema(
             trim: true
         }
     },
-    
+
     { timestamps: true }
 );
 
@@ -57,7 +57,11 @@ const postSchema = new mongoose.Schema(
             type: Array,
             required: true
         },
-        comments: [commentSchema]
+        _comments: [commentSchema],
+        comments: {
+            type: Number,
+            default: 0
+        },
     },
     { timestamps: true }
 );

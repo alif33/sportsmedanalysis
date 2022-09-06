@@ -18,26 +18,28 @@ const NewsTab = ({ posts, players }) => {
                             img={posts[0].image}
                             description="Follow here for signings, trades, rumors and analysis from The Athletic's staff as the"
                             name="John Holinger"
-                            comment={posts[0]?.comments ? posts[0]?.comments.length : "0"}
+                            comment={ posts[0]?.comments && posts[0]?.comments }
                         />
                     </div>
                 }
 
                 <div className="col-lg-4 col-md-6 mt-4 mt-md-0 ">
                     {
-                        posts && posts.slice(1, 4).map((item, i) => <NewsCard7
-                            key={i}
-                            _id={item._id}
-                            slug={item.slug}
-                            title={item.title}
+                        posts && posts.slice(1, 4).map((item, index) => <NewsCard7
+                            key={ index }
+                            _id={ item._id }
+                            slug={ item.slug }
+                            title={ item.title }
+                            img={ item.image }
                             description="The Athletic NFL Staff"
-                            img={item.image}
                         />)
                     }
                 </div>
 
                 <div className="col-lg-3 col-md-6 mx-auto mt-2 mt-lg-0 ">
-                    <PlayerTab players={players} />
+                    <PlayerTab 
+                        players={ players } 
+                    />
                 </div>
 
             </div>

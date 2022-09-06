@@ -31,7 +31,7 @@ const TopStory = ({ topPosts }) => {
                             slug={item.slug}
                             title={item.title}
                             name="Scott Wheeler"
-                            comment={item?.comments ? item?.comments.length : "0"}
+                            comment={ item?.comments && item?.comments }
                         />)}
                     </div>
                     <div className="col-12 mx-auto col-lg-4">

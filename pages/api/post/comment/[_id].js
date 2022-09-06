@@ -8,7 +8,7 @@ const handler = nc();
 
 handler.use(isAuth).post(async (req, res) => {
     await db.connect();
-    const { fullName } = await User.find({ _id : req.user._id });
+    const { fullName } = await User.findById({ _id : req.user._id });
 
     if (req.query._id) {
       const { comment } = req.body;
@@ -16,11 +16,15 @@ handler.use(isAuth).post(async (req, res) => {
         { _id: req.query._id },
         {
           $push: {
-            comments: {
+            _comments: {
               name: fullName,
               comment
             },
           },
+
+          $inc: {
+            "comments": 1
+          }
         },
         { returnOriginal: false }
       ).then((post) =>

@@ -13,7 +13,7 @@ const RecentStories = ({ posts }) => {
                 name="John Holinger" 
                 title={ item.title } 
                 img={ item.image } 
-                comment={ item?.comments? item.comments.length: "0" }
+                comment={ item?.comments && item.comments }
                 link='#!' 
             />)}
         </div>
