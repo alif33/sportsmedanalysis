@@ -2,8 +2,6 @@
   width: 100%;
   margin: auto;
 }
-.mainNewsCard {
-}
 .mainNewsCard h3 {
   font-family: "Poppins";
   font-style: normal;
@@ -53,8 +51,6 @@
 
   color: #ffffff;
 }
-.latestNews {
-}
 .latestNews h5 {
   font-family: "Poppins";
   font-style: normal;
@@ -63,4 +59,14 @@
   line-height: 32px;
   letter-spacing: -0.04em;
   color: #000000;
+}
+@media (max-width: 768px) {
+  .nflNewsCardContent p {
+    font-size: 8px;
+    line-height: 10px;
+  }
+  .nflNewsCardContent h4 {
+    font-size: 14px;
+    line-height: 17px;
+  }
 }

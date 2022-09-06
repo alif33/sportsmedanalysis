@@ -101,6 +101,32 @@ a {
   align-items: center;
   margin: 15px 0;
 }
+@media (max-width: 768px) {
+  .container {
+    padding: 0%;
+    width: 100%;
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+    max-width: 100%;
+    margin: auto !important;
+  }
+}
+@media (max-width: 991px) {
+  h3 {
+    font-size: 20px;
+    line-height: 20px;
+  }
+  h5 {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .main-btn {
+    font-size: 14px !important;
+    padding: 8px 23px !important;
+  }
+}
 
 .top-players-slider .slick-prev:before,
 .top-players-slider .slick-next:before {
@@ -140,10 +166,9 @@ a {
   top: 0 !important;
   right: 0 !important;
 }
-.player-gallery-slider .slick-list{
-padding-left: 0 !important;
+.player-gallery-slider .slick-list {
+  padding-left: 0 !important;
 }
-
 
 @media (max-width: 768px) {
   .slick-prev,

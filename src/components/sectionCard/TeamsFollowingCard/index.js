@@ -6,8 +6,10 @@ const TeamsFollowingCard = () => {
     return (
         <div className={style.teamsFollowingCard}>
             <div className={style.imageAndName}>
-                <Image height="87" width="144" src="/images/card-img/following.png" alt="" />
-                <div className="ms-3">
+               <div className={style.cardImage}>
+               <Image height="87" width="144" src="/images/card-img/following.png" alt="" />
+               </div>
+                <div className="ms-md-3 ms-1 ">
                     <Image height="26" width="26" src="/images/icon/football.png" alt="" />
                 </div>
                 <div className="">

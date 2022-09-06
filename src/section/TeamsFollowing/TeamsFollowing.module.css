@@ -41,3 +41,17 @@
   border: none;
   background: transparent;
 }
+@media (max-width: 768px) {
+  .teamsFollowingTitle {
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .TeamsFollowingSort h6 {
+    font-size: 8px;
+    line-height: 10px;
+    margin: 0 6px;
+  }
+  .TeamsFollowingSort span {
+    width: 10px !important;
+  }
+}
