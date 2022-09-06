@@ -60,7 +60,7 @@ function NFL({ posts, players, trendings }) {
 
 export default NFL;
 
-export async function getServerSideProps() {
+export async function getStaticProps(context) {
 
   await db.connect();
   const posts = await Post.find({}, { _comments: 0 })
@@ -85,6 +85,7 @@ export async function getServerSideProps() {
       trendings: trendings.map(db.convertDocToObj),
       players: players.map(db.convertDocToObj)
     },
+    revalidate: 60,
   };
 }
 

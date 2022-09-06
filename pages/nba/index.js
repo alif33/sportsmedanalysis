@@ -41,7 +41,7 @@ const NBA = ({ posts, players, topPicks, bettings }) => {
 
 export default NBA;
 
-export async function getServerSideProps() {
+export async function getStaticProps(context) {
 
   await db.connect();
   const posts = await Post.find({}, { _comments: 0 })
@@ -73,6 +73,7 @@ export async function getServerSideProps() {
       bettings: bettings.map(db.convertDocToObj),
       players: players.map(db.convertDocToObj)
     },
+    revalidate: 60,
   };
 }
 
