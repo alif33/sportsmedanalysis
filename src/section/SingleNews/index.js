@@ -36,11 +36,14 @@ const SingleNews = ({ post, _comments }) => {
                    { post.description }
                 </p>
             </div>
-            <PostComment />
+            <PostComment
+                _id={ post._id } 
+                _setComments={ _setComments }
+            />
             {
-                comments && comments.map((item, index)=><SinglePageComment 
+                comments && comments.reverse().map((item, index)=><SinglePageComment 
                     key={ index }
-                    fullName={ item.fullName }
+                    fullName={ item.name }
                     comment={ item.comment }
                 />)
             }

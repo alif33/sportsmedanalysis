@@ -63,16 +63,17 @@ export default NFL;
 export async function getServerSideProps() {
 
   await db.connect();
-  const posts = await Post.find()
+  const posts = await Post.find({}, { _comments: 0 })
     .lean()
     .limit(50);
 
-  const trendings = await Post.find({ league: "NFL"})
+  const trendings = await Post.find({ league: "NFL"},
+      { _comments: 0 })
     .sort({"views": -1})
     .lean()
     .limit(50);
 
-  const players = await Player.find()
+  const players = await Player.find({}, { _comments: 0 })
     .lean()
     .limit(50);
 

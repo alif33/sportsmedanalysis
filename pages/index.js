@@ -76,24 +76,24 @@ export async function getServerSideProps() {
         .lean()
         .limit(50);
 
-    const topPosts = await Post.find()
+    const topPosts = await Post.find({}, { _comments: 0 })
         .sort({ "views": -1 })
         .lean()
         .limit(50);
 
-    const players = await Player.find()
+    const players = await Player.find({}, { _comments: 0 })
         .lean()
         .limit(50);
 
     const topPicks = await Post.find({
         tags: { $in: ["top_picks"] }
-    })
+    }, { _comments: 0 })
         .lean()
         .limit(50);
 
     const bettings = await Post.find({
         tags: { $in: ["betting"] }
-    })
+    }, { _comments: 0 })
         .lean()
         .limit(50);
 

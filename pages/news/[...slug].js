@@ -14,7 +14,7 @@ const Single = ({ post, _comments }) => {
             <div className="container">
                 <SingleNews 
                     post={ post } 
-                    _comments={ JSON.parse(_comments) }
+                    _comments={ JSON.parse(_comments).reverse() }
                     />
             </div>
         </Layout>
