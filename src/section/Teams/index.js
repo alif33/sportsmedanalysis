@@ -11,6 +11,7 @@ const Teams = () => {
                 <div>
                     <Image height="43" width='43' src="/images/icon/player-icon.png" alt="" />
                     <h2>Ball Control</h2>
+                    <h4>Aces down Sets up</h4>
                     <button>Follow</button>
                 </div>
                 <p>In a parting shot at Parker, owner Maxim Demin said in a statement that “in order for us to keep progressing as </p>

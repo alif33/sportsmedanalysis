@@ -10,69 +10,69 @@ import NbaNews from '../../src/section/NbaNews';
 import PlayerSection from '../../src/section/PlayerSection';
 import TopPicks from '../../src/section/TopPicks';
 import NflTeam from '../../src/section/NflTeam';
+import NbaNewsSection from '../../src/section/NbaNewsSection';
 
 const NBA = ({ posts, players, topPicks, bettings }) => {
 
-    return (
-        <div>
-            <Layout navheader={ true }>
-              <NbaHero />
-              <NbaNews 
-                title="NBA News" 
-                players={ players }
-              />
-              <TopPicks 
-                topPicks={ posts }
-              />
-              <BettingFantasy 
-                title="Trendings"
-                bettings={ posts }
-              />
-              <PlayerSection 
-                posts={ posts }
-                players={ players }
-              />
-              <MoreNews posts={ posts } />
-              <NflTeam />
-            </Layout>
-        </div>
-    );
+  return (
+    <div>
+      <Layout navheader={true}>
+        <NbaHero />
+        <NbaNews
+          title="NBA News"
+          players={players}
+        />
+        <TopPicks
+          topPicks={posts}
+        />
+        <BettingFantasy
+          title="Trendings"
+          bettings={posts}
+        />
+        <NbaNewsSection
+          posts={posts}
+        />
+        <MoreNews posts={posts} />
+        <NflTeam />
+      </Layout>
+    </div>
+  );
 };
 
 export default NBA;
 
 export async function getServerSideProps() {
-  
-    await db.connect();
-    const posts = await Post.find({}, { _comments: 0 })
-        .lean()
-        .limit(50);
 
-    const topPicks = await Post.find({ 
-          tags: { $in: [ "top_picks" ] } 
-      }, { _comments: 0 })
-      .lean()
-      .limit(50);
+  await db.connect();
+  const posts = await Post.find({}, { _comments: 0 })
+    .lean()
+    .limit(50);
 
-    const players = await Player.find({}, { _comments: 0 })
-        .lean()
-        .limit(50);
+  const topPicks = await Post.find({
+    tags: { $in: ["top_picks"] }
+  }, { _comments: 0 })
+    .lean()
+    .limit(50);
 
-    const bettings = await Post.find({ 
-          tags: { $in: [ "betting" ] } 
-      }, { _comments: 0 })
-      .lean()
-      .limit(50);
+  const players = await Player.find({}, { _comments: 0 })
+    .lean()
+    .limit(50);
 
-    await db.disconnect();
-  
-    return {
-      props: {
-        posts: posts.map(db.convertDocToObj),
-        topPicks: topPicks.map(db.convertDocToObj),
-        bettings: bettings.map(db.convertDocToObj),
-        players: players.map(db.convertDocToObj)
-      },
-    };
-  }
-  
+  const bettings = await Post.find({
+    tags: { $in: ["betting"] }
+  }, { _comments: 0 })
+    .lean()
+    .limit(50);
+
+  await db.disconnect();
+
+  return {
+    props: {
+      posts: posts.map(db.convertDocToObj),
+      topPicks: topPicks.map(db.convertDocToObj),
+      bettings: bettings.map(db.convertDocToObj),
+      players: players.map(db.convertDocToObj)
+    },
+  };
+}
+

@@ -104,7 +104,7 @@ a {
 
 .top-players-slider .slick-prev:before,
 .top-players-slider .slick-next:before {
-  color: #111 !important;
+  color: #fff !important;
 }
 
 .featuredPodcasts .slick-prev:before,
@@ -140,6 +140,10 @@ a {
   top: 0 !important;
   right: 0 !important;
 }
+.player-gallery-slider .slick-list{
+padding-left: 0 !important;
+}
+
 
 @media (max-width: 768px) {
   .slick-prev,

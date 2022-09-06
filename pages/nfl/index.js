@@ -18,7 +18,7 @@ function NFL({ posts, players, trendings }) {
       <Layout navheader={true}>
         <NFLSlider />
 
-        <NewsTab 
+        <NewsTab
           posts={ posts }
           players={ players }
         />
