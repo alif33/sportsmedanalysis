@@ -40,7 +40,8 @@ export async function getStaticProps(context) {
     return {
       props: {
         blogs: JSON.stringify(blogs)
-      }, // will be passed to the page component as props
+      },
+      revalidate: 10, // will be passed to the page component as props
     }
   }
 // export const getServerSideProps = __Auth((context) => {
