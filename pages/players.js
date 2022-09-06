@@ -1,7 +1,7 @@
 import React from 'react';
 import Player from '../models/Player';
 import Layout from '../src/components/Layout';
-import TeamsFollowing from '../src/section/TeamsFollowing';
+import PlayersFollowing from '../src/section/PlayersFollowing';
 
 const Players = ({ players }) => {
     return (
@@ -10,7 +10,7 @@ const Players = ({ players }) => {
                 <h3>Player Lists</h3>
             </div>
             <div className="container mb-4">
-                <TeamsFollowing title="Players Following" />
+                <PlayersFollowing title="Players Following" />
             </div>
         </Layout>
     );
