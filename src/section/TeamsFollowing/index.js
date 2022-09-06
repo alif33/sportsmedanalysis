@@ -5,6 +5,7 @@ import TeamsFollowingCard from '../../components/sectionCard/TeamsFollowingCard'
 import style from './TeamsFollowing.module.css'
 
 const TeamsFollowing = ({ title }) => {
+    
     return (
         <>
             <div className="d-flex justify-content-between mt-3">
