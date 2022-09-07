@@ -12,7 +12,7 @@ const NewsCard3 = ({ _id, slug, title, img,  comment, name, link }) => {
                 <div className={`d-flex ${style.newscard3}`}>
 
                     <div className={style.newscard3Image}>
-                    <Image height="132" width="218" src={img} alt="" />
+                        <Image height="132" width="218" src={img} alt="" />
                     </div>
 
                     <div className={style.newscard3content}>

@@ -64,6 +64,7 @@ export async function getStaticProps(context) {
 
   await db.connect();
   const posts = await Post.find({}, { _comments: 0 })
+    .sort({"createdAt": -1})
     .lean()
     .limit(50);
 
@@ -74,6 +75,7 @@ export async function getStaticProps(context) {
     .limit(50);
 
   const players = await Player.find()
+    .sort({"createdAt": -1})
     .lean()
     .limit(50);
 
