@@ -8,14 +8,14 @@ import SingleNews from '../../src/section/SingleNews';
 const Single = ({ post, _comments }) => {
     return (
         <Layout>
-            <div className="container-fluid my-2">
+            <div className="container-fluid my-2 d-md-block d-none">
                 <LiveBtn name="live" />
             </div>
-            <div className="container">
-                <SingleNews 
-                    post={ post } 
-                    _comments={ JSON.parse(_comments).reverse() }
-                    />
+            <div className="container-fluid2">
+                <SingleNews
+                    post={post}
+                    _comments={JSON.parse(_comments).reverse()}
+                />
             </div>
         </Layout>
     );
@@ -29,24 +29,26 @@ export async function getServerSideProps(context) {
 
     await db.connect();
     const { _doc } = await Post.findById(slug[1]);
-                await Post.updateOne({ _id: slug[1] }, 
-                    { $inc: {
-                        "views": 1
-                    }});
+    await Post.updateOne({ _id: slug[1] },
+        {
+            $inc: {
+                "views": 1
+            }
+        });
     await db.disconnect();
 
     const { _id, title, image, description, league, playersName, views, tags, comments, _comments, createdAt, updatedAt } = _doc;
-    
+
     return {
         props: {
-            post :  {
+            post: {
                 _id: _id.toString(),
-                title, 
-                image, 
-                description, 
-                league, 
-                playersName, 
-                views, 
+                title,
+                image,
+                description,
+                league,
+                playersName,
+                views,
                 tags,
                 createdAt: createdAt.toString(),
                 updatedAt: updatedAt.toString()

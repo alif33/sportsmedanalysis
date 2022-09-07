@@ -75,8 +75,8 @@ a {
 }
 .nfl_con,
 .container-fluid2 {
-  width: 95%;
-  margin: 0 auto;
+  width: 95% !important;
+  margin: 0 auto !important;
 }
 
 .bg-black {

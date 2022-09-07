@@ -53,3 +53,20 @@
   margin: 0;
   margin-top: 10px;
 }
+@media (max-width: 768px) {
+  .singlePageComment {
+    grid-template-columns: 10% 82%;
+    column-gap: 5%;
+  }
+  .content h4 {
+    font-weight: 600;
+    font-size: 8px;
+    margin-top: 5px;
+  }
+  .content h4 span {
+    font-size: 8px;
+  }
+  .content p {
+    font-size: 8px;
+  }
+}

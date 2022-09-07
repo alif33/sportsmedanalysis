@@ -51,6 +51,18 @@ _smd_navbar
   background: #ffffff2b;
 }
 
+@media (max-width: 768px) {
+  ._smd_nav_item.active a {
+    background: transparent;
+  }
+  ._smd_nav_item.active a:after {
+    top: 97%;
+    left: 0;
+    height: 3px;
+    bottom: 0;
+  }
+}
+
 /*==========================
   end _smd_navbar
   ===========================*/
@@ -205,6 +217,9 @@ end _smd_navbar
     height: 43px;
     padding: 0 8px !important;
   }
+  .navBrand span {
+    width: 31px !important;
+  }
   .navMenu {
     width: 92%;
     align-items: center;
@@ -236,6 +251,7 @@ end _smd_navbar
     background: transparent;
     width: 15px;
     height: 15px;
+    display: flex;
   }
   .formInline button svg {
     margin: 0;
@@ -244,5 +260,16 @@ end _smd_navbar
     background: transparent;
     width: 15px;
     height: 15px;
+  }
+  .leangBtn {
+    display: none;
+  }
+  .signBtn {
+    margin: 0 5px;
+  }
+  .signBtn svg {
+    margin-right: 3px;
+    width: 17px !important;
+    height: 17px !important;
   }
 }

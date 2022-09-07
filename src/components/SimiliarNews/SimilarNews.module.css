@@ -109,3 +109,33 @@
   letter-spacing: 0.008em;
   color: #9a9ab0;
 }
+
+.similarNewsCard div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+  .similarNewsTitle h3 {
+    font-size: 16px;
+    border-bottom: 2px solid #111;
+    padding-bottom: 7px;
+  }
+  .similarNewsTitle button {
+    display: none;
+  }
+  .newCard h4 {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .similarNewsCard h4 {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .similarNewsCard li,
+  .newCard li {
+    font-size: 10px;
+    line-height: 15px;
+  }
+}

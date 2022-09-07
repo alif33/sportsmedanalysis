@@ -10,8 +10,8 @@ const SimilarNews = () => {
                 <button>View All</button>
             </div>
 
-            <div className="row mt-3 mb-2">
-                <div className="col-md-7">
+            <div className="row mt-md-3 mt-1 mb-1 mb-md-2 w-100  mx-auto">
+                <div className="col-md-7 mb-md-0 mb-3">
                     <div className={style.newCard}>
                         <Image height="377" width="695" src="/images/card-img/card-img3.png" alt="" />
                         <h4>Abraham earns point for Roma on Dybala&apos;s difficult Juve return
@@ -26,7 +26,7 @@ const SimilarNews = () => {
 
                     <div className={style.similarNewsCard}>
                         <Image height="164" width="192" src="/images/card-img/card-img4.png" alt="" />
-                        <div className="">
+                        <div className="h-100 ">
                             <h4>Uninspired Juve held by Sampdoria NFL
                             </h4>
                             <ul>

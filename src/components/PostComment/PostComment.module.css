@@ -40,3 +40,21 @@
   border: none;
   margin-top: 10px;
 }
+
+@media (max-width: 768px) {
+  .postComment {
+    grid-template-columns: 10% 82%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    column-gap: 5%;
+  }
+  .textareaPart textarea {
+    height: 107px;
+    font-size: 12px;
+    padding: 14px 18px;
+  }
+  .textareaPart button {
+    font-size: 8px;
+    padding: 7px 38px;
+  }
+}

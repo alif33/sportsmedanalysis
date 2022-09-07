@@ -106,6 +106,7 @@
   color: #111;
   width: 100%;
   padding: 8px 14px;
+  border: none;
 }
 .newsLatterInput input:placeholder {
   color: #999999;
@@ -131,6 +132,7 @@
   background: transparent;
   color: #fff;
   margin-top: 36px;
+  text-transform: uppercase;
 }
 .selectLang option {
   color: #111;
@@ -150,4 +152,54 @@
 }
 
 @media (max-width: 768px) {
+  .copy_right a {
+    font-size: 12px;
+    line-height: 12px;
+  }
+  ._footer_logo {
+    top: 28px;
+    left: 30px;
+    width: 41px;
+    height: 41px;
+  }
+  .tilte {
+    font-size: 16px;
+  }
+  .description {
+    font-size: 10px;
+    line-height: 20px;
+    margin-top: 0px;
+  }
+  ._smd_footer_menu {
+    margin-top: 30px;
+  }
+  ._smd_footer_menu li {
+    margin-bottom: 5px !important;
+  }
+  ._smd_footer_menu li a {
+    font-size: 12px;
+    line-height: 17px;
+  }
+  .newsLatter {
+    margin-top: 20px;
+  }
+  .newsLatter label {
+    display: none;
+  }
+
+  .newsLatter h3 {
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .newsLatterInput input {
+    font-size: 10px;
+    padding: 2px 9px;
+  }
+  .newsLatterInput button {
+    width: 23px;
+    height: 18px;
+  }
+  .selectLang {
+    font-size: 12px;
+  }
 }
