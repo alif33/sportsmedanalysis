@@ -56,16 +56,6 @@ const MobileNavbar = () => {
                             </form>
 
                             {
-                                // user?.isUser ? <a onClick={ ()=>dispatch(logOut()) } className={style.signBtn}>
-                                //         <i> <Image width="14" height="14" src="/images/icon/user-icon.png" alt="" /></i>
-                                //         LOG OUT
-                                //     </a>: <Link href="/auth/sign-in">
-                                //         <a className={style.signBtn}>
-                                //             <i> <Image width="14" height="14" src="/images/icon/user-icon.png" alt="" /></i>
-                                //             SIGN IN
-                                //         </a>
-                                //     </Link>
-
                                 user?.isUser ? <a onClick={() => dispatch(logOut())} className={style.signBtn}>
                                     <UserIcon />
                                     LOG OUT
