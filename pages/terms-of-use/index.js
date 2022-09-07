@@ -1,12 +1,12 @@
 import React from 'react';
+import Player from '../../models/Player';
 import Layout from '../../src/components/Layout';
 import HeaderSection from '../../src/section/HeaderSection';
-
 import PlayerTab from '../../src/section/PlayerSection/PlayerTab';
-
 import TermsDescription from '../../src/section/TermsDescription';
+import db from '../../utils/db';
 
-const TermsOfUse = () => {
+const TermsOfUse = ({ players }) => {
     return (
         <Layout navheader={true}>
 
@@ -17,7 +17,9 @@ const TermsOfUse = () => {
                         <TermsDescription />
                     </div>
                     <div className="col-md-3">
-                        <PlayerTab />
+                        <PlayerTab 
+                            players={ JSON.parse(players) }
+                        />
                     </div>
                 </div>
             </div>
@@ -26,3 +28,23 @@ const TermsOfUse = () => {
 };
 
 export default TermsOfUse;
+
+
+export async function getStaticProps(context) {
+
+    await db.connect();
+
+    const players = await Player.find({}, { _comments: 0 })
+        .sort({"createdAt": -1})
+        .lean()
+        .limit(50);
+    await db.disconnect();
+
+    return {
+        props: {
+            players: JSON.stringify(players)
+        },
+        revalidate: 60,
+    };
+}
+
