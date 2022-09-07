@@ -4,7 +4,7 @@ import SearchBar from '../../components/SearchBar';
 import PlayersFollowingCard from '../../components/sectionCard/PlayersFollowingCard';
 import style from './TeamsFollowing.module.css'
 
-const PlayersFollowing = ({ title }) => {
+const PlayersFollowing = ({ title, players }) => {
     return (
         <>
             <div className="d-flex justify-content-between mt-3">
@@ -15,9 +15,20 @@ const PlayersFollowing = ({ title }) => {
                     <Image width="20" height="17" src="/images/icon/arrows-down-up.png" alt="" />
                 </div>
             </div>
-
-            <PlayersFollowingCard />
-            <PlayersFollowingCard />
+            {
+                players && players.map((item, index)=>{
+                    return(
+                        <PlayersFollowingCard 
+                            key={ index }
+                            firstName={ item.firstName }
+                            lastName={ item.lastName }
+                            league={ item.league }
+                            img={ item.image }
+                        />
+                    )
+                })
+            }
+            {/* <PlayersFollowingCard /> */}
 
             <div className="d-flex justify-content-between align-items-center">
                 <button className={style.nextPreBtn}>

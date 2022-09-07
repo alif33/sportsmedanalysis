@@ -11,7 +11,10 @@ const Players = ({ players }) => {
                 <h3>Player Lists</h3>
             </div>
             <div className="container mb-4">
-                <PlayersFollowing title="Players Following" />
+                <PlayersFollowing 
+                    title="Following" 
+                    players={ JSON.parse(players) }
+                />
             </div>
         </Layout>
     );
@@ -23,7 +26,7 @@ export default Players;
 export async function getStaticProps(context) {
 
     await db.connect();
-    const players = await Player.find({}, { _comments: 0 })
+    const players = await Player.find({})
         .sort()
         .lean()
         .limit(50);

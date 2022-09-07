@@ -58,11 +58,11 @@ const MobileNavbar = () => {
                                         <i> <Image width="14" height="14" src="/images/icon/user-icon.png" alt="" /></i>
                                         LOG OUT
                                     </a>: <Link href="/auth/sign-in">
-                                <a className={style.signBtn}>
-                                    <i> <Image width="14" height="14" src="/images/icon/user-icon.png" alt="" /></i>
-                                    SIGN IN
-                                </a>
-                            </Link>
+                                        <a className={style.signBtn}>
+                                            <i> <Image width="14" height="14" src="/images/icon/user-icon.png" alt="" /></i>
+                                            SIGN IN
+                                        </a>
+                                    </Link>
                             }
                             <ul className={style.leangBtn}>
                                 <li className={`d-flex align-items-center dropdown ${style.dropdown}`}>
