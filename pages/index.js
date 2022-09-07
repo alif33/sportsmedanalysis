@@ -23,7 +23,7 @@ const LandingPage = ({ posts, topPosts, players, topPicks, bettings }) => {
     return (
 
         <div className="_LandingPage">
-            <Layout>
+            <Layout navheader={true}>
 
                 <Article posts={ JSON.parse(posts) } />
 

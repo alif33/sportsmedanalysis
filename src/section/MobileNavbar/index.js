@@ -6,6 +6,7 @@ import { logOut } from '../../../store/user/actions';
 import { useDispatch, useSelector } from 'react-redux';
 import SearchIcon from '../../components/svg/SearchIcon';
 import style from './MobileNavbar.module.css';
+import UserIcon from '../../components/svg/UserIcon';
 
 const navMenus = [
     "NFL",
@@ -17,7 +18,7 @@ const navMenus = [
 
 const MobileNavbar = () => {
     const router = useRouter();
-    const { user } = useSelector(state=>state);
+    const { user } = useSelector(state => state);
     const dispatch = useDispatch();
 
     return (
@@ -25,8 +26,9 @@ const MobileNavbar = () => {
             <nav className={`navbar navbar-expand-lg navbar-dark bg-black pt-0 pb-0 ${style._smd_navbar_border}`}>
                 <div className="container-fluid ">
                     <Link href="/">
-                        <a className="navbar-brand m-0 me-0">
+                        <a className="navbar-brand m-0 me-0 d-flex justify-content-center align-items-center">
                             <Image height="66.06" width="64" src="/images/icon/logo.png" alt="" />
+                            
                         </a>
                     </Link>
 
@@ -54,19 +56,19 @@ const MobileNavbar = () => {
                             </form>
 
                             {
-                                user?.isUser ? <a onClick={ ()=>dispatch(logOut()) } className={style.signBtn}>
-                                        <i> <Image width="14" height="14" src="/images/icon/user-icon.png" alt="" /></i>
-                                        LOG OUT
-                                    </a>: <Link href="/auth/sign-in">
-                                <a className={style.signBtn}>
-                                    <i> <Image width="14" height="14" src="/images/icon/user-icon.png" alt="" /></i>
-                                    SIGN IN
-                                </a>
-                            </Link>
+                                user?.isUser ? <a onClick={() => dispatch(logOut())} className={style.signBtn}>
+                                    <UserIcon />
+                                    LOG OUT
+                                </a> : <Link href="/auth/sign-in">
+                                    <a className={style.signBtn}>
+                                        <UserIcon />
+                                        SIGN IN
+                                    </a>
+                                </Link>
                             }
                             <ul className={style.leangBtn}>
                                 <li className={`d-flex align-items-center dropdown ${style.dropdown}`}>
-                                    <div className="dropdown-btn"><Image height="6" width="12" src="/images/icon/arrow-down.png" alt="" />En</div>
+                                    <div className="dropdown-btn d-flex align-items-center"><Image height="6" width="12" src="/images/icon/arrow-down.png" alt="" /><p className="mb-0">En</p></div>
                                     <ul className={`dropdown-items ${style.dropdown_items}`}>
                                         <li>bn</li>
                                         <li>en</li>
