@@ -10,7 +10,7 @@ import TopPlayers from '../../src/section/TopPlayers';
 const Players = () => {
     return (
         <Layout>
-            <div className="container-fluid2 my-2">
+            <div className="container-fluid2 py-2 pt-3">
                 <TopPlayers title="Top Players" />
             </div>
             <div className="container-fluid2 my-2">

@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import BorderLine from '../../components/BorderLine';
+import RightArrow from '../../components/svg/RightArrow';
 import style from './MobileFooter.module.css';
 
 const MobileFooter = () => {
@@ -148,7 +149,7 @@ const MobileFooter = () => {
                                     <label htmlFor="">Your Email</label>
                                     <div className={style.newsLatterInput}>
                                         <input type="text" placeholder="Enter email here" />
-                                        <button><Image height="15" width="15" src="/images/icon/arrow-right.png" alt="" /></button>
+                                        <button><RightArrow/></button>
                                     </div>
                                 </div>
                             </div>

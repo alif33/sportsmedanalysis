@@ -10,11 +10,8 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 20px;
-  /* identical to box height, or 125% */
-
   letter-spacing: 0.18px;
   text-transform: uppercase;
-
   color: #ffffff;
 }
 .galleryCard h6 {
@@ -23,11 +20,8 @@
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
-  /* or 125% */
-
   letter-spacing: 0.18px;
   text-transform: uppercase;
-
   color: #ffffff;
 }
 .galleryCard p {
@@ -36,10 +30,22 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 20px;
-  /* or 125% */
-
   letter-spacing: 0.18px;
-  text-transform: uppercase;
-
   color: #ffffff;
+  text-transform: capitalize;
+}
+
+@media (max-width: 768px) {
+  .galleryCard small {
+    font-size: 6px;
+    line-height: 23px;
+  }
+  .galleryCard h6 {
+    font-size: 8px;
+    line-height: 9px;
+  }
+  .galleryCard p {
+    font-size: 6px;
+    line-height: 8px;
+  }
 }

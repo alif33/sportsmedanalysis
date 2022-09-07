@@ -3,8 +3,8 @@
   padding: 20px;
   margin: 0 20px;
 }
-.podcast_card img {
-  width: 100%;
+.podcast_card .podcast_card_img span {
+  width: 100% !important;
 }
 .podcast_card span {
   background: #000000;
@@ -51,4 +51,23 @@
 }
 .podcast_card_img span {
   width: 100% !important;
+}
+@media (max-width: 768px) {
+  .podcast_card span {
+    font-size: 8px;
+    line-height: 11px;
+    margin: 10px 0;
+    display: inline-block;
+    padding: 5px 10px;
+  }
+  .podcast_card h4 {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .podcast_card a {
+    font-size: 10px;
+    line-height: 28px;
+    padding: 2px 0;
+    margin-top: 25px;
+  }
 }
