@@ -11,7 +11,7 @@ const TopStory = ({ topPosts }) => {
         <>
             <div className="container-fluid py-3">
                 <div className="row">
-                    <div className="col-12 col-md-6 col-lg-4">
+                    <div className="col-12 col-md-6 col-lg-5">
                         <div className={style._smd_newCard}>
                             <h2>Top Story</h2>
                             <NewsCard
@@ -34,7 +34,7 @@ const TopStory = ({ topPosts }) => {
                             comment={ item?.comments && item?.comments }
                         />)}
                     </div>
-                    <div className="col-12 mx-auto col-lg-4">
+                    <div className="col-12 mx-auto col-lg-3">
                         <h1 className={style._smd_Upcoming_events}>Upcoming events</h1>
                         <TopStoryVerticalSlider />
                     </div>
