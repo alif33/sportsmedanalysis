@@ -78,6 +78,7 @@ _smd_navbar
   color: #ffffff !important;
   text-transform: uppercase;
   margin: 0 30px;
+  cursor: pointer;
 }
 
 .navMenu ul {

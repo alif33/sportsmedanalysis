@@ -2,6 +2,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { logOut } from '../../../store/user/actions';
+import { useDispatch, useSelector } from 'react-redux';
 import SearchIcon from '../../components/svg/SearchIcon';
 import style from './MobileNavbar.module.css';
 
@@ -15,7 +17,8 @@ const navMenus = [
 
 const MobileNavbar = () => {
     const router = useRouter();
-
+    const { user } = useSelector(state=>state);
+    const dispatch = useDispatch();
 
     return (
         <>
@@ -50,12 +53,17 @@ const MobileNavbar = () => {
                                 <button type="submit"><SearchIcon /></button>
                             </form>
 
-                            <Link href="">
+                            {
+                                user?.isUser ? <a onClick={ ()=>dispatch(logOut()) } className={style.signBtn}>
+                                        <i> <Image width="14" height="14" src="/images/icon/user-icon.png" alt="" /></i>
+                                        LOG OUT
+                                    </a>: <Link href="/auth/sign-in">
                                 <a className={style.signBtn}>
                                     <i> <Image width="14" height="14" src="/images/icon/user-icon.png" alt="" /></i>
                                     SIGN IN
                                 </a>
                             </Link>
+                            }
                             <ul className={style.leangBtn}>
                                 <li className={`d-flex align-items-center dropdown ${style.dropdown}`}>
                                     <div className="dropdown-btn"><Image height="6" width="12" src="/images/icon/arrow-down.png" alt="" />En</div>
