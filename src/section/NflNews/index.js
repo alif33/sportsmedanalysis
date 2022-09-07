@@ -21,7 +21,10 @@ const NflNews = () => {
                 </Link>
             </div>
             <div className={`col-md-5 ${style.latestNews}`} >
-                <h5>Latest News</h5>
+                <div className="d-flex justify-content-between align-items-center">
+                    <h5>Latest News</h5>
+                    <Link href="/"><a className="show-more"><h3>Show More</h3><i><Image height="8" width="12" src="/images/icon/arrow-right2.png" alt="" /></i></a></Link>
+                </div>
                 <LatestNewsCard />
                 <LatestNewsCard />
             </div>

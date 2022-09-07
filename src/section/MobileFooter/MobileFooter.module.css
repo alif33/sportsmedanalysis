@@ -62,7 +62,7 @@
   padding: 0;
 }
 ._smd_footer_menu li {
-  margin-bottom: 15px !important;
+  margin-bottom: 25px !important;
 }
 ._smd_footer_menu li a {
   font-family: "Poppins";
@@ -71,6 +71,8 @@
   font-size: 17px;
   line-height: 12px;
   color: #cbcbcb !important;
+
+
 }
 .newsLatter label {
   font-family: "Poppins";
@@ -87,9 +89,10 @@
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
-  line-height: 43px;
+  line-height: 16px;
   font-feature-settings: "pnum" on, "lnum" on;
   color: #ffffff;
+  margin-bottom: 25px;
 }
 .newsLatterInput {
   position: relative;

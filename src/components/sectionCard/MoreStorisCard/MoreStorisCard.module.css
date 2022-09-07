@@ -1,6 +1,7 @@
 .moreStorisCard {
   background: #f5f5f5;
   margin-bottom: 22px;
+  display: inline-block;
 }
 .moreStorisCard span {
   width: 100% !important;
@@ -46,4 +47,24 @@
   letter-spacing: -0.04em;
 
   color: #000000;
+}
+
+@media (max-width: 768px) {
+  .moreStorisCard {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 35% 66%;
+    column-gap: 1%;
+    background: transparent;
+  }
+  .moreStorisCard div p,
+  .moreStorisCard div p span {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 15px;
+    letter-spacing: 0.18px;
+    color: #5c5656;
+  }
 }

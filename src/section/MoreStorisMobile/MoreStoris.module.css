@@ -15,16 +15,14 @@
 }
 
 @media (max-width: 768px) {
-  .title h3 {
+  .title h4 {
     font-family: "Poppins";
     font-style: normal;
     font-weight: 600;
     font-size: 16px;
     line-height: 32px;
-    display: flex;
-    align-items: center;
     letter-spacing: -0.04em;
-
     color: #000000;
+    border-bottom: 2px solid #111;
   }
 }

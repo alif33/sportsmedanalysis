@@ -7,17 +7,17 @@ import MostReadTap from '../../src/section/MostReadTap';
 
 const Newsfeeds = () => {
     return (
-        <Layout>
+        <Layout navheader={true}>
             <div className="container-fluid mt-2">
                 <NflNews />
             </div>
-            <div className="container-fluid my-2">
+            <div className="container-fluid my-2 d-md-block d-none">
                 <BorderLine />
             </div>
             <div className="container-fluid my-2">
                 <MoreStoris title="More Stories" />
             </div>
-            
+
             <div className="container-fluid my-2">
                 <div className="row">
                     <div className="col-md-7 m-auto">
@@ -25,7 +25,7 @@ const Newsfeeds = () => {
                     </div>
                 </div>
             </div>
-            <div className="container-fluid my-2">
+            <div className="container-fluid my-2 ">
                 <MoreStoris title="More Stories" />
             </div>
 

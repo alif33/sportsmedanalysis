@@ -35,3 +35,14 @@
 .latestNewsContent p span {
   color: #000000;
 }
+
+@media (max-width: 768px) {
+  .latestNewsContent h3 {
+    font-weight: 500;
+    font-size: 14px;
+  }
+  .latestNewsContent p {
+    font-size: 10px;
+    line-height: 15px;
+  }
+}

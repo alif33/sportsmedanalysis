@@ -16,7 +16,7 @@ const MobileFooter = () => {
             </div>
             <div className="container">
                 <div className="row py-md-4 pb-1 pt-0 w-100 mx-auto">
-                    <div className="col-md-4 col-10 ms-auto">
+                    <div className="col-md-4  col-10 ms-auto">
                         <h3 className={style.tilte}>
                             Sports med analytics
                         </h3>
@@ -69,8 +69,8 @@ const MobileFooter = () => {
                         </ul>
                     </div>
                     <div className="col-md-5">
-                        <div className="row w-100 m-auto">
-                            <div className="col-4">
+                        <div className="row ms-md-5 w-100 m-auto">
+                            <div className="col-4 p-md-0">
                                 <ul className={`${style._smd_footer_menu}`}>
                                     <li>
                                         <Link href="/">
@@ -94,7 +94,7 @@ const MobileFooter = () => {
                                     </li>
                                 </ul>
                             </div>
-                            <div className="col-4">
+                            <div className="col-4 p-md-0">
                                 <ul className={`${style._smd_footer_menu}`}>
                                     <li>
                                         <Link href="/">
@@ -118,7 +118,7 @@ const MobileFooter = () => {
                                     </li>
                                 </ul>
                             </div>
-                            <div className="col-4">
+                            <div className="col-4 p-md-0">
                                 <ul className={`${style._smd_footer_menu}`}>
                                     <li>
                                         <Link href="/">

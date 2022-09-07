@@ -8,26 +8,22 @@
   font-weight: 600;
   font-size: 36px;
   line-height: 32px;
-  /* identical to box height, or 89% */
-
   letter-spacing: -0.04em;
-
-  /* main */
-
   color: #000000;
 }
 .nflNewsCard {
   position: relative;
+  display: inline-block;
 }
 .nflNewsCard span {
   width: 100% !important;
+  height: 100% !important;
 }
 .nflNewsCardContent {
   position: absolute;
-  position: absolute;
-  bottom: 12px;
-  left: 44px;
-  right: 74px;
+  left: 0;
+  bottom: 0;
+  padding: 20px 57px;
 }
 .nflNewsCardContent p {
   font-family: "Poppins";
@@ -44,11 +40,8 @@
   font-weight: 700;
   font-size: 30px;
   line-height: 42px;
-  /* or 140% */
-
   letter-spacing: -0.04em;
   text-transform: uppercase;
-
   color: #ffffff;
 }
 .latestNews h5 {
@@ -68,5 +61,14 @@
   .nflNewsCardContent h4 {
     font-size: 14px;
     line-height: 17px;
+  }
+  .mainNewsCard h3 {
+    font-size: 16px;
+    line-height: 32px;
+  }
+  .nflNewsCardContent {
+    background: #0000006b;
+    bottom: 7px;
+    padding: 11px 41px;
   }
 }

@@ -1,26 +1,23 @@
 import React from 'react';
 import style from './NavHeader.module.css';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 const NavHeader = () => {
+    const router = useRouter();
+    console.log(router.pathname.split('/')[1]);
     return (
         <div className={style.nfl_nav}>
             <ul className={style.nfl_nav_ul}>
-                <li><Link href="/"><a>SCORES</a></Link></li>
-                <li><Link href="/"><a>SCHEDULE</a></Link></li>
-                <li><Link href="/"><a>STANDINGS</a></Link></li>
-                <li><Link href="/"><a>STATS</a></Link></li>
-                <li><Link href="/"><a>INJURIES</a></Link></li>
-                <li><Link href="/"><a>TRANSACTIONS</a></Link></li>
-                <li><Link href="/"><a>DRAFT TRACKERS</a></Link></li>
-                <li><Link href="/"><a>FANNATION</a></Link></li>
-                <li><Link href="/"><a>FUTURES</a></Link></li>
-            </ul>
-            <ul className={style.nfl_nav_ul_mobile}>
-                <li><Link href="/"><a>NEWS</a></Link></li>
-                <li><Link href="/"><a>PLAYERS</a></Link></li>
-                <li><Link href="/"><a>TEAMS</a></Link></li>
-                <li><Link href="/"><a>MY LIST</a></Link></li>
+
+                <li className={router.pathname.split('/')[1] === "newsfeeds" ? style.active : ''} ><Link href="/newsfeeds"><a>NEWS</a></Link></li>
+
+
+                <li className={`nav-item ${style._smd_nav_item} ${router.pathname.split('/')[1] === "newsfeeds" ? style.active : ''}`}><Link href="/"><a>PLAYERS</a></Link></li>
+
+                <li className={`nav-item ${style._smd_nav_item} ${router.pathname.split('/')[1] === "newsfeeds" ? style.active : ''}`}><Link href="/"><a>TEAMS</a></Link></li>
+
+                <li className={`nav-item ${style._smd_nav_item} ${router.pathname.split('/')[1] === "newsfeeds" ? style.active : ''}`}><Link href="/"><a>MY LIST</a></Link></li>
             </ul>
         </div>
     );
