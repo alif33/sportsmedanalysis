@@ -2,7 +2,7 @@ import React from 'react';
 import Slider from "react-slick";
 import TopPlayersSliderCard from '../sectionCard/TopPlayersSliderCard';
 
-const TopPlayersSlider = () => {
+const TopPlayersSlider = ({ players }) => {
     var settings = {
         dots: true,
         infinite: false,
@@ -40,8 +40,25 @@ const TopPlayersSlider = () => {
     };
     return (
         <Slider {...settings}>
+            {
+                players && players.map((item, index)=>{
+                    return(
+                    <div key={ index }>
+                        <TopPlayersSliderCard 
+                            active={true}
+                            _id={ item._id }
+                            firstName={ item.firstName }
+                            lastName={ item.lastName }
+                            slug={ item.slug }
+                            img={ item.image }
+                        />
+                    </div>
+                    )
+                })
+            }
+{/* 
             <div>
-                <TopPlayersSliderCard />
+                <TopPlayersSliderCard  />
             </div>
             <div>
                 <TopPlayersSliderCard active={true} />
@@ -66,10 +83,7 @@ const TopPlayersSlider = () => {
             </div>
             <div>
                 <TopPlayersSliderCard active={true} />
-            </div>
-            <div>
-                <TopPlayersSliderCard active={true} />
-            </div>
+            </div> */}
 
         </Slider>
     );

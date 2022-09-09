@@ -12,19 +12,19 @@ const PodcastPage = () => {
 
          <FeaturedPodcast />
 
-<div className="podcast-cards">
-    <div className="container-fluid">
-        <div className="row">
-            <PodcastCard />
-            <PodcastCard />
-            <PodcastCard />
-            <PodcastCard />
-            <PodcastCard />
-            <PodcastCard />
-            <PodcastCard />
+        <div className="podcast-cards">
+            <div className="container-fluid">
+                <div className="row">
+                    <PodcastCard />
+                    <PodcastCard />
+                    <PodcastCard />
+                    <PodcastCard />
+                    <PodcastCard />
+                    <PodcastCard />
+                    <PodcastCard />
+                </div>
+            </div>
         </div>
-    </div>
-</div>
             
         </Layout>
     );

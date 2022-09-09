@@ -1,20 +1,28 @@
 import React from 'react';
+import Player from '../../models/Player';
+import db from '../../utils/db';
 import Layout from '../../src/components/Layout';
 import FeaturedPodcasts from '../../src/section/FeaturedPodcasts';
 import MoreStoris from '../../src/section/MoreStoris';
-import Player from '../../src/section/Player';
+import PlayerSection from '../../src/section/Player';
 import PlayerGallery from '../../src/section/PlayerGallery';
 import PlayerVideo from '../../src/section/PlayerVideo';
 import TopPlayers from '../../src/section/TopPlayers';
 
-const Players = () => {
+const Players = ({ players, player }) => {
+    console.log(player);
     return (
         <Layout>
             <div className="container-fluid2 py-2 pt-3">
-                <TopPlayers title="Top Players" />
+                <TopPlayers 
+                    title="Top Players" 
+                    players={ JSON.parse(players) }
+                />
             </div>
             <div className="container-fluid2 my-2">
-                <Player />
+                <PlayerSection 
+                    player={ JSON.parse(player) }
+                />
             </div>
             <div className="container-fluid2 my-2">
                 <MoreStoris title="Lastest News on This Player" />
@@ -33,3 +41,54 @@ const Players = () => {
 };
 
 export default Players;
+
+
+export async function getServerSideProps(context) {
+    const { slug } = context.params;
+    const rgx = /^(?=[a-f\d]{24}$)(\d+[a-f]|[a-f]+\d)/i
+    if(!slug || slug.length !==2 || !rgx.test(slug[1])){
+        return {
+            redirect: {
+                destination: '/404',
+            }
+        }
+    }else{
+
+        await db.connect();
+        const players = await Player.find({})
+            .sort({ "views": -1 })
+            .lean()
+            .limit(50);
+        const player = await Player.findById(slug[1]);
+            await Player.updateOne({ _id: slug[1] }, 
+                { $inc: {
+                    "views": 1
+                }});
+        await db.disconnect();
+    
+
+        // console.log(player);
+        // const { _id, title, image, description, league, playersName, views, tags, comments, _comments, createdAt, updatedAt } = _doc;
+        
+        return {
+            props: {
+                players: JSON.stringify(players),
+                player: JSON.stringify(player)
+
+                // post :  {
+                //     _id: _id.toString(),
+                //     title, 
+                //     image, 
+                //     description, 
+                //     league, 
+                //     playersName, 
+                //     views, 
+                //     tags,
+                //     createdAt: createdAt.toString(),
+                //     updatedAt: updatedAt.toString()
+                // },
+                // _comments: JSON.stringify(_comments)
+            }
+        };
+    }
+}

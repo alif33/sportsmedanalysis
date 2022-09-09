@@ -48,7 +48,7 @@ export default Newsfeed;
 export async function getServerSideProps() {
 
     await db.connect();
-    const posts = await Post.find()
+    const posts = await Post.find({}, { _comments: 0 })
         .lean()
         .limit(50);
 
