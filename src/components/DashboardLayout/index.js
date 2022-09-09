@@ -16,10 +16,10 @@ const DashboardLayout = ({ children, navheader, stutas }) => {
                 position="top-center"
                 reverseOrder={false}
             />
-            <div className={style.navbar}>
+            {/* <div className={style.navbar}>
                 <TopHeading />
                 <Navbar />
-            </div>
+            </div> */}
             <MobileNavbar />
             {
                 navheader && <NavHeader />
@@ -36,7 +36,7 @@ const DashboardLayout = ({ children, navheader, stutas }) => {
                     </div>
                 </div>
             </div>
-            <SMDFooter />
+            {/* <SMDFooter /> */}
             <MobileFooter />
         </>
     );

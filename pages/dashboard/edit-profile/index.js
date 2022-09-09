@@ -7,7 +7,7 @@ import { __Auth } from '../../../__lib__/helpers/AuthProvider';
 import { updateData } from '../../../__lib__/helpers/HttpService';
 import { logedIn } from '../../../store/user/actions';
 import toast from 'react-hot-toast';
-import Layout from '../../../src/components/Layout';
+import DashboardLayout from '../../../src/components/DashboardLayout';
 
 const EditProfile = () => {
     const [ disable, setDisable ] = useState(false);
@@ -43,7 +43,7 @@ const EditProfile = () => {
     };
 
     return (
-        <Layout stutas="edit-profile">
+        <DashboardLayout stutas="edit-profile">
             <div className="container ps-1 pe-2 mt-2 mb-5">
                 <div className="w-100 d-flex justify-content-between align-items-center mt-3">
                     <div className="profile-text">
@@ -140,7 +140,7 @@ const EditProfile = () => {
                     </div>
                 </form>
             </div>
-        </Layout>
+        </DashboardLayout>
     );
 };
 
