@@ -78,6 +78,11 @@ a {
   width: 95% !important;
   margin: 0 auto !important;
 }
+.nfl_con .row,
+.container-fluid2 .row {
+  margin: auto;
+  width: 100% !important;
+}
 
 .bg-black {
   background-color: #000000 !important;

@@ -1,0 +1,23 @@
+.relatedVideoCard {
+  display: grid;
+  grid-template-columns: 42% 56%;
+  column-gap: 4%;
+}
+.relatedVideoCard h4 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+
+  color: #000000;
+}
+.relatedVideoCard p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000000;
+  display: flex;
+}

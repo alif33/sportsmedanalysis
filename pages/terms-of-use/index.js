@@ -16,7 +16,7 @@ const TermsOfUse = ({ players }) => {
                     <div className="col-md-9">
                         <TermsDescription />
                     </div>
-                    <div className="col-md-3">
+                    <div className="col-md-3 d-md-block d-none">
                         <PlayerTab 
                             players={ JSON.parse(players) }
                         />

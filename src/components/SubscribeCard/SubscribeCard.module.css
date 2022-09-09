@@ -1,0 +1,90 @@
+.subsribeCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-items: center;
+  margin-top: 30px;
+}
+.userImage {
+  width: 40%;
+  display: grid;
+  grid-template-columns: 30% 70%;
+  align-items: center;
+}
+.userpic {
+  height: 65px;
+  width: 65px;
+  border-radius: 50%;
+}
+.userpic span {
+  width: 100% !important;
+  height: 100% !important;
+}
+.name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.name h3 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  color: #000000;
+  margin-bottom: 10px;
+}
+.name p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 22px;
+  /* identical to box height */
+
+  color: #000000;
+  margin-bottom: 0;
+  mix-blend-mode: normal;
+}
+
+.subsribeBtnSide {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.subsribeBtnSide p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px !important;
+}
+.subsribeBtnSide p span {
+  margin-right: 10px !important;
+}
+.subsribeBtnSide p {
+}
+.subsribeBtnSide button {
+  background: linear-gradient(0deg, #d70404, #d70404), #ebebeb;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+  border: none;
+  display: inline-block;
+  padding: 13px 34px;
+}
+.subsribeBtnSide button span {
+  margin-right: 10px !important;
+  height: 16px !important;
+  width: 13px !important;
+}

@@ -1,0 +1,29 @@
+.tilte {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 32px;
+  letter-spacing: -0.04em;
+  color: #000000;
+}
+
+.videoDescription h3 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 100%;
+  color: #000000;
+  margin-top: 50px;
+}
+.videoDescription p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 134.5%;
+  color: #000000;
+  opacity: 0.6;
+  margin-top: 30px;
+}

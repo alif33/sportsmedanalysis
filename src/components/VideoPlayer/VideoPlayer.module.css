@@ -1,0 +1,68 @@
+
+.watchVideo {
+  position: relative;
+  width: 100%;
+  height: 30rem;
+}
+.watchVideo span {
+  width: 100% !important;
+  height: 100% !important;
+}
+.videoPlayIcon {
+  position: absolute;
+  background: #00000063;
+  color: #fff;
+  bottom: 30px;
+  left: 50%;
+  width: 95%;
+  margin: auto;
+  transform: translate(-50%, 0);
+  display: flex;
+  padding: 1.2rem 0.9375rem;
+  gap: 1rem;
+  align-items: center;
+}
+.videoPlayIcon svg {
+  width: 12px;
+  cursor: pointer;
+}
+
+.playBtn {
+  width: 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.videoTime {
+  width: 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 22px;
+  color: #ffffff;
+  margin-right: 1rem;
+}
+.videoTimePrograss {
+  background: rgba(255, 255, 255, 0.32);
+  width: 65%;
+  position: relative;
+  height: 4px !important;
+  cursor: pointer;
+}
+.videoTimePrograss div {
+  background: linear-gradient(180deg, #f2870d 0%, #f20df2 100%), #ffffff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+.soundIcon {
+  width: 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

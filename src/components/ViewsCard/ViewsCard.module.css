@@ -1,0 +1,22 @@
+.viewsCard {
+  border: 1px solid #c4c9d4;
+  border-radius: 20px;
+  list-style: none;
+  padding: 23px 29px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 216px;
+}
+.viewsCard li {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+}
+
+.viewsCard li svg{
+    margin-right: 15px;
+}

@@ -1,4 +1,3 @@
-
 .termsDescription h4 {
   font-family: "Poppins";
   font-style: normal;
@@ -42,4 +41,27 @@
   font-size: 20px;
   line-height: 37px;
   color: #5c5656;
+}
+
+@media (max-width: 768px) {
+  .termsDescription h4 {
+    font-size: 16px;
+    line-height: 18px;
+  }
+  .termsDescription h5 {
+    font-size: 14px;
+    line-height: 26px;
+  }
+  .termsDescription h6 {
+    font-size: 12px;
+    line-height: 17px;
+  }
+  .termsDescription p {
+    font-size: 10px;
+    line-height: 16px;
+  }
+  .termsDescription b {
+    font-size: 10px;
+    line-height: 16px;
+  }
 }
