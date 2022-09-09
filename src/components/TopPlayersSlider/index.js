@@ -43,9 +43,8 @@ const TopPlayersSlider = ({ players }) => {
             {
                 players && players.map((item, index)=>{
                     return(
-                    <div>
+                    <div key={ index }>
                         <TopPlayersSliderCard 
-                            key={ index }
                             active={true}
                             _id={ item._id }
                             firstName={ item.firstName }
