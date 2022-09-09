@@ -11,9 +11,11 @@ handler.post(async (req, res) => {
   await db.connect();
   const salt = await bcrypt.genSalt(10);
   const hashedPassword = await bcrypt.hash(password, salt);
+  const userName = email.split("@")[0];
   const newUser = new User({
     firstName, 
     lastName,
+    userName,
     fullName: firstName +" "+ lastName,
     email,
     password: hashedPassword,

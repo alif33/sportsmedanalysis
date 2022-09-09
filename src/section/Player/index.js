@@ -2,20 +2,18 @@ import Image from 'next/image';
 import React from 'react';
 import style from './Player.module.css'
 
-const Player = () => {
+const Player = ({ player }) => {
     return (
         <div className={style.player} >
             <div className={style.playerImage}>
-                <Image height="728" width="498" src="/images/player/preview.png" alt="" />
+                <Image height="600" width="498" src={ player.image } alt="" />
             </div>
             <div className={style.playerContent}>
-                <h2>Kimbila Fiza
-                    Jonson</h2>
+                <h2>{ player.firstName } { player.lastName }</h2>
                 <h6> <Image height="32" width="32" src="/images/icon/player-icon.png" alt="" />
-                    Basket Raptors
+                    { player.league }
                 </h6>
-                <p>
-                    In a parting shot at Parker, owner Maxim Demin said in a statement that “in order for us to keep progressing as a team and a club as a whole, it is unconditional that we are aligned in our strategy to run the club sustainably.In a parting shot at Parker, owner Maxim Demin said in a statement that “in order for us to keep progressing as a team and a club as a whole, it is unconditional that we are aligned in our strategy to run the club sustainably. </p>
+                <p>{ player.description }</p>
                 <button> Follow</button>
 
             </div>

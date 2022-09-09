@@ -4,7 +4,7 @@ import SearchBar from '../../components/SearchBar';
 import TopPlayersSlider from '../../components/TopPlayersSlider';
 import style from './TopPlayers.module.css'
 
-const TopPlayers = ({ title }) => {
+const TopPlayers = ({ title, players }) => {
     return (
         <>
             <div className={style.topPlayersTilte}>
@@ -15,7 +15,9 @@ const TopPlayers = ({ title }) => {
             </div>
             <div className="mt-2"></div>
             <div className="top-players-slider">
-                <TopPlayersSlider />
+                <TopPlayersSlider 
+                    players={ players }
+                />
             </div>
 
         </>
