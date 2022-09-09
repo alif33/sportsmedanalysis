@@ -1,4 +1,3 @@
-
 .watchVideo {
   position: relative;
   width: 100%;
@@ -10,23 +9,20 @@
 }
 .videoPlayIcon {
   position: absolute;
-  background: #00000063;
   color: #fff;
-  bottom: 30px;
+  top: 50%;
   left: 50%;
-  width: 95%;
   margin: auto;
-  transform: translate(-50%, 0);
-  display: flex;
-  padding: 1.2rem 0.9375rem;
-  gap: 1rem;
-  align-items: center;
+  transform: translate(-50%, -50%);
+  width: 94px;
+  height: 94px;
 }
 .videoPlayIcon svg {
-  width: 12px;
+  width: 94px;
+  height: 94px;
   cursor: pointer;
 }
-
+/* 
 .playBtn {
   width: 10%;
   display: flex;
@@ -65,4 +61,4 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
+} */
