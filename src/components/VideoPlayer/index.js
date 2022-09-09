@@ -37,10 +37,7 @@ const VideoPlayer = ({ watch }) => {
                 <div className={style.watchVideo}>
                     <Image width="863" height="484" src="/images/watch/video.png" alt="" />
                     <div className={style.videoPlayIcon}>
-
                         {false ? <IoMdPlay /> : <MdPause />}
-
-
                         {/* <button onClick={ ()=>setPlaying(true) }>Play Video</button> */}
                     </div>
                 </div>
