@@ -7,7 +7,7 @@ const RelatedVideos = () => {
     return (
         <div className={style.relatedVideo}>
             <div className={style.relatedHeader}>
-                <h5>Comment</h5>
+                <h5>Related Videos</h5>
                 <ThreeDot />
             </div>
 

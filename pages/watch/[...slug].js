@@ -2,17 +2,24 @@ import React from 'react';
 import Watch from "../../models/Watch";
 import db from "../../utils/db";
 import Layout from '../../src/components/Layout';
+import NflSingleVideo from '../../src/section/NflSingleVideo';
 
 
-const WatchView = ({ watch }) => {
+const SingleVideo = ({ watch }) => {
     return (
         <Layout>
-            <h1></h1>
+            <div className="container-fluid2">
+                <NflSingleVideo 
+                    watch={ JSON.parse(watch) }
+                />
+            </div>
         </Layout>
     );
 };
 
-export default WatchView;
+export default SingleVideo;
+
+
 
 export async function getServerSideProps(context) {
     const { slug } = context.params;

@@ -11,7 +11,7 @@ const VideoDescription = () => {
                     sint. Velit officia consequat duis enim velit mollit. Exercitation
                     veniam consequat sunt nostrud amet.</p> <br /><br />
             </div>
-            <ViewsCard/>
+            {/* <ViewsCard/> */}
         </div>
     );
 };
