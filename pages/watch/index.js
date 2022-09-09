@@ -4,11 +4,8 @@ import db from "../../utils/db";
 import LiveWatchHeader from "../../src/section/LiveWatchHeader";
 import Section from "../../src/components/watches/Section";
 import Layout from "../../src/components/Layout";
-import { watchlistByLeague } from "../../__lib__/helpers/Filter";
 
-const WatchPage =({ watches }) => {
-
-   const { NFL, NBA, MLB } = watchlistByLeague(watches); 
+const WatchPage =({ watches, nfl, nba, mlb }) => {
 
     return (
         <Layout>
@@ -20,25 +17,25 @@ const WatchPage =({ watches }) => {
             <Section
                 title="Top Videos"
                 live={ false }
-
+                lists= { watches }
             />
 
             <Section
                 title="NFL"
                 live={ false }
-                lists={ NFL }
+                lists={ nfl }
             />
 
             <Section
                 title="NBA"
                 live={ false }
-                lists={ NBA }
+                lists={ nba }
             />
 
             <Section
                 title="MLB"
                 live={ false }
-                lists={ MLB }
+                lists={ mlb }
             />
         </Layout>
     );
@@ -51,6 +48,16 @@ export async function getServerSideProps() {
 
     await db.connect();
     const watches = await Watch.find()
+        .sort({"createdAt": -1})
+        .lean()
+        .limit(50);
+    const nfl = await Watch.find({ league: "NFL" })
+        .lean()
+        .limit(50);
+    const nba = await Watch.find({ league: "NBA" })
+        .lean()
+        .limit(50);
+    const mlb = await Watch.find({ league: "MLB" })
         .lean()
         .limit(50);
     await db.disconnect();
@@ -58,6 +65,9 @@ export async function getServerSideProps() {
     return {
         props: {
             watches: watches.map(db.convertDocToObj),
+            nfl: nfl.map(db.convertDocToObj),
+            nba: nba.map(db.convertDocToObj),
+            mlb: mlb.map(db.convertDocToObj)
         },
     };
 }
