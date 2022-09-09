@@ -22,12 +22,20 @@ const VideoPlayer = ({ watch }) => {
                 // title={string}                    // defaults -> ''
                 // loading={string}                  // defaults -> undefined
                 opts={{
+                    width: "822px",
                     height: "480px",
-                    width: "822px"
+                    playerVars: {
+                        autoplay: 1,
+                        // controls: 0,
+                        // rel: 0,
+                        // showinfo: 0,
+                        // mute: 1,
+                        // loop: 1
+                      }
                 }}                        // defaults -> {}
                 // onReady={func}                    // defaults -> noop
                 // onPlay={func}                     // defaults -> noop
-                onPause={() => setPlaying(false)}                    // defaults -> noop
+                // onPause={() => setPlaying(false)}                    // defaults -> noop
             // onEnd={func}                      // defaults -> noop
             // onError={func}                    // defaults -> noop
             // onStateChange={func}              // defaults -> noop
@@ -35,10 +43,9 @@ const VideoPlayer = ({ watch }) => {
             // onPlaybackQualityChange={func}    // defaults -> noop
             /> :
                 <div className={style.watchVideo}>
-                    <Image width="863" height="484" src="/images/watch/video.png" alt="" />
+                    <Image width="863" height="484" src={`https://i.ytimg.com/vi/${ watch.videoId }/hq720.jpg`} alt="" />
                     <div className={style.videoPlayIcon}>
-                        {false ? <IoMdPlay /> : <MdPause />}
-                        {/* <button onClick={ ()=>setPlaying(true) }>Play Video</button> */}
+                        <IoMdPlay onClick={()=>setPlaying(true)} />
                     </div>
                 </div>
 

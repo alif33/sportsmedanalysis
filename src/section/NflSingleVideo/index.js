@@ -15,7 +15,9 @@ const NflSingleVideo = ({ watch }) => {
                         watch={ watch }
                     />
                     {/* <SubscribeCard /> */}
-                    <VideoDescription />
+                    <VideoDescription 
+                        watch={ watch }
+                    />
                 </div>
                 <div className="col-md-4">
                     <RelatedVideos />

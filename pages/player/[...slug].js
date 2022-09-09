@@ -8,6 +8,7 @@ import PlayerSection from '../../src/section/Player';
 import PlayerGallery from '../../src/section/PlayerGallery';
 import PlayerVideo from '../../src/section/PlayerVideo';
 import TopPlayers from '../../src/section/TopPlayers';
+// import Post from '../../models/Post';
 
 const Players = ({ players, player }) => {
     console.log(player);
@@ -55,6 +56,7 @@ export async function getServerSideProps(context) {
     }else{
 
         await db.connect();
+
         const players = await Player.find({})
             .sort({ "views": -1 })
             .lean()
@@ -64,11 +66,19 @@ export async function getServerSideProps(context) {
                 { $inc: {
                     "views": 1
                 }});
+
+
+        // const posts = await Post.find({
+        //         tags: { $in: ["top_picks"] }
+        //     }, { _comments: 0 })
+        //         .sort({"createdAt": -1})
+        //         .lean()
+        //         .limit(50);
+
         await db.disconnect();
     
 
-        // console.log(player);
-        // const { _id, title, image, description, league, playersName, views, tags, comments, _comments, createdAt, updatedAt } = _doc;
+        console.log(player);
         
         return {
             props: {
