@@ -6,7 +6,7 @@ import VideoDescription from '../../components/VideoDescription';
 import VideoPlayer from '../../components/VideoPlayer';
 import style from './NflSingleVideo.module.css';
 
-const NflSingleVideo = ({ watch }) => {
+const NflSingleVideo = ({ watch, watches }) => {
     return (
         <>
             <div className="row my-4">
@@ -20,7 +20,9 @@ const NflSingleVideo = ({ watch }) => {
                     />
                 </div>
                 <div className="col-md-4">
-                    <RelatedVideos />
+                    <RelatedVideos 
+                        watches={ watches }
+                    />
                 </div>
             </div>
         </>

@@ -5,12 +5,13 @@ import Layout from '../../src/components/Layout';
 import NflSingleVideo from '../../src/section/NflSingleVideo';
 
 
-const SingleVideo = ({ watch }) => {
+const SingleVideo = ({ watch, watches }) => {
     return (
         <Layout>
             <div className="container-fluid2">
                 <NflSingleVideo 
                     watch={ JSON.parse(watch) }
+                    watches={ JSON.parse(watches) }
                 />
             </div>
         </Layout>
@@ -38,10 +39,16 @@ export async function getServerSideProps(context) {
                         { $inc: {
                             "views": 1
                         }});
+
+        const watches = await Watch.find({
+            league: watch.league
+        });
+
         await db.disconnect();
             
         return {
             props: {
+                watches: JSON.stringify(watches),
                 watch: JSON.stringify(watch)
             }
         };

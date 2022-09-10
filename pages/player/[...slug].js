@@ -8,9 +8,9 @@ import PlayerSection from '../../src/section/Player';
 import PlayerGallery from '../../src/section/PlayerGallery';
 import PlayerVideo from '../../src/section/PlayerVideo';
 import TopPlayers from '../../src/section/TopPlayers';
-// import Post from '../../models/Post';
+import Post from '../../models/Post';
 
-const Players = ({ players, player }) => {
+const Players = ({ players, player, posts }) => {
     console.log(player);
     return (
         <Layout>
@@ -26,16 +26,18 @@ const Players = ({ players, player }) => {
                 />
             </div>
             <div className="container-fluid2 my-2">
-                <MoreStoris title="Lastest News on This Player" />
+                <MoreStoris 
+                    title="Lastest News on This Player" 
+                    posts={ JSON.parse(posts) }
+                />
             </div>
-            <PlayerVideo title="Lastest Videos on This Player" />
-
+            {/* <PlayerVideo title="Lastest Videos on This Player" />
             <div className="my-2">
                 <PlayerGallery title="Player Gallery" />
             </div>
             <div className="my-2 container-fluid2">
                 <FeaturedPodcasts title="Featured Podcasts" />
-            </div>
+            </div> */}
 
         </Layout>
     );
@@ -68,22 +70,20 @@ export async function getServerSideProps(context) {
                 }});
 
 
-        // const posts = await Post.find({
-        //         tags: { $in: ["top_picks"] }
-        //     }, { _comments: 0 })
-        //         .sort({"createdAt": -1})
-        //         .lean()
-        //         .limit(50);
+        const posts = await Post.find({
+                playersName: { $in: [player.slug] }
+            }, { _comments: 0 })
+                .sort({"createdAt": -1})
+                .lean()
+                .limit(50);
 
         await db.disconnect();
-    
-
-        console.log(player);
-        
+            
         return {
             props: {
                 players: JSON.stringify(players),
-                player: JSON.stringify(player)
+                player: JSON.stringify(player),
+                posts: JSON.stringify(posts)
 
                 // post :  {
                 //     _id: _id.toString(),
@@ -97,7 +97,6 @@ export async function getServerSideProps(context) {
                 //     createdAt: createdAt.toString(),
                 //     updatedAt: updatedAt.toString()
                 // },
-                // _comments: JSON.stringify(_comments)
             }
         };
     }

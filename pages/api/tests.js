@@ -10,6 +10,15 @@ handler.get(async (req, res) => {
     await db.disconnect();
     players.forEach(item=>{
         const { _id, firstName, lastName } = item;
+        Player.findOneAndUpdate(
+            { _id }, 
+            { $set: {
+                slug: firstName+"-"+ lastName
+            }},
+            { returnOriginal: false },
+            (err, school)=>{
+
+            })
 
     })
 

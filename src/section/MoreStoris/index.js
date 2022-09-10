@@ -4,7 +4,7 @@ import React from 'react';
 import MoreStorisCard from '../../components/sectionCard/MoreStorisCard';
 import style from '../MoreStorisMobile/MoreStoris.module.css'
 
-const MoreStoris = ({ title }) => {
+const MoreStoris = ({ title, posts }) => {
     return (
         <>
             <div className="row w-100 mx-auto mb-md-3 mt-md-3 mb-2  ">
@@ -16,15 +16,25 @@ const MoreStoris = ({ title }) => {
                 </div>
             </div>
             <div className="row w-100 m-auto">
-                <div className="col-md-3">  <MoreStorisCard /></div>
-                <div className="col-md-3">  <MoreStorisCard /></div>
-                <div className="col-md-3">  <MoreStorisCard /></div>
-                <div className="col-md-3">  <MoreStorisCard /></div>
+                {
+                    posts && posts.map((item, index)=>{
+                        return(
+                            <div className="col-md-3">  
+                                <MoreStorisCard 
+                                    item={ item }
+                                />
+                            </div>
+                        )
+                    })
+                }
 
+                {/* <div className="col-md-3">  <MoreStorisCard /></div>
                 <div className="col-md-3">  <MoreStorisCard /></div>
                 <div className="col-md-3">  <MoreStorisCard /></div>
                 <div className="col-md-3">  <MoreStorisCard /></div>
                 <div className="col-md-3">  <MoreStorisCard /></div>
+                <div className="col-md-3">  <MoreStorisCard /></div>
+                <div className="col-md-3">  <MoreStorisCard /></div> */}
             </div>
         </>
     );
