@@ -35,10 +35,11 @@
 ._smd_card_desc {
   font-family: "Poppins";
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 18px;
   line-height: 25px;
   color: #121212;
+  margin-top: 10px;
 }
 
 .nfl_para1 {

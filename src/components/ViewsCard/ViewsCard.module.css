@@ -23,3 +23,36 @@
 .sharebtn {
   cursor: pointer;
 }
+
+.socialLink {
+  list-style: none;
+  padding: 8px 0;
+  display: flex;
+  align-items: center;
+}
+.socialLink li {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 15px;
+  color: #000000;
+  margin-right: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.socialLink li svg {
+  cursor: pointer;
+}
+
+.socialLink p{
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 15px;
+  color: #000000;
+  margin-right: 24px;
+  margin-bottom: 0;
+}

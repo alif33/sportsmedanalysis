@@ -21,3 +21,7 @@
   color: #000000;
   display: flex;
 }
+.relatedVideoCard p svg {
+  margin-right: 6px;
+  width: 17px;
+}

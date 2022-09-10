@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import style from './LiveWatch.module.css';
 
 const LiveWatchHeader = () => {
@@ -6,11 +7,13 @@ const LiveWatchHeader = () => {
         <div className="bg-black">
             <div className={style._smd_live_watch_bg} style={{ backgroundImage: `url('/images/watch/live-header.png')` }}>
                 <button className={style._smd_live_btn}>Live</button>
-                <div className={style._smd_live_video_tilte}>
-                    <Image height='75' width='59.5' src="/images/watch/play-btn-icon.png" alt="" />
-                    <h2>Jim Bowden joins Jeremy St. Louis to discuss the two players the Dodgers need to target ahead
-                        of the MLB trade deadline</h2>
-                </div>
+                <Link href="" >
+                    <a className={style._smd_live_video_tilte}>
+                        <Image height='100' width='100' src="/images/watch/play-btn-icon.png" alt="" />
+                        <h2>Jim Bowden joins Jeremy St. Louis to discuss the two players the Dodgers need to target ahead
+                            of the MLB trade deadline</h2>
+                    </a>
+                </Link>
             </div>
             <div className={style._smd_watch_system}>
                 <p>Watch anywhere, anytime</p>
