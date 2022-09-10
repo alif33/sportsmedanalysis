@@ -1,12 +1,13 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+import slugify from 'slugify';
 import EyeIcon from '../svg/EyeIcon';
 import style from './RelatedVideoCard.module.css';
 
 const RelatedVideoCard = ({ item }) => {
     return (
-        <Link href="">
+        <Link href={`/watch/${slugify(item.title, "-")}/${item._id}`}>
             <a>
                 <div className={style.relatedVideoCard}>
                     <div>
