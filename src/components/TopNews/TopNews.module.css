@@ -1,0 +1,23 @@
+.container{
+    display: flex;
+    gap: 10px;
+  }
+  .text{
+    font-size: 14px;
+    line-height: 90%;
+    cursor: pointer;
+  }
+  .description{
+    font-size: 12px;
+    line-height: 90%;
+    color:gray;
+    cursor: pointer;
+  }
+  .subtitle{
+    font-size: 8px;
+    line-height: 90%;
+  }
+  .center{
+    text-align: center;
+    cursor: pointer;
+  }
