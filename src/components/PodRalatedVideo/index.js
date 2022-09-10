@@ -8,8 +8,8 @@ const PodRalatedVideo = () => {
             <h3>Related Podcast</h3>
             <div className="row">
                 <div className="col-md-4">
-                    <RelatedVideoCard />
-                    <RelatedVideoCard />
+                    {/* <RelatedVideoCard />
+                    <RelatedVideoCard /> */}
                 </div>
             </div>
         </div>

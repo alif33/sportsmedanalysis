@@ -102,8 +102,6 @@ export async function getStaticProps(context) {
 
     await db.disconnect();
 
-
-    console.log(topPosts);
     return {
         props: {
             posts: JSON.stringify(posts),
