@@ -12,10 +12,10 @@ const Card = ({ item }) => {
                 <a>
                     <div>
                         <div className={style.nfl_s2_img}>
-                            <Image height="153" width="274" src={`https://i.ytimg.com/vi/${item.videoId}/mq1.jpg`} alt={item.title} />
+                            <Image height="153" width="274" src={`https://i.ytimg.com/vi/${item.videoId}/mqdefault.jpg`} alt={item.title} />
                         </div>
                         <p className={` ${style._smd_card_desc}`}>
-                            Follow here for signings, trades, rumors and analysis from
+                            { item.title }
                         </p>
                     </div>
                 </a>
