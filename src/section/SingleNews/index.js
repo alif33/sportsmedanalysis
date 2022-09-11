@@ -130,7 +130,7 @@ const SingleNews = ({ post, _comments }) => {
                   comment={item.comment}
                 />
               ))}
-               <p> <small className={style.center}>Load more comments</small> </p>
+               <p className={style.center}> <small >Load more comments</small> </p>
           {/* <SimilarNews /> */}
         </div>
 

@@ -116,24 +116,50 @@
   justify-content: space-between;
 }
 
+
+/* new css addition */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
 .container{
   display: flex;
   gap: 10px;
+  align-items: center;
+}
+.leftBlock{
+  width: 50%;
+
+  /* height:154px; width:213px; */
+}
+.rightBlock{
+  width: 50%;
 }
 .text{
-  font-size: 14px;
+  font-size: 18px;
   line-height: 90%;
   cursor: pointer;
+  color: black;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700px;
+  margin-bottom: 0px;
 }
 .description{
-  font-size: 12px;
-  line-height: 90%;
+  font-size: 14px;
   color:gray;
   cursor: pointer;
+  white-space: nowrap;
+  overflow-x: hidden;
+  margin-bottom: 0px;
 }
-.subtitle{
-  font-size: 8px;
-  line-height: 90%;
+.viewCountcontainer{
+ display: flex;
+ justify-content: space-between;
+ margin-top: 0;
+ margin-bottom: 0;
+ padding-top: 0;
+ padding-bottom: 0;
+}
+.viewCount{
+  font-size: 12px;
 }
 .center{
   text-align: center;
