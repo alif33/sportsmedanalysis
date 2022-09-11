@@ -5,6 +5,7 @@ import SimilarNews from "../../components/SimiliarNews";
 import TopNews from "../../components/TopNews";
 import SinglePageComment from "../../components/SinglePageComment";
 import style from "./SingleNews.module.css";
+import { BsFillCaretDownFill } from 'react-icons/bs';
 import single from "../../../pages/[...slug]"
 
 const SingleNews = ({ post, _comments }) => {
@@ -130,7 +131,7 @@ const SingleNews = ({ post, _comments }) => {
                   comment={item.comment}
                 />
               ))}
-               <p className={style.center}> <small >Load more comments</small> </p>
+               <p className={style.center}> <small >Load more comments <BsFillCaretDownFill/> </small> </p>
           {/* <SimilarNews /> */}
         </div>
 

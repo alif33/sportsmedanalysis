@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
+import { BsFillCaretDownFill } from 'react-icons/bs';
 import style from './TopNews.module.css'
 
 const SimilarNews = () => {
@@ -18,7 +19,7 @@ const SimilarNews = () => {
                </div>
            </div>
        </div>
-       <p className={style.center}> <small >Show more</small> </p>
+       <p className={style.center}> <small >Show more <BsFillCaretDownFill/> </small> </p>
       </div>
     );
 };

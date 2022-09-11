@@ -39,6 +39,7 @@
 }
 .container>.rightBlock{
   width: 30%;
+  height: fit-screen;
 }
 .heading{
   font-size: 16px;
