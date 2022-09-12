@@ -8,9 +8,9 @@ import SingleNews from '../src/section/SingleNews';
 const Single = ({ post, _comments }) => {
     return (
         <Layout>
-            <div className="container-fluid my-2">
+            {/* <div className="container-fluid my-2">
                 <LiveBtn name="live" />
-            </div>
+            </div> */}
             <div className="container">
                 <SingleNews 
                     post={ post } 

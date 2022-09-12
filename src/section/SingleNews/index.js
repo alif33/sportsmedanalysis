@@ -5,7 +5,10 @@ import SimilarNews from "../../components/SimiliarNews";
 import TopNews from "../../components/TopNews";
 import SinglePageComment from "../../components/SinglePageComment";
 import style from "./SingleNews.module.css";
-import single from "../../../pages/[...slug]"
+import single from "../../../pages/[...slug]";
+import Favorite from "../../components/svg/Favorite";
+import MessageIcon from "../../components/svg/MessageIcon";
+import ShareIcon from "../../components/ShareIcon";
 
 const SingleNews = ({ post, _comments }) => {
   const [comments, _setComments] = useState();
@@ -13,10 +16,12 @@ const SingleNews = ({ post, _comments }) => {
   useEffect(() => {
     _setComments(_comments);
   }, []);
+
   return (
     <>
-      <div className={style.container}>
-        <div className={style.leftBlock}>
+      <div className="row mt-5">
+        <div className="col-md-8">
+          <h2 className={style.categoryName}>NFL News</h2>
           <ul className={style.newsCateHour}>
             <li>{post.league}</li>
             <li>2 Hours ago</li>
@@ -30,30 +35,15 @@ const SingleNews = ({ post, _comments }) => {
 
           <ul className={style.likeCommentShare}>
             <li>
-              <Image
-                height="18.73"
-                width="22.47"
-                src="/images/icon/favorite.png"
-                alt=""
-              />{" "}
+              <Favorite />
               <span>521K</span>
             </li>
             <li>
-              <Image
-                height="18.73"
-                width="22.47"
-                src="/images/icon/commnet2.png"
-                alt=""
-              />{" "}
+              <MessageIcon />
               <span>521K</span>
             </li>
             <li>
-              <Image
-                height="18.73"
-                width="22.47"
-                src="/images/icon/share.png"
-                alt=""
-              />{" "}
+              <ShareIcon />
               <span>521K</span>
             </li>
 
@@ -130,15 +120,24 @@ const SingleNews = ({ post, _comments }) => {
                   comment={item.comment}
                 />
               ))}
-               <p> <small className={style.center}>Load more comments</small> </p>
+          <p>
+            {" "}
+            <small className={style.center}>Load more comments</small>{" "}
+          </p>
           {/* <SimilarNews /> */}
         </div>
 
-        <div className={style.rightBlock}>
-            <h1 className={style.heading}>Related News</h1>
-            <SimilarNews single={single}/>
-            <h1 className={style.heading}>Top News</h1>
-            <TopNews />
+        <div className="col-md-4">
+          <h1 className={style.heading}>Related News</h1>
+          <SimilarNews single={single} />
+          <SimilarNews single={single} />
+          <SimilarNews single={single} />
+          <h1 className={style.heading2}>Top News</h1>
+          <TopNews />
+          <TopNews />
+          <TopNews />
+          <TopNews />
+          <TopNews />
         </div>
       </div>
     </>
