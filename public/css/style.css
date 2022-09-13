@@ -199,3 +199,29 @@ a {
   margin-right: 10px;
   margin-bottom: 0;
 }
+/* adio-player */
+
+.adio-player {}
+.adio-player button.rhap_button-clear.rhap_main-controls-button.rhap_skip-button {
+  width: 50px;
+  height: 50px;
+  font-size: 52px;
+  color: #d70404 !important;
+}
+.adio-player .rhap_play-pause-button {
+  width: 56px !important;
+  height: 56px !important;
+  color: #d70404 !important;
+  font-size: 55px !important;
+}
+.adio-player .rhap_container {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0 !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+/* end adio-player */
