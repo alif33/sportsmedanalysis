@@ -10,7 +10,7 @@ import FeaturedPodcast from "../../src/section/FeaturedPodcast";
 const PodcastPage = ({ podcasts }) => {
     return (
         <Layout>
-        <HeaderSection img="/images/podcast/header-bg.png" title="Sports Meds Analytics Podcasts" />
+            <HeaderSection img="/images/podcast/header-bg.png" title="Sports Meds Analytics Podcasts" />
         <FeaturedPodcast />
 
         <div className="podcast-cards">

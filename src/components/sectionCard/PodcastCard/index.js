@@ -4,6 +4,7 @@ import React from 'react';
 import style from './Podcast.module.css';
 
 const PodcastCard = ({ item }) => {
+  
   return (
     <div className="col-md-4  col-6 mb-3">
       <div className={style.podcast_card}>
@@ -12,7 +13,7 @@ const PodcastCard = ({ item }) => {
         </div>
         <span>Fantasy & Gambling</span>
         <h4>{ item.title }</h4>
-        <Link href={`/podcast/${ item.title }/${ item._id }`}><a> FOLLOW PODCASTS </a></Link>
+        <Link href={`/podcast/${ item.title }/${ item._id }`}><a>FOLLOW PODCASTS</a></Link>
       </div>
     </div>
   );
