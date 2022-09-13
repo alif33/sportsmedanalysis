@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import EyeIcon from "../svg/EyeIcon";
 import style from "./TopNews.module.css";
 
 const SimilarNews = () => {
@@ -16,13 +17,14 @@ const SimilarNews = () => {
           />
           <p className={style.time}>14:58</p>
         </div>
-        <div>
+        <div className={style.content}>
           <p className={style.text}>How is the correct solo vlogger</p>
-          <p className={style.description}>
-            <small>solo vlogger</small>
-          </p>
-          <div className={style.container}>
-            <p className={style.subtitle}>10,0000 listened</p>
+
+          <div className={style.description}>
+            <p className={style.subtitle}>
+              {" "}
+              <EyeIcon /> 10,0000 listened
+            </p>
             <p className={style.subtitle}>10 Jan 2022</p>
           </div>
         </div>
