@@ -1,0 +1,23 @@
+.tapList {
+  list-style: none;
+  padding: 0px 40px;
+  margin: 0;
+  margin-bottom: 21px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e3e3e3;
+}
+.tapList li {
+}
+.tapList li button {
+  border: none;
+  background: transparent;
+  padding: 8px 8px;
+}
+.tapList li button.active {
+  border-bottom: 2px solid #111;
+}
+.tapList li button svg {
+}

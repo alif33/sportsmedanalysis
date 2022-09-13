@@ -9,29 +9,74 @@ import PostCard from "../../src/components/PostCard";
 import PlayerList from "../../src/section/PlayerList";
 import NewsListCard from "../../src/components/sectionCard/NewsListCard";
 import BorderLine from "../../src/components/BorderLine";
+import PostTapIcon from "../../src/components/svg/PostTapIcon";
+import LatestNewsIcon from "../../src/components/svg/LatestNewsIcon";
+import style from "./Newsfeed.module.css";
+import { useState } from "react";
+import UserPeple from "../../src/components/svg/UserPepole";
+import SearchPlayer from "../../src/components/svg/SearchPlayer";
+import ProfileIcon from "../../src/components/svg/ProfileIcon";
 
 const Newsfeed = ({ posts }) => {
+  const [tapList, setTapList] = useState("PostCard");
+
   return (
     <Layout>
-      <div className="nfl_con my-2">
+      <ul className={style.tapList}>
+        <li>
+          <button
+            onClick={() => setTapList("PostCard")}
+            className={tapList === "PostCard" && style.active}
+          >
+            <PostTapIcon />
+          </button>
+        </li>
+        <li>
+          <button
+            onClick={() => setTapList("NewsListCard")}
+            className={tapList === "NewsListCard" && style.active}
+          >
+            <LatestNewsIcon />
+          </button>
+        </li>
+        <li>
+          <button
+            onClick={() => setTapList("FollowingPlayersCard")}
+            className={tapList === "FollowingPlayersCard" && style.active}
+          >
+            <UserPeple />
+          </button>
+        </li>
+        <li>
+          <button
+            onClick={() => setTapList("PlayerList")}
+            className={tapList === "PlayerList" && style.active}
+          >
+            <SearchPlayer />
+          </button>
+        </li>
+        <li>
+          <button
+            onClick={() => setTapList("ProfileCard")}
+            className={tapList === "ProfileCard" && style.active}
+          >
+            <ProfileIcon />
+          </button>
+        </li>
+      </ul>
+      <div className="nfl_con my-2 d-block d-lg-none">
         <div className="row">
           <div className="col-12">
-            <ul className={style.tapList}>
-              <li>
-                <button></button>
-              </li>
-            </ul>
-          </div>
-          <div className="col-12">
-            {true && <ProfileCard />}
-            {true && <FollowingPlayersCard />}
-            {true && <PostCard />}
-            {true && <PlayerList />}
-            {true && <NewsListCard />}
+            {tapList === "ProfileCard" && <ProfileCard />}
+            {tapList === "FollowingPlayersCard" && <FollowingPlayersCard />}
+            {tapList === "PostCard" && <PostCard />}
+            {tapList === "PlayerList" && <PlayerList />}
+            {tapList === "NewsListCard" && <NewsListCard />}
           </div>
         </div>
-
-        <div className="row mt-3 d-none d-lg-flex">
+      </div>
+      <div className="nfl_con my-2 d-none d-lg-block">
+        <div className="row mt-3 ">
           <div className="col-lg-3">
             <ProfileCard />
             <FollowingPlayersCard />
