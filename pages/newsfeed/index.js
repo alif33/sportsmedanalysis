@@ -22,7 +22,7 @@ const Newsfeed = ({ posts }) => {
 
   return (
     <Layout>
-      <ul className={style.tapList}>
+      <ul className={` d-lg-none ${style.tapList}`}>
         <li>
           <button
             onClick={() => setTapList("PostCard")}
@@ -93,9 +93,10 @@ const Newsfeed = ({ posts }) => {
         </div>
       </div>
 
-      <div className="nfl_con">
+      {/* <div className="nfl_con my-4">
         <BorderLine />
-      </div>
+      </div> */}
+
       <NflTeam />
     </Layout>
   );
