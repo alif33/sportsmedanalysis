@@ -4,6 +4,11 @@
   width: 100%;
   margin-bottom: 1rem;
 }
+.description {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
 .text {
   font-family: "Poppins";
   font-style: normal;
@@ -13,20 +18,16 @@
   color: #000000;
   margin-bottom: 0;
 }
-.description {
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 300;
-  font-size: 14px;
-  line-height: 20px;
-  color: #000000;
-  margin-bottom: 0;
+
+.subtitle svg {
+  width: 15px;
+  margin-right: 1px;
 }
 .subtitle {
   font-family: "Poppins";
   font-style: normal;
   font-weight: 300;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 21px;
   color: #000000;
   margin-bottom: 0;
@@ -53,4 +54,11 @@
   font-size: 13px;
   line-height: 20px;
   color: #ffffff;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100px;
 }
