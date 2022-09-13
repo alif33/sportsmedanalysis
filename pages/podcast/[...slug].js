@@ -4,11 +4,13 @@ import Layout from '../../src/components/Layout';
 import PodcastVideo from '../../src/section/PodcastVideo';
 import db from '../../utils/db';
 
-const PodcastPage = () => {
+const PodcastPage = ({ podcast }) => {
     return (
         <Layout>
             <div className="container-fluid2">
-                <PodcastVideo />
+                <PodcastVideo 
+                    podcast={ JSON.parse(podcast) }
+                />
             </div>
         </Layout>
     );
@@ -42,18 +44,7 @@ export async function getServerSideProps(context) {
         
         return {
             props: {
-                podcast :  {
-                    // _id: _id.toString(),
-                    // title, 
-                    // image, 
-                    // description, 
-                    // league, 
-                    // playersName, 
-                    // views, 
-                    // tags,
-                    // createdAt: createdAt.toString(),
-                    // updatedAt: updatedAt.toString()
-                },
+                podcast : JSON.stringify(podcast)
             }
         };
     }
