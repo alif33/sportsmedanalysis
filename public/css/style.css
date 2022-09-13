@@ -228,6 +228,7 @@ a {
 
 .rhap_progress-filled {
   background: #d70404 !important;
+  border-radius: 8px !important;
 }
 .rhap_progress-indicator {
   background: #d70404 !important;
@@ -235,6 +236,10 @@ a {
 }
 .rhap_progress-bar {
   height: 10px !important;
+  border-radius: 8px !important;
+}
+.rhap_download-progress {
+  background-color: #c6c0ce !important;
   border-radius: 8px !important;
 }
 /* end adio-player */
