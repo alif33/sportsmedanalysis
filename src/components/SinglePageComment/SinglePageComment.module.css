@@ -1,6 +1,6 @@
 .singlePageComment {
   display: grid;
-  grid-template-columns: 7% 90%;
+  grid-template-columns: 10% 87%;
   margin-bottom: 26px;
 }
 .commentImage span {
@@ -12,15 +12,11 @@
   font-weight: 600;
   font-size: 16px;
   line-height: 120%;
-  /* or 19px */
-
   letter-spacing: 0.005em;
-
-  /* Light/Text Color/Title */
-
   color: #11142d;
   margin: 0;
   margin-top: 10px;
+  text-transform: capitalize;
 }
 .content h4 span {
   font-family: "Poppins";
@@ -28,12 +24,7 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 120%;
-  /* or 19px */
-
   letter-spacing: 0.005em;
-
-  /* Light/Text Color/Body 2 */
-
   color: #9a9ab0;
   margin-left: 10px;
 }

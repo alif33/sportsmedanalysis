@@ -9,6 +9,7 @@ import single from "../../../pages/[...slug]";
 import Favorite from "../../components/svg/Favorite";
 import MessageIcon from "../../components/svg/MessageIcon";
 import ShareIcon from "../../components/ShareIcon";
+import { RiArrowDownSFill } from "react-icons/ri";
 
 const SingleNews = ({ post, _comments }) => {
   const [comments, _setComments] = useState();
@@ -29,7 +30,7 @@ const SingleNews = ({ post, _comments }) => {
 
           <h1 className={style.title}>{post.title}</h1>
           <div className={style.postMaker}>
-            <Image height="54" width="43" src={post.image} alt={post.title} />
+            <Image height="250" width="250" src={post.image} alt={post.title} />
             <h4>Cameron Williamson</h4>
           </div>
 
@@ -120,10 +121,11 @@ const SingleNews = ({ post, _comments }) => {
                   comment={item.comment}
                 />
               ))}
-          <p>
-            {" "}
-            <small className={style.center}>Load more comments</small>{" "}
-          </p>
+          <div className={style.loadMore}>
+            <button>
+              Load more comments <RiArrowDownSFill />
+            </button>
+          </div>
           {/* <SimilarNews /> */}
         </div>
 

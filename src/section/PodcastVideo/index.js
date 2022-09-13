@@ -7,7 +7,6 @@ const PodcastVideo = () => {
   return (
     <div className=" row mt-3 mb-2">
       <div className="col-md-8">
-        <h2 className={style.tilte}>Latest Podcasts</h2>
         <PodcastVideoPlayer />
         <div className={style.videoDescription}>
           <h3>The Things Wrong That You Think About People</h3>

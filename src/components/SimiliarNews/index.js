@@ -1,27 +1,35 @@
-import Image from 'next/image';
-import React from 'react';
-import style from './SimilarNews.module.css'
+import Image from "next/image";
+import Link from "next/link";
+import React from "react";
+import style from "./SimilarNews.module.css";
 
 const SimilarNews = (props) => {
-    console.log(props);
-    return (
+  console.log(props);
+  return (
+    <Link href="/">
+      <a className={style.container}>
+        <div className={style.cardImg}>
+          <Image
+            height="110"
+            width="180"
+            src="/images/card-img/related.png"
+            alt=""
+          />
+          <p className={style.time}>14:58</p>
+        </div>
         <div>
-        <div className={style.container}>
-           <div>
-           <Image height="110" width="180" src="/images/card-img/card-img3.png" alt="" />
-           </div>
-           <div>
-               <p className={style.text}>How is the correct solo vlogger</p>
-               <p className={style.description}><small>solo vlogger</small></p>
-               <div className={style.container}>
-                   <p><small className={style.subtitle}>10,0000 listened</small></p>
-                   <p><small className={style.subtitle}>10 Jan 2022</small></p>
-               </div>
-           </div>
-       </div>
-       <p> <small className={style.center}>Show more</small> </p>
-      </div>
-    );
+          <p className={style.text}>How is the correct solo vlogger</p>
+          <p className={style.description}>
+            <small>solo vlogger</small>
+          </p>
+          <div className={style.container}>
+            <p className={style.subtitle}>10,0000 listened</p>
+            <p className={style.subtitle}>10 Jan 2022</p>
+          </div>
+        </div>
+      </a>
+    </Link>
+  );
 };
 
 export default SimilarNews;

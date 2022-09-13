@@ -1,168 +1,56 @@
-.similarNews {
-}
-.similarNewsTitle {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.similarNewsTitle h3 {
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 31px;
-  line-height: 120%;
-  letter-spacing: 0.005em;
-  color: #11142d;
-}
-.similarNewsTitle button {
-  background: #d70404;
-  border-radius: 8px;
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 120%;
-  text-align: center;
-  letter-spacing: 0.005em;
-  color: #ffffff;
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-  border: none;
-  padding: 16px 18px;
-  border-radius: 5px;
-}
-
-.newCard {
-}
-.newCard span {
-  width: 100% !important;
-}
-.newCard h4 {
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 120%;
-  /* or 24px */
-
-  letter-spacing: 0.005em;
-
-  /* Light/Text Color/Title */
-
-  color: #11142d;
-}
-.newCard ul {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  margin: 0;
-  padding: 0;
-}
-.newCard li {
-  margin-right: 7px;
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 110%;
-  /* or 13px */
-
-  letter-spacing: 0.008em;
-
-  /* Light/Text Color/Body 2 */
-
-  color: #9a9ab0;
-}
-.similarNewsCard {
-  display: grid;
-  grid-template-columns: 30% 64%;
-  column-gap: 6%;
-  align-items: center;
-}
-.similarNewsCard span {
-  width: 100% !important;
-}
-.similarNewsCard h4 {
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 120%;
-  letter-spacing: 0.005em;
-  color: #11142d;
-}
-.similarNewsCard ul {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  margin: 0;
-  padding: 0;
-}
-.similarNewsCard li {
-  margin-right: 7px;
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 110%;
-  letter-spacing: 0.008em;
-  color: #9a9ab0;
-}
-
-.similarNewsCard div {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.container{
+.container {
   display: flex;
   gap: 10px;
+  width: 100%;
+  margin-bottom: 1rem;
 }
-.text{
+.text {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  color: #000000;
+  margin-bottom: 0;
+}
+.description {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 300;
   font-size: 14px;
-  line-height: 90%;
-  cursor: pointer;
+  line-height: 20px;
+  color: #000000;
+  margin-bottom: 0;
 }
-.description{
-  font-size: 12px;
-  line-height: 90%;
-  color:gray;
-  cursor: pointer;
-}
-.subtitle{
-  font-size: 8px;
-  line-height: 90%;
-}
-.center{
-  text-align: center;
-  cursor: pointer;
+.subtitle {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 21px;
+  color: #000000;
+  margin-bottom: 0;
 }
 
-
-
-
-@media (max-width: 768px) {
-  .similarNewsTitle h3 {
-    font-size: 16px;
-    border-bottom: 2px solid #111;
-    padding-bottom: 7px;
-  }
-  .similarNewsTitle button {
-    display: none;
-  }
-  .newCard h4 {
-    font-size: 14px;
-    line-height: 20px;
-  }
-  .similarNewsCard h4 {
-    font-size: 14px;
-    line-height: 20px;
-  }
-  .similarNewsCard li,
-  .newCard li {
-    font-size: 10px;
-    line-height: 15px;
-  }
+.cardImg span {
+  width: 100% !important;
+  height: 100% !important;
+}
+.cardImg {
+  position: relative;
+}
+.time {
+  position: absolute;
+  bottom: 4%;
+  right: 3%;
+  background: #111111ab;
+  margin-bottom: 0;
+  padding: 1px 8px;
+  border-radius: 10px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 20px;
+  color: #ffffff;
 }
