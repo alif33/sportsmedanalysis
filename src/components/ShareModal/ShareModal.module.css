@@ -1,0 +1,62 @@
+.modalPopup {
+  position: relative;
+  padding: 28px 30px;
+}
+.modalOpenBtn {
+  background: transparent;
+  border: none;
+  width: 20px;
+  height: 20px;
+}
+.close {
+  position: absolute;
+  top: 0%;
+  right: 2%;
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  color: #999;
+}
+
+.socialBtnList {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  justify-content: space-evenly;
+}
+.socialBtnList li {
+}
+.socialBtnList li button {
+  border: none;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.socialBtnList li button.facebook svg {
+  background: #1585c7;
+}
+.socialBtnList li button svg {
+  background: #111;
+  color: #fff;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+}
+.socialBtnList li button p {
+  color: #747474;
+  margin: 0;
+  margin-top: 11px;
+}
+.socialBtnList li:hover button p {
+  text-decoration: underline;
+}
+.socialBtnList li:hover button svg {
+}

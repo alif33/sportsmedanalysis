@@ -10,6 +10,7 @@ import Favorite from "../../components/svg/Favorite";
 import MessageIcon from "../../components/svg/MessageIcon";
 import ShareIcon from "../../components/ShareIcon";
 import { RiArrowDownSFill } from "react-icons/ri";
+import ShareModal from "../../components/ShareModal";
 
 const SingleNews = ({ post, _comments }) => {
   const [comments, _setComments] = useState();
@@ -44,8 +45,7 @@ const SingleNews = ({ post, _comments }) => {
               <span>521K</span>
             </li>
             <li>
-              <ShareIcon />
-              <span>521K</span>
+              <ShareModal />
             </li>
 
             <li className="d-md-block d-none">

@@ -27,6 +27,7 @@
     "react-alice-carousel": "^2.6.4",
     "react-dom": "18.1.0",
     "react-feather": "^2.0.10",
+    "react-h5-audio-player": "^3.8.5",
     "react-hook-form": "^7.29.0",
     "react-hot-toast": "^2.2.0",
     "react-icons": "^4.3.1",
