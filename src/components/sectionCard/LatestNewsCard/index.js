@@ -7,8 +7,8 @@ const LatestNewsCard = () => {
     return (
         <Link href="/">
             <a className={style.latestNewsCard}>
-                <div className="latestcardimg">
-                    <Image height="101px" width="84px" src="/images/nfl-news/latest-card.png" alt="" />
+                <div className={style.latestcardimg}>
+                    <Image height="550px" width="450px" src="/images/nfl-news/latest-card.png" alt="" />
                 </div>
                 <div className={style.latestNewsContent}>
                     <h3>Hollinger: The 5 Kevin Durant trades that make</h3>

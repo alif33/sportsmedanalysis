@@ -7,7 +7,7 @@ const NewsCard = ({ _id, slug, title, img, description }) => {
     return (
         <Link href={`news/${slug}/${_id}`}>
             <a className={style.news_card}>
-                <Image src={img ? img : "/images/card-img/card-img2.png"} alt={title} height="400" width="380" />
+                <Image src={img ? img : "/images/card-img/card-img2.png"} alt={title} height="900" width="880" />
                 <h3>{title}</h3>
                 <p>{description}</p>
             </a>

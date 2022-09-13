@@ -11,8 +11,8 @@ const ArticleCard = ({ index, post }) => {
 
                     <div className={articleStyle._smd_article_card_img}>
                         <Image
-                            height="150"
-                            width="240"
+                            height="550"
+                            width="740"
                             src={post.image}
                             alt={post.title}
 

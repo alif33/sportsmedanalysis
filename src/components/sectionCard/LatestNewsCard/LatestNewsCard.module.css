@@ -5,8 +5,9 @@
   margin-bottom: 22px;
   margin-top: 15px;
 }
-.latestNewsCard span {
+.latestcardimg span {
   width: 100% !important;
+  height: 100px !important;
 }
 
 .latestNewsContent {

@@ -53,6 +53,21 @@
   letter-spacing: -0.04em;
   color: #000000;
 }
+@media (max-width: 1224px) {
+  .nflNewsCardContent p {
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .nflNewsCardContent h4 {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .mainNewsCard h3 {
+    font-size: 16px;
+    line-height: 32px;
+  }
+}
+
 @media (max-width: 768px) {
   .nflNewsCardContent p {
     font-size: 8px;
