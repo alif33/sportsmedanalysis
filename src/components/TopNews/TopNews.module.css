@@ -1,7 +1,8 @@
 .container {
-  display: flex;
-  gap: 10px;
+  gap: 4%;
   width: 100%;
+  display: grid;
+  grid-template-columns: 34% 64%;
   margin-bottom: 1rem;
 }
 .description {
@@ -14,7 +15,7 @@
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
-  line-height: 27px;
+  line-height: 22px;
   color: #000000;
   margin-bottom: 0;
 }
