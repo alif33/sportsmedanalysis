@@ -21,7 +21,7 @@ const Newsfeed = ({ posts }) => {
   const [tapList, setTapList] = useState("PostCard");
 
   return (
-    <Layout>
+    <Layout navheader={true}>
       <ul className={` d-lg-none ${style.tapList}`}>
         <li>
           <button

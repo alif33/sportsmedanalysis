@@ -16,11 +16,20 @@
   transform: translate(-50%, -50%);
   width: 94px;
   height: 94px;
+  background-color: #fff;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  box-shadow: 0 0 45px 2px #111;
 }
 .videoPlayIcon svg {
-  width: 94px;
-  height: 94px;
+  width: 60px;
+  height: 60px;
   cursor: pointer;
+  color: red;
+  margin-left: 13px;
 }
 /* 
 .playBtn {

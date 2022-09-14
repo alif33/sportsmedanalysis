@@ -6,7 +6,7 @@ const Player = ({ player }) => {
     return (
         <div className={style.player} >
             <div className={style.playerImage}>
-                <Image height="600" width="498" src={ player.image } alt="" />
+                <Image height="600" width="600" src={ player.image } alt="" />
             </div>
             <div className={style.playerContent}>
                 <h2>{ player.firstName } { player.lastName }</h2>

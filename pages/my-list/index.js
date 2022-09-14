@@ -1,21 +1,36 @@
 import React from 'react';
 import Layout from '../../src/components/Layout';
-import TeamsFollowing from '../../src/section/TeamsFollowing';
+import NflNews from '../../src/section/NflNews';
+import BorderLine from '../../src/components/BorderLine';
+import MoreStoris from '../../src/section/MoreStoris';
+import MostReadTap from '../../src/section/MostReadTap';
 
-const MyList = () => {
+const Newsfeeds = () => {
     return (
-        <Layout>
-            <div className="container-fluid2 mt-3">
-                <h3>My Lists</h3>
+        <Layout navheader={true}>
+            <div className="container-fluid mt-2">
+                <NflNews />
             </div>
-            <div className="container mb-4">
-                <TeamsFollowing title="Teams Following" />
+            <div className="container-fluid my-2 d-md-block d-none">
+                <BorderLine />
             </div>
-            <div className="container mb-4">
-                <TeamsFollowing title="Players Following" />
+            <div className="container-fluid my-2">
+                <MoreStoris title="More Stories" />
             </div>
+
+            <div className="container-fluid my-2">
+                <div className="row">
+                    <div className="col-md-7 m-auto">
+                        <MostReadTap />
+                    </div>
+                </div>
+            </div>
+            <div className="container-fluid my-2 ">
+                <MoreStoris title="More Stories" />
+            </div>
+
         </Layout>
     );
 };
 
-export default MyList;
+export default Newsfeeds;

@@ -48,7 +48,7 @@
   grid-template-columns: 2fr 1fr;
 }
 
-._smd_date {
+._smd_inner_table {
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 400;
@@ -58,6 +58,7 @@
 
   letter-spacing: 1px;
   text-transform: uppercase;
+  margin-top: 4px;
 
   color: #757678;
 }
@@ -123,6 +124,7 @@
     display: grid;
     grid-template-columns: 1fr 84px;
     width: 206px;
+    grid-template-columns: 74% 17%;
   }
 }
 
@@ -138,7 +140,7 @@
     font-family: "Poppins";
     font-style: normal;
     font-weight: 600;
-    font-size: 8px;
+    font-size: 14px;
     line-height: 17px;
     /* or 212% */
 
@@ -152,7 +154,7 @@
     font-family: "Poppins";
     font-style: normal;
     font-weight: 600;
-    font-size: 10px;
+    font-size: 15px;
     line-height: 15px;
     /* or 150% */
 
@@ -164,8 +166,8 @@
     font-family: "Poppins";
     font-style: normal;
     font-weight: 600;
-    font-size: 10px;
-    line-height: 15px;
+    font-size: 15px;
+    line-height: 17px;
     /* or 150% */
 
     letter-spacing: -0.04em;
@@ -187,7 +189,7 @@
     font-family: "Poppins";
     font-style: normal;
     font-weight: 400;
-    font-size: 8px;
+    font-size: 14px;
     line-height: 12px;
     /* or 150% */
 
@@ -198,11 +200,11 @@
 
     color: #202121;
   }
-  ._smd_date {
+  ._smd_inner_table {
     font-family: "Poppins";
     font-style: normal;
     font-weight: 400;
-    font-size: 4px;
+    font-size: 12px;
     line-height: 10px;
     /* or 200% */
 

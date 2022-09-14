@@ -11,10 +11,10 @@ const NavHeader = () => {
       <ul className={style.nfl_nav_ul}>
         <li
           className={
-            router.pathname.split("/")[1] === "newsfeeds" ? style.active : ""
+            router.pathname.split("/")[1] === "newsfeed" ? style.active : ""
           }
         >
-          <Link href="/newsfeeds">
+          <Link href="/newsfeed">
             <a>NEWS</a>
           </Link>
         </li>
@@ -24,7 +24,7 @@ const NavHeader = () => {
             router.pathname.split("/")[1] === "players" ? style.active : ""
           }`}
         >
-          <Link href="/">
+          <Link href="/players">
             <a>PLAYERS</a>
           </Link>
         </li>
@@ -34,7 +34,7 @@ const NavHeader = () => {
             router.pathname.split("/")[1] === "teams" ? style.active : ""
           }`}
         >
-          <Link href="/">
+          <Link href="/teams">
             <a>TEAMS</a>
           </Link>
         </li>
@@ -44,7 +44,7 @@ const NavHeader = () => {
             router.pathname.split("/")[1] === "my-list" ? style.active : ""
           }`}
         >
-          <Link href="/">
+          <Link href="/my-list">
             <a>MY LIST</a>
           </Link>
         </li>
