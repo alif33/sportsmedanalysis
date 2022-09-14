@@ -6,10 +6,10 @@ const AudioPlayerCard = () => {
   const [trackIndex, setTrackIndex] = useState(0);
 
   const musicTracks = [
-    {
-      name: "Memories",
-      src: "https://www.bensound.com/bensound-music/bensound-memories.mp3",
-    },
+    // {
+    //   name: "Memories",
+    //   src: "https://www.bensound.com/bensound-music/bensound-memories.mp3",
+    // },
     {
       name: "Creative Minds",
       src: "https://www.bensound.com/bensound-music/bensound-creativeminds.mp3",
@@ -91,8 +91,8 @@ const AudioPlayerCard = () => {
         onPlay={(e) => console.log("onPlay")}
         showSkipControls={true}
         showJumpControls={false}
-        header={`Now playing: ${musicTracks[trackIndex].name}`}
-        footer="All music from: www.bensound.com"
+        // header={`Now playing: ${musicTracks[trackIndex].name}`}
+        // footer="All music from: www.bensound.com"
         onClickPrevious={handleClickPrevious}
         onClickNext={handleClickNext}
         onEnded={handleClickNext}

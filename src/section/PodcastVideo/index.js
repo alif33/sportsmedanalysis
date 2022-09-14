@@ -4,23 +4,23 @@ import PodRalatedVideo from "../../components/PodRalatedVideo";
 import style from "./PodcastVideo.module.css";
 
 const PodcastVideo = ({ podcast }) => {
-  const [audio] = useState(new Audio(podcast.audioUri));
-  const [playing, setPlaying] = useState(true);
+  // const [audio] = useState(new Audio(podcast.audioUri));
+  // const [playing, setPlaying] = useState(true);
 
-  const sessionStarted = async()=>{
-    if(playing){
-      await audio.play();
-    }else{
-      await audio.pause();
-    }
-  }
+  // const sessionStarted = async()=>{
+  //   if(playing){
+  //     await audio.play();
+  //   }else{
+  //     await audio.pause();
+  //   }
+  // }
 
 
   useEffect(() => {
-    sessionStarted()
+    // sessionStarted()
     // console.log(audio);
     // playing ? audio.play() : audio.pause();
-  }, [playing]);
+  }, []);
 
   return (
     <div className=" row mt-3 mb-2">
