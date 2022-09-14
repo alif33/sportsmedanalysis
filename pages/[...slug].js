@@ -5,7 +5,7 @@ import Layout from '../src/components/Layout';
 import LiveBtn from '../src/components/LiveBtn';
 import SingleNews from '../src/section/SingleNews';
 
-const Single = ({ post, _comments }) => {
+const Single = ({ post, _comments, posts }) => {
     return (
         <Layout>
             {/* <div className="container-fluid my-2">
@@ -14,8 +14,9 @@ const Single = ({ post, _comments }) => {
             <div className="container">
                 <SingleNews 
                     post={ post } 
+                    posts={ JSON.parse(posts) }
                     _comments={ JSON.parse(_comments).reverse() }
-                    />
+                />
             </div>
         </Layout>
     );
@@ -41,9 +42,18 @@ export async function getServerSideProps(context) {
                         { $inc: {
                             "views": 1
                         }});
-        await db.disconnect();
-    
+
         const { _id, title, image, description, league, playersName, views, tags, comments, _comments, createdAt, updatedAt } = _doc;
+
+        const posts = await Post.find({
+            tags: { $in: [...tags] }
+        }, { _comments: 0 })
+            .sort({"createdAt": -1})
+            .lean()
+            .limit(50);
+        await db.disconnect();
+        
+        // console.log(posts);
         
         return {
             props: {
@@ -59,7 +69,8 @@ export async function getServerSideProps(context) {
                     createdAt: createdAt.toString(),
                     updatedAt: updatedAt.toString()
                 },
-                _comments: JSON.stringify(_comments)
+                posts: JSON.stringify(posts),
+                _comments: JSON.stringify(_comments),
             }
         };
     }

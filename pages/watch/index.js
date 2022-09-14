@@ -5,19 +5,21 @@ import LiveWatchHeader from "../../src/section/LiveWatchHeader";
 import Section from "../../src/components/watches/Section";
 import Layout from "../../src/components/Layout";
 
-const WatchPage =({ watches, nfl, nba, mlb }) => {
+const WatchPage =({ watches, topVideos, nfl, nba, mlb }) => {
 
     return (
         <Layout>
-            <LiveWatchHeader />
-            <Section
+            <LiveWatchHeader 
+                video={ watches[0] }
+            />
+            {/* <Section
                 title="Watch more live"
                 live={ true }
-            />
+            /> */}
             <Section
                 title="Top Videos"
                 live={ false }
-                lists= { watches }
+                lists= { topVideos }
             />
 
             <Section
@@ -51,20 +53,30 @@ export async function getStaticProps(context) {
         .sort({"createdAt": -1})
         .lean()
         .limit(50);
+
+    const topVideos = await Watch.find()
+        .sort({ "views": -1 })
+        .lean()
+        .limit(50);
+
     const nfl = await Watch.find({ league: "NFL" })
         .lean()
         .limit(50);
+
     const nba = await Watch.find({ league: "NBA" })
         .lean()
         .limit(50);
+
     const mlb = await Watch.find({ league: "MLB" })
         .lean()
         .limit(50);
+
     await db.disconnect();
 
     return {
         props: {
             watches: watches.map(db.convertDocToObj),
+            topVideos: topVideos.map(db.convertDocToObj),
             nfl: nfl.map(db.convertDocToObj),
             nba: nba.map(db.convertDocToObj),
             mlb: mlb.map(db.convertDocToObj)

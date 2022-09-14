@@ -1,17 +1,17 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import slugify from 'slugify';
 import style from './LiveWatch.module.css';
 
-const LiveWatchHeader = () => {
+const LiveWatchHeader = ({ video }) => {
     return (
         <div className="bg-black">
-            <div className={style._smd_live_watch_bg} style={{ backgroundImage: `url('/images/watch/live-header.png')` }}>
-                <button className={style._smd_live_btn}>Live</button>
-                <Link href="" >
+            <div className={style._smd_live_watch_bg} style={{ backgroundImage: `url('https://i.ytimg.com/vi/${ video.videoId }/maxresdefault.jpg')` }}>
+                {/* <button className={style._smd_live_btn}>Live</button> */}
+                <Link href={`/watch/${ slugify(video.title, "-") }/${ video._id }`} >
                     <a className={style._smd_live_video_tilte}>
                         <Image height='100' width='100' src="/images/watch/play-btn-icon.png" alt="" />
-                        <h2>Jim Bowden joins Jeremy St. Louis to discuss the two players the Dodgers need to target ahead
-                            of the MLB trade deadline</h2>
+                        <h2>{ video.title }</h2>
                     </a>
                 </Link>
             </div>
