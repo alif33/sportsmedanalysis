@@ -5,9 +5,10 @@ import PlayersFollowing from '../src/section/PlayersFollowing';
 import db from '../utils/db';
 
 const Players = ({ players }) => {
+
     return (
         <Layout navheader={ true }>
-            <div className="container-fluid2 mt-3">
+            <div className="container-fluid2 pt-2">
                 <h3>Player Lists</h3>
             </div>
             <div className="container mb-4">

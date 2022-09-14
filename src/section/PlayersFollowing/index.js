@@ -5,6 +5,7 @@ import PlayersFollowingCard from '../../components/sectionCard/PlayersFollowingC
 import style from './TeamsFollowing.module.css'
 
 const PlayersFollowing = ({ title, players }) => {
+    
     return (
         <>
             <div className="d-flex justify-content-between mt-3">
@@ -20,6 +21,7 @@ const PlayersFollowing = ({ title, players }) => {
                     return(
                         <PlayersFollowingCard 
                             key={ index }
+                            _id={ item._id }
                             firstName={ item.firstName }
                             lastName={ item.lastName }
                             league={ item.league }

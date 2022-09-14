@@ -32,6 +32,14 @@ const userSchema = new mongoose.Schema(
     },
     tags: {
       type: Array
+    },
+    _players: {
+      type: Array,
+      default: []
+    },
+    _teams: {
+      type: Array,
+      default: []
     }
   },
   {

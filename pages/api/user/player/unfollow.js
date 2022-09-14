@@ -1,26 +1,23 @@
 import nc from 'next-connect';
-import bcrypt from 'bcryptjs';
-import User from '../../../models/User';
-import db from '../../../utils/db';
-import { signToken, isAuth } from '../../../utils/auth';
+import User from '../../../../models/User';
+import db from '../../../../utils/db';
+import { signToken, isAuth } from '../../../../utils/auth';
 
 const handler = nc();
 handler.use(isAuth);
 
 handler.put(async (req, res) => {
   const { _id } = req.user;
-  const { fullName, fanduelUsername, draftKingsUsername } = req.body;
+  const { __p } = req.query;
   await db.connect();
 
   const updates = {
-    fullName, 
-    fanduelUsername, 
-    draftKingsUsername
+    _players: __p
   };
 
   User.findOneAndUpdate(
     { _id }, 
-    { $set: updates },
+    { $pull: updates },
     { returnOriginal: false },
     (err, user)=>{
         if(err){
@@ -45,7 +42,9 @@ handler.put(async (req, res) => {
                 userName, 
                 fullName,
                 fanduelUsername, 
-                draftKingsUsername
+                draftKingsUsername,
+                _players, 
+                _teams
               }
             });
         }
@@ -55,3 +54,4 @@ handler.put(async (req, res) => {
 });
 
 export default handler;
+
