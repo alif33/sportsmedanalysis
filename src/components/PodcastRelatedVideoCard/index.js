@@ -22,9 +22,7 @@ const PodcastRelatedVideoCard = () => {
             <p>
               <EyeIcon />
               For beginners who are just..
-              <ul>
-                <li>16 Jan 2022</li>{" "}
-              </ul>
+              <span className="ml-1">16 Jan 2022</span>
             </p>
           </div>
         </div>

@@ -20,21 +20,21 @@ const PodcastVideoPlayer = () => {
         />
       </div>
       <div className="w-75 mx-auto mt-4">
-        <div className={style.videoTimePrograss}>
+        {/* <div className={style.videoTimePrograss}>
           <div style={{ width: "70%" }}></div>
         </div>
         <div className="mt-2 d-flex justify-content-between align-items-center">
           <span>15:29</span>
           <span>-15:29</span>
-        </div>
+        </div> */}
 
-        <div className={style.playBtn}>
+        {/* <div className={style.playBtn}>
           <PodNextBtn />
           <Reverse seound="50" />
           <PodPause />
           <Forward seound="50" />
           <PodPrevBtn />
-        </div>
+        </div> */}
         <AudioPlayerCard />
       </div>
     </div>

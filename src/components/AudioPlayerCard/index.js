@@ -91,8 +91,6 @@ const AudioPlayerCard = () => {
         onPlay={(e) => console.log("onPlay")}
         showSkipControls={true}
         showJumpControls={false}
-        // header={`Now playing: ${musicTracks[trackIndex].name}`}
-        // footer="All music from: www.bensound.com"
         onClickPrevious={handleClickPrevious}
         onClickNext={handleClickNext}
         onEnded={handleClickNext}
