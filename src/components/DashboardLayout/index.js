@@ -27,7 +27,7 @@ const DashboardLayout = ({ children, navheader, stutas }) => {
             <div className="dashboard-section">
                 <div className="container-fluid">
                     <div className="row">
-                        <div className="col-md-3 d-md-block d-none">
+                        <div className="col-md-3 ps-0 d-md-block d-none">
                             <DashboardSidebar stutas={stutas} />
                         </div>
                         <div className="col-md-9 col-12 ps-md-0 pe-md-2 ">
