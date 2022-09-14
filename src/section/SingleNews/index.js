@@ -12,7 +12,7 @@ import ShareIcon from "../../components/ShareIcon";
 import { RiArrowDownSFill } from "react-icons/ri";
 import ShareModal from "../../components/ShareModal";
 
-const SingleNews = ({ post, _comments, posts }) => {
+const SingleNews = ({ post, posts, topPosts, _comments }) => {
   const [comments, _setComments] = useState();
 
   useEffect(() => {
@@ -139,11 +139,12 @@ const SingleNews = ({ post, _comments, posts }) => {
           {/* <SimilarNews single={single} />
           <SimilarNews single={single} /> */}
           <h1 className={style.heading2}>Top News</h1>
-          <TopNews />
-          <TopNews />
-          <TopNews />
-          <TopNews />
-          <TopNews />
+          {
+            topPosts && topPosts.map((item, index)=><TopNews 
+              key={ index }
+              post={ item }
+            />)
+          }
         </div>
       </div>
     </>

@@ -5,7 +5,7 @@ import Layout from '../src/components/Layout';
 import LiveBtn from '../src/components/LiveBtn';
 import SingleNews from '../src/section/SingleNews';
 
-const Single = ({ post, _comments, posts }) => {
+const Single = ({ post, posts, topPosts, _comments }) => {
     return (
         <Layout>
             {/* <div className="container-fluid my-2">
@@ -15,6 +15,7 @@ const Single = ({ post, _comments, posts }) => {
                 <SingleNews 
                     post={ post } 
                     posts={ JSON.parse(posts) }
+                    topPosts={ JSON.parse(topPosts) }
                     _comments={ JSON.parse(_comments).reverse() }
                 />
             </div>
@@ -50,7 +51,14 @@ export async function getServerSideProps(context) {
         }, { _comments: 0 })
             .sort({"createdAt": -1})
             .lean()
-            .limit(50);
+            .limit(5);
+
+        const topPosts = await Post.find({}, { _comments: 0 })
+            .sort({ "views": -1 })
+            .lean()
+            .limit(5);
+
+
         await db.disconnect();
         
         // console.log(posts);
@@ -70,6 +78,7 @@ export async function getServerSideProps(context) {
                     updatedAt: updatedAt.toString()
                 },
                 posts: JSON.stringify(posts),
+                topPosts: JSON.stringify(topPosts),
                 _comments: JSON.stringify(_comments),
             }
         };
