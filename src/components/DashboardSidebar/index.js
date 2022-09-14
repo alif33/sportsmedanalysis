@@ -5,7 +5,7 @@ import style from './Dashboard.module.css';
 
 const DashboardSidebar = ({ stutas }) => {
     return (
-        <div className={`bg-black ${style._smd_dashboard_sidebar} h-100`}>
+        <div className={` bg-black ${style._smd_dashboard_sidebar} h-100`}>
             <h4 className="ms-2 py-2">Account Links</h4>
             <ul className={style.sidebar_link}>
 
