@@ -51,6 +51,57 @@ const EmailPreferences = () => {
               </div>
             </div>
           </div>
+          <div className="row mt-3">
+            <div className="col-md-12">
+              <h5>Daily Newsletter</h5>
+            </div>
+
+            <div className="col-md-12">
+              <div className="row mt-1">
+                <div className="col-md-2">
+                  <div className={style.input_check}>
+                    <div
+                      onClick={() => setCheck(!check)}
+                      className={check && style.active}
+                    >
+                      NFL Daily
+                      <span className={style.checkmark}></span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="col-md-2">
+                  <div className={style.input_check}>
+                    <div>
+                      MLB Daily
+                      <span className={style.checkmark}></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="row mt-3">
+            <div className="col-md-12">
+              <h5>Unsubscribe from all:</h5>
+            </div>
+
+            <div className="col-md-12">
+              <div className="row mt-1">
+                <div className="col-md-12">
+                  <div className={style.input_check}>
+                    <div
+                      onClick={() => setCheck(!check)}
+                      className={check && style.active}
+                    >
+                      <p> Remove me from all email lists</p>
+                      <span className={style.checkmark}></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
           <div className="row mt-4">
             <div className="col-md-6">

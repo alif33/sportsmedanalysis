@@ -78,12 +78,17 @@
 } */
 
 /* When the checkbox is checked, add a blue background */
-.input_check div {
-  background-color: #111;
-  /* opacity: 0; */
+.input_check div p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 21px;
+  color: #121212;
+  display: block;
+  padding-left: 0px;
+  margin-bottom: 12px;
   cursor: pointer;
-  height: 0;
-  width: 0;
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
