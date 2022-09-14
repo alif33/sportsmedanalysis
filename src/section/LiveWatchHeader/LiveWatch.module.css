@@ -1,8 +1,11 @@
 ._smd_live_watch_bg {
   width: 100%;
-  height: 339px;
+  height: 65vh;
   background-repeat: no-repeat;
   position: relative;
+  background-size: cover;
+  background-position: 0 -96px;
+  background-attachment: fixed;
 }
 
 ._smd_live_btn {
@@ -24,6 +27,7 @@
 
 ._smd_live_video_tilte {
   position: absolute;
+  width: 100%;
   bottom: 0;
   left: 0;
   background: #111111ba;
@@ -35,7 +39,8 @@
   align-items: center;
   column-gap: 4%;
 }
-._smd_live_video_tilte span{}
+._smd_live_video_tilte span {
+}
 ._smd_live_video_tilte h2 {
   font-family: "Poppins";
   font-style: normal;

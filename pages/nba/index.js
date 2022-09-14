@@ -17,7 +17,7 @@ const NBA = ({ posts, players, topPicks, bettings }) => {
   return (
     <div>
       <Layout navheader={true}>
-        <NbaHero />
+        <NbaHero posts={posts} />
         <NbaNews
           title="NBA News"
           players={players}

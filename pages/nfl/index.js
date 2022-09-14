@@ -10,13 +10,15 @@ import PageNewsSection from '../../src/section/PageNewsSection';
 import NewsTab from '../../src/section/NewsTap';
 import NflTeam from "../../src/section/NflTeam";
 import BorderLine from '../../src/components/BorderLine'
+import NbaHero from "../../src/section/hero/NbaHero";
 
 function NFL({ posts, players, trendings }) {
 
   return (
     <div className='_nfl'>
       <Layout navheader={true}>
-        <NFLSlider />
+        {/* <NFLSlider /> */}
+        <NbaHero posts={posts} />
 
         <NewsTab
           posts={ posts }
