@@ -1,39 +1,37 @@
-
 ._smd_login_card {
-    /* background: rgba(0, 0, 0, 0.432); */
-    width: 51%;
-    margin: auto;
-    margin-top: 19px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-  ._smd_login_card button {
-    width: 100%;
-    border: 1px solid #d9d9d9;
-    background: #fff;
-    font-family: "Poppins";
-    font-style: normal;
-    font-weight: 600;
-    font-size: 19px;
-    line-height: 28px;
-    color: #121212;
-    padding: 15px 40px;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    margin: 15px 0;
-  }
-  ._smd_login_card button div {
-    width: 100%;
-  }
-  
-  
+  /* background: rgba(0, 0, 0, 0.432); */
+  width: 51%;
+  margin: auto;
+  margin-top: 19px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+._smd_login_card button {
+  width: 100%;
+  border: 1px solid #d9d9d9;
+  background: #fff;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 19px;
+  line-height: 28px;
+  color: #121212;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin: 15px 0;
+}
+._smd_login_card button div {
+  width: 100%;
+}
+
 /* form checkbox */
 /* The container */
-.input_check label {
+.input_check div {
   font-family: "Poppins";
   font-style: normal;
   font-weight: 500;
@@ -41,7 +39,6 @@
   line-height: 21px;
   color: #121212;
   display: block;
-  position: relative;
   padding-left: 35px;
   margin-bottom: 12px;
   cursor: pointer;
@@ -49,10 +46,12 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  position: relative;
 }
 
 /* Hide the browser's default checkbox */
-.input_check label input {
+.input_check div::before {
+  content: "";
   position: absolute;
   opacity: 0;
   cursor: pointer;
@@ -61,7 +60,7 @@
 }
 
 /* Create a custom checkbox */
-.input_check label .checkmark {
+.input_check div .checkmark {
   position: absolute;
   top: 0;
   left: 0;
@@ -70,31 +69,37 @@
   border: 1px solid #111;
   background-color: #fff;
 }
-
+.input_check div.active .checkmark {
+  background: #111;
+}
 /* On mouse-over, add a grey background color */
 /* .input_check label:hover input ~ .checkmark {
   background-color: #111;
 } */
 
 /* When the checkbox is checked, add a blue background */
-.input_check label input:checked ~ .checkmark {
+.input_check div {
   background-color: #111;
+  /* opacity: 0; */
+  cursor: pointer;
+  height: 0;
+  width: 0;
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
-.input_check label .checkmark:after {
+.input_check div .checkmark:after {
   content: "";
   position: absolute;
-  display: none;
+  display: block;
 }
 
 /* Show the checkmark when checked */
-.input_check label input:checked ~ .checkmark:after {
+.input_check div.active .checkmark:after {
   display: block;
 }
 
 /* Style the checkmark/indicator */
-.input_check label .checkmark:after {
+.input_check div .checkmark:after {
   left: 7px;
   top: 1px;
   width: 6px;
