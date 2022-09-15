@@ -98,12 +98,12 @@ const MobileFooter = () => {
                             <div className="col-md-4 p-md-0">
                                 <ul className={`${style._smd_footer_menu}`}>
                                     <li>
-                                        <Link href="/">
+                                        <Link href="/privacy-policy">
                                             <a>Privacy</a>
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link href="/">
+                                        <Link href="/terms-of-use">
                                             <a>Terms</a>
                                         </Link>
                                     </li>
@@ -122,7 +122,7 @@ const MobileFooter = () => {
                             <div className="col-md-4 p-md-0">
                                 <ul className={`${style._smd_footer_menu}`}>
                                     <li>
-                                        <Link href="/">
+                                        <Link href="/auth/sign-in">
                                             <a>Login</a>
                                         </Link>
                                     </li>

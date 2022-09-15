@@ -11,7 +11,8 @@ import TopPlayers from '../../src/section/TopPlayers';
 import Post from '../../models/Post';
 
 const Players = ({ players, player, posts }) => {
-    console.log(player);
+
+
     return (
         <Layout>
             <div className="container-fluid2 py-2 pt-3">

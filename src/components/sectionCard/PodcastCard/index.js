@@ -9,7 +9,7 @@ const PodcastCard = ({ item }) => {
     <div className="col-md-4  col-6 mb-3">
       <div className={style.podcast_card}>
         <div className={style.podcast_card_img}>
-          <Image height="252" width="274" src="/images/podcast/card-img.png" alt="" />
+          <Image height="252" width="274" src={ item.image } alt="" />
         </div>
         <span>Fantasy & Gambling</span>
         <h4>{ item.title }</h4>

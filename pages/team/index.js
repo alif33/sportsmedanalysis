@@ -18,8 +18,8 @@ const TeamsPage = () => {
                 <Teams />
             </div>
             <div className="container-fluid2 my-2 mb-3">
-                <MoreStoris title="Lastest News on This Team" />
-                <MoreStorisMobile title="Lastest News on This Team" />
+                {/* <MoreStoris title="Lastest News on This Team" /> */}
+                {/* <MoreStorisMobile title="Lastest News on This Team" /> */}
             </div>
 
             <PlayerVideo title="Lastest Videos on This Team" />

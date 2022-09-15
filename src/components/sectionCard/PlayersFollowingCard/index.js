@@ -51,7 +51,7 @@ const PlayersFollowingCard = ({ _id, firstName, lastName, img }) => {
 
   return (
     <div className={style.teamsFollowingCard}>
-      <Link href="/">
+      <Link href={`/player/${ firstName }-${ lastName }/${ _id }`}>
         <a className={style.imageAndName}>
           <div className={style.cardImage}>
             <Image height="87" width="100" src={img} alt="" />
