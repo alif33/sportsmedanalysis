@@ -6,10 +6,10 @@ import articleStyle from './Article.module.css';
 const ArticleCard = ({ index, post }) => {
 
     const image = post.image.split("upload");
-    
+
     return (
         <div className={`${articleStyle._smd_article_card} w-100 px-2`}>
-            <Link key={index} href={`/${post.slug}/c_thumb,g_face,h_150,w_200/${post._id}`}>
+            <Link key={index} href={`/${post.slug}/c_thumb,g_face,h_150,w_315/${post._id}`}>
                 <a>
                     <div className={articleStyle._smd_article_card_img}>
                         <Image
