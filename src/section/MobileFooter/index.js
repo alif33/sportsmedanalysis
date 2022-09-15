@@ -16,8 +16,8 @@ const MobileFooter = () => {
                 </Link>
             </div>
             <div className="container">
-                <div className="row py-md-4 pb-1 pt-0 w-100 mx-auto">
-                    <div className="col-md-4  col-10 ms-auto">
+                <div className="row py-md-4 pb-1 pt-4 w-100 ms-md-5 w-100 m-auto">
+                    <div className="col-md-4 ">
                         <h3 className={style.tilte}>
                             Sports med analytics
                         </h3>
@@ -71,7 +71,7 @@ const MobileFooter = () => {
                     </div>
                     <div className="col-md-5">
                         <div className="row ms-md-5 w-100 m-auto">
-                            <div className="col-4 p-md-0">
+                            <div className="col-md-4 p-md-0">
                                 <ul className={`${style._smd_footer_menu}`}>
                                     <li>
                                         <Link href="/">
@@ -95,7 +95,7 @@ const MobileFooter = () => {
                                     </li>
                                 </ul>
                             </div>
-                            <div className="col-4 p-md-0">
+                            <div className="col-md-4 p-md-0">
                                 <ul className={`${style._smd_footer_menu}`}>
                                     <li>
                                         <Link href="/">
@@ -119,7 +119,7 @@ const MobileFooter = () => {
                                     </li>
                                 </ul>
                             </div>
-                            <div className="col-4 p-md-0">
+                            <div className="col-md-4 p-md-0">
                                 <ul className={`${style._smd_footer_menu}`}>
                                     <li>
                                         <Link href="/">
@@ -143,7 +143,7 @@ const MobileFooter = () => {
                     </div>
                     <div className="col-md-3">
                         <div className="row mb-2 w-100 m-auto">
-                            <div className="col-md-12 col-6">
+                            <div className="col-md-12 col-9">
                                 <div className={style.newsLatter}>
                                     <h3>Sign Up for Our Newsletters</h3>
                                     <label htmlFor="">Your Email</label>
@@ -153,7 +153,7 @@ const MobileFooter = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-6 d-md-none d-block ">
+                            <div className="col-3 d-md-none d-block ">
                                 <div className="text-end d-flex justify-content-end h-100 align-items-end">
                                     <select className={style.selectLang}>
                                         <option value="En">En</option>
