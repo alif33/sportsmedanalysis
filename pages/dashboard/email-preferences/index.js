@@ -10,7 +10,7 @@ const EmailPreferences = () => {
   const { user } = useSelector(state=>state);
   const { __u__ } = user;
 
-  console.log(user);
+  console.log(user);   
 
   return (
     <DashboardLayout stutas="email-preferences">
