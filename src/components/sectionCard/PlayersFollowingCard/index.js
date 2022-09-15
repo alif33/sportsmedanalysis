@@ -50,13 +50,13 @@ const PlayersFollowingCard = ({ _id, firstName, lastName, img }) => {
   };
 
   return (
-    <Link href="/">
-      <a className={style.teamsFollowingCard}>
-        <div className={style.imageAndName}>
+    <div className={style.teamsFollowingCard}>
+      <Link href="/">
+        <a className={style.imageAndName}>
           <div className={style.cardImage}>
             <Image height="87" width="100" src={img} alt="" />
           </div>
-          <div className="ms-md-3 ms-1 ">
+          <div className="ms-md-2 ms-1 ">
             <Image
               height="26"
               width="26"
@@ -64,22 +64,22 @@ const PlayersFollowingCard = ({ _id, firstName, lastName, img }) => {
               alt=""
             />
           </div>
-          <div className="">
+          <div className="ms-1 ">
             <h4>
               {firstName} {lastName}
             </h4>
             <p>1.2 Million Followers</p>
           </div>
-        </div>
-        <div className={style.buttonSide}>
-          {isUser && info._players.includes(_id) ? (
-            <button onClick={UnfollowHandler}>Unfollow</button>
-          ) : (
-            <button onClick={followHandler}>Follow</button>
-          )}
-        </div>
-      </a>
-    </Link>
+        </a>
+      </Link>
+      <div className={style.buttonSide}>
+        {isUser && info._players.includes(_id) ? (
+          <button onClick={UnfollowHandler}>Unfollow</button>
+        ) : (
+          <button onClick={followHandler}>Follow</button>
+        )}
+      </div>
+    </div>
   );
 };
 
