@@ -7,10 +7,14 @@ import { useDispatch, useSelector } from "react-redux";
 import SearchIcon from "../../components/svg/SearchIcon";
 import style from "./MobileNavbar.module.css";
 import UserIcon from "../../components/svg/UserIcon";
+import { AiOutlineMenuUnfold } from "react-icons/ai";
+import { GrClose } from "react-icons/gr";
+import { useState } from "react";
 
 const navMenus = ["NFL", "NBA", "MLB", "WATCH", "PODCAST"];
 
 const MobileNavbar = () => {
+  const [mobileMenu, setMobileMenu] = useState();
   const router = useRouter();
   const { user } = useSelector((state) => state);
   const dispatch = useDispatch();
@@ -26,8 +30,8 @@ const MobileNavbar = () => {
               className={`navbar-brand m-0 me-0 d-flex justify-content-center align-items-center ${style.navBrand}`}
             >
               <Image
-                height="66.06"
-                width="64"
+                height="160"
+                width="160"
                 src="/images/icon/logo.png"
                 alt=""
               />
@@ -37,7 +41,60 @@ const MobileNavbar = () => {
           <div
             className={`d-flex  justify-content-between align-items-center ${style.navMenu}`}
           >
-            <ul className={`d-flex navbar-nav mr-auto `}>
+            <button
+              onClick={() => setMobileMenu(!mobileMenu)}
+              className={style.menuBtn}
+            >
+              <AiOutlineMenuUnfold />
+            </button>
+
+            <div
+              className={`${style.mobileMenuSideBar} ${
+                mobileMenu ? style.active : ""
+              }`}
+            >
+              <div className="d-flex justify-content-between align-items-center w-50 mx-auto">
+                <Link href="/">
+                  <a
+                    className={`navbar-brand m-0 me-0 d-flex justify-content-center align-items-center ${style.navBrand}`}
+                  >
+                    <Image
+                      height="150"
+                      width="150"
+                      src="/images/icon/logo.png"
+                      alt=""
+                    />
+                  </a>
+                </Link>
+                <button
+                  onClick={() => setMobileMenu(!mobileMenu)}
+                  className={style.MobileMenucloseBtn}
+                >
+                  <GrClose />
+                </button>
+              </div>
+              <ul className={style.mobileMenu}>
+                {navMenus.map((menu, index) => {
+                  return (
+                    <li
+                      key={index}
+                      className={`nav-item ${style._smd_nav_item} ${
+                        router.pathname.split("/")[1] ===
+                        menu.toLocaleLowerCase()
+                          ? style.active
+                          : ""
+                      }`}
+                    >
+                      <Link href={`/${menu.toLocaleLowerCase()}`}>
+                        <a className="nav-link">{menu}</a>
+                      </Link>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+
+            <ul className={`d-md-flex navbar-nav mr-auto d-none  `}>
               {navMenus.map((menu, index) => {
                 return (
                   <li
