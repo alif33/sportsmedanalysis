@@ -4,6 +4,8 @@ import React from 'react';
 import style from './NewsCard3.module.css';
 
 const NewsCard3 = ({ _id, slug, title, img,  comment, name, link }) => {
+    const _image = img.split("upload");
+
 
     return (
 
@@ -12,7 +14,12 @@ const NewsCard3 = ({ _id, slug, title, img,  comment, name, link }) => {
                 <div className={`d-flex ${style.newscard3}`}>
 
                     <div className={style.newscard3Image}>
-                        <Image height="132" width="218" src={img} alt="" />
+                        <Image 
+                            height="132" 
+                            width="218" 
+                            src={`${_image[0]}/upload/c_thumb,g_face,h_150,w_150/${_image[1]}`} 
+                            alt={ title }
+                        />
                     </div>
 
                     <div className={style.newscard3content}>
@@ -27,3 +34,5 @@ const NewsCard3 = ({ _id, slug, title, img,  comment, name, link }) => {
 };
 
 export default NewsCard3;
+
+// https://res.cloudinary.com/demo/image/upload/c_thumb,g_face,h_150,w_150/woman.jpg

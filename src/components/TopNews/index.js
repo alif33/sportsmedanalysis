@@ -7,6 +7,8 @@ import EyeIcon from "../svg/EyeIcon";
 import style from "./TopNews.module.css";
 
 const SimilarNews = ({ post }) => {
+
+  const _image = post.image.split("upload");
   return (
     <Link href={`/${ slugify(post.title, "-") }/${ post._id }`}>
       <a className={style.container}>
@@ -14,7 +16,7 @@ const SimilarNews = ({ post }) => {
           <Image
             height="110"
             width="180"
-            src={ post.image }
+            src={`${_image[0]}/upload/c_thumb,g_face,h_150,w_150/${_image[1]}`}
             alt={ post.title }
           />
         </div>

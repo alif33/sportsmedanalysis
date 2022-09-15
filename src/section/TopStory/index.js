@@ -6,7 +6,8 @@ import MiddleTitleCard from '../../components/sectionCard/MiddleTitleCard';
 import style from './TopStory.module.css';
 
 const TopStory = ({ topPosts }) => {
-
+    
+    const _topImage = topPosts[0]?.image.split("upload");
     return (
         <>
             <div className="container-fluid py-3">
@@ -18,7 +19,7 @@ const TopStory = ({ topPosts }) => {
                                 _id={topPosts[0]?._id}
                                 slug={topPosts[0]?.slug}
                                 title={topPosts[0]?.title}
-                                img={topPosts[0]?.image}
+                                img={`${_topImage[0]}/upload/c_thumb,g_face,h_380,w_540/${_topImage[1]}`} 
                                 description='NBA free agency 2022 live tracker: News, rumors, trades, signings, as the offseason rolls on'
                             />
                         </div>

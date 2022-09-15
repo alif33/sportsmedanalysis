@@ -25,7 +25,9 @@ const LandingPage = ({ posts, topPosts, players, topPicks, bettings }) => {
         <div className="_LandingPage">
             <Layout navheader={true}>
 
-                <Article posts={ JSON.parse(posts) } />
+                <Article 
+                    posts={ JSON.parse(posts) } 
+                />
 
                 <ScoreSlider />
                 <div className="container-fluid">

@@ -7,7 +7,7 @@ import { Sortern } from "../../../__lib__/helpers/Validator";
 import slugify from "slugify";
 
 const SimilarNews = ({ post }) => {
-
+  const _image = post.image.split("upload");
   return (
     <Link href={`/${ slugify(post.title, "-") }/${ post._id }`}>
     <a className={style.container}>
@@ -15,7 +15,7 @@ const SimilarNews = ({ post }) => {
         <Image
           height="110"
           width="180"
-          src={ post.image }
+          src={`${_image[0]}/upload/c_thumb,g_face,h_150,w_150/${_image[1]}`}
           alt={ post.title }
         />
         {/* <p className={style.time}>14:58</p> */}

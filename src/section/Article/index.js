@@ -43,7 +43,10 @@ const Article = ({ posts }) => {
       <Slider {...settings}>
         {posts.slice(0, 4).map((item, index) => (
           <div key={index}>
-            <ArticleCard index={index} post={item} />
+            <ArticleCard 
+              index={index} 
+              post={item} 
+            />
           </div>
         ))}
       </Slider>

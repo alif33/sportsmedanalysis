@@ -5,12 +5,17 @@ import style from "./NewsCard4.module.css";
 
 const NewsCard4 = ({ _id, slug, title, name, img, comment, description }) => {
 
+  const _image = img.split("upload");
   return (
     <Link href={`/${slug}/${_id}`}>
       <a>
         <div className={style.newsCard4}>
           <div className="w-100">
-            <Image height="200" width="440" src={img} alt={title} />
+            <Image 
+              height="200" 
+              width="440" 
+              src={`${_image[0]}/upload/c_thumb,g_face,h_190,w_425/${_image[1]}`} 
+              alt={title} />
           </div>
 
           <h3 style={{ color: "#121212" }} className="mt-2">
