@@ -21,7 +21,10 @@ export default Players;
 
 export async function getStaticProps(context) {
   await db.connect();
-  const players = await Player.find({}).sort().lean().limit(50);
+  const players = await Player.find({})
+    .sort()
+    .lean()
+    .limit(50);
 
   await db.disconnect();
 

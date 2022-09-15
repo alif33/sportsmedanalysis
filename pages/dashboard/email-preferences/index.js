@@ -1,19 +1,24 @@
 import { useRouter } from "next/router";
 import React, { useState } from "react";
+import { useSelector } from "react-redux";
 import DashboardLayout from "../../../src/components/DashboardLayout";
 import style from "./EmailPreferences.module.css";
 
 const EmailPreferences = () => {
   const [check, setCheck] = useState(true);
-
   const router = useRouter();
+  const { user } = useSelector(state=>state);
+  const { __u__ } = user;
+
+  console.log(user);
+
   return (
     <DashboardLayout stutas="email-preferences">
       <div className="container ps-1 pe-2 mt-2 mb-5">
         <div className="w-100 d-flex justify-content-between align-items-center">
           <div className="profile-text">
             <h3 className="mt-2">Change Email Preferences</h3>
-            <h5 className="mt-3">Email address: johndoe@gmail.com</h5>
+            <h5 className="mt-3">Email address: { __u__.info.email }</h5>
             <p className="mt-3 mb-1">
               We want to provide you with the most useful and timely advice. Let
               us know what you&apos;d like to hear about below.
@@ -32,7 +37,7 @@ const EmailPreferences = () => {
                   <div className={style.input_check}>
                     <div
                       onClick={() => setCheck(!check)}
-                      className={check && style.active}
+                      className={check ? style.active: ""}
                     >
                       NFL
                       <span className={style.checkmark}></span>

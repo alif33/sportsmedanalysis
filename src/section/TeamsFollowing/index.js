@@ -4,7 +4,7 @@ import SearchBar from '../../components/SearchBar';
 import TeamsFollowingCard from '../../components/sectionCard/TeamsFollowingCard';
 import style from './TeamsFollowing.module.css'
 
-const TeamsFollowing = ({ title }) => {
+const TeamsFollowing = ({ title, teams }) => {
     
     return (
         <>
@@ -16,9 +16,17 @@ const TeamsFollowing = ({ title }) => {
                     <Image width="20" height="17" src="/images/icon/arrows-down-up.png" alt="" />
                 </div>
             </div>
-
-            <TeamsFollowingCard />
-            <TeamsFollowingCard />
+            {
+                teams && teams.map((team, index)=>{
+                    return(
+                        <TeamsFollowingCard 
+                            _id={ team._id }
+                            name={ team.name }
+                            league={ team.league }
+                        />
+                    )
+                })
+            }
 
             <div className="d-flex justify-content-between align-items-center">
                 <button className={style.nextPreBtn}>
