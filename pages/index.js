@@ -17,9 +17,7 @@ import { useSelector } from "react-redux";
 const LandingPage = ({ posts, topPosts, players, topPicks, bettings }) => {
 
     const { user } = useSelector(state=>state);
-    console.log(user);
 
-    // console.log(JSON.parse(post));
     return (
 
         <div className="_LandingPage">
