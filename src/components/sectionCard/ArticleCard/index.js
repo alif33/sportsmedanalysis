@@ -5,7 +5,7 @@ import articleStyle from './Article.module.css';
 
 const ArticleCard = ({ index, post }) => {
 
-    const image = post.image.split("upload");
+    const _image = post.image.split("upload");
 
     return (
         <div className={`${articleStyle._smd_article_card} w-100 px-2`}>
@@ -15,7 +15,7 @@ const ArticleCard = ({ index, post }) => {
                         <Image
                             height="550"
                             width="740"
-                            src={`${image[0]}/upload/${image[1]}`}
+                            src={`${_image[0]}/upload/c_thumb,g_face,h_290,w_630/${_image[1]}`}
                             alt={ post.title }
                         />
                     </div>
