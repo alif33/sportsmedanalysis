@@ -19,7 +19,7 @@ const TopStory = ({ topPosts }) => {
                                 _id={topPosts[0]?._id}
                                 slug={topPosts[0]?.slug}
                                 title={topPosts[0]?.title}
-                                img={`${_topImage[0]}/upload/c_thumb,g_face,h_380,w_540/${_topImage[1]}`} 
+                                img={`${_topImage[0]}/upload/c_thumb,g_face,h_760,w_1080/${_topImage[1]}`} 
                                 description='NBA free agency 2022 live tracker: News, rumors, trades, signings, as the offseason rolls on'
                             />
                         </div>
