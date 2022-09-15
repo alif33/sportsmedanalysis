@@ -17,7 +17,7 @@ const NewsCard3 = ({ _id, slug, title, img,  comment, name, link }) => {
                         <Image 
                             height="132" 
                             width="218" 
-                            src={`${_image[0]}/upload/c_thumb,g_face,h_150,w_150/${_image[1]}`} 
+                            src={`${_image[0]}/upload/c_thumb,g_face,h_264,w_436/${_image[1]}`} 
                             alt={ title }
                         />
                     </div>
