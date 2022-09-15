@@ -12,7 +12,7 @@ const NewsCard10 = ({ _id, slug, title, name, img, comment, description }) => {
                         <Image height="360" width="440" src={img} alt={title} />
                     </div>
 
-                    <h3 style={{ color: "#121212" }} className="mt-2">
+                    <h3 className="mt-2">
                         {title}
                     </h3>
 

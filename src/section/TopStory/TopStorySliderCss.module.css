@@ -1,18 +1,30 @@
-
 .v_s_div {
-    background: rgba(255, 255, 255, 0.81);
-    height: 96px;
-    position: absolute;
-    width: 100%;
-  }
-  
-  .v_s_top {
-    top: 0;
-    left: 0;
-  }
-  
-  .v_s_bottom {
-    bottom: 0;
-    left: 0;
-  }
-  
+  background: rgba(255, 255, 255, 0.81);
+  height: 96px;
+  position: absolute;
+  width: 100%;
+}
+
+.v_s_top {
+  top: 0;
+  left: 0;
+}
+
+.v_s_bottom {
+  bottom: 0;
+  left: 0;
+}
+.sliderCard h4 {
+  color: #121212;
+  font-weight: 600;
+}
+.sliderCard:hover h4 {
+  color: rgb(0, 102, 255);
+}
+
+.sliderCard h6 {
+  color: #5c5656;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 18px;
+}

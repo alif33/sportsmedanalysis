@@ -30,7 +30,7 @@ function NFL({ posts, players, trendings }) {
         </div>
 
         <PageNewsSection 
-          title="NFL News" 
+          title="NFL News"
           posts={ posts }
         />
 

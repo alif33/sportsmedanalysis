@@ -37,7 +37,13 @@ _smd article
   font-weight: 500;
   font-size: 17px;
   line-height: 23.87px;
+  transition: all 0.4s ease-in-out;
 }
+._smd_article_card:hover h4 {
+  color: rgb(0, 102, 255);
+  background: #fff;
+}
+
 @media only screen and (max-width: 768px) {
   ._smd_article_card {
     width: 100%;

@@ -16,6 +16,11 @@
 
   color: #121212;
 }
+
+.nfl_S5_middle_card:hover h4{
+  color: rgb(0, 102, 255);
+}
+
 .nfl_S5_middle_card p {
   font-family: "Poppins";
   font-style: normal;

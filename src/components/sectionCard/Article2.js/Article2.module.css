@@ -36,3 +36,9 @@
   letter-spacing: 0.18px;
   color: #ffffff;
 }
+.article2:hover p {
+  color: rgb(0, 102, 255);
+}
+.article2:hover p.nfl_Article {
+  background-color: #fff;
+}

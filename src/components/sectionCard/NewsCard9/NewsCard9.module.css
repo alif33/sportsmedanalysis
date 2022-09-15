@@ -21,11 +21,15 @@
   letter-spacing: 0.18px;
   color: #5c5656;
 }
-.nfl_S5_middle_card h4{
-  font-family: 'Poppins';
+.nfl_S5_middle_card h4 {
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
   line-height: 26px;
   color: #121212;
+  transition: all 0.4s ease-in-out;
+}
+.nfl_S5_middle_card:hover h4 {
+  color: rgb(0, 102, 255);
 }

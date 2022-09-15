@@ -4,7 +4,8 @@
 
 .nfl_sec_two_middle {
   margin-top: 20px;
-  /* align-items: center; */
+  display: grid;
+  grid-template-columns: 70% 30%;
   gap: 10px;
 }
 .nfl_sec_two_middle span {
@@ -16,6 +17,10 @@
     flex-direction: column-reverse;
   }
 } */
+
+.nfl_sec_two_middle:hover h4{
+  color: rgb(0, 102, 255);
+}
 
 .nfl_card_title1 {
   font-family: "Poppins";

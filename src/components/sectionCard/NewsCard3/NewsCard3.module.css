@@ -18,6 +18,13 @@
   color: #5c5656;
 }
 
+.newscard3 .newscard3content h4 {
+  color: #121212;
+}
+.newscard3 .newscard3content:hover h4 {
+  color: rgb(0, 102, 255);
+}
+
 .newscard3Image span {
   width: 202px !important;
   height: 130px !important;

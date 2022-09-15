@@ -4,11 +4,7 @@ import { imageResize, Sortern } from "../../../__lib__/helpers/Validator";
 import style from "./NbaHero.module.css";
 
 const NbaHero = ({ posts }) => {
-  console.log(posts);
-  // const _image = posts[1].image.split("upload");
-  const _image2 = posts[2].image.split("upload");
-  const _image3 = posts[3].image.split("upload");
-
+  
   return (
     <div className={style._smd_nbahero}>
       <div className={style._smd_nbahero_card_main}>

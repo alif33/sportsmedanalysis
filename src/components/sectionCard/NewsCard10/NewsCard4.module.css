@@ -35,3 +35,7 @@
   letter-spacing: -0.04em;
   color: #121212;
 }
+
+.newsCard4:hover h3 {
+  color: rgb(0, 102, 255);
+}

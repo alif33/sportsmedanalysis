@@ -21,7 +21,7 @@ const NewsCard3 = ({ _id, slug, title, img, comment, name, link }) => {
           </div>
 
           <div className={style.newscard3content}>
-            <h4 style={{ color: "#121212" }}>{Sortern(title, 6)}</h4>
+            <h4 >{Sortern(title, 6)}</h4>
             <p className="mt-2">
               {name}{" "}
               <span
