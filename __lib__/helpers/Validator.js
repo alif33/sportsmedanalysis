@@ -1,6 +1,7 @@
 import parse from 'html-react-parser'
 
 export const parseHtml = body => parse(body);
+
 export const Sortern = (str, n) =>{
     let strSplit = str.split(' ');
     
@@ -11,3 +12,7 @@ export const Sortern = (str, n) =>{
     }
 } 
 
+export const imageResize = (image, format)=>{
+    const _image = image.split("upload");
+    return `${_image[0]}/upload/${format}/${_image[1]}`
+}

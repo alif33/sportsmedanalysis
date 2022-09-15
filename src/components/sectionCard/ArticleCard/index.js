@@ -1,11 +1,10 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+import { imageResize } from '../../../../__lib__/helpers/Validator';
 import articleStyle from './Article.module.css';
 
 const ArticleCard = ({ index, post }) => {
-
-    const _image = post.image.split("upload");
 
     return (
         <div className={`${articleStyle._smd_article_card} w-100 px-2`}>
@@ -15,7 +14,7 @@ const ArticleCard = ({ index, post }) => {
                         <Image
                             height="550"
                             width="740"
-                            src={`${_image[0]}/upload/c_thumb,g_face,h_290,w_630/${_image[1]}`}
+                            src={imageResize(post.image, "c_thumb,g_face,h_290,w_630")}
                             alt={ post.title }
                         />
                     </div>
