@@ -10,7 +10,6 @@ const NewsCard11 = ({ _id, slug, title, img, description }) => {
       <a className={style.news_card}>
         <Image
           src={ imageResize(img, "c_thumb,g_face,h_724,w_1070") }
-          priority={ true }
           alt={title}
           height="724"
           width="1070"
