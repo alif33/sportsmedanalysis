@@ -42,7 +42,9 @@ const TopStory = ({ topPosts }) => {
                 ))}
           </div>
           <div className="col-12 mx-auto col-lg-3">
-            <h1 className={style._smd_Upcoming_events}>Upcoming events</h1>
+            <h1 className={`text-center ${style._smd_Upcoming_events}`}>
+              Trending Now
+            </h1>
             <TopStoryVerticalSlider />
           </div>
         </div>
