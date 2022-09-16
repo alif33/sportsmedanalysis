@@ -3,19 +3,27 @@ import React from 'react';
 import LatestNewsCard from '../../components/sectionCard/LatestNewsCard';
 import style from './Nflnews.module.css';
 import Link from 'next/link';
+import slugify from 'slugify';
+import { imageResize } from '../../../__lib__/helpers/Validator';
 
-const NflNews = () => {
+const NflNews = ({ posts }) => {
+
     return (
         <div className={`row mt-1 ${style.nflNews}`}>
             <div className={`col-md-7 ${style.mainNewsCard}`}>
-                <h3 className="mb-1">NFL News</h3>
-                <Link href="">
+                {/* <h3 className="mb-1">NFL News</h3> */}
+                <Link href={`/${ slugify(posts[0].title, "-") }/${ posts[0]._id }`}>
                     <a className={style.nflNewsCard}>
-                        <Image height="474px" width="798px" src="/images/nfl-news/nfl-main-news.png" alt="" />
+                        <Image 
+                            height="474px" 
+                            width="798px" 
+                            src={ imageResize(posts[0].image, "c_thumb,g_face,h_724,w_1070") } 
+                            alt={ posts[0].title }
+                        />
                         <div className={style.nflNewsCardContent}>
-                            <p>PREMIER LEGUE</p>
-                            <h4>What happened to Andrew Luck? Our new series goes inside his rise, shocking retirement</h4>
-                            <p>LIVE UPDATES</p>
+                            <p>{ posts[0].league }</p>
+                            <h4>{ posts[0].title }</h4>
+                            {/* <p>LIVE UPDATES</p> */}
                         </div>
                     </a>
                 </Link>
