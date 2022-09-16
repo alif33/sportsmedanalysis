@@ -15,7 +15,7 @@ const MoreNewsCard = ({ _id, slug, title, img }) => {
             src={imageResize(img, "c_thumb,g_face,h_333,w_384")}
             alt={title}
           />
-          <p className={style.nfl_card_Desc}>{Sortern(title, 5)}</p>
+          <p className={style.nfl_card_Desc}>{Sortern(title, 10)}</p>
         </a>
       </Link>
     </div>

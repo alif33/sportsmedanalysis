@@ -9,7 +9,7 @@ const NewsCard4 = ({ _id, slug, title, name, img, comment, description }) => {
   return (
     <Link href={`/${slug}/${_id}`}>
       <a>
-        <div className={style.newsCard4}>
+        <div className={`mb-3 ${style.newsCard4}`}>
           <div className="w-100">
             <Image
               height="200"
@@ -19,7 +19,7 @@ const NewsCard4 = ({ _id, slug, title, name, img, comment, description }) => {
             />
           </div>
 
-          <h3 className="mt-2">{Sortern(title, 7)}</h3>
+          <h3 className="mt-2">{Sortern(title, 10)}</h3>
 
           {description && <p className={style.nfl_para1}>{description}</p>}
 

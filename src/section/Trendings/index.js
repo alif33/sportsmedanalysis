@@ -14,7 +14,7 @@ const Trendings = ({ trendings }) => {
           <NewsCard
             _id={trendings[0]._id}
             slug={trendings[0].slug}
-            title={Sortern(trendings[0].title, 8)}
+            title={Sortern(trendings[0].title, 10)}
             img={imageResize(trendings[0].image, "c_thumb,g_face,h_624,w_1088")}
             description="  Follow here for signings, trades, rumors and analysis from The Athletic's staff as the"
           />
@@ -28,7 +28,7 @@ const Trendings = ({ trendings }) => {
                   key={index}
                   _id={item._id}
                   slug={item.slug}
-                  title={Sortern(item.title, 6)}
+                  title={Sortern(item.title, 10)}
                   description="Scott Wheeler"
                   comment={item?.comments ? item.comments : "0"}
                 />

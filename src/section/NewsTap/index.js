@@ -14,7 +14,7 @@ const NewsTab = ({ posts, players }) => {
             <NewsCard10
               _id={posts[0]._id}
               slug={posts[0].slug}
-              title={Sortern(posts[0].title, 8)}
+              title={Sortern(posts[0].title, 10)}
               img={imageResize(posts[0].image, "c_thumb,g_face,h_720,w_1060")}
               description="Follow here for signings, trades, rumors and analysis from The Athletic's staff as the"
               name="John Holinger"
@@ -32,7 +32,7 @@ const NewsTab = ({ posts, players }) => {
                   key={index}
                   _id={item._id}
                   slug={item.slug}
-                  title={Sortern(item.title, 8)}
+                  title={Sortern(item.title, 10)}
                   img={item.image}
                   description="The Athletic NFL Staff"
                 />

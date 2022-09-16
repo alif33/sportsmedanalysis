@@ -1,10 +1,10 @@
 .nfl_comment_num {
-  font-family: "Roboto";
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
-  line-height: 15px;
-  letter-spacing: 0.18px;
+  line-height: 20px;
+  letter-spacing: -0.04em;
   color: #5c5656;
   display: flex;
 }

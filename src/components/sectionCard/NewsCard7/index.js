@@ -10,7 +10,7 @@ const NewsCard7 = ({ _id, slug, title, img, description }) => {
       <a className="mb-1">
         <div className={` ${style.nfl_sec_two_middle}`}>
           <div>
-            <h4 className={style.nfl_card_title1}>{Sortern(title, 5)}</h4>
+            <h4 className={style.nfl_card_title1}>{Sortern(title, 10)}</h4>
             <p className={style.nfl_card_desc}>{description}</p>
           </div>
           <div>

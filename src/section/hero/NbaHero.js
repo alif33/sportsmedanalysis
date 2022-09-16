@@ -17,7 +17,7 @@ const NbaHero = ({ posts }) => {
         />
         <Link href={`/${posts[1].slug}/${posts[1]._id}`}>
           <a>
-            <h2>{Sortern(posts[1].title, 6)}</h2>
+            <h2>{Sortern(posts[1].title, 10)}</h2>
           </a>
         </Link>
       </div>
@@ -32,7 +32,7 @@ const NbaHero = ({ posts }) => {
           />
           <Link href={`/${posts[6].slug}/${posts[6]._id}`}>
             <a>
-              <h2>{Sortern(posts[6].title, 6)}</h2>
+              <h2>{Sortern(posts[6].title, 10)}</h2>
             </a>
           </Link>
         </div>
@@ -46,7 +46,7 @@ const NbaHero = ({ posts }) => {
           />
           <Link href={`/${posts[2].slug}/${posts[2]._id}`}>
             <a>
-              <h2>{Sortern(posts[2].title, 6)}</h2>
+              <h2>{Sortern(posts[2].title, 10)}</h2>
             </a>
           </Link>
         </div>

@@ -4,7 +4,6 @@ import style from "./TopStory.module.css";
 import NewsCard11 from "../../components/sectionCard/NewsCard11";
 
 const TopStory = ({ topPosts }) => {
-  const _topImage = topPosts[0]?.image.split("upload");
   return (
     <>
       <div className="container-fluid py-3">
@@ -29,7 +28,7 @@ const TopStory = ({ topPosts }) => {
             </h4>
             {topPosts &&
               topPosts
-                ?.slice(0, 6)
+                ?.slice(0, 4)
                 .map((item, i) => (
                   <MiddleTitleCard
                     key={i}

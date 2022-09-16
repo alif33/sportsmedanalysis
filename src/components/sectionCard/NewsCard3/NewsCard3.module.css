@@ -1,27 +1,36 @@
 .nfl_comment_num {
-  position: relative;
-  top: 2px;
-  margin-right: 5px;
-  margin-left: 20px;
-}
-
-.newscard3 p {
+  display: flex;
+  align-items: center;
   font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
-  font-size: 18px;
-  line-height: 42px;
-  /* identical to box height, or 233% */
-
+  font-size: 14px;
+  line-height: 25px;
   letter-spacing: -0.04em;
-
+  color: #5c5656;
+}
+.nfl_comment_num div {
+  margin-left: 20px;
+  align-items: center;
+  display: flex;
+}
+.nfl_comment_num div span {
+  position: relative;
+  top: 2px;
+  margin-right: 5px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.18px;
   color: #5c5656;
 }
 
 .newscard3 .newscard3content h4 {
   color: #121212;
 }
-.newscard3:hover .newscard3content  h4 {
+.newscard3:hover .newscard3content h4 {
   color: rgb(0, 102, 255);
 }
 

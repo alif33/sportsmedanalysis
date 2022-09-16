@@ -2,6 +2,7 @@ import React from "react";
 import style from "./PlayerSection.module.css";
 import Link from "next/link";
 import Image from "next/image";
+import { Sortern } from "../../../__lib__/helpers/Validator";
 
 const Card = ({ players }) => {
   console.log(players);
@@ -26,7 +27,7 @@ const Card = ({ players }) => {
                       className={style.nfl_card_title1}
                     >{`${item.firstName}  ${item.lastName}`}</h1>
                     <p className="mb-0">
-                      Possible suspension has ‘no timetable’ for decision
+                     {Sortern(item.description, 15)}
                     </p>
                   </div>
                 </a>
