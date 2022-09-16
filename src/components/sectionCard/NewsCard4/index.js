@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { imageResize, Sortern } from "../../../../__lib__/helpers/Validator";
 import style from "./NewsCard4.module.css";
 
 const NewsCard4 = ({ _id, slug, title, name, img, comment, description }) => {
@@ -14,12 +15,12 @@ const NewsCard4 = ({ _id, slug, title, name, img, comment, description }) => {
             <Image 
               height="200" 
               width="440" 
-              src={`${_image[0]}/upload/c_thumb,g_face,h_200,w_440/${_image[1]}`} 
+              src={imageResize(img, 'c_thumb,g_face,h_200,w_440')} 
               alt={title} />
           </div>
 
-          <h3 style={{ color: "#121212" }} className="mt-2">
-            {title}
+          <h3  className="mt-2">
+            {Sortern(title, 7)}
           </h3>
 
           {description && <p className={style.nfl_para1}>{description}</p>}

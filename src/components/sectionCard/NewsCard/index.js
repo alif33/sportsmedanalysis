@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { imageResize } from '../../../../__lib__/helpers/Validator';
 import style from './NewsCard.module.css';
 
 const NewsCard = ({ _id, slug, title, img, description }) => {
@@ -7,7 +8,7 @@ const NewsCard = ({ _id, slug, title, img, description }) => {
     return (
         <Link href={`news/${slug}/${_id}`}>
             <a className={style.news_card}>
-                <Image src={img ? img : "/images/card-img/card-img2.png"} alt={title} height="900" width="880" />
+                <Image src={img ? imageResize(img, 'c_thumb,g_face,h_930,w_1480') : "/images/card-img/card-img2.png"} alt={title} height="900" width="880" />
                 <h3>{title}</h3>
                 <p>{description}</p>
             </a>

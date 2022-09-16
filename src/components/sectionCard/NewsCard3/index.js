@@ -1,12 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { Sortern } from "../../../../__lib__/helpers/Validator";
+import { imageResize, Sortern } from "../../../../__lib__/helpers/Validator";
 import style from "./NewsCard3.module.css";
 
 const NewsCard3 = ({ _id, slug, title, img, comment, name, link }) => {
-  const _image = img.split("upload");
-
   return (
     <Link href={`/${slug}/${_id}`}>
       <a className="mb-2 d-inline-block">
@@ -15,13 +13,13 @@ const NewsCard3 = ({ _id, slug, title, img, comment, name, link }) => {
             <Image
               height="132"
               width="218"
-              src={`${_image[0]}/upload/c_thumb,g_face,h_260,w_400/${_image[1]}`}
+              src={imageResize(img, "c_thumb,g_face,h_260,w_400")}
               alt={title}
             />
           </div>
 
           <div className={style.newscard3content}>
-            <h4 >{Sortern(title, 6)}</h4>
+            <h4>{Sortern(title, 6)}</h4>
             <p className="mt-2">
               {name}{" "}
               <span

@@ -20,7 +20,7 @@ const TopPicks = ({ topPicks }) => {
                 </div>
 
                 <div className="col-lg-5">
-                    {   topPicks && topPicks.slice(1, 4).map((item, index)=>{
+                    {   topPicks && topPicks.slice(1, 5).map((item, index)=>{
                         return(
                             <NewsCard3
                                 key={ index } 

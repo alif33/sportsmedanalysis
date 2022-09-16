@@ -26,7 +26,7 @@ const TopStory = ({ topPosts }) => {
                     </div>
                     <div className="col-12 col-md-4 mx-auto col-lg-3">
                         <h4 className={`${style.nfl_card_title2} mb-4 ${style.smd_border_bottom_Headlines}`}>Headlines</h4>
-                        {topPosts && topPosts?.slice(1, 5).map((item, i) => <MiddleTitleCard
+                        {topPosts && topPosts?.slice(0, 6).map((item, i) => <MiddleTitleCard
                             key={i}
                             _id={item._id}
                             slug={item.slug}

@@ -21,7 +21,7 @@
 .newscard3 .newscard3content h4 {
   color: #121212;
 }
-.newscard3 .newscard3content:hover h4 {
+.newscard3:hover .newscard3content  h4 {
   color: rgb(0, 102, 255);
 }
 

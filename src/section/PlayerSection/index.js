@@ -15,7 +15,7 @@ const PlayerSection = ({ posts, players }) => {
 
                 <div className="col-12 col-md-6 col-lg-5">
                     {
-                        posts && posts.slice(0, 3).map((item, index) => {
+                        posts && posts.slice(0, 4).map((item, index) => {
                             return (
                                 <NewsCard3
                                     key={index}

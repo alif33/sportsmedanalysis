@@ -26,6 +26,7 @@
   width: 100% !important;
   height: auto !important;
 }
+
 .newsCard4 h3 {
   font-family: "Poppins";
   font-style: normal;
@@ -34,4 +35,7 @@
   line-height: 34px;
   letter-spacing: -0.04em;
   color: #121212;
+}
+.newsCard4:hover h3 {
+  color: rgb(0, 102, 255);
 }

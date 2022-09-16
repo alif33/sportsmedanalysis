@@ -43,7 +43,7 @@ const LandingPage = ({ posts, topPosts, players, topPicks, bettings }) => {
           title="Betting & Fantasy"
           bettings={JSON.parse(posts)}
         />
-        <Fannation recentStories={JSON.parse(posts).slice(5, 10)} />
+        <Fannation recentStories={JSON.parse(posts)} />
       </Layout>
     </div>
   );
