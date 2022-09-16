@@ -49,10 +49,11 @@ const BettingFantasy = ({ title, bettings }) => {
                     bettings && bettings.slice(0, 5).map((item, index) => {
                         return (
                             <div key={index}> <NewsCard6
-                                _id={item._id}
-                                slug={item.slug}
+                                _id={ item._id }
+                                slug={ item.slug }
                                 title="Betting"
-                                img={item.image}
+                                _title={ item.title }
+                                img={ item.image }
                                 description=" Who profited most from transfer portal?"
                             /></div>
                         )
