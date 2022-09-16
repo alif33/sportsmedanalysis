@@ -1,0 +1,16 @@
+.news_card span {
+  width: 100% !important;
+  height: 362px !important;
+}
+.news_card h3 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 23px;
+  line-height: 34px;
+  letter-spacing: -0.04em;
+  color: #121212;
+}
+.news_card:hover h3 {
+  color: rgb(0, 102, 255);
+}
