@@ -20,16 +20,17 @@
   background-color: #000;
 }
 .fannationCardNews {
-  border-bottom: 1px solid #121212;
+  border-bottom: 1px solid #8b8b8b;
   display: block;
+  margin-bottom: 20px;
 }
 
 .fannationCardNews h4 {
   font-family: "Poppins";
   font-style: normal;
   font-weight: 600;
-  font-size: 23px;
-  line-height: 34px;
+  font-size: 18px;
+  line-height: 25px;
   letter-spacing: -0.04em;
   color: #5c5656;
 }
@@ -40,7 +41,7 @@
   font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 15px;
   line-height: 20px;
   letter-spacing: -0.04em;
   color: #5c5656;

@@ -1,6 +1,6 @@
 import React from "react";
 import { imageResize, Sortern } from "../../../__lib__/helpers/Validator";
-import NewsCard from "../../components/sectionCard/NewsCard";
+import NewsCard11 from "../../components/sectionCard/NewsCard11";
 import NewsCard7 from "../../components/sectionCard/NewsCard7";
 import NewsCard9 from "../../components/sectionCard/NewsCard9";
 import style from "./Trendings.module.css";
@@ -11,11 +11,11 @@ const Trendings = ({ trendings }) => {
       <h4 className={`${style.nfl_card_title2} mt-3`}>Trendings</h4>
       <div className={`${style.nfl_sec5_grid} mt-3`}>
         {trendings && (
-          <NewsCard
+          <NewsCard11
             _id={trendings[0]._id}
             slug={trendings[0].slug}
-            title={Sortern(trendings[0].title, 10)}
-            img={imageResize(trendings[0].image, "c_thumb,g_face,h_624,w_1088")}
+            title={trendings[0].title}
+            img={trendings[0].image}
             description="  Follow here for signings, trades, rumors and analysis from The Athletic's staff as the"
           />
         )}
@@ -51,6 +51,7 @@ const Trendings = ({ trendings }) => {
                 />
               ))}
         </div>
+        
       </div>
     </div>
   );

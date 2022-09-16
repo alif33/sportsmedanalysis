@@ -6,7 +6,7 @@
 }
 .nfl_S5_middle_card {
   border-bottom: 1px solid rgba(0, 0, 0, 0.54);
-  padding-top: 20px;
+  margin-bottom: 20px;
 }
 
 .nfl_S5_middle_card:last-child {

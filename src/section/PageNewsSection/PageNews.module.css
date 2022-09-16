@@ -19,7 +19,7 @@
 
 .cardImg span {
   width: 100% !important;
-  height: auto !important;
+  height: 390px !important;
 }
 
 .nfl_title1 {
@@ -79,25 +79,18 @@
 }
 
 .nfl_S3__ul {
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 23px;
-  letter-spacing: 0.18px;
-  color: #5c5656;
-  margin-top: 20px;
+  margin-top: 20px ;
 }
 
 .nfl_S3__ul li {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 .nfl_S3__ul li a {
   font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
-  font-size: 20px;
-  line-height: 23px;
+  font-size: 18px;
+  line-height: 20px;
   letter-spacing: 0.18px;
   color: #5c5656;
 }

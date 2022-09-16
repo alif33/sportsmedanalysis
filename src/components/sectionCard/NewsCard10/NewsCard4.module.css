@@ -1,17 +1,22 @@
 .nfl_comment_num {
-  font-family: "Roboto";
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 15px;
   letter-spacing: 0.18px;
   color: #5c5656;
+  display: flex;
 }
+.nfl_comment_num div {
+  margin-left: 20px;
+  display: flex;
+}
+
 .nfl_comment_num span {
   position: relative;
   top: 2px;
   margin-right: 5px;
-  margin-left: 20px;
 }
 
 .nfl_para1 {

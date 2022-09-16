@@ -5,26 +5,26 @@ import Link from "next/link";
 
 const PageNewsSection = ({ title }) => {
   return (
-    <div className="nfl_con">
+    <div className="nfl_con pb-4">
       <div className={style.nfl_sec_three}></div>
       <h4 className={style.nfl_card_title2}>{title}</h4>
       <div className="row mt-3">
         <div className={`${style.pageNewsSection} col-md-9`}>
           <Link href="/">
             <a className="row">
-              <div className="col-md-6">
+              <div className="col-md-7">
                 <div className={style.cardImg}>
                   <a>
                     <Image
-                      width="350"
-                      height="300"
+                      width="1116"
+                      height="780"
                       src="/images/landing_Page/nfl_S3_img.png"
                       alt=""
                     />
                   </a>
                 </div>
               </div>
-              <div className="col-md-6">
+              <div className="col-md-5">
                 {" "}
                 <div>
                   <a>
@@ -61,26 +61,34 @@ const PageNewsSection = ({ title }) => {
 
           <ul className={style.nfl_S3__ul}>
             <li>
-              <a href="#!">Former Chiefs OL Mitchell Schwartz retires</a>
+              <Link href="#!">
+                <a>Former Chiefs OL Mitchell Schwartz retires</a>
+              </Link>
             </li>
             <li>
-              <a href="#!">
-                Dan Snyder: Will testify July 28,' no need for subpoena'
-              </a>
+              <Link href="#!">
+                <a>Former Chiefs OL Mitchell Schwartz retires</a>
+              </Link>
             </li>
             <li>
-              <a href="#!">Patriots trade WR N'Keal Harry to Bears</a>
+              <Link href="#!">
+                <a>Former Chiefs OL Mitchell Schwartz retires</a>
+              </Link>
             </li>
             <li>
-              <a href="#!">Patriots trade WR N'Keal Harry to Bears</a>
+              <Link href="#!">
+                <a>Former Chiefs OL Mitchell Schwartz retires</a>
+              </Link>
             </li>
             <li>
-              <a href="#!">
-                Texans to wear 'Battle Red' helmets in Week 9 vs. Eagles
-              </a>
+              <Link href="#!">
+                <a>Former Chiefs OL Mitchell Schwartz retires</a>
+              </Link>
             </li>
             <li>
-              <a href="#!">Patriots trade WR N'Keal Harry to Bears</a>
+              <Link href="#!">
+                <a>Former Chiefs OL Mitchell Schwartz retires</a>
+              </Link>
             </li>
           </ul>
         </div>
