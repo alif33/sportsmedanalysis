@@ -6,7 +6,7 @@ import style from './NewsCard.module.css';
 const NewsCard = ({ _id, slug, title, img, description }) => {
     console.log(img);
     return (
-        <Link href={`news/${slug}/${_id}`}>
+        <Link href={`${slug}/${_id}`}>
             <a className={style.news_card}>
                 <Image src={img ? imageResize(img, 'c_thumb,g_face,h_930,w_1480') : "/images/card-img/card-img2.png"} alt={title} height="900" width="880" />
                 <h3>{Sortern(title, 15)}</h3>

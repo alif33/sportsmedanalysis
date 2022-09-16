@@ -6,7 +6,7 @@ import { imageResize, Sortern } from "../../../../__lib__/helpers/Validator";
 
 const NewsCard7 = ({ _id, slug, title, img, description }) => {
   return (
-    <Link key={_id} href={`news/${slug}/${_id}`}>
+    <Link key={_id} href={`/${slug}/${_id}`}>
       <a className="mb-1">
         <div className={` ${style.nfl_sec_two_middle}`}>
           <div>

@@ -7,7 +7,7 @@ const NewsCard6 = ({ _id, slug, title, img, description }) => {
   const _image = img.split("upload");
   return (
     <div className={style.newscard6}>
-      <Link href={`news/${slug}/${_id}`}>
+      <Link href={`/${slug}/${_id}`}>
         <a>
           <Image
             height="162"
