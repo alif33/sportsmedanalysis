@@ -2,7 +2,7 @@ import React from "react";
 import style from "./PlayerSection.module.css";
 import Link from "next/link";
 import Image from "next/image";
-import { Sortern } from "../../../__lib__/helpers/Validator";
+import { imageResize, Sortern } from "../../../__lib__/helpers/Validator";
 
 const Card = ({ players }) => {
   console.log(players);
@@ -21,7 +21,12 @@ const Card = ({ players }) => {
                 }`}
               >
                 <a className="d-grid align-items-center">
-                  <Image height="150" width="150" src={item.image} alt="" />
+                  <Image
+                    height="300"
+                    width="300"
+                    src={imageResize(item.image, "c_thumb,g_face,h_300,w_300")}
+                    alt=""
+                  />
                   <div>
                     <h1
                       className={style.nfl_card_title1}
