@@ -21,6 +21,7 @@ const NBA = ({ posts, players, topPicks, bettings }) => {
         <NbaNews
           title="NBA News"
           players={players}
+          posts={posts}
         />
         <TopPicks
           topPicks={posts}

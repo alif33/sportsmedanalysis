@@ -16,4 +16,10 @@
 }
 
 .news_card p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 25px;
+  color: #5c5656;
 }

@@ -20,15 +20,13 @@ const Card = ({ players }) => {
                   item._id
                 }`}
               >
-                <a className="d-flex align-items-center p-1">
-                  <Image height={50} width={50} src={item.image} alt="" />
+                <a className="d-grid align-items-center">
+                  <Image height="150" width="150" src={item.image} alt="" />
                   <div>
                     <h1
                       className={style.nfl_card_title1}
                     >{`${item.firstName}  ${item.lastName}`}</h1>
-                    <p className="mb-0">
-                     {Sortern(item.description, 15)}
-                    </p>
+                    <p className="mb-0">{Sortern(item.description, 8)}</p>
                   </div>
                 </a>
               </Link>

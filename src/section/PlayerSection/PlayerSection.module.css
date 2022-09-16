@@ -67,12 +67,19 @@
   background: #ffffff;
   box-shadow: 0px 0px 4px 0 rgba(0, 0, 0, 0.25);
   border-radius: 5px;
-  gap: 20px;
+  gap: 2%;
   transition: all 0.1s ease-in-out;
+  padding: 8px 11px;
+  grid-template-columns: 22% 76%;
 }
 
 .nfl_S2_3rd_card a:hover {
   box-shadow: 0px 0px 7px 0px rgb(0 0 0 / 50%);
+}
+.nfl_S2_3rd_card a span {
+  width: 50px !important;
+  height: 50px !important;
+  border-radius: 50%;
 }
 
 .nfl_S2_3rd_card:first-child a {
@@ -87,18 +94,16 @@
   line-height: 17px;
   color: #5c5656;
 }
-.nfl_S2_3rd_card span {
-  border-radius: 50%;
-}
 
 .nfl_card_title1 {
   font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
-  line-height: 30px;
+  line-height: 22px;
   letter-spacing: 0.18px;
   color: #000000;
+  margin-bottom: 0;
 }
 
 .nfl_S2_3rd_card a:hover .nfl_card_title1 {
