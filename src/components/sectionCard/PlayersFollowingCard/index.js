@@ -5,6 +5,7 @@ import toast from "react-hot-toast";
 import { useDispatch, useSelector } from "react-redux";
 import { logedIn } from "../../../../store/user/actions";
 import { updateData } from "../../../../__lib__/helpers/HttpService";
+import { imageResize } from "../../../../__lib__/helpers/Validator";
 import style from "./TeamsFollowingCard.module.css";
 
 const PlayersFollowingCard = ({ _id, firstName, lastName, img }) => {
@@ -54,7 +55,12 @@ const PlayersFollowingCard = ({ _id, firstName, lastName, img }) => {
       <Link href={`/player/${ firstName }-${ lastName }/${ _id }`}>
         <a className={style.imageAndName}>
           <div className={style.cardImage}>
-            <Image height="87" width="100" src={img} alt="" />
+            <Image 
+              height="87" 
+              width="100" 
+              src={imageResize(img, "c_thumb,g_face,h_400,w_400")} 
+              alt={`${ firstName }-${ lastName }`} 
+            />
           </div>
           <div className="ms-md-2 ms-1 ">
             <Image
@@ -73,7 +79,7 @@ const PlayersFollowingCard = ({ _id, firstName, lastName, img }) => {
         </a>
       </Link>
       <div className={style.buttonSide}>
-        {isUser && info._players.includes(_id) ? (
+        {isUser && info?._players?.includes(_id) ? (
           <button onClick={UnfollowHandler}>Unfollow</button>
         ) : (
           <button onClick={followHandler}>Follow</button>

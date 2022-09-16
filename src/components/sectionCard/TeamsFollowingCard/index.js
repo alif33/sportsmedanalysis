@@ -68,7 +68,7 @@ const TeamsFollowingCard = ({ _id, name, league }) => {
         </a>
       </Link>
       <div className={style.buttonSide}>
-        {isUser && info._teams.includes(_id) ? (
+        {isUser && info?._teams?.includes(_id) ? (
           <button onClick={UnfollowHandler}>Unfollow</button>
         ) : (
           <button onClick={followHandler}>Follow</button>
