@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { imageResize } from "../../../../__lib__/helpers/Validator";
+import { imageResize, Sortern } from "../../../../__lib__/helpers/Validator";
 import style from "./NewsCard.module.css";
 
 const NewsCard11 = ({ _id, slug, title, img, description }) => {
@@ -18,8 +18,8 @@ const NewsCard11 = ({ _id, slug, title, img, description }) => {
           height="724"
           width="1070"
         />
-        <h3>{title}</h3>
-        <p>{description}</p>
+        <h3>{Sortern(title, 15)}</h3>
+        <p>{Sortern(description, 30)}</p>
       </a>
     </Link>
   );

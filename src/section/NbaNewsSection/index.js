@@ -10,7 +10,7 @@ const NbaNewsSection = ({ posts }) => {
 
                 <div className="col-12 col-md-6 col-lg-5">
                     {
-                        posts && posts.slice(0, 3).map((item, index) => {
+                        posts && posts.slice(0, 4).map((item, index) => {
                             return (
                                 <NewsCard3
                                     key={index}
@@ -46,7 +46,7 @@ const NbaNewsSection = ({ posts }) => {
                 </div>
                 <div className="col-12 col-md-6  mx-auto col-lg-3">
                     {
-                        posts && posts.slice(1, 4).map((item, index) => <NewsCard7
+                        posts && posts.slice(0, 4).map((item, index) => <NewsCard7
                             key={index}
                             _id={item._id}
                             slug={item.slug}

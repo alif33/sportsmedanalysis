@@ -14,7 +14,7 @@ const NewsCard4 = ({ _id, slug, title, name, img, comment, description }) => {
             <Image
               height="200"
               width="440"
-              src={imageResize(img, "c_thumb,g_face,h_200,w_440")}
+              src={imageResize(img, "c_thumb,g_face,h_600,w_1320")}
               alt={title}
             />
           </div>
