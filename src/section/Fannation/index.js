@@ -25,7 +25,7 @@ const Fannation = ({ recentStories }) => {
 
           {recentStories.slice(0, 5)?.map((item, i) => (
             <Link href="/" key={i}>
-              <a className={`border-bottom ${style.fannationCardNews}`}>
+              <a className={`${style.fannationCardNews}`}>
                 <h4 className="mt-2">{Sortern(item.title, 10)}</h4>
                 <p className="mt-1">John Holinger</p>
               </a>

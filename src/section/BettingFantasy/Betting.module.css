@@ -1,13 +1,13 @@
-
 .nfl_card_title2 {
-    font-family: "Poppins";
-    font-style: normal;
-    font-weight: 600;
-    font-size: 32px;
-    display: inline-block;
-    line-height: 32px;
-    letter-spacing: -0.04em;
-    color: #000000;
-    position: relative;
-  }
-  
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  display: inline-block;
+  line-height: 32px;
+  letter-spacing: -0.04em;
+  color: #000000;
+  border-bottom: 3px solid #fff;
+  padding-bottom: 13px;
+  padding-right: 36px;
+}

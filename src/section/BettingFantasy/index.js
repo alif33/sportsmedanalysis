@@ -41,7 +41,7 @@ const BettingFantasy = ({ title, bettings }) => {
     return (
         <div className="container-fluid py-2" style={{ background: '#000' }}>
 
-            <h1 className={`${style.nfl_card_title2} text-white bf_title mb-4`} >{title}</h1>
+            <h1 className={`${style.nfl_card_title2} text-white bf_title mb-3`} >{title}</h1>
 
 
             <Slider {...settings}>
