@@ -1,4 +1,3 @@
-import ScoreSlider from "../src/section/ScoreSlider";
 import db from "../utils/db";
 import _ from "lodash";
 import Post from "../models/Post";

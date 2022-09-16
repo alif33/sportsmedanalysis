@@ -9,11 +9,8 @@ const NewsCard11 = ({ _id, slug, title, img, description }) => {
     <Link href={`/${slug}/${_id}`}>
       <a className={style.news_card}>
         <Image
-          src={
-            img
-              ? imageResize(img, "c_thumb,g_face,h_724,w_1070")
-              : "/images/card-img/card-img2.png"
-          }
+          src={ imageResize(img, "c_thumb,g_face,h_724,w_1070") }
+          priority={ true }
           alt={title}
           height="724"
           width="1070"
