@@ -21,3 +21,8 @@
 }
 .tapList li button svg {
 }
+
+.newsfeedPosts {
+  overflow-y: scroll;
+  height: 100vh;
+}

@@ -1,0 +1,40 @@
+.bookmarkCard {
+  display: grid;
+  grid-template-columns: 25% 70%;
+  column-gap: 4%;
+  margin-top: 14px;
+}
+.bookmarkCardImg span {
+  width: 100% !important;
+  height: 111px !important;
+  border-radius: 7px;
+}
+.bookmarkCardContent h4 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 22px;
+  letter-spacing: 0.772799px;
+  color: #202020;
+}
+.bookmarkCardContent p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 22px;
+  letter-spacing: 0.772799px;
+  color: #000000;
+}
+.bookmarkCardContent span {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 15px;
+  letter-spacing: 0.772799px;
+  color: #000000;
+  margin-top: 22px;
+  display: inline-block;
+}

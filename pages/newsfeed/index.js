@@ -8,7 +8,6 @@ import FollowingPlayersCard from "../../src/components/FollowingPlayersCard";
 import PostCard from "../../src/components/PostCard";
 import PlayerList from "../../src/section/PlayerList";
 import NewsListCard from "../../src/components/sectionCard/NewsListCard";
-import BorderLine from "../../src/components/BorderLine";
 import PostTapIcon from "../../src/components/svg/PostTapIcon";
 import LatestNewsIcon from "../../src/components/svg/LatestNewsIcon";
 import style from "./Newsfeed.module.css";
@@ -16,9 +15,12 @@ import { useState } from "react";
 import UserPeple from "../../src/components/svg/UserPepole";
 import SearchPlayer from "../../src/components/svg/SearchPlayer";
 import ProfileIcon from "../../src/components/svg/ProfileIcon";
+import BookmarkSection from "../../src/components/BookmarkSection";
+import FollowingPlayers from "../../src/components/FollowingPlayers";
 
 const Newsfeed = ({ posts }) => {
   const [tapList, setTapList] = useState("PostCard");
+  const [newsfeedTap, setNewsfeedTap] = useState("posts");
 
   return (
     <Layout navheader={true}>
@@ -69,7 +71,11 @@ const Newsfeed = ({ posts }) => {
           <div className="col-12">
             {tapList === "ProfileCard" && <ProfileCard />}
             {tapList === "FollowingPlayersCard" && <FollowingPlayersCard />}
-            {tapList === "PostCard" && <PostCard />}
+            {tapList === "PostCard" && (
+              <>
+                <PostCard />
+              </>
+            )}
             {tapList === "PlayerList" && <PlayerList />}
             {tapList === "NewsListCard" && <NewsListCard />}
           </div>
@@ -78,11 +84,28 @@ const Newsfeed = ({ posts }) => {
       <div className="nfl_con my-2 d-none d-lg-block">
         <div className="row mt-3 ">
           <div className="col-lg-3">
-            <ProfileCard />
+            <ProfileCard
+              newsfeedTap={newsfeedTap}
+              setNewsfeedTap={setNewsfeedTap}
+            />
             <FollowingPlayersCard />
           </div>
           <div className="col-lg-6">
-            <PostCard />
+            <div className={style.newsfeedPosts}>
+              {newsfeedTap === "posts" && (
+                <>
+                  <PostCard />
+                  <PostCard />
+                  <PostCard />
+                </>
+              )}
+              {newsfeedTap === "following-players" && (
+                <>
+                  <FollowingPlayers />
+                </>
+              )}
+              {newsfeedTap === "bookmarks" && <BookmarkSection />}
+            </div>
           </div>
           <div className="col-lg-3">
             <PlayerList />
