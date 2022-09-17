@@ -20,7 +20,7 @@ const NflNews = ({ posts, latests }) => {
               alt={posts[0].title}
             />
             <div className={style.nflNewsCardContent}>
-              <p>{posts[0].league}</p>
+              <p className="badge badge-secondary">{posts[0].league}</p>
               <h4>{posts[0].title}</h4>
               {/* <p>LIVE UPDATES</p> */}
             </div>
