@@ -11,7 +11,7 @@ const Players = ({ players }) => {
         <h3 className="mt-3">Player Lists</h3>
       </div>
       <div className="container mb-4">
-        <PlayersFollowing title="Following" players={JSON.parse(players)} />
+        <PlayersFollowing search={true} title="Following" players={JSON.parse(players)} />
       </div>
     </Layout>
   );
