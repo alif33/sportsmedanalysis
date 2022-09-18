@@ -18,7 +18,7 @@ import ProfileIcon from "../../src/components/svg/ProfileIcon";
 import BookmarkSection from "../../src/components/BookmarkSection";
 import FollowingPlayers from "../../src/components/FollowingPlayers";
 
-const Newsfeed = ({ posts }) => {
+const Newsfeed = ({ posts, players }) => {
   const [tapList, setTapList] = useState("PostCard");
   const [newsfeedTap, setNewsfeedTap] = useState("posts");
 
@@ -101,7 +101,7 @@ const Newsfeed = ({ posts }) => {
               )}
               {newsfeedTap === "following-players" && (
                 <>
-                  <FollowingPlayers />
+                  <FollowingPlayers players={players} />
                 </>
               )}
               {newsfeedTap === "bookmarks" && <BookmarkSection />}
