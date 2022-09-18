@@ -128,17 +128,17 @@ const Newsfeed = ({ posts }) => {
 export default Newsfeed;
 
 export async function getServerSideProps() {
-  // await db.connect();
-  // const posts = await Post.find({}, { _comments: 0 }).lean().limit(50);
+  await db.connect();
+  const posts = await Post.find({}, { _comments: 0 }).lean().limit(50);
 
-  // const players = await Player.find().lean().limit(50);
+  const players = await Player.find().lean().limit(50);
 
-  // await db.disconnect();
+  await db.disconnect();
 
   return {
     props: {
-      // posts: posts.map(db.convertDocToObj),
-      // players: players.map(db.convertDocToObj),
+      posts: posts.map(db.convertDocToObj),
+      players: players.map(db.convertDocToObj),
     },
   };
 }
