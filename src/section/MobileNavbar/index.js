@@ -19,6 +19,11 @@ const MobileNavbar = () => {
   const { user } = useSelector((state) => state);
   const dispatch = useDispatch();
 
+  const handleLogOut = () => {
+    dispatch(logOut());
+    router.push("/auth/sign-in");
+  };
+
   return (
     <>
       <nav
@@ -123,7 +128,7 @@ const MobileNavbar = () => {
               </form>
 
               {user?.isUser ? (
-                <a onClick={() => dispatch(logOut())} className={style.signBtn}>
+                <a onClick={handleLogOut} className={style.signBtn}>
                   <UserIcon />
                   LOG OUT
                 </a>

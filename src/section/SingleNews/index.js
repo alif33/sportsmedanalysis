@@ -10,16 +10,16 @@ import Favorite from "../../components/svg/Favorite";
 import MessageIcon from "../../components/svg/MessageIcon";
 import ShareIcon from "../../components/ShareIcon";
 import { RiArrowDownSFill } from "react-icons/ri";
+import { BsBookmark, BsBookmarksFill } from "react-icons/bs";
 import ShareModal from "../../components/ShareModal";
 
 const SingleNews = ({ post, posts, topPosts, _comments }) => {
   const [comments, _setComments] = useState();
+  const [bookmark, setBookmark] = useState(false);
 
   useEffect(() => {
     _setComments(_comments);
   }, []);
-
-  
 
   return (
     <>
@@ -37,10 +37,11 @@ const SingleNews = ({ post, posts, topPosts, _comments }) => {
 
           <ul className={style.likeCommentShare}>
             <li>
-              <Favorite 
-
-              />
-              {/* <span>521K</span> */}
+              {bookmark ? (
+                <BsBookmarksFill onClick={() => setBookmark(!bookmark)} />
+              ) : (
+                <BsBookmark onClick={() => setBookmark(!bookmark)} />
+              )}
             </li>
             <li>
               <MessageIcon />
