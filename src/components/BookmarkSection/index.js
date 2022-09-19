@@ -2,15 +2,24 @@ import React from "react";
 import BookmarkCard from "../sectionCard/BookmarkCard";
 import style from "./BookmarkSection.module.css";
 
-const BookmarkSection = () => {
+const BookmarkSection = ({ _bookmarks }) => {
   return (
     <div>
       <h3 className={style.title}>My Bookmarks </h3>
-      <p className={style.descritiop}>Recently Saved</p>
+      {/* <p className={style.descritiop}>Recently Saved</p> */}
+      {
+        _bookmarks && _bookmarks.map((item, index)=>{
+          return(
+            <BookmarkCard
+              key={ index }
+              item={ item }
+            />
+          )
+        })
+      }
+      {/* <BookmarkCard/>
       <BookmarkCard/>
-      <BookmarkCard/>
-      <BookmarkCard/>
-      <BookmarkCard/>
+      <BookmarkCard/> */}
     </div>
   );
 };

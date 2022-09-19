@@ -1,6 +1,8 @@
+import React, { useState } from "react";
 import db from "../../utils/db";
-import Post from "../../models/Post";
+import cookie from 'cookie';
 import Player from "../../models/Player";
+import User from "../../models/User";
 import Layout from "../../src/components/Layout";
 import NflTeam from "../../src/section/NflTeam";
 import ProfileCard from "../../src/section/ProfileCard";
@@ -11,14 +13,14 @@ import NewsListCard from "../../src/components/sectionCard/NewsListCard";
 import PostTapIcon from "../../src/components/svg/PostTapIcon";
 import LatestNewsIcon from "../../src/components/svg/LatestNewsIcon";
 import style from "./Newsfeed.module.css";
-import { useState } from "react";
 import UserPeple from "../../src/components/svg/UserPepole";
 import SearchPlayer from "../../src/components/svg/SearchPlayer";
 import ProfileIcon from "../../src/components/svg/ProfileIcon";
 import BookmarkSection from "../../src/components/BookmarkSection";
 import FollowingPlayers from "../../src/components/FollowingPlayers";
+import { unsignedToken } from "../../utils/auth";
 
-const Newsfeed = ({ posts, players }) => {
+const Newsfeed = ({ players, _bookmarks }) => {
   const [tapList, setTapList] = useState("PostCard");
   const [newsfeedTap, setNewsfeedTap] = useState("posts");
 
@@ -104,7 +106,9 @@ const Newsfeed = ({ posts, players }) => {
                   <FollowingPlayers players={players} />
                 </>
               )}
-              {newsfeedTap === "bookmarks" && <BookmarkSection />}
+              {newsfeedTap === "bookmarks" && <BookmarkSection 
+                  _bookmarks={ JSON.parse(_bookmarks) }
+              />}
             </div>
           </div>
           <div className="col-lg-3">
@@ -120,25 +124,46 @@ const Newsfeed = ({ posts, players }) => {
         <BorderLine />
       </div> */}
 
-      <NflTeam />
+      {/* <NflTeam /> */}
     </Layout>
   );
 };
 
 export default Newsfeed;
 
-export async function getServerSideProps() {
+export async function getServerSideProps(ctx) {
+
+  // const { __t__ } = ctx.req.headers.cookie;
   await db.connect();
-  const posts = await Post.find({}, { _comments: 0 }).lean().limit(50);
+  const { __t__ } = cookie.parse(ctx.req.headers.cookie);
+  if(__t__){
+    const { _id } = await unsignedToken(__t__);
+    const { _bookmarks } = await User
+      .findOne({ _id }, { _comments: 0 })
+      .populate("_bookmarks", "title slug image description league views comments")
+      .lean()
+      .limit(50);
 
-  const players = await Player.find().lean().limit(50);
+    const players = await Player.find()
+      .lean()
+      .limit(50);
 
-  await db.disconnect();
+      await db.disconnect();
 
-  return {
-    props: {
-      posts: posts.map(db.convertDocToObj),
-      players: players.map(db.convertDocToObj),
-    },
-  };
+      return {
+        props: {
+          // post: post.map(db.convertDocToObj),
+          _bookmarks: JSON.stringify(_bookmarks),
+          players: players.map(db.convertDocToObj),
+        },
+      };
+    // console.log(_bookmarks);
+  }
+  // if(?.){
+
+  // }
+  // console.log(ctx.req.headers.cookie?.__t__);
+
+
+
 }

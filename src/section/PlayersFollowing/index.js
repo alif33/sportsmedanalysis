@@ -5,6 +5,7 @@ import PlayersFollowingCard from "../../components/sectionCard/PlayersFollowingC
 import style from "./TeamsFollowing.module.css";
 
 const PlayersFollowing = ({ title, players, search }) => {
+  
   return (
     <>
       {search && (
@@ -23,7 +24,7 @@ const PlayersFollowing = ({ title, players, search }) => {
         </div>
       )}
       {players &&
-        players.map((item, index) => {
+        players.slice(0, 3).map((item, index) => {
           return (
             <PlayersFollowingCard
               key={index}

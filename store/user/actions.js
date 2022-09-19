@@ -4,9 +4,7 @@ import Cookies from 'universal-cookie';
 const cookies = new Cookies();
 
 export const logedIn = u => (dispatch) => {
-    cookies.set("__t__", JSON.stringify({
-       token: u.token
-    }), { path: '/' });
+    cookies.set("__t__", u.token, { path: '/' });
     dispatch(slice.logedIn(u))
 }
 

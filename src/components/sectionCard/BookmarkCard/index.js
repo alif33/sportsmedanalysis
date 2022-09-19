@@ -1,31 +1,32 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import slugify from "slugify";
 import AlartIcon from "../../svg/AlartIcon";
 import DeleteIcon from "../../svg/DeleteIcon";
 import SaveIcon from "../../svg/SaveIcon";
 import style from "./BookmarkCard.module.css";
 
-const BookmarkCard = () => {
+const BookmarkCard = ({ item }) => {
   return (
-    <Link href="/">
+    <Link href={`/${slugify(item.title)}/${ item._id }`}>
       <a className={style.bookmarkCard}>
         <div className={style.bookmarkCardImg}>
           <Image
             height="333"
             width="486"
-            src="/images/card-img/bookmark.png"
+            src={ item.image }
             alt=""
           />
         </div>
         <div className={style.bookmarkCardContent}>
           <div className="d-flex align-items-center justify-content-between">
             <h4>
-              Davante Adams <SaveIcon />
+              { item.title }<SaveIcon />
             </h4>
             <DeleteIcon />
           </div>
-          <p>I found this cup on the internet, and it .....</p>
+          <p>{ item.description }</p>
           <span>
             <AlartIcon /> Saved 2 Days Ago
           </span>

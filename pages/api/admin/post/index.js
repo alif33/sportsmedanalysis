@@ -68,3 +68,6 @@ handler.use(isAdmin, upload.single("image")).post(async (req, res) => {
 
 
 export default handler;
+
+
+// model.findOne({}, undefined, )
