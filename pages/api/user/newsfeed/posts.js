@@ -1,6 +1,6 @@
 import nc from 'next-connect';
-import db from '../../utils/db';
-import Podcast from '../../models/Podcast';
+import db from '../../../../utils/db';
+import Podcast from '../../../../models/Podcast';
 
 const handler = nc();
 
