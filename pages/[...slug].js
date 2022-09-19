@@ -88,6 +88,7 @@ export async function getServerSideProps(context) {
           playersName,
           views,
           tags,
+          comments,
           createdAt: createdAt.toString(),
           updatedAt: updatedAt.toString(),
         },

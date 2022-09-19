@@ -40,7 +40,11 @@ const userSchema = new mongoose.Schema(
     _teams: {
       type: Array,
       default: []
-    }
+    },
+    _bookmarks: [{
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Post"
+    }]
   },
   {
     timestamps: true,

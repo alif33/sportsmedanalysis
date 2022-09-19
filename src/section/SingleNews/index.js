@@ -19,6 +19,8 @@ const SingleNews = ({ post, posts, topPosts, _comments }) => {
     _setComments(_comments);
   }, []);
 
+  
+
   return (
     <>
       <div className="row mt-5">
@@ -35,8 +37,10 @@ const SingleNews = ({ post, posts, topPosts, _comments }) => {
 
           <ul className={style.likeCommentShare}>
             <li>
-              <Favorite />
-              <span>521K</span>
+              <Favorite 
+
+              />
+              {/* <span>521K</span> */}
             </li>
             <li>
               <MessageIcon />
