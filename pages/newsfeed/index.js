@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import db from "../../utils/db";
-import cookie from 'cookie';
+import cookie from "cookie";
 import Player from "../../models/Player";
 import User from "../../models/User";
 import Layout from "../../src/components/Layout";
@@ -106,13 +106,13 @@ const Newsfeed = ({ players, _bookmarks }) => {
                   <FollowingPlayers players={players} />
                 </>
               )}
-              {newsfeedTap === "bookmarks" && <BookmarkSection 
-                  _bookmarks={ JSON.parse(_bookmarks) }
-              />}
+              {newsfeedTap === "bookmarks" && (
+                <BookmarkSection _bookmarks={JSON.parse(_bookmarks)} />
+              )}
             </div>
           </div>
           <div className="col-lg-3">
-            <PlayerList />
+            <PlayerList players={players} />
             <div className="mt-2">
               <NewsListCard />
             </div>
@@ -132,38 +132,34 @@ const Newsfeed = ({ players, _bookmarks }) => {
 export default Newsfeed;
 
 export async function getServerSideProps(ctx) {
-
   // const { __t__ } = ctx.req.headers.cookie;
   await db.connect();
   const { __t__ } = cookie.parse(ctx.req.headers.cookie);
-  if(__t__){
+  if (__t__) {
     const { _id } = await unsignedToken(__t__);
-    const { _bookmarks } = await User
-      .findOne({ _id }, { _comments: 0 })
-      .populate("_bookmarks", "title slug image description league views comments")
+    const { _bookmarks } = await User.findOne({ _id }, { _comments: 0 })
+      .populate(
+        "_bookmarks",
+        "title slug image description league views comments"
+      )
       .lean()
       .limit(50);
 
-    const players = await Player.find()
-      .lean()
-      .limit(50);
+    const players = await Player.find().lean().limit(50);
 
-      await db.disconnect();
+    await db.disconnect();
 
-      return {
-        props: {
-          // post: post.map(db.convertDocToObj),
-          _bookmarks: JSON.stringify(_bookmarks),
-          players: players.map(db.convertDocToObj),
-        },
-      };
+    return {
+      props: {
+        // post: post.map(db.convertDocToObj),
+        _bookmarks: JSON.stringify(_bookmarks),
+        players: players.map(db.convertDocToObj),
+      },
+    };
     // console.log(_bookmarks);
   }
   // if(?.){
 
   // }
   // console.log(ctx.req.headers.cookie?.__t__);
-
-
-
 }
