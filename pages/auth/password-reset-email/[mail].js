@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import AuthLayout from "../../../src/components/AuthLayout";
-import jwt from 'jsonwebtoken';
 import { _decrypt } from '../../../__lib__/helpers/Validator';
 
 const PasswordResetEmail = () => {
