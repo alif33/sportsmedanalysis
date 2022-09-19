@@ -5,21 +5,66 @@ import SimilarNews from "../../components/SimiliarNews";
 import TopNews from "../../components/TopNews";
 import SinglePageComment from "../../components/SinglePageComment";
 import style from "./SingleNews.module.css";
-import single from "../../../pages/[...slug]";
-import Favorite from "../../components/svg/Favorite";
 import MessageIcon from "../../components/svg/MessageIcon";
-import ShareIcon from "../../components/ShareIcon";
 import { RiArrowDownSFill } from "react-icons/ri";
 import { BsBookmark, BsBookmarksFill } from "react-icons/bs";
 import ShareModal from "../../components/ShareModal";
+import { useDispatch, useSelector } from "react-redux";
+import { updateData } from "../../../__lib__/helpers/HttpService";
+import { toast } from "react-hot-toast";
+import { logedIn } from "../../../store/user/actions";
 
 const SingleNews = ({ post, posts, topPosts, _comments }) => {
   const [comments, _setComments] = useState();
   const [bookmark, setBookmark] = useState(false);
+  const dispatch = useDispatch();
+  const { user } = useSelector((state) => state);
+  const { isUser, __u__ } = user;
+  const { info } = __u__;
 
   useEffect(() => {
     _setComments(_comments);
   }, []);
+
+
+  const Handlebookmark = () => {
+    console.log("calling...");
+    updateData(
+      `/user/bookmark?__b=${post._id}`,
+      { status: "ADD" },
+      __u__.token
+    ).then((res) => {
+      if (res.success) {
+        toast.success(`${res.message}`);
+        const { token, info } = res;
+        dispatch(
+          logedIn({
+            token,
+            info,
+          })
+        );
+      }
+    });
+  };
+console.log(post._id);
+  const removeBookmark = () => {
+    updateData(`/user/bookmark?__b=${post._id}`, { status: "REMOVE" }, __u__.token).then(
+      (res) => {
+        if (res.success) {
+          toast.success(`${res.message}`);
+          const { token, info } = res;
+          dispatch(
+            logedIn({
+              token,
+              info,
+            })
+          );
+        }
+      }
+    );
+  };
+
+  // console.log(info);
 
   return (
     <>
@@ -37,10 +82,14 @@ const SingleNews = ({ post, posts, topPosts, _comments }) => {
 
           <ul className={style.likeCommentShare}>
             <li>
-              {bookmark ? (
-                <BsBookmarksFill onClick={() => setBookmark(!bookmark)} />
+              { isUser && info?._bookmarks?.includes(post._id) ? (
+                <BsBookmarksFill 
+                  onClick={removeBookmark} 
+                />
               ) : (
-                <BsBookmark onClick={() => setBookmark(!bookmark)} />
+                <BsBookmark 
+                  onClick={Handlebookmark} 
+                />
               )}
             </li>
             <li>
