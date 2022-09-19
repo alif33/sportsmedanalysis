@@ -1,6 +1,6 @@
 import React from "react";
 
-const Favorite = () => {
+const Favorite = ({ }) => {
   return (
     <svg
       width="19"

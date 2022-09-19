@@ -1,26 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import AuthLayout from "../../../src/components/AuthLayout";
-import jwt from 'jsonwebtoken';
+import { _decrypt } from '../../../__lib__/helpers/Validator';
 
 const PasswordResetEmail = () => {
     const [email, setEmail] = useState();
     const router = useRouter();
 
     useEffect(() => {
-        jwt.verify(router.query.mail, 'cryptr', (err, decoded) => {
-            setEmail(decoded?.email);
-            // console.log(decoded);
-        })
-
+        setEmail(_decrypt(router.query.mail));
+        
         if (router.query.mail) {
             console.log(router.query.mail);
         } else {
-            router.push('/');
-
-            // setEmail(cryptr.decrypt(router.query.mail));
+            router.push('/404');
         }
-        // console.log(router.query?.mail);
     }, [])
 
     if (router.query.mail) {
