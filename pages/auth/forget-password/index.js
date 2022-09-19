@@ -8,7 +8,7 @@ import { showErr } from '../../../__lib__/helpers/ErrHandler';
 import { postData } from '../../../__lib__/helpers/HttpService';
 import toast from 'react-hot-toast';
 import Cookies from 'universal-cookie';
-import jwt from 'jsonwebtoken';
+import { _encrypt } from '../../../__lib__/helpers/Validator';
 
 const ForgetPassword = () => {
 
@@ -20,7 +20,8 @@ const ForgetPassword = () => {
 
     const onSubmit = async data => {
         setDisable(true);
-        const signMail = await jwt.sign({ email: data.email }, 'cryptr', { expiresIn: '30d', });
+
+        const signMail = _encrypt(data.email);
 
         postData('/user/forget-password', data, setDisable)
             .then(res => {
