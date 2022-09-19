@@ -5,6 +5,7 @@ import PlayersFollowingCard from "../../components/sectionCard/PlayersFollowingC
 import style from "./TeamsFollowing.module.css";
 
 const PlayersFollowing = ({ title, players, search }) => {
+  console.log(players);
   
   return (
     <>
