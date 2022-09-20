@@ -4,7 +4,7 @@ import style from "./BookmarkSection.module.css";
 
 const BookmarkSection = ({ _bookmarks }) => {
   return (
-    <div>
+    <div className="pb-3">
       <h3 className={style.title}>My Bookmarks </h3>
       {/* <p className={style.descritiop}>Recently Saved</p> */}
       {
