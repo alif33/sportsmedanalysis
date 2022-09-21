@@ -39,6 +39,11 @@ const postSchema = new mongoose.Schema(
             required: true,
             trim: true
         },
+        _author: {
+            type: String,
+            required: true,
+            trim: true
+        },
         league: {
             type: String,
             enum : ['NFL', 'NBA', 'MLB'],
