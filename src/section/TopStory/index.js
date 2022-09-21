@@ -3,7 +3,7 @@ import MiddleTitleCard from "../../components/sectionCard/MiddleTitleCard";
 import style from "./TopStory.module.css";
 import NewsCard11 from "../../components/sectionCard/NewsCard11";
 
-const TopStory = ({ topPosts }) => {
+const TopStory = ({ topPosts, topVideos }) => {
   return (
     <>
       <div className="container-fluid py-3">
@@ -44,7 +44,9 @@ const TopStory = ({ topPosts }) => {
             <h1 className={`text-center ${style._smd_Upcoming_events}`}>
               Trending Now
             </h1>
-            <TopStoryVerticalSlider />
+            <TopStoryVerticalSlider 
+              topVideos={ topVideos }
+            />
           </div>
         </div>
       </div>

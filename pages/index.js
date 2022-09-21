@@ -11,21 +11,20 @@ import Layout from "../src/components/Layout";
 import Article from "../src/section/Article";
 import BorderLine from "../src/components/BorderLine";
 import { useSelector } from "react-redux";
+import Watch from "../models/Watch";
 
-const LandingPage = ({ posts, topPosts, players, topPicks, bettings }) => {
+const LandingPage = ({ posts, topPosts, topVideos, players, topPicks, bettings }) => {
   const { user } = useSelector((state) => state);
 
   return (
     <div className="_LandingPage">
       <Layout navheader={true}>
         <Article posts={JSON.parse(posts)} />
-        {/* 
-                <ScoreSlider />
-                <div className="container-fluid">
-                    <BorderLine />
-                </div> */}
 
-        <TopStory topPosts={JSON.parse(topPosts)} />
+        <TopStory 
+          topPosts={JSON.parse(topPosts)} 
+          topVideos={ JSON.parse(topVideos) }
+        />
 
         <div className="container-fluid">
           <BorderLine />
@@ -62,6 +61,11 @@ export async function getStaticProps(context) {
     .lean()
     .limit(50);
 
+  const topVideos = await Watch.find()
+    .sort({ "views": -1 })
+    .lean()
+    .limit(50);
+
   const players = await Player.find({}, { _comments: 0 })
     .sort({ createdAt: -1 })
     .lean()
@@ -93,6 +97,7 @@ export async function getStaticProps(context) {
     props: {
       posts: JSON.stringify(posts),
       topPosts: JSON.stringify(topPosts),
+      topVideos: JSON.stringify(topVideos),
       players: players.map(db.convertDocToObj),
       topPicks: JSON.stringify(topPicks),
       bettings: JSON.stringify(bettings),

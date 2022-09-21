@@ -6,7 +6,7 @@ import { Mousewheel, Navigation } from "swiper";
 import SliderCard from "./SliderCard";
 import style from "./TopStorySliderCss.module.css";
 
-function TopStoryVerticalSlider() {
+function TopStoryVerticalSlider({ topVideos }) {
     return (
         <div className="position-relative">
 
@@ -20,7 +20,19 @@ function TopStoryVerticalSlider() {
                 className="vertical_slider"
             >
                 <div className={`${style.v_s_div} ${style.v_s_top}`}></div>
-                <SwiperSlide>
+                {
+                    topVideos && topVideos.map((item, index)=>{
+                        return(
+                            <SwiperSlide 
+                                key={ index }
+                            >
+                                <SliderCard item={ item }/>
+                            </SwiperSlide>
+                        )
+                    })
+                }
+
+                {/* <SwiperSlide>
                     <SliderCard />
                 </SwiperSlide>
                 <SwiperSlide>
@@ -34,10 +46,7 @@ function TopStoryVerticalSlider() {
                 </SwiperSlide>
                 <SwiperSlide>
                     <SliderCard />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <SliderCard />
-                </SwiperSlide>
+                </SwiperSlide> */}
 
                 <div className={`${style.v_s_div} ${style.v_s_bottom}`}></div>
             </Swiper>
