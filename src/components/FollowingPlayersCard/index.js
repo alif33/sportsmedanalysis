@@ -42,7 +42,7 @@ const FollowingPlayersCard = () => {
             <ul className={style.search_player_list}>
                 { results && results.length>0 && results.map((item, index)=>{
                     return(
-                        <li> 
+                        <li key={ index }> 
                             <Link href={`/player/${ item.slug }/${ item._id }`}>
                                 <a>
                                     <Image height="39" width="42" 
