@@ -2,6 +2,7 @@ import TopStoryVerticalSlider from "./TopStoryVerticalSlider";
 import MiddleTitleCard from "../../components/sectionCard/MiddleTitleCard";
 import style from "./TopStory.module.css";
 import NewsCard11 from "../../components/sectionCard/NewsCard11";
+import { Sortern } from "../../../__lib__/helpers/Validator";
 
 const TopStory = ({ topPosts, topVideos }) => {
   return (
@@ -16,7 +17,7 @@ const TopStory = ({ topPosts, topVideos }) => {
                 slug={topPosts[0]?.slug}
                 title={topPosts[0]?.title}
                 img={topPosts[0]?.image}
-                description="NBA free agency 2022 live tracker: News, rumors, trades, signings, as the offseason rolls on"
+                description={Sortern(topPosts[0]?.description, 40)}
               />
             </div>
           </div>
@@ -35,7 +36,7 @@ const TopStory = ({ topPosts, topVideos }) => {
                     _id={item._id}
                     slug={item.slug}
                     title={item.title}
-                    name="Scott Wheeler"
+                    name={item._author}
                     comment={item?.comments && item?.comments}
                   />
                 ))}

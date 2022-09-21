@@ -27,7 +27,7 @@ const Fannation = ({ recentStories }) => {
             <Link href="/" key={i}>
               <a className={`${style.fannationCardNews}`}>
                 <h4>{Sortern(item.title, 10)}</h4>
-                <p className="mt-1">John Holinger</p>
+                <p className="mt-1">{item._author}</p>
               </a>
             </Link>
           ))}

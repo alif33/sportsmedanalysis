@@ -2,6 +2,8 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import style from "./Dashboard.module.css";
+import { RiUserFollowFill } from "react-icons/ri";
+import { AiOutlineMail, AiOutlineUser } from "react-icons/ai";
 
 const DashboardSidebar = ({ stutas }) => {
   return (
@@ -15,17 +17,23 @@ const DashboardSidebar = ({ stutas }) => {
         >
           <Link href="/dashboard">
             <a>
-              <Image
-                height="22"
-                width="18"
-                src="/images/icon/user.png"
-                alt=""
-              />{" "}
+              <AiOutlineUser />
               <h4>My Account</h4>
             </a>
           </Link>
         </li>
-
+        <li
+          className={`${style.sidebar_navlink} ${
+            stutas === "following" ? style.active : ""
+          }`}
+        >
+          <Link href="/dashboard/following">
+            <a>
+              <RiUserFollowFill />
+              <h4>Following</h4>
+            </a>
+          </Link>
+        </li>
         <li
           className={`${style.sidebar_navlink} ${
             stutas === "email-preferences" ? style.active : ""
@@ -33,16 +41,12 @@ const DashboardSidebar = ({ stutas }) => {
         >
           <Link href="/dashboard/email-preferences">
             <a>
-              <Image
-                height="20"
-                width="20"
-                src="/images/icon/message.png"
-                alt=""
-              />{" "}
+              <AiOutlineMail />
               <h4>Email Preferences</h4>
             </a>
           </Link>
         </li>
+
         {/* <li className={`${style.sidebar_navlink} ${stutas === 'edit-profile' ? style.active : ""}`}>
                     <Link href="/dashboard/edit-profile"><a><Image height="20" width="20" src="/images/icon/message.png" alt="" /> <h4>Edit Profile</h4></a></Link>
                 </li>

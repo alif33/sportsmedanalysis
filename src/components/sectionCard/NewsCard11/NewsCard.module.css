@@ -14,3 +14,6 @@
 .news_card:hover h3 {
   color: rgb(0, 102, 255);
 }
+.news_card p{
+  line-height: 27px;
+}

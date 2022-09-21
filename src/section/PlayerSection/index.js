@@ -23,7 +23,7 @@ const PlayerSection = ({ posts, players }) => {
                                     slug={item.slug}
                                     title={item.title}
                                     img={item.image}
-                                    name="John Holinger"
+                                    name={item._author}
                                     comment={item?.comments ? item?.comments : "0"}
                                 />
                             )
@@ -42,7 +42,7 @@ const PlayerSection = ({ posts, players }) => {
                                     slug={item.slug}
                                     title={item.title}
                                     img={item.image}
-                                    name="John Holinger"
+                                    name={item._author}
                                     comment={item?.comments ? item?.comments : "0"}
                                 />
                             )

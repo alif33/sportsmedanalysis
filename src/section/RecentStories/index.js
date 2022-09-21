@@ -14,7 +14,7 @@ const RecentStories = ({ posts }) => {
         posts.map((item, index) => (
           <NewsCard3
             key={index}
-            name="John Holinger"
+            name={item._author}
             title={item.title}
             img={item.image}
             comment={item?.comments && item.comments}

@@ -13,7 +13,7 @@ const Featured = ({ posts }) => {
       {posts.slice(1, 3)?.map((item, i) => (
         <NewsCard4
           key={i}
-          name="John Holinger"
+          name={item._author}
           title={item.title}
           img={item.image}
           comment={item?.comments && item.comments}
