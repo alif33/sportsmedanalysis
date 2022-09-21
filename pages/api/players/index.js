@@ -7,14 +7,7 @@ const handler = nc();
 handler.get(async (req, res) => {
     await db.connect();
 
-    const players = await Player.aggregate([
-        { 
-            $group: { 
-                _id: "$league", 
-                items: { $push: "$$ROOT" }
-            }
-        }
-    ]);
+    const players = await Player.find({});
 
     await db.disconnect();
     res.send(players.reverse());

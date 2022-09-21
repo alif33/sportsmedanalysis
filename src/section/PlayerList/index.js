@@ -9,7 +9,7 @@ const PlayerList = ({ players }) => {
       {players.slice(0, 5)?.map((item, i) => (
         <PlayerCard item={item} key={i} />
       ))}
-      <Link href="/">
+      <Link href="/players">
         <a>
           <p className={`text-end my-1 ${playerCss.seeAllPlayer}`}>
             See All Players

@@ -4,7 +4,6 @@ import cookie from "cookie";
 import Player from "../../models/Player";
 import User from "../../models/User";
 import Layout from "../../src/components/Layout";
-import NflTeam from "../../src/section/NflTeam";
 import ProfileCard from "../../src/section/ProfileCard";
 import FollowingPlayersCard from "../../src/components/FollowingPlayersCard";
 import PostCard from "../../src/components/PostCard";
@@ -20,7 +19,7 @@ import BookmarkSection from "../../src/components/BookmarkSection";
 import FollowingPlayers from "../../src/components/FollowingPlayers";
 import { unsignedToken } from "../../utils/auth";
 
-const Newsfeed = ({ players, _bookmarks }) => {
+const Newsfeed = ({ info, players, _bookmarks }) => {
   const [tapList, setTapList] = useState("PostCard");
   const [newsfeedTap, setNewsfeedTap] = useState("posts");
 
@@ -71,15 +70,15 @@ const Newsfeed = ({ players, _bookmarks }) => {
       <div className="nfl_con my-2 d-block d-lg-none">
         <div className="row">
           <div className="col-12">
-            {tapList === "ProfileCard" && <ProfileCard />}
-            {tapList === "FollowingPlayersCard" && <FollowingPlayersCard />}
-            {tapList === "PostCard" && (
+            { tapList === "ProfileCard" && <ProfileCard /> }
+            { tapList === "FollowingPlayersCard" && <FollowingPlayersCard /> }
+            { tapList === "PostCard" && (
               <>
                 <PostCard />
               </>
             )}
-            {tapList === "PlayerList" && <PlayerList />}
-            {tapList === "NewsListCard" && <NewsListCard />}
+            { tapList === "PlayerList" && <PlayerList /> }
+            { tapList === "NewsListCard" && <NewsListCard /> }
           </div>
         </div>
       </div>
@@ -87,6 +86,8 @@ const Newsfeed = ({ players, _bookmarks }) => {
         <div className="row mt-3 ">
           <div className="col-lg-3">
             <ProfileCard
+              info={ info }
+              _bookmarks={ JSON.parse(_bookmarks) }
               newsfeedTap={newsfeedTap}
               setNewsfeedTap={setNewsfeedTap}
             />
@@ -107,7 +108,9 @@ const Newsfeed = ({ players, _bookmarks }) => {
                 </>
               )}
               {newsfeedTap === "bookmarks" && (
-                <BookmarkSection _bookmarks={JSON.parse(_bookmarks)} />
+                <BookmarkSection 
+                  _bookmarks={JSON.parse(_bookmarks)} 
+                />
               )}
             </div>
           </div>
@@ -137,7 +140,7 @@ export async function getServerSideProps(ctx) {
   const { __t__ } = cookie.parse(ctx.req.headers.cookie);
   if (__t__) {
     const { _id } = await unsignedToken(__t__);
-    const { _bookmarks } = await User.findOne({ _id }, { _comments: 0 })
+    const { fullName, firstName, lastName, userName, email, _bookmarks } = await User.findOne({ _id }, { _comments: 0 })
       .populate(
         "_bookmarks",
         "title slug image description league views comments"
@@ -148,9 +151,16 @@ export async function getServerSideProps(ctx) {
     const players = await Player.find().lean().limit(50);
 
     await db.disconnect();
-
+      // console.log(fullName, firstName, lastName, email);
     return {
       props: {
+        info: {
+          fullName, 
+          firstName, 
+          lastName,
+          userName, 
+          email
+        },
         // post: post.map(db.convertDocToObj),
         _bookmarks: JSON.stringify(_bookmarks),
         players: players.map(db.convertDocToObj),
