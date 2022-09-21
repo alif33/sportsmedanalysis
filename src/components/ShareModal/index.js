@@ -2,11 +2,16 @@ import { useRouter } from "next/router";
 import React, { useRef } from "react";
 import toast from "react-hot-toast";
 import Popup from "reactjs-popup";
-import ShareIcon from "../ShareIcon";
+import { ImShare2 } from "react-icons/im";
 import style from "./ShareModal.module.css";
-import { FacebookShareButton } from "react-share";
+import {
+  FacebookShareButton,
+  LinkedinShareButton,
+  TwitterShareButton,
+} from "react-share";
+import { FaFacebookF, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 
-const ShareModal = () => {
+const ShareModal = ({ color }) => {
   const router = useRouter();
   /* Just personal preference. I prefer to not show the whole text area selected. */
   const textAreaRef = useRef(null);
@@ -21,8 +26,7 @@ const ShareModal = () => {
     <Popup
       trigger={
         <button className={style.modalOpenBtn}>
-          {" "}
-          <ShareIcon />
+          <ImShare2 style={{ color: color }} />
         </button>
       }
       modal
@@ -37,25 +41,33 @@ const ShareModal = () => {
           <div>
             <h3 className={style.title}>Share</h3>
             <div className={style.copyInputBtn}>
-              <input
-                disabled
-                type="text"
-                value={location.href}
-                ref={textAreaRef}
-              />
+              <input type="text" value={location.href} ref={textAreaRef} />
               <button onClick={copyToClipboard}> copy </button>
             </div>
-            <ul className={style.socialBtnList}>
+            <ul className={`${style.socialBtnList}`}>
               <li>
                 <button>{"<>"}</button>
               </li>
               <li>
                 <FacebookShareButton url={location.href}>
-                  <button>FB</button>
+                  <button>
+                    <FaFacebookF />
+                  </button>
                 </FacebookShareButton>
               </li>
               <li>
-                <button>IG</button>
+                <LinkedinShareButton>
+                  <button>
+                    <FaLinkedinIn />
+                  </button>
+                </LinkedinShareButton>
+              </li>
+              <li>
+                <TwitterShareButton>
+                  <button>
+                    <FaTwitter />
+                  </button>
+                </TwitterShareButton>
               </li>
             </ul>
           </div>
