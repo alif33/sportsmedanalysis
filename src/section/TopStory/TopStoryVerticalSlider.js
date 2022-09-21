@@ -13,7 +13,7 @@ function TopStoryVerticalSlider({ topVideos }) {
             <Swiper
                 direction={"vertical"}
                 slidesPerView={5}
-                spaceBetween={30}
+                spaceBetween={0}
                 navigation={true}
                 mousewheel={false}
                 modules={[Mousewheel, Navigation]}

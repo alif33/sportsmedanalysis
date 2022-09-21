@@ -18,45 +18,71 @@
   color: #999;
 }
 
+.title {
+  font-size: 1.5rem;
+  color: #111;
+  margin-bottom: 0.88rem;
+}
+.copyInputBtn {
+  width: 100%;
+  display: flex;
+  box-sizing: border-box;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1.4rem;
+}
+.copyInputBtn input {
+  width: 80%;
+  box-sizing: border-box;
+  border: none;
+  background: #f8f8f8;
+  padding: 0px 20px;
+  height: 38px;
+  font-size: 1rem;
+  color: #666;
+  opacity: 1;
+}
+.copyInputBtn input:focus {
+  outline: none;
+}
+.copyInputBtn input:active {
+  outline: none;
+}
+
+.copyInputBtn button {
+  width: 15%;
+  box-sizing: border-box;
+  height: 38px;
+  border: none;
+  background: #c10000;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
 .socialBtnList {
   list-style: none;
   display: flex;
   align-items: center;
   margin: 0;
   padding: 0;
-  justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 .socialBtnList li {
+  margin-right: 1rem;
+  margin-top: 1rem;
 }
 .socialBtnList li button {
   border: none;
-  background: transparent;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   align-items: center;
-}
-.socialBtnList li button.facebook svg {
-  background: #1585c7;
-}
-.socialBtnList li button svg {
   background: #111;
   color: #fff;
-  width: 46px;
-  height: 46px;
-  border-radius: 50%;
-  display: flex;
+  height: 3.5rem;
+  width: 3.5rem;
   justify-content: center;
-  align-items: center;
-  padding: 8px;
-}
-.socialBtnList li button p {
-  color: #747474;
-  margin: 0;
-  margin-top: 11px;
-}
-.socialBtnList li:hover button p {
-  text-decoration: underline;
-}
-.socialBtnList li:hover button svg {
+  border-radius: 50%;
+  font-size: 1.7rem;
+  font-weight: 600;
 }

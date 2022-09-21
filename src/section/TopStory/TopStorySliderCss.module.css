@@ -14,17 +14,34 @@
   bottom: 0;
   left: 0;
 }
+.sliderCard {
+  padding: 8px 9px;
+  border-bottom: 1px solid #d9d9d9;
+  height: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+}
 .sliderCard h4 {
   color: #121212;
   font-weight: 600;
+  font-size: 20px;
 }
+
 .sliderCard:hover h4 {
   color: rgb(0, 102, 255);
 }
 
 .sliderCard h6 {
-  color: #5c5656;
   font-weight: 300;
-  font-size: 16px;
-  line-height: 18px;
+  font-size: 11px;
+  line-height: 13px;
+  background: #111;
+  color: #fff;
+  padding: 4px 8px;
+  display: inline-block;
+  border-radius: 10px;
+  margin-bottom: 0px;
+  margin-left: 14px;
 }
