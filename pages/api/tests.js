@@ -8,14 +8,14 @@ const handler = nc();
 
 handler.get(async (req, res) => {
     await db.connect();
-    const players = await Post.find();
+    const posts = await Post.find({});
     await db.disconnect();
-    players.forEach(item=>{
-        const { _id, title } = item;
+    posts.forEach(item=>{
+        const { _id } = item;
         Post.findOneAndUpdate(
             { _id }, 
-            { $set: {
-                slug: slugify(title, "-")
+            { $push: {
+                tags: "current"
             }},
             { returnOriginal: false },
             (err, school)=>{

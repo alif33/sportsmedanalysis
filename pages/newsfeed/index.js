@@ -18,8 +18,9 @@ import ProfileIcon from "../../src/components/svg/ProfileIcon";
 import BookmarkSection from "../../src/components/BookmarkSection";
 import FollowingPlayers from "../../src/components/FollowingPlayers";
 import { unsignedToken } from "../../utils/auth";
+import Post from "../../models/Post";
 
-const Newsfeed = ({ info, players, _bookmarks }) => {
+const Newsfeed = ({ info, posts, players, _bookmarks }) => {
   const [tapList, setTapList] = useState("PostCard");
   const [newsfeedTap, setNewsfeedTap] = useState("posts");
 
@@ -140,7 +141,7 @@ export async function getServerSideProps(ctx) {
   const { __t__ } = cookie.parse(ctx.req.headers.cookie);
   if (__t__) {
     const { _id } = await unsignedToken(__t__);
-    const { fullName, firstName, lastName, userName, email, _bookmarks } = await User.findOne({ _id }, { _comments: 0 })
+    const { fullName, firstName, lastName, userName, email, _bookmarks, tags } = await User.findOne({ _id }, { _comments: 0 })
       .populate(
         "_bookmarks",
         "title slug image description league views comments"
@@ -148,10 +149,20 @@ export async function getServerSideProps(ctx) {
       .lean()
       .limit(50);
 
+    const posts = await Post.find(
+      {
+        tags: { $in: tags },
+      },
+      { _comments: 0 }
+    )
+      .sort({ createdAt: -1 })
+      .lean()
+      .limit(50);
+
     const players = await Player.find().lean().limit(50);
 
     await db.disconnect();
-      // console.log(fullName, firstName, lastName, email);
+      console.log(posts);
     return {
       props: {
         info: {
@@ -163,6 +174,7 @@ export async function getServerSideProps(ctx) {
         },
         // post: post.map(db.convertDocToObj),
         _bookmarks: JSON.stringify(_bookmarks),
+        posts: JSON.stringify(posts),
         players: players.map(db.convertDocToObj),
       },
     };
