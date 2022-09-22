@@ -67,7 +67,6 @@ const FollowingPage = () => {
             <h3 className="mt-2">Tags</h3>
           </div>
         </div>
-        <form className={`w-100 ${style._smd_login_card} d-block text-start`}>
           <div className="row">
             <div className="col-md-12">
               <h5>Subscribed</h5>
@@ -111,7 +110,6 @@ const FollowingPage = () => {
                           <div className={style.input_check}>
                             <div
                               onClick={() => subscribedHandler(item.tagName, "SUBSCRIBE")}
-                              // className={check ? style.active : ""}
                             >
                               { item.tagName }
                               <span className={style.checkmark}></span>
@@ -125,26 +123,6 @@ const FollowingPage = () => {
               </div>
             </div>
           </div>
-          {/* <div className="row mt-4">
-            <div className="col-md-6">
-              <button
-                type="submit"
-                className="bg-black text-center justify-content-center"
-              >
-                Save Changes
-              </button>
-            </div>
-            <div className="col-md-6 ">
-              <button
-                type="button"
-                onClick={() => router.back()}
-                className="text-center justify-content-center"
-              >
-                Cancel
-              </button>
-            </div>
-          </div> */}
-        </form>
       </div>
     </DashboardLayout>
   );
