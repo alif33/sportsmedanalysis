@@ -35,6 +35,8 @@
   line-height: 15px;
   letter-spacing: 0.772799px;
   color: #000000;
-  margin-top: 22px;
+  margin-top: 0px;
   display: inline-block;
 }
+
+.deleteIcon{}

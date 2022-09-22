@@ -21,7 +21,7 @@ const BookmarkCard = ({ item }) => {
               {Sortern(item.title, 10)}
               <SaveIcon />
             </h4>
-            <DeleteIcon />
+          <i className={style.deleteIcon} >  <DeleteIcon /></i>
           </div>
           <p>{Sortern(item.description, 10)}</p>
           <span>
