@@ -28,7 +28,6 @@ const SingleNews = ({ post, posts, topPosts, _comments }) => {
 
 
   const Handlebookmark = () => {
-    console.log("calling...");
     updateData(
       `/user/bookmark?__b=${post._id}`,
       { status: "ADD" },

@@ -1,23 +1,24 @@
 import nc from 'next-connect';
-import User from '../../../models/User';
-import db from '../../../utils/db';
-import { signToken, isAuth } from '../../../utils/auth';
+import User from '../../../../models/User';
+import db from '../../../../utils/db';
+import { signToken, isAuth } from '../../../../utils/auth';
 
 const handler = nc();
 handler.use(isAuth);
 
 handler.put(async (req, res) => {
+
   const { _id } = req.user;
-  const { __b } = req.query;
+  const { tagName } = req.query;
   const { status } = req.body;
 
   await db.connect();
 
   const updates = {
-    _bookmarks: __b
+    tags: tagName
   };
 
-  if(status==="ADD"){
+  if(status==="SUBSCRIBE"){
     User.findOneAndUpdate(
       { _id }, 
       { $push: updates },
@@ -37,7 +38,7 @@ handler.put(async (req, res) => {
               res.send({
                 success: true,
                 token,
-                message: "Bookmarked successfully",
+                message: "Subscribed",
                 info: {
                   _id,
                   name,
@@ -57,7 +58,7 @@ handler.put(async (req, res) => {
     )
   }
 
-  if(status==="REMOVE"){
+  if(status==="UNSUBSCRIBE"){
     User.findOneAndUpdate(
       { _id }, 
       { $pull: updates },
@@ -77,7 +78,7 @@ handler.put(async (req, res) => {
               res.send({
                 success: true,
                 token,
-                message: "Removed from bookmark",
+                message: "Unsubscribed",
                 info: {
                   _id,
                   name,
