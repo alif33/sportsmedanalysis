@@ -18,7 +18,9 @@ const FollowingPage = () => {
   useEffect(()=>{
     getData("/tags")
     .then(res=>{
-      setTags(res);
+      if(res){
+        setTags(res);
+      }
     })
   }, [])
 
