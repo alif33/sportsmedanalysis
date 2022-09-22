@@ -3,7 +3,8 @@ import React from 'react';
 import CommentCard from '../sectionCard/CommentCard';
 import postCard from './PostCard.module.css';
 
-const PostCard = () => {
+const PostCard = ({ title, _author, image }) => {
+  console.log(image);
   return (
     <div className={`${postCard.card2}`}>
 
@@ -11,7 +12,7 @@ const PostCard = () => {
         <div className={`d-flex align-items-center`}>
           <Image height="60" width="60" src="/images/user/user.png" alt="" />
           <div className={postCard.postProfileName}>
-            <h6>Owen Klukas</h6>
+            <h6>{_author}</h6>
             <p>29 mins</p>
           </div>
         </div>
@@ -19,12 +20,17 @@ const PostCard = () => {
       </div>
 
       <div className={`w-100 ${postCard.postImage}`}>
-        <Image height="427" width="600" src="/images/post/post.png" alt="" />
+        <Image 
+          height="427" 
+          width="600" 
+          src={image? image: "/images/post/post.png"}
+          alt="" 
+        />
       </div>
 
       <div className={`${postCard.postContent}`} >
         <p className={`${postCard.postDescription}`} >
-          Watkins has lasted at least five innings in his last seven starts resulting in three quality starts. However, his ERA is back above 4.00 as he has allowed eight earned runs in his last three starts.
+          { title }
         </p>
       </div>
 

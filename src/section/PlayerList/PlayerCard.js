@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import playerCss from "./Player.module.css";
 import Image from "next/image";
 import { useDispatch, useSelector } from "react-redux";
@@ -51,7 +52,8 @@ const PlayerCard = ({ item }) => {
   };
 
   return (
-    <a href="#!" className="mt-2 d-block">
+    <Link href={`player/${item.firstName}-${item.lastName}/${item._id}`}>
+    <a className="mt-2 d-block">
       <div className={` d-flex align-items-center ${playerCss.card}`}>
         <Image
           height="61"
@@ -80,6 +82,7 @@ const PlayerCard = ({ item }) => {
         </div>
       </div>
     </a>
+    </Link>
   );
 };
 

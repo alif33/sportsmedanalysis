@@ -99,9 +99,21 @@ const Newsfeed = ({ info, posts, players, _bookmarks }) => {
             <div className={style.newsfeedPosts}>
               {newsfeedTap === "posts" && (
                 <>
-                  <PostCard />
-                  <PostCard />
-                  <PostCard />
+                {
+                  posts && posts.map((item, index)=>{
+                    return(
+                      <PostCard 
+                        key={ index }
+                        item={ item.title }
+                        _author = { item._author}
+                        image={ item.image }
+                      />
+                    )
+                  })
+                }
+
+                  {/* <PostCard />
+                  <PostCard /> */}
                 </>
               )}
               {newsfeedTap === "following-players" && (
@@ -168,8 +180,8 @@ export const getServerSideProps = __Auth( async(ctx) => {
         },
         // post: post.map(db.convertDocToObj),
         _bookmarks: JSON.stringify(_bookmarks),
-        posts: JSON.stringify(posts),
-        players: players.map(db.convertDocToObj),
+        posts: posts.map(db.convertDocToObj),
+        players: players.map(db.convertDocToObj)
       },
     };
     // console.log(_bookmarks);
