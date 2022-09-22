@@ -19,6 +19,7 @@ import BookmarkSection from "../../src/components/BookmarkSection";
 import FollowingPlayers from "../../src/components/FollowingPlayers";
 import { unsignedToken } from "../../utils/auth";
 import Post from "../../models/Post";
+import { __Auth } from "../../__lib__/helpers/AuthProvider";
 
 const Newsfeed = ({ info, posts, players, _bookmarks }) => {
   const [tapList, setTapList] = useState("PostCard");
@@ -123,20 +124,13 @@ const Newsfeed = ({ info, posts, players, _bookmarks }) => {
           </div>
         </div>
       </div>
-
-      {/* <div className="nfl_con my-4">
-        <BorderLine />
-      </div> */}
-
-      {/* <NflTeam /> */}
     </Layout>
   );
 };
 
 export default Newsfeed;
 
-export async function getServerSideProps(ctx) {
-  // const { __t__ } = ctx.req.headers.cookie;
+export const getServerSideProps = __Auth( async(ctx) => {
   await db.connect();
   const { __t__ } = cookie.parse(ctx.req.headers.cookie);
   if (__t__) {
@@ -184,4 +178,4 @@ export async function getServerSideProps(ctx) {
 
   // }
   // console.log(ctx.req.headers.cookie?.__t__);
-}
+})
