@@ -1,11 +1,25 @@
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
+import { getData } from "../../../__lib__/helpers/HttpService";
 import SearchBar from "../../components/SearchBar";
 import PlayersFollowingCard from "../../components/sectionCard/PlayersFollowingCard";
 import style from "./TeamsFollowing.module.css";
 
-const PlayersFollowing = ({ title, players, search }) => {
-  console.log(players);
+const PlayersFollowing = ({ title, search }) => {
+  const [players, setPlayers] = useState();
+  const { user } = useSelector(state=>state);
+  const { __u__ } = user;
+
+  useEffect(()=>{
+    getData("/players")
+      .then(res=>{
+        if(res)
+        {
+          setPlayers(res);
+        }
+      })
+  },[])
   
   return (
     <>
@@ -25,7 +39,7 @@ const PlayersFollowing = ({ title, players, search }) => {
         </div>
       )}
       {players &&
-        players.slice(0, 3).map((item, index) => {
+        players.slice(0, 4).map((item, index) => {
           return (
             <PlayersFollowingCard
               key={index}
@@ -37,7 +51,6 @@ const PlayersFollowing = ({ title, players, search }) => {
             />
           );
         })}
-      {/* <PlayersFollowingCard /> */}
 
       <div className="d-flex justify-content-between align-items-center">
         <button className={style.nextPreBtn}>Previous Page</button>

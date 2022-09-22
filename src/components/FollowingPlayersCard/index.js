@@ -16,15 +16,9 @@ const FollowingPlayersCard = () => {
     }, [])
 
     const handleChange = query =>{
-        // players.filter(el=>el.firstName === query || el.lastName === query);
         setResults(players.filter(
             el=>el.slug.toLowerCase().includes(query)
         ));
-
-        console.log(results);
-        // homes.filter(       function (el) {
-        //     return el.firstName <= 1000 || el.sqft >= 500 
-        //   });
     } 
     return (
         <div className={`${style.card2} mt-2`}>
@@ -57,14 +51,7 @@ const FollowingPlayersCard = () => {
                 })
                     
                 }
-
-                {/* <li> <Link href="/">
-                    <a>
-                        <Image height="39" width="42" src="/images/player/search-player.png" alt="" />
-                        <h5>Allen Lazard</h5></a>
-                </Link>  </li> */}
             </ul>
-
         </div>
     );
 };
