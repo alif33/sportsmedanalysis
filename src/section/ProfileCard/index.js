@@ -9,7 +9,7 @@ import style from "./ProfileCard.module.css";
 const ProfileCard = ({ info, _bookmarks, setNewsfeedTap, newsfeedTap }) => {
   const { user } = useSelector(state=>state);
   const { __u__ } = user;
-  // console.log(__u__);
+  console.log(__u__?.info);
   return (
     <div className={style.profile_card}>
       <div className="d-flex align-items-center justify-content-between">
@@ -19,15 +19,15 @@ const ProfileCard = ({ info, _bookmarks, setNewsfeedTap, newsfeedTap }) => {
       <div className={`${style.profile_card_img_name} mt-2`}>
         <Image height="60" width="60" src="/images/user/user.png" alt="" />
         <div className="profile-card-name">
-          <h6>{ __u__.info.fullName }</h6>
-          <p>{ __u__.info.userName }</p>
+          <h6>{ __u__?.info.fullName }</h6>
+          <p>{ __u__?.info.userName }</p>
         </div>
       </div>
 
       <div className={style.profile_post_and_following}>
         <div className="profile-posts">
           <Image height="12" width="12" src="/images/icon/posts.png" alt="" />
-          <p>{ __u__.info._bookmarks.length } Posts</p>
+          <p>{ __u__?.info._bookmarks?.length } Posts</p>
         </div>
         <div className="profile-following">
           <Image
