@@ -9,7 +9,6 @@ import toast from "react-hot-toast";
 
 const FollowingPage = () => {
   const [ tags, setTags ] = useState();
-  const [check, setCheck] = useState(true);
   const router = useRouter();
   const { user } = useSelector((state) => state);
   const dispatch = useDispatch();
@@ -82,7 +81,7 @@ const FollowingPage = () => {
                           <div className={style.input_check}>
                             <div
                               onClick={() => unsubscribedHandler(item.tagName, "UNSUBSCRIBE")}
-                              className={check ? style.active : ""}
+                              className={style.active}
                             >
                               { item.tagName }
                               <span className={style.checkmark}></span>
