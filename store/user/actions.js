@@ -9,5 +9,6 @@ export const logedIn = u => (dispatch) => {
 }
 
 export const logOut = () => (dispatch) => {
-    dispatch(slice.logOut())
+    dispatch(slice.logOut());
+    cookies.remove("__t__",{ path: '/' });
 }
