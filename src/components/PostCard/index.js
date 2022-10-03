@@ -118,8 +118,6 @@ const PostCard = ({ _id, title, _author, image, comments }) => {
             )
           })
         }
-
-          {/* <CommentCard /> */}
       </div>
       </>)
       }
