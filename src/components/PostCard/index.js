@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import React, { useState } from 'react';
-import { getData } from '../../../__lib__/helpers/HttpService';
+import toast from 'react-hot-toast';
+import { useSelector } from 'react-redux';
+import { authPost, getData } from '../../../__lib__/helpers/HttpService';
 import CommentCard from '../sectionCard/CommentCard';
 import postCard from './PostCard.module.css';
 
@@ -8,6 +10,9 @@ const PostCard = ({ _id, title, _author, image, comments }) => {
   const [show, setShow] = useState(false);
   const [loading, setLoading] = useState(false);
   const [_comments_, _setComments_] = useState();
+  const [comment, setComment] = useState("");
+  const { user } = useSelector(state=>state);
+  const { __u__ } = user;
 
   const fetchComments = ()=>{
     setLoading(true);
@@ -18,7 +23,32 @@ const PostCard = ({ _id, title, _author, image, comments }) => {
     setShow(!show);
     fetchComments();
   }
-  console.log(_comments_);
+
+  const handleComment = event => {
+    if (event.key === 'Enter') {
+      if (user.isUser) {
+        if (!comment && comment.length < 10) {
+            toast.error("Comment is too short")
+        } else {
+            authPost(`post/comment/${_id}`, { comment }, __u__.token)
+                .then(res => {
+                    if (res.success) {
+                        toast.success("Comment added successfully");
+                        const { post } = res;
+                        _setComments_(post._comments.reverse());
+                        setComment("");
+                    }
+                })
+                .catch(err => {
+
+                })
+        }
+      } else {
+          router.push("/auth/sign-in");
+      }
+    }
+  }
+
   return (
     <div className={`${postCard.card2} mt-2`}>
       <div className={`d-flex align-items-center justify-content-between ${postCard.postProfile}`}>
@@ -69,7 +99,13 @@ const PostCard = ({ _id, title, _author, image, comments }) => {
       { show && (<>
       <div className={` ${postCard.postComment}`} >
         <div className={`${postCard.postCommentInput}`}>
-          <input type="text" placeholder="Write a comment" />
+          <input 
+            type="text" 
+            placeholder="Write a comment"
+            value={comment}
+            onChange={e=>setComment(e.target.value)} 
+            onKeyDown={handleComment}
+          />
         </div>
         {
           _comments_ && _comments_.length>0 && _comments_.map((item, index)=>{
