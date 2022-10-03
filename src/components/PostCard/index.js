@@ -1,13 +1,26 @@
 import Image from 'next/image';
-import React from 'react';
+import React, { useState } from 'react';
+import { getData } from '../../../__lib__/helpers/HttpService';
 import CommentCard from '../sectionCard/CommentCard';
 import postCard from './PostCard.module.css';
 
-const PostCard = ({ title, _author, image }) => {
-  console.log(image);
-  return (
-    <div className={`${postCard.card2}`}>
+const PostCard = ({ _id, title, _author, image, comments }) => {
+  const [show, setShow] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [_comments_, _setComments_] = useState();
 
+  const fetchComments = ()=>{
+    setLoading(true);
+    getData(`post/comments?_id=${_id}`)
+    .then(res=>_setComments_(res));
+  }
+  const handleShowComments = ()=>{
+    setShow(!show);
+    fetchComments();
+  }
+  console.log(_comments_);
+  return (
+    <div className={`${postCard.card2} mt-2`}>
       <div className={`d-flex align-items-center justify-content-between ${postCard.postProfile}`}>
         <div className={`d-flex align-items-center`}>
           <Image height="60" width="60" src="/images/user/user.png" alt="" />
@@ -34,6 +47,7 @@ const PostCard = ({ title, _author, image }) => {
         </p>
       </div>
 
+
       <div className={`d-flex align-items-center justify-content-between ${postCard.postReactAndCommnetText}`}>
         <div className={`d-flex align-items-center ${postCard.postReact}`} >
           <Image height="19" width="19" src="/images/icon/like.png" alt="" />
@@ -41,39 +55,38 @@ const PostCard = ({ title, _author, image }) => {
           <p>+15</p>
         </div>
         <div className={`d-flex align-items-center  ${postCard.commentText}`} >
-          <p className="me-1">2 Comments</p>
-          <p>5 Saved</p>
+          <p className="me-1">{comments} Comments</p>
         </div>
       </div>
-
       <div className={`${postCard.postReactAndCommnetText}`}>
         <div className={`d-flex align-items-center justify-content-between ${postCard.postReactAndCommnetBtn}`}>
           <div className={`d-flex align-items-center ${postCard.postButton}`} >
             <p className={`d-flex align-items-center  `}><Image height="19" width="19" src="/images/icon/like-icon.png" alt="" />Like</p>
-            <p className={`d-flex align-items-center ms-1`}><Image height="19" width="19" src="/images/icon/comment-icon.png" alt="" />Comment</p>
-          </div>
-          <div className={`d-flex align-items-center  ${postCard.postButton}`} >
-            <p className={`d-flex align-items-center`}><Image height="19" width="19" src="/images/icon/save.png" alt="" />Save</p>
+            <p onClick={handleShowComments} className={`d-flex align-items-center ms-1`}><Image height="19" width="19" src="/images/icon/comment-icon.png" alt="" />Comment</p>
           </div>
         </div>
-
       </div>
-
+      { show && (<>
       <div className={` ${postCard.postComment}`} >
         <div className={`${postCard.postCommentInput}`}>
           <input type="text" placeholder="Write a comment" />
-          <div className={`${postCard.postCommentInputIcon}`}>
-            <i> <Image height="18" width="18" src="/images/icon/emoji.png" alt="" /></i>
-            <i> <Image height="18" width="18" src="/images/icon/camera.png" alt="" /></i>
-          </div>
         </div>
+        {
+          _comments_ && _comments_.length>0 && _comments_.map((item, index)=>{
+            return(
+              <CommentCard 
+                key={index}
+                name={item.name}
+                comment={item.comment}
+              />
+            )
+          })
+        }
 
-        <CommentCard />
-        <CommentCard />
-
-
+          {/* <CommentCard /> */}
       </div>
-
+      </>)
+      }
     </div>
   );
 };

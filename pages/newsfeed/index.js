@@ -103,10 +103,12 @@ const Newsfeed = ({ info, posts, players, _bookmarks }) => {
                   posts && posts.map((item, index)=>{
                     return(
                       <PostCard 
-                        key={ index }
-                        item={ item.title }
-                        _author = { item._author}
-                        image={ item.image }
+                        key={index}
+                        _id={item._id}
+                        item={item.title}
+                        _author={item._author}
+                        image={item.image}
+                        comments={item.comments}
                       />
                     )
                   })

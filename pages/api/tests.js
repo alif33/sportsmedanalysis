@@ -10,12 +10,13 @@ handler.get(async (req, res) => {
     await db.connect();
     const posts = await Post.find({});
     await db.disconnect();
-    posts.forEach(item=>{
+    posts.forEach((item, index) =>{
         const { _id } = item;
+        if(index === 6 || index === 7 || index === 8 || index === 9)
         Post.findOneAndUpdate(
             { _id }, 
-            { $push: {
-                tags: "current"
+            { $set: {
+                _author: "Doe"
             }},
             { returnOriginal: false },
             (err, school)=>{

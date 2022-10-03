@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import commentCardCss from './commentCardCss.module.css';
 
-const CommentCard = () => {
+const CommentCard = ({name, comment}) => {
     return (
         <div className={`${commentCardCss.commentCard}`} >
             <div className={`${commentCardCss.commenterImg}`} >
@@ -9,15 +9,14 @@ const CommentCard = () => {
             </div>
             <div className={`${commentCardCss.commenterNameDesc}`} >
                 <div className="d-flex align-items-center justify-content-between">
-                    <h5>Landon Watts </h5>
+                    <h5>{name}</h5>
                     <p>5 mins</p>
                 </div>
-                <p>Mateo continues to light it up post All-Star break with four home runs,
-                    12 runs scored,</p>
-                <div className={commentCardCss.commentLIkebtn}>
+                <p>{comment}</p>
+                {/* <div className={commentCardCss.commentLIkebtn}>
                     <button>Like</button>
                     <button>Reply</button>
-                </div>
+                </div> */}
             </div>
         </div>
     );
