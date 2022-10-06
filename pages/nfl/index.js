@@ -2,13 +2,11 @@ import db from "../../utils/db";
 import Post from '../../models/Post';
 import Player from '../../models/Player';
 import Layout from "../../src/components/Layout";
-import NFLSlider from '../../src/components/nlf_Slider/NFLSlider';
 import ArticleSection from '../../src/section/ArticleSection';
 import Trendings from '../../src/section/Trendings';
 import MoreNews from '../../src/section/MoreNews';
 import PageNewsSection from '../../src/section/PageNewsSection';
 import NewsTab from '../../src/section/NewsTap';
-import NflTeam from "../../src/section/NflTeam";
 import BorderLine from '../../src/components/BorderLine'
 import NbaHero from "../../src/section/hero/NbaHero";
 
@@ -53,8 +51,6 @@ function NFL({ posts, players, trendings }) {
         <div className="nfl_con">
           <BorderLine />
         </div>
-        
-        <NflTeam />
       </Layout>
     </div>
   )

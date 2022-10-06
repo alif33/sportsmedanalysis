@@ -146,7 +146,7 @@ const EditProfile = () => {
 
 export default EditProfile;
 
-export const getServerSideProps = __Auth((context) => {
+export const getServerSideProps = __Auth( async(context) => {
     return {
       props: {},
     };

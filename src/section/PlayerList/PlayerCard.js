@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import playerCss from "./Player.module.css";
 import Image from "next/image";
 import { useDispatch, useSelector } from "react-redux";
@@ -6,7 +7,7 @@ import { updateData } from "../../../__lib__/helpers/HttpService";
 import toast from "react-hot-toast";
 import { logedIn } from "../../../store/user/actions";
 import { imageResize } from "../../../__lib__/helpers/Validator";
-import Link from "next/link";
+// import Link from "next/link";
 
 const PlayerCard = ({ item }) => {
   const { firstName, lastName, _id } = item;
@@ -52,7 +53,8 @@ const PlayerCard = ({ item }) => {
   };
 
   return (
-    <div className="mt-2 d-block">
+    <Link href={`player/${item.firstName}-${item.lastName}/${item._id}`}>
+    <a className="mt-2 d-block">
       <div className={` d-flex align-items-center ${playerCss.card}`}>
         <Link href="/">
           <a>
@@ -85,7 +87,8 @@ const PlayerCard = ({ item }) => {
           </p>
         </div>
       </div>
-    </div>
+    </a>
+    </Link>
   );
 };
 

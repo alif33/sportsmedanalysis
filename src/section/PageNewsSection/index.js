@@ -3,14 +3,15 @@ import style from "./PageNews.module.css";
 import Image from "next/image";
 import Link from "next/link";
 
-const PageNewsSection = ({ title }) => {
+const PageNewsSection = ({ title, posts }) => {
+  // console.log("posts", posts);
   return (
     <div className="nfl_con pb-4">
       <div className={style.nfl_sec_three}></div>
       <h4 className={style.nfl_card_title2}>{title}</h4>
       <div className="row mt-3">
         <div className={`${style.pageNewsSection} col-md-9`}>
-          <Link href="/">
+          <Link href={``}>
             <a className="row">
               <div className="col-md-7">
                 <div className={style.cardImg}>

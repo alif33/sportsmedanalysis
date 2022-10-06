@@ -18,7 +18,7 @@ import ProfileIcon from "../../src/components/svg/ProfileIcon";
 import BookmarkSection from "../../src/components/BookmarkSection";
 import { unsignedToken } from "../../utils/auth";
 import Post from "../../models/Post";
-import FollowingPlayers2 from "../../src/components/FollowingPlayers2";
+import { __Auth } from "../../__lib__/helpers/AuthProvider";
 
 const Newsfeed = ({ info, posts, players, _bookmarks }) => {
   const [tapList, setTapList] = useState("PostCard");
@@ -98,11 +98,23 @@ const Newsfeed = ({ info, posts, players, _bookmarks }) => {
             <div className={style.newsfeedPosts}>
               {newsfeedTap === "posts" && (
                 <>
-                  {allPosts &&
-                    allPosts?.map(
-                      (item, i) =>
-                        item && <PostCard item={item && item} key={i} />
-                    )}
+                {
+                  posts && posts.map((item, index)=>{
+                    return(
+                      <PostCard 
+                        key={index}
+                        _id={item._id}
+                        item={item.title}
+                        _author={item._author}
+                        image={item.image}
+                        comments={item.comments}
+                      />
+                    )
+                  })
+                }
+
+                  {/* <PostCard />
+                  <PostCard /> */}
                 </>
               )}
               {newsfeedTap === "following-players" && (
@@ -123,20 +135,13 @@ const Newsfeed = ({ info, posts, players, _bookmarks }) => {
           </div>
         </div>
       </div>
-
-      {/* <div className="nfl_con my-4">
-        <BorderLine />
-      </div> */}
-
-      {/* <NflTeam /> */}
     </Layout>
   );
 };
 
 export default Newsfeed;
 
-export async function getServerSideProps(ctx) {
-  // const { __t__ } = ctx.req.headers.cookie;
+export const getServerSideProps = __Auth( async(ctx) => {
   await db.connect();
   const { __t__ } = cookie.parse(ctx.req.headers.cookie);
   if (__t__) {
@@ -175,8 +180,8 @@ export async function getServerSideProps(ctx) {
         },
         // post: post.map(db.convertDocToObj),
         _bookmarks: JSON.stringify(_bookmarks),
-        posts: JSON.stringify(posts),
-        players: players.map(db.convertDocToObj),
+        posts: posts.map(db.convertDocToObj),
+        players: players.map(db.convertDocToObj)
       },
     };
     // console.log(_bookmarks);
@@ -185,4 +190,4 @@ export async function getServerSideProps(ctx) {
 
   // }
   // console.log(ctx.req.headers.cookie?.__t__);
-}
+})

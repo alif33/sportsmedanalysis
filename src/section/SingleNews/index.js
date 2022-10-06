@@ -45,7 +45,7 @@ const SingleNews = ({ post, posts, topPosts, _comments }) => {
       }
     });
   };
-console.log(post._id);
+
   const removeBookmark = () => {
     updateData(`/user/bookmark?__b=${post._id}`, { status: "REMOVE" }, __u__.token).then(
       (res) => {
@@ -63,7 +63,6 @@ console.log(post._id);
     );
   };
 
-  // console.log(info);
 
   return (
     <>

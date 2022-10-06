@@ -17,7 +17,7 @@ const NewsTab = ({ posts, players }) => {
               title={Sortern(posts[0].title, 10)}
               img={imageResize(posts[0].image, "c_thumb,g_face,h_720,w_1060")}
               description="Follow here for signings, trades, rumors and analysis from The Athletic's staff as the"
-              name="John Holinger"
+              name={posts[0]._author}
               comment={posts[0]?.comments && posts[0]?.comments}
             />
           </div>
@@ -34,7 +34,7 @@ const NewsTab = ({ posts, players }) => {
                   slug={item.slug}
                   title={Sortern(item.title, 10)}
                   img={item.image}
-                  description="The Athletic NFL Staff"
+                  description={item._author}
                 />
               ))}
         </div>

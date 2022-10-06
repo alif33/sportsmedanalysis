@@ -29,7 +29,7 @@ handler.put(async (req, res) => {
 
         if(user){
 
-          const { _id, name, email, tags, userName, fullName, fanduelUsername, draftKingsUsername, _players, _teams } = user;
+          const { _id, name, email, tags, userName, fullName, fanduelUsername, draftKingsUsername, _players, _teams, _bookmarks } = user;
           const token = signToken(user);
             res.send({
               success: true,
@@ -44,7 +44,8 @@ handler.put(async (req, res) => {
                 fanduelUsername, 
                 draftKingsUsername,
                 _players, 
-                _teams
+                _teams,
+                _bookmarks
               }
             });
         }

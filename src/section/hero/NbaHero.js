@@ -53,11 +53,11 @@ const NbaHero = ({ posts }) => {
       </div>
       <div className={style._smd_nbanews_list}>
         <ul>
-          {posts.slice(0, 6)?.map((item, i) => (
+          {posts.slice(0, 4)?.map((item, i) => (
             <li key={i}>
               <Link href={`/${item.slug}/${item._id}`}>
                 <a>
-                  <h3>{item.title.slice(0, 30)}</h3>
+                  <h3>{Sortern(item.title, 10)}</h3>
                 </a>
               </Link>
               <p>{item.league}</p>
