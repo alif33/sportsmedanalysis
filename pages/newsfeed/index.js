@@ -19,6 +19,7 @@ import BookmarkSection from "../../src/components/BookmarkSection";
 import { unsignedToken } from "../../utils/auth";
 import Post from "../../models/Post";
 import { __Auth } from "../../__lib__/helpers/AuthProvider";
+import FollowingPlayers2 from "../../src/components/FollowingPlayers2";
 
 const Newsfeed = ({ info, posts, players, _bookmarks }) => {
   const [tapList, setTapList] = useState("PostCard");
