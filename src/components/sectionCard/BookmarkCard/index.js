@@ -7,6 +7,7 @@ import slugify from "slugify";
 import { logedIn } from "../../../../store/user/actions";
 import { updateData } from "../../../../__lib__/helpers/HttpService";
 import { Sortern } from "../../../../__lib__/helpers/Validator";
+import AlartIcon from "../../svg/AlartIcon";
 import DeleteIcon from "../../svg/DeleteIcon";
 import SaveIcon from "../../svg/SaveIcon";
 import style from "./BookmarkCard.module.css";
@@ -47,18 +48,19 @@ const BookmarkCard = ({ item }) => {
               {Sortern(item.title, 10)}
               <SaveIcon />
             </a>
-          </Link>
-          <i className={style.deleteIcon}>
-            {" "}
-            <DeleteIcon />
-          </i>
+            </Link>
+          <i className={style.deleteIcon} >  <DeleteIcon handler={()=>removeBookmark(item._id)} /></i>
+          </div>
+          <p>{Sortern(item.description, 15)}</p>
+          {/* <span>
+            <AlartIcon /> Saved 2 Days Ago
+          </span> */}
         </div>
         <p>{Sortern(item.description, 10)}</p>
         <span>
           <AlartIcon /> Saved 2 Days Ago
         </span>
       </div>
-    </div>
   );
 };
 
