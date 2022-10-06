@@ -127,7 +127,7 @@ const MobileFooter = () => {
           </div>
           <div className="col-md-5">
             <div className="row ms-md-5 w-100 m-auto">
-              <div className="col-md-4 p-md-0">
+              <div className="col-md-4 col-6 p-md-0">
                 <ul className={`${style._smd_footer_menu}`}>
                   <li>
                     <Link href="/">
@@ -151,7 +151,7 @@ const MobileFooter = () => {
                   </li>
                 </ul>
               </div>
-              <div className="col-md-4 p-md-0">
+              <div className="col-md-4 col-6 p-md-0">
                 <ul className={`${style._smd_footer_menu}`}>
                   <li>
                     <Link href="/privacy-policy">
@@ -175,7 +175,7 @@ const MobileFooter = () => {
                   </li>
                 </ul>
               </div>
-              <div className="col-md-4 p-md-0">
+              <div className="col-md-4 col-6 p-md-0">
                 <ul className={`${style._smd_footer_menu}`}>
                   <li>
                     <Link href="/auth/sign-in">

@@ -39,4 +39,15 @@
   display: inline-block;
 }
 
-.deleteIcon{}
+.title {
+  color: #111 !important;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  font-family: "Poppins", sans-serif;
+}
+
+.title:hover {
+  color: rgb(22, 86, 223) !important;
+  text-decoration: underline;
+}

@@ -17,9 +17,6 @@ const BookmarkSection = ({ _bookmarks }) => {
           )
         })
       }
-      {/* <BookmarkCard/>
-      <BookmarkCard/>
-      <BookmarkCard/> */}
     </div>
   );
 };

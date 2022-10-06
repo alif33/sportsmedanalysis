@@ -1,7 +1,8 @@
 .card2 {
   background: #ffffff;
-  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 1px 4px rgb(0 0 0 / 51%);
   border-radius: 5px;
+  margin: 35px 10px;
 }
 .postProfile {
   padding: 20px 20px;
@@ -69,6 +70,7 @@
   letter-spacing: 0.18px;
   color: #878787;
   margin: 0;
+  cursor: pointer;
 }
 .postReactAndCommnetBtn {
   border-top: 1px solid rgba(217, 217, 217, 0.8);
@@ -111,8 +113,8 @@
   height: 100%;
   border: none;
   background: transparent;
-  padding-left:30px;
-  padding-right:80px;
+  padding-left: 30px;
+  padding-right: 80px;
 }
 .postCommentInput input:focus {
   outline: none;

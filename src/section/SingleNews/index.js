@@ -67,7 +67,7 @@ console.log(post._id);
 
   return (
     <>
-      <div className="row mt-5">
+      <div className="row mt-5 w-100 m-0 ">
         <div className="col-md-8">
           <h1 className={style.title}>{post.title}</h1>
           <ul className={style.newsCateHour}>
@@ -95,7 +95,7 @@ console.log(post._id);
               <MessageIcon />
               <span>521K</span>
             </li>
-            <li>
+            <li >
               <ShareModal />
             </li>
           </ul>

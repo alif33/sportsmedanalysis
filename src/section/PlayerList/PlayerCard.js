@@ -6,6 +6,7 @@ import { updateData } from "../../../__lib__/helpers/HttpService";
 import toast from "react-hot-toast";
 import { logedIn } from "../../../store/user/actions";
 import { imageResize } from "../../../__lib__/helpers/Validator";
+import Link from "next/link";
 
 const PlayerCard = ({ item }) => {
   const { firstName, lastName, _id } = item;
@@ -51,18 +52,23 @@ const PlayerCard = ({ item }) => {
   };
 
   return (
-    <a href="#!" className="mt-2 d-block">
+    <div className="mt-2 d-block">
       <div className={` d-flex align-items-center ${playerCss.card}`}>
-        <Image
-          height="61"
-          width="61"
-          src={imageResize(item.image, "c_thumb,g_face,h_400,w_400")}
-          alt=""
-        />
-
+        <Link href="/">
+          <a>
+            <Image
+              height="61"
+              width="61"
+              src={imageResize(item.image, "c_thumb,g_face,h_400,w_400")}
+              alt=""
+            />
+          </a>
+        </Link>
         <div>
           <h4 className={playerCss.cardTitle}>
-            {firstName + " " + lastName}
+            <Link href="/">
+              <a>{firstName + " " + lastName}</a>
+            </Link>
 
             {isUser && info?._players?.includes(_id) ? (
               <sapn className={playerCss.followBtn} onClick={UnfollowHandler}>
@@ -79,7 +85,7 @@ const PlayerCard = ({ item }) => {
           </p>
         </div>
       </div>
-    </a>
+    </div>
   );
 };
 

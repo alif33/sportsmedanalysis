@@ -10,26 +10,31 @@ import style from "./BookmarkCard.module.css";
 
 const BookmarkCard = ({ item }) => {
   return (
-    <Link href={`/${slugify(item.title)}/${item._id}`}>
-      <a className={style.bookmarkCard}>
-        <div className={style.bookmarkCardImg}>
+    <div className={style.bookmarkCard}>
+      <Link href={`/${slugify(item.title)}/${item._id}`}>
+        <a className={style.bookmarkCardImg}>
           <Image height="333" width="486" src={item.image} alt="" />
-        </div>
-        <div className={style.bookmarkCardContent}>
-          <div className="d-flex align-items-center justify-content-between">
-            <h4>
+        </a>
+      </Link>
+      <div className={style.bookmarkCardContent}>
+        <div className="d-flex align-items-center justify-content-between">
+          <Link href={`/${slugify(item.title)}/${item._id}`}>
+            <a className={style.title}>
               {Sortern(item.title, 10)}
               <SaveIcon />
-            </h4>
-          <i className={style.deleteIcon} >  <DeleteIcon /></i>
-          </div>
-          <p>{Sortern(item.description, 10)}</p>
-          <span>
-            <AlartIcon /> Saved 2 Days Ago
-          </span>
+            </a>
+          </Link>
+          <i className={style.deleteIcon}>
+            {" "}
+            <DeleteIcon />
+          </i>
         </div>
-      </a>
-    </Link>
+        <p>{Sortern(item.description, 10)}</p>
+        <span>
+          <AlartIcon /> Saved 2 Days Ago
+        </span>
+      </div>
+    </div>
   );
 };
 

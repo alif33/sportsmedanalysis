@@ -1,0 +1,57 @@
+.TeamsFollowingSort {
+  display: flex;
+  align-items: center;
+}
+.TeamsFollowingSort h6 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 53px;
+  /* or 331% */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: -0.04em;
+
+  color: #000000;
+  margin: 0 20px;
+}
+.teamsFollowingTitle {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 32px;
+  letter-spacing: -0.04em;
+  color: #000000;
+}
+.nextPreBtn {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 53px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: -0.04em;
+  color: #000000;
+  border: none;
+  background: transparent;
+}
+@media (max-width: 768px) {
+  .teamsFollowingTitle {
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .TeamsFollowingSort h6 {
+    font-size: 8px;
+    line-height: 10px;
+    margin: 0 6px;
+  }
+  .TeamsFollowingSort span {
+    width: 10px !important;
+  }
+}

@@ -16,14 +16,14 @@ import UserPeple from "../../src/components/svg/UserPepole";
 import SearchPlayer from "../../src/components/svg/SearchPlayer";
 import ProfileIcon from "../../src/components/svg/ProfileIcon";
 import BookmarkSection from "../../src/components/BookmarkSection";
-import FollowingPlayers from "../../src/components/FollowingPlayers";
 import { unsignedToken } from "../../utils/auth";
 import Post from "../../models/Post";
+import FollowingPlayers2 from "../../src/components/FollowingPlayers2";
 
 const Newsfeed = ({ info, posts, players, _bookmarks }) => {
   const [tapList, setTapList] = useState("PostCard");
   const [newsfeedTap, setNewsfeedTap] = useState("posts");
-
+  const allPosts = JSON.parse(posts);
   return (
     <Layout navheader={true}>
       <ul className={` d-lg-none ${style.tapList}`}>
@@ -71,15 +71,15 @@ const Newsfeed = ({ info, posts, players, _bookmarks }) => {
       <div className="nfl_con my-2 d-block d-lg-none">
         <div className="row">
           <div className="col-12">
-            { tapList === "ProfileCard" && <ProfileCard /> }
-            { tapList === "FollowingPlayersCard" && <FollowingPlayersCard /> }
-            { tapList === "PostCard" && (
+            {tapList === "ProfileCard" && <ProfileCard />}
+            {tapList === "FollowingPlayersCard" && <FollowingPlayersCard />}
+            {tapList === "PostCard" && (
               <>
                 <PostCard />
               </>
             )}
-            { tapList === "PlayerList" && <PlayerList /> }
-            { tapList === "NewsListCard" && <NewsListCard /> }
+            {tapList === "PlayerList" && <PlayerList />}
+            {tapList === "NewsListCard" && <NewsListCard />}
           </div>
         </div>
       </div>
@@ -87,8 +87,8 @@ const Newsfeed = ({ info, posts, players, _bookmarks }) => {
         <div className="row mt-3 ">
           <div className="col-lg-3">
             <ProfileCard
-              info={ info }
-              _bookmarks={ JSON.parse(_bookmarks) }
+              info={info}
+              _bookmarks={JSON.parse(_bookmarks)}
               newsfeedTap={newsfeedTap}
               setNewsfeedTap={setNewsfeedTap}
             />
@@ -98,20 +98,20 @@ const Newsfeed = ({ info, posts, players, _bookmarks }) => {
             <div className={style.newsfeedPosts}>
               {newsfeedTap === "posts" && (
                 <>
-                  <PostCard />
-                  <PostCard />
-                  <PostCard />
+                  {allPosts &&
+                    allPosts?.map(
+                      (item, i) =>
+                        item && <PostCard item={item && item} key={i} />
+                    )}
                 </>
               )}
               {newsfeedTap === "following-players" && (
                 <>
-                  <FollowingPlayers players={players} />
+                  <FollowingPlayers2 players={players} />
                 </>
               )}
               {newsfeedTap === "bookmarks" && (
-                <BookmarkSection 
-                  _bookmarks={JSON.parse(_bookmarks)} 
-                />
+                <BookmarkSection _bookmarks={JSON.parse(_bookmarks)} />
               )}
             </div>
           </div>
@@ -141,13 +141,14 @@ export async function getServerSideProps(ctx) {
   const { __t__ } = cookie.parse(ctx.req.headers.cookie);
   if (__t__) {
     const { _id } = await unsignedToken(__t__);
-    const { fullName, firstName, lastName, userName, email, _bookmarks, tags } = await User.findOne({ _id }, { _comments: 0 })
-      .populate(
-        "_bookmarks",
-        "title slug image description league views comments"
-      )
-      .lean()
-      .limit(50);
+    const { fullName, firstName, lastName, userName, email, _bookmarks, tags } =
+      await User.findOne({ _id }, { _comments: 0 })
+        .populate(
+          "_bookmarks",
+          "title slug image description league views comments"
+        )
+        .lean()
+        .limit(50);
 
     const posts = await Post.find(
       {
@@ -162,15 +163,15 @@ export async function getServerSideProps(ctx) {
     const players = await Player.find().lean().limit(50);
 
     await db.disconnect();
-      console.log(posts);
+    console.log(posts);
     return {
       props: {
         info: {
-          fullName, 
-          firstName, 
+          fullName,
+          firstName,
           lastName,
-          userName, 
-          email
+          userName,
+          email,
         },
         // post: post.map(db.convertDocToObj),
         _bookmarks: JSON.stringify(_bookmarks),
