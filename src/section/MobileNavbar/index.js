@@ -46,12 +46,7 @@ const MobileNavbar = () => {
           <div
             className={`d-flex  justify-content-between align-items-center ${style.navMenu}`}
           >
-            <button
-              onClick={() => setMobileMenu(!mobileMenu)}
-              className={style.menuBtn}
-            >
-              <AiOutlineMenuUnfold />
-            </button>
+         
 
             <div
               className={`${style.mobileMenuSideBar} ${
@@ -160,6 +155,13 @@ const MobileNavbar = () => {
                 </li>
               </ul>
             </div>
+            <button
+              onClick={() => setMobileMenu(!mobileMenu)}
+              className={style.menuBtn}
+            >
+              <AiOutlineMenuUnfold />
+            </button>
+
           </div>
         </div>
       </nav>

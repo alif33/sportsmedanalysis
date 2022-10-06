@@ -275,9 +275,9 @@ end _smd_navbar
     height: 43px;
     padding: 0 8px !important;
   }
-  .navBrand span {
-    /* width: 31px !important; */
-  }
+  /* .navBrand span {
+    width: 31px !important;
+  } */
   .navMenu {
     width: 42%;
     flex-direction: row;
