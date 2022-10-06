@@ -280,9 +280,9 @@ end _smd_navbar
   }
   .navMenu {
     width: 42%;
-    flex-direction: column;
-    align-items: flex-end !important;
-    justify-content: end !important;
+    flex-direction: row;
+    align-items: center!important;
+    /* justify-content: end !important; */
   }
   .signBtn i {
     margin-right: 4px;
