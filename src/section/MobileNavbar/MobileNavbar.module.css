@@ -275,14 +275,14 @@ end _smd_navbar
     height: 43px;
     padding: 0 8px !important;
   }
-  .navBrand span {
-    /* width: 31px !important; */
-  }
+  /* .navBrand span {
+    width: 31px !important;
+  } */
   .navMenu {
     width: 42%;
-    flex-direction: column;
-    align-items: flex-end !important;
-    justify-content: end !important;
+    flex-direction: row;
+    align-items: center!important;
+    /* justify-content: end !important; */
   }
   .signBtn i {
     margin-right: 4px;
