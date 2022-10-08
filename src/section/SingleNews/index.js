@@ -92,7 +92,7 @@ const SingleNews = ({ post, posts, topPosts, _comments }) => {
             </li>
             <li>
               <MessageIcon />
-              <span>521K</span>
+              <span>{ post._comments }</span>
             </li>
             <li >
               <ShareModal />
