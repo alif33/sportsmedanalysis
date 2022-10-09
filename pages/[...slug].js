@@ -75,8 +75,6 @@ export async function getServerSideProps(context) {
 
     await db.disconnect();
 
-    // console.log(posts);
-
     return {
       props: {
         post: {
