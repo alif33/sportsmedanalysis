@@ -35,8 +35,8 @@ const MobileNavbar = () => {
               className={`navbar-brand m-0 me-0 d-flex justify-content-center align-items-center ${style.navBrand}`}
             >
               <Image
-                height="35"
-                width="35"
+                height="50"
+                width="50"
                 src="/images/icon/logo.png"
                 alt=""
               />
