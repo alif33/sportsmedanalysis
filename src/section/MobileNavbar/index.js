@@ -35,8 +35,8 @@ const MobileNavbar = () => {
               className={`navbar-brand m-0 me-0 d-flex justify-content-center align-items-center ${style.navBrand}`}
             >
               <Image
-                height="160"
-                width="160"
+                height="35"
+                width="35"
                 src="/images/icon/logo.png"
                 alt=""
               />
@@ -46,8 +46,6 @@ const MobileNavbar = () => {
           <div
             className={`d-flex  justify-content-between align-items-center ${style.navMenu}`}
           >
-         
-
             <div
               className={`${style.mobileMenuSideBar} ${
                 mobileMenu ? style.active : ""
@@ -131,7 +129,7 @@ const MobileNavbar = () => {
                 <Link href="/auth/sign-in">
                   <a className={style.signBtn}>
                     <UserIcon />
-                    SIGN IN
+                    <span>SIGN IN</span>
                   </a>
                 </Link>
               )}
@@ -161,7 +159,6 @@ const MobileNavbar = () => {
             >
               <AiOutlineMenuUnfold />
             </button>
-
           </div>
         </div>
       </nav>
