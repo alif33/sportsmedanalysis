@@ -9,14 +9,14 @@ const Fannation = ({ recentStories }) => {
   return (
     <div className="container-fluid py-3">
       <div className="row m-0">
-        <div className="col-lg-5 col-md-6">
+        <div className="col-lg-5 ">
           <RecentStories posts={recentStories.slice(0, 4)} />
         </div>
 
-        <div className="col-lg-3 col-md-6">
+        <div className="col-lg-3 ">
           <Featured posts={recentStories} />
         </div>
-        <div className="col-lg-4 col-md-6 mx-auto">
+        <div className="col-lg-4 ">
           <h1
             className={`${style.nfl_card_title2} ${style.smd_border_bottom} mb-4`}
           >

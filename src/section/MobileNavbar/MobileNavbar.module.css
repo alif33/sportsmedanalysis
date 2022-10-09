@@ -105,7 +105,7 @@ _smd_navbar
   font-size: 18px !important;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .menuBtn {
     display: block;
   }

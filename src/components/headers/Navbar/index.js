@@ -41,7 +41,7 @@ const Navbar = () => {
             className="collapse navbar-collapse justify-content-between"
             id="navbarSupportedContent"
           >
-            <ul className="navbar-nav mr-auto">
+            <ul className={`navbar-nav mr-auto${style._smd_nav_item_nav}`}>
               {navMenus.map((menu, index) => {
                 return (
                   <li
