@@ -93,9 +93,9 @@
     width: 300px;
     background-color: #fff;
   }
-  .socialBtnList {
+  /* .socialBtnList {
  flex-direction: column;
-  }
+  } */
 
   .socialBtnList li button {
 

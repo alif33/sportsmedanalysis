@@ -4,6 +4,7 @@ import toast from "react-hot-toast";
 import Popup from "reactjs-popup";
 import { ImShare2 } from "react-icons/im";
 import style from "./ShareModal.module.css";
+
 import {
   FacebookShareButton,
   LinkedinShareButton,
@@ -21,10 +22,10 @@ const ShareModal = ({ color }) => {
     document.execCommand("copy");
     toast.success("Link Copied! ");
   };
-
+  const contentStyle = { background: "#286ba6" };
   return (
     <Popup
-      className=""
+      className="p-5"
       trigger={
         <button className={style.modalOpenBtn}>
           <ImShare2 style={{ color: color }} />
@@ -34,13 +35,13 @@ const ShareModal = ({ color }) => {
       nested
     >
       {(close) => (
-        <div className={`border border-0 p-0${style.modalPopup}`}>
+        <div className={`border-0${style.modalPopup}`}>
           <button className={style.close} onClick={close}>
             &times;
           </button>
 
           <div>
-            <h3 className={style.title}>Share</h3>
+            <h3 className={`${style.title}`}>Share</h3>
             <div className={style.copyInputBtn}>
               <input type="text" value={location.href} ref={textAreaRef} />
               <button onClick={copyToClipboard}> copy </button>
