@@ -96,6 +96,16 @@
   .socialBtnList {
  flex-direction: column;
   }
+
+  .socialBtnList li button {
+
+    height: 2rem;
+    width: 2rem;
+
+    border-radius: 50%;
+    font-size: 1rem;
+  
+  }
   .copyInputBtn button {
     height: 20px;
     font-size: 10px
