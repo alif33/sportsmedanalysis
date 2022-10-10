@@ -4,7 +4,7 @@ import React from "react";
 import { imageResize, Sortern } from "../../../../__lib__/helpers/Validator";
 import style from "./NewsCard3.module.css";
 
-const NewsCard3 = ({ _id, slug, title, img, comment, name, link }) => {
+const NewsCard3 = ({ _id, slug, title, img, comment, name }) => {
   return (
     <Link href={`/${slug}/${_id}`}>
       <a className="mb-2 d-inline-block">

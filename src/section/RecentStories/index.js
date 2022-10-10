@@ -1,4 +1,5 @@
 import React from "react";
+import slugify from "slugify";
 import NewsCard3 from "../../components/sectionCard/NewsCard3";
 import style from "./Recent.module.css";
 
@@ -14,6 +15,8 @@ const RecentStories = ({ posts }) => {
         posts.map((item, index) => (
           <NewsCard3
             key={index}
+            _id={item._id}
+            slug={item.slug? item.slug: slugify(item.slug, "-")}
             name={item._author}
             title={item.title}
             img={item.image}
