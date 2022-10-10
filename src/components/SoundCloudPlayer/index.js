@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { findDOMNode } from 'react-dom';
+// import { findDOMNode } from 'react-dom';
 // import { hot } from 'react-hot-loader'
 // import screenfull from 'screenfull'
 
@@ -133,7 +133,7 @@ class App extends Component {
   }
 
   handleClickFullscreen = () => {
-    screenfull.request(findDOMNode(this.player))
+    // screenfull.request(findDOMNode(this.player))
   }
 
   renderLoadButton = (url, label) => {
