@@ -6,19 +6,19 @@ import SearchBar from "../../components/SearchBar";
 import PlayersFollowingCard from "../../components/sectionCard/PlayersFollowingCard";
 import style from "./TeamsFollowing.module.css";
 
-const PlayersFollowing = ({ title, search }) => {
-  const [players, setPlayers] = useState();
+const PlayersFollowing = ({ title, search, players }) => {
+  // const [players, setPlayers] = useState();
   const { user } = useSelector(state=>state);
   const { __u__ } = user;
 
   useEffect(()=>{
-    getData("/players")
-      .then(res=>{
-        if(res)
-        {
-          setPlayers(res);
-        }
-      })
+    // getData("/players")
+    //   .then(res=>{
+    //     if(res)
+    //     {
+    //       setPlayers(res);
+    //     }
+    //   })
   },[])
   
   return (
@@ -39,7 +39,7 @@ const PlayersFollowing = ({ title, search }) => {
         </div>
       )}
       {players &&
-        players.slice(0, 4).map((item, index) => {
+        players.map((item, index) => {
           return (
             <PlayersFollowingCard
               key={index}
