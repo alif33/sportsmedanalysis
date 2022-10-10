@@ -64,8 +64,8 @@ const PlayersFollowingCard = ({ _id, firstName, lastName, img }) => {
           </div>
           <div className="ms-md-2 ms-1 ">
             <Image
-              height="26"
-              width="26"
+              height="30"
+              width="30"
               src="/images/icon/football.png"
               alt=""
             />
