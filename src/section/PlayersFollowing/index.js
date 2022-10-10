@@ -36,21 +36,20 @@ const PlayersFollowing = ({ title, search }) => {
           </div>
         </div>
       )}
-      <div className="mx-1">
-        {players &&
-          players.slice(0, 4).map((item, index) => {
-            return (
-              <PlayersFollowingCard
-                key={index}
-                _id={item._id}
-                firstName={item.firstName}
-                lastName={item.lastName}
-                league={item.league}
-                img={item.image}
-              />
-            );
-          })}
-      </div>
+
+      {players &&
+        players.slice(0, 4).map((item, index) => {
+          return (
+            <PlayersFollowingCard
+              key={index}
+              _id={item._id}
+              firstName={item.firstName}
+              lastName={item.lastName}
+              league={item.league}
+              img={item.image}
+            />
+          );
+        })}
 
       <div className="d-flex justify-content-between align-items-center mx-1">
         <button className={style.nextPreBtn}>Previous Page</button>
