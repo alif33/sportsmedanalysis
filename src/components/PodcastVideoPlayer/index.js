@@ -10,26 +10,26 @@ import Reverse from "../svg/Reverse";
 import style from "./PodcastVideoPlayer.module.css";
 
 const PodcastVideoPlayer = ({ _id, podcast, podcasts, trackIndex, setTrackIndex }) => {
-  // const index = podcasts.map(e => e._id).indexOf(_id);
-  // console.log(index);
-  // const [audio, setAudio] = useState(new Audio(podcast.audioUri));
-  // const [playing, setPlaying] = useState(false);
+  const index = podcasts.map(e => e._id).indexOf(_id);
+  console.log(index);
+  const [audio, setAudio] = useState(new Audio(podcast.audioUri));
+  const [playing, setPlaying] = useState(false);
 
 
-  // audio.addEventListener('loadeddata', (event) => {
-  //   console.log('Yay! The readyState just increased to  ' +
-  //       'HAVE_CURRENT_DATA or greater for the first time.');
-  // });
+  audio.addEventListener('loadeddata', (event) => {
+    console.log('Yay! The readyState just increased to  ' +
+        'HAVE_CURRENT_DATA or greater for the first time.');
+  });
 
-  // const handlePlay = async()=>{
-  //   await audio.play();
-  //   setPlaying(true);
-  // }
+  const handlePlay = async()=>{
+    await audio.play();
+    setPlaying(true);
+  }
 
-  // const handlePause = async()=>{
-  //   await audio.pause();
-  //   setPlaying(false);
-  // }
+  const handlePause = async()=>{
+    await audio.pause();
+    setPlaying(false);
+  }
 
   return (
     <div className="mt-2 mb-3">
@@ -50,7 +50,7 @@ const PodcastVideoPlayer = ({ _id, podcast, podcasts, trackIndex, setTrackIndex 
           <span>-15:29</span>
         </div>
 
-        {/* <div className={style.playBtn}>
+        <div className={style.playBtn}>
           <PodNextBtn />
           <Reverse seound="50" />
           {
@@ -61,17 +61,9 @@ const PodcastVideoPlayer = ({ _id, podcast, podcasts, trackIndex, setTrackIndex 
             />
           }
          
-         
           <Forward seound="50" />
           <PodPrevBtn />
-        </div> */}
-
-        <AudioPlayerCard 
-          podcast={ podcast }
-          podcasts={ podcasts }
-          trackIndex={ trackIndex }
-          setTrackIndex={ setTrackIndex }
-        />
+        </div>
       </div>
     </div>
   );
