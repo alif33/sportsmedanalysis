@@ -10,7 +10,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav
+      {/* <nav
         className={`navbar navbar-expand-lg navbar-dark bg-black pt-0 pb-0 ${style._smd_navbar_border}`}
       >
         <div className="container-fluid">
@@ -66,7 +66,7 @@ const Navbar = () => {
             </form>
           </div>
         </div>
-      </nav>
+      </nav> */}
     </>
   );
 };

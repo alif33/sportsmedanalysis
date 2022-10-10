@@ -11,7 +11,12 @@ const MobileFooter = () => {
       <div className={style._footer_logo}>
         <Link href="#">
           <a>
-            <Image height="300" width="300" src="/images/icon/logo.png" alt="" />
+            <Image
+              height="200"
+              width="200"
+              src="/images/icon/logo.png"
+              alt=""
+            />
           </a>
         </Link>
       </div>
