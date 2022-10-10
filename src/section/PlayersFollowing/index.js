@@ -21,10 +21,11 @@ const PlayersFollowing = ({ title, search, players }) => {
     //   })
   },[])
   
+
   return (
     <>
       {search && (
-        <div className="d-flex justify-content-between mt-3">
+        <div className="d-flex justify-content-between mt-3 mx-1">
           <h2 className={style.teamsFollowingTitle}>{title}</h2>
           <div className={style.TeamsFollowingSort}>
             <SearchBar />
@@ -38,6 +39,7 @@ const PlayersFollowing = ({ title, search, players }) => {
           </div>
         </div>
       )}
+
       {players &&
         players.map((item, index) => {
           return (
@@ -52,7 +54,7 @@ const PlayersFollowing = ({ title, search, players }) => {
           );
         })}
 
-      <div className="d-flex justify-content-between align-items-center">
+      <div className="d-flex justify-content-between align-items-center mx-1">
         <button className={style.nextPreBtn}>Previous Page</button>
         <button className={style.nextPreBtn}>Next Page</button>
       </div>
