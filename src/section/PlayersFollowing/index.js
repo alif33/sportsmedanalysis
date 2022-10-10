@@ -8,10 +8,10 @@ import style from "./TeamsFollowing.module.css";
 
 const PlayersFollowing = ({ title, search, players }) => {
   // const [players, setPlayers] = useState();
-  const { user } = useSelector(state=>state);
+  const { user } = useSelector((state) => state);
   const { __u__ } = user;
 
-  useEffect(()=>{
+  useEffect(() => {
     // getData("/players")
     //   .then(res=>{
     //     if(res)
@@ -19,8 +19,7 @@ const PlayersFollowing = ({ title, search, players }) => {
     //       setPlayers(res);
     //     }
     //   })
-  },[])
-  
+  }, []);
 
   return (
     <>
@@ -40,19 +39,21 @@ const PlayersFollowing = ({ title, search, players }) => {
         </div>
       )}
 
-      {players &&
-        players.map((item, index) => {
-          return (
-            <PlayersFollowingCard
-              key={index}
-              _id={item._id}
-              firstName={item.firstName}
-              lastName={item.lastName}
-              league={item.league}
-              img={item.image}
-            />
-          );
-        })}
+      <div className="mx-1">
+        {players &&
+          players.slice(0, 4).map((item, index) => {
+            return (
+              <PlayersFollowingCard
+                key={index}
+                _id={item._id}
+                firstName={item.firstName}
+                lastName={item.lastName}
+                league={item.league}
+                img={item.image}
+              />
+            );
+          })}
+      </div>
 
       <div className="d-flex justify-content-between align-items-center mx-1">
         <button className={style.nextPreBtn}>Previous Page</button>
