@@ -87,3 +87,34 @@
   font-size: 1.7rem;
   font-weight: 600;
 }
+
+@media (max-width: 768px){
+  .modalPopup {
+    width: 300px;
+    background-color: #fff;
+  }
+  /* .socialBtnList {
+ flex-direction: column;
+  } */
+
+  .socialBtnList li button {
+
+    height: 2rem;
+    width: 2rem;
+
+    border-radius: 50%;
+    font-size: 1rem;
+  
+  }
+  .copyInputBtn button {
+    height: 20px;
+    font-size: 8px
+  }
+
+  .copyInputBtn input {
+    width: 80%;
+  
+    height: 20px;
+    
+  }
+}

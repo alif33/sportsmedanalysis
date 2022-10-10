@@ -13,7 +13,14 @@ import BorderLine from "../src/components/BorderLine";
 import { useSelector } from "react-redux";
 import Watch from "../models/Watch";
 
-const LandingPage = ({ posts, topPosts, topVideos, players, topPicks, bettings }) => {
+const LandingPage = ({
+  posts,
+  topPosts,
+  topVideos,
+  players,
+  topPicks,
+  bettings,
+}) => {
   const { user } = useSelector((state) => state);
 
   return (
@@ -21,9 +28,9 @@ const LandingPage = ({ posts, topPosts, topVideos, players, topPicks, bettings }
       <Layout navheader={true}>
         <Article posts={JSON.parse(posts)} />
 
-        <TopStory 
-          topPosts={JSON.parse(topPosts)} 
-          topVideos={ JSON.parse(topVideos) }
+        <TopStory
+          topPosts={JSON.parse(topPosts)}
+          topVideos={JSON.parse(topVideos)}
         />
 
         <div className="container-fluid">
@@ -61,10 +68,7 @@ export async function getStaticProps(context) {
     .lean()
     .limit(50);
 
-  const topVideos = await Watch.find()
-    .sort({ "views": -1 })
-    .lean()
-    .limit(50);
+  const topVideos = await Watch.find().sort({ views: -1 }).lean().limit(50);
 
   const players = await Player.find({}, { _comments: 0 })
     .sort({ createdAt: -1 })

@@ -99,20 +99,19 @@ const Newsfeed = ({ info, posts, players, _bookmarks }) => {
             <div className={style.newsfeedPosts}>
               {newsfeedTap === "posts" && (
                 <>
-                {
-                  posts && posts.map((item, index)=>{
-                    return(
-                      <PostCard 
-                        key={index}
-                        _id={item._id}
-                        item={item.title}
-                        _author={item._author}
-                        image={item.image}
-                        comments={item.comments}
-                      />
-                    )
-                  })
-                }
+                  {posts &&
+                    posts.map((item, index) => {
+                      return (
+                        <PostCard
+                          key={index}
+                          _id={item._id}
+                          item={item.title}
+                          _author={item._author}
+                          image={item.image}
+                          comments={item.comments}
+                        />
+                      );
+                    })}
 
                   {/* <PostCard />
                   <PostCard /> */}
@@ -142,7 +141,7 @@ const Newsfeed = ({ info, posts, players, _bookmarks }) => {
 
 export default Newsfeed;
 
-export const getServerSideProps = __Auth( async(ctx) => {
+export const getServerSideProps = __Auth(async (ctx) => {
   await db.connect();
   const { __t__ } = cookie.parse(ctx.req.headers.cookie);
   if (__t__) {
@@ -182,7 +181,7 @@ export const getServerSideProps = __Auth( async(ctx) => {
         // post: post.map(db.convertDocToObj),
         _bookmarks: JSON.stringify(_bookmarks),
         posts: posts.map(db.convertDocToObj),
-        players: players.map(db.convertDocToObj)
+        players: players.map(db.convertDocToObj),
       },
     };
     // console.log(_bookmarks);
@@ -191,4 +190,4 @@ export const getServerSideProps = __Auth( async(ctx) => {
 
   // }
   // console.log(ctx.req.headers.cookie?.__t__);
-})
+});

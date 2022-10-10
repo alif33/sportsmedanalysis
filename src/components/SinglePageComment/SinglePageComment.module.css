@@ -10,7 +10,7 @@
   font-family: "Poppins";
   font-style: normal;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 120%;
   letter-spacing: 0.005em;
   color: #11142d;
@@ -22,7 +22,7 @@
   font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 17px;
   line-height: 120%;
   letter-spacing: 0.005em;
   color: #9a9ab0;
@@ -32,7 +32,7 @@
   font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 125%;
   /* or 20px */
 
@@ -51,13 +51,18 @@
   }
   .content h4 {
     font-weight: 600;
-    font-size: 8px;
+    font-size: 16px;
     margin-top: 5px;
   }
   .content h4 span {
-    font-size: 8px;
+    font-size: 14px;
   }
   .content p {
-    font-size: 8px;
+    font-size: 16px;
+  }
+  .content p {
+
+    font-size: 18px;
+
   }
 }

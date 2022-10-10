@@ -10,7 +10,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav
+      {/* <nav
         className={`navbar navbar-expand-lg navbar-dark bg-black pt-0 pb-0 ${style._smd_navbar_border}`}
       >
         <div className="container-fluid">
@@ -41,7 +41,7 @@ const Navbar = () => {
             className="collapse navbar-collapse justify-content-between"
             id="navbarSupportedContent"
           >
-            <ul className="navbar-nav mr-auto">
+            <ul className={`navbar-nav mr-auto${style._smd_nav_item_nav}`}>
               {navMenus.map((menu, index) => {
                 return (
                   <li
@@ -66,7 +66,7 @@ const Navbar = () => {
             </form>
           </div>
         </div>
-      </nav>
+      </nav> */}
     </>
   );
 };
