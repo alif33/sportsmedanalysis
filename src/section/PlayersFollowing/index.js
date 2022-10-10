@@ -8,23 +8,21 @@ import style from "./TeamsFollowing.module.css";
 
 const PlayersFollowing = ({ title, search }) => {
   const [players, setPlayers] = useState();
-  const { user } = useSelector(state=>state);
+  const { user } = useSelector((state) => state);
   const { __u__ } = user;
 
-  useEffect(()=>{
-    getData("/players")
-      .then(res=>{
-        if(res)
-        {
-          setPlayers(res);
-        }
-      })
-  },[])
-  
+  useEffect(() => {
+    getData("/players").then((res) => {
+      if (res) {
+        setPlayers(res);
+      }
+    });
+  }, []);
+
   return (
     <>
       {search && (
-        <div className="d-flex justify-content-between mt-3">
+        <div className="d-flex justify-content-between mt-3 mx-1">
           <h2 className={style.teamsFollowingTitle}>{title}</h2>
           <div className={style.TeamsFollowingSort}>
             <SearchBar />
@@ -38,21 +36,23 @@ const PlayersFollowing = ({ title, search }) => {
           </div>
         </div>
       )}
-      {players &&
-        players.slice(0, 4).map((item, index) => {
-          return (
-            <PlayersFollowingCard
-              key={index}
-              _id={item._id}
-              firstName={item.firstName}
-              lastName={item.lastName}
-              league={item.league}
-              img={item.image}
-            />
-          );
-        })}
+      <div className="mx-1">
+        {players &&
+          players.slice(0, 4).map((item, index) => {
+            return (
+              <PlayersFollowingCard
+                key={index}
+                _id={item._id}
+                firstName={item.firstName}
+                lastName={item.lastName}
+                league={item.league}
+                img={item.image}
+              />
+            );
+          })}
+      </div>
 
-      <div className="d-flex justify-content-between align-items-center">
+      <div className="d-flex justify-content-between align-items-center mx-1">
         <button className={style.nextPreBtn}>Previous Page</button>
         <button className={style.nextPreBtn}>Next Page</button>
       </div>
