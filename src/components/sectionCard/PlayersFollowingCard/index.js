@@ -52,14 +52,14 @@ const PlayersFollowingCard = ({ _id, firstName, lastName, img }) => {
 
   return (
     <div className={style.teamsFollowingCard}>
-      <Link href={`/player/${ firstName }-${ lastName }/${ _id }`}>
+      <Link href={`/player/${firstName}-${lastName}/${_id}`}>
         <a className={style.imageAndName}>
           <div className={style.cardImage}>
-            <Image 
-              height="87" 
-              width="100" 
-              src={imageResize(img, "c_thumb,g_face,h_400,w_400")} 
-              alt={`${ firstName }-${ lastName }`} 
+            <Image
+              height="87"
+              width="100"
+              src={imageResize(img, "c_thumb,g_face,h_400,w_400")}
+              alt={`${firstName}-${lastName}`}
             />
           </div>
           <div className="ms-md-2 ms-1 ">
@@ -70,8 +70,8 @@ const PlayersFollowingCard = ({ _id, firstName, lastName, img }) => {
               alt=""
             />
           </div>
-          <div className="ms-1 ">
-            <h4>
+          <div className={`ms-1${style.profile_name}`}>
+            <h4 className={``}>
               {firstName} {lastName}
             </h4>
             <p>1.2 Million Followers</p>

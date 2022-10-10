@@ -1,181 +1,331 @@
-import React, { 
-    useState, 
-    createRef,
-    useEffect } from "react";
-import Image from "next/image";
-import Forward from "../svg/Forward";
-import PodNextBtn from "../svg/PodNextBtn";
-import PodPause from "../svg/PodPause";
-import PodPlay from "../svg/PodPlay";
-import PodPrevBtn from "../svg/PodPrevBtn";
-import Reverse from "../svg/Reverse";
-import loadscript from "load-script";
-import style from "./SoundCloudPlayer.module.css";
-import ReactPlayer from "react-player/soundcloud";
-import { convertMsToTime } from "../../../__lib__/helpers/Validator";
+import React, { Component } from 'react';
+// import { findDOMNode } from 'react-dom';
+// import { hot } from 'react-hot-loader'
+// import screenfull from 'screenfull'
 
-const PodcastVideoPlayer = ({ _id, podcast, podcasts, trackIndex, setTrackIndex }) => {
+// import './reset.css'
+// import './defaults.css'
+// import './range.css'
+// import './App.css'
 
-    const [duration, setDuration] = useState();
-    const [isPlaying, setIsPlaying] = useState(false);
-    const [playlistIndex, setPlaylistIndex] = useState(0);
-      const [player, setPlayer] = useState(false);
-  
-    const iframeRef = createRef()
-   
-    // initialization - load soundcloud widget API and set SC event listeners
-  
-    useEffect(() => {
-  
-      // use load-script module to load SC Widget API
-      loadscript('https://w.soundcloud.com/player/api.js', () => {
-        
-        // initialize player and store reference in state
-  
-        const player = window.SC.Widget(iframeRef.current)
-        setPlayer( player )
-      
-        const { PLAY, PLAY_PROGRESS, PAUSE, FINISH, ERROR } = window.SC.Widget.Events
-  
-        // NOTE: closures created - cannot access react state or props from within and SC callback functions!!
-  
+// import { version } from '../../package.json'
+import ReactPlayer from 'react-player';
+// import Duration from './Duration'
 
-        player.bind( PLAY, () => {
-  
-          // update state to playing
-          setIsPlaying(true)
-  
-          // check to see if song has changed - if so update state with next index
-          player.getCurrentSoundIndex( (playerPlaylistIndex) => {            
-            setPlaylistIndex(playerPlaylistIndex)
-          })
-      
-        })
-  
-        player.bind( PAUSE, () => {
-          // update state if player has paused - must double check isPaused since false positives
-          player.isPaused( (playerIsPaused) => {
-            if (playerIsPaused) setIsPlaying(false)
-          })
-        })
+class App extends Component {
+  state = {
+    url: "https://soundcloud.com/sportsmedanalytics/nfl-week-1-fantasy-football-injury-analysis-jk-dobbins-chris-godwin-michael-thomas-more?ref=clipboard&p=i&c=0&si=21BDA7C892A44341979857BFD8E1F7D8&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+    pip: false,
+    playing: true,
+    controls: false,
+    light: false,
+    volume: 0.8,
+    muted: false,
+    played: 0,
+    loaded: 0,
+    duration: 0,
+    playbackRate: 1.0,
+    loop: false
+  }
 
-      })
-  
-    }, [])
-  
-  
-    // integration - update SC player based on new state (e.g. play button in React section was click)
-  
-    // adjust playback in SC player to match isPlaying state
-    useEffect(() => {
-      
-      if (!player) return // player loaded async - make sure available
-  
-      player.isPaused( (playerIsPaused) => {
-        if (isPlaying && playerIsPaused) {
-          player.play()
-        } else if (!isPlaying && !playerIsPaused) {
-          player.pause()
-        }
-      })
-      
-    },[isPlaying])
-  
-    // adjust seleted song in SC player playlist if playlistIndex state has changed
-    useEffect(() => {
-      
-      if (!player) return // player loaded async - make sure available
-  
-        player.getCurrentSoundIndex( (playerPlaylistIndex) => {            
-            if (playerPlaylistIndex !== playlistIndex) player.skip(playlistIndex)
-        })
-      
-        player.getDuration(function(duration){
-            setDuration(convertMsToTime(duration));
-        });
+  load = url => {
+    this.setState({
+      url,
+      played: 0,
+      loaded: 0,
+      pip: false
+    })
+  }
 
-    },[playlistIndex])
-  
-  
-    // React section button click event handlers (play/next/previous)
-    //  - adjust React component state based on click events
-  
-    const togglePlayback = () => {
-      setIsPlaying(!isPlaying)
+  handlePlayPause = () => {
+    this.setState({ playing: !this.state.playing })
+  }
+
+  handleStop = () => {
+    this.setState({ url: null, playing: false })
+  }
+
+  handleToggleControls = () => {
+    const url = this.state.url
+    this.setState({
+      controls: !this.state.controls,
+      url: null
+    }, () => this.load(url))
+  }
+
+  handleToggleLight = () => {
+    this.setState({ light: !this.state.light })
+  }
+
+  handleToggleLoop = () => {
+    this.setState({ loop: !this.state.loop })
+  }
+
+  handleVolumeChange = e => {
+    this.setState({ volume: parseFloat(e.target.value) })
+  }
+
+  handleToggleMuted = () => {
+    this.setState({ muted: !this.state.muted })
+  }
+
+  handleSetPlaybackRate = e => {
+    this.setState({ playbackRate: parseFloat(e.target.value) })
+  }
+
+  handleOnPlaybackRateChange = (speed) => {
+    this.setState({ playbackRate: parseFloat(speed) })
+  }
+
+  handleTogglePIP = () => {
+    this.setState({ pip: !this.state.pip })
+  }
+
+  handlePlay = () => {
+    console.log('onPlay')
+    this.setState({ playing: true })
+  }
+
+  handleEnablePIP = () => {
+    console.log('onEnablePIP')
+    this.setState({ pip: true })
+  }
+
+  handleDisablePIP = () => {
+    console.log('onDisablePIP')
+    this.setState({ pip: false })
+  }
+
+  handlePause = () => {
+    console.log('onPause')
+    this.setState({ playing: false })
+  }
+
+  handleSeekMouseDown = e => {
+    this.setState({ seeking: true })
+  }
+
+  handleSeekChange = e => {
+    this.setState({ played: parseFloat(e.target.value) })
+  }
+
+  handleSeekMouseUp = e => {
+    this.setState({ seeking: false })
+    this.player.seekTo(parseFloat(e.target.value))
+  }
+
+  handleProgress = state => {
+    console.log('onProgress', state)
+    // We only want to update time slider if we are not currently seeking
+    if (!this.state.seeking) {
+      this.setState(state)
     }
-  
-    const changePlaylistIndex = (skipForward = true) => {
-  
-      // get list of songs from SC widget
-      player.getSounds( (playerSongList) => {      
-  
-        let nextIndex = (skipForward) ? playlistIndex + 1 : playlistIndex - 1
-  
-        // ensure index is not set to less than 0 or greater than playlist
-        if (nextIndex < 0) nextIndex = 0
-        else if (nextIndex >= playerSongList.length) nextIndex = playerSongList.length - 1
-  
-        setPlaylistIndex(nextIndex)
-  
-      })
-  
-    }
+  }
 
-    console.log(duration);
-  return (
-    <div className="mt-2 mb-3">
-      <div className={style.podcastImage}>
-        <Image
-          width="1379"
-          height="535"
-          src="/images/card-img/podcast-video.png"
-          alt=""
-        />
-      </div>
-      <ReactPlayer 
-        url={"https://soundcloud.com/sportsmedanalytics/nfl-week-1-fantasy-football-injury-analysis-jk-dobbins-chris-godwin-michael-thomas-more?ref=clipboard&p=i&c=0&si=21BDA7C892A44341979857BFD8E1F7D8&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"}
-        playing={ true }
-        controls={ false }
-        
-      />
-      <div className="soundcloud-section" style={{ display: "none" }}>
-            <h3>SoundCloud Widget</h3>
-            <iframe 
-                ref={iframeRef} id="sound-cloud-player" 
-                style={{border: 'none', height: 314, width: 400}} 
-                scrolling="no" 
-                allow="autoplay" 
-                src={ "https://w.soundcloud.com/player/?url=https://soundcloud.com/sportsmedanalytics/nfl-week-1-fantasy-football-injury-analysis-jk-dobbins-chris-godwin-michael-thomas-more?ref=clipboard&p=i&c=0&si=21BDA7C892A44341979857BFD8E1F7D8&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" }>
-            </iframe>
-         </div>
-      <div className="w-75 mx-auto mt-4">
-        <div className={style.videoTimePrograss}>
-          <div style={{ width: "70%" }}></div>
-        </div>
-        <div className="mt-2 d-flex justify-content-between align-items-center">
-          <span>15:29</span>
-          <span>-15:29</span>
-        </div>
+  handleEnded = () => {
+    console.log('onEnded')
+    this.setState({ playing: this.state.loop })
+  }
 
-        <div className={style.playBtn}>
-          <PodNextBtn />
-          <Reverse seound="50" />
-          {
-             true?  <PodPause 
-              handlePause={togglePlayback}
-            />:  <PodPlay
-              handlePlay={()=>console.log("Playing")}
+  handleDuration = (duration) => {
+    console.log('onDuration', duration)
+    this.setState({ duration })
+  }
+
+  handleClickFullscreen = () => {
+    // screenfull.request(findDOMNode(this.player))
+  }
+
+  renderLoadButton = (url, label) => {
+    return (
+      <button onClick={() => this.load(url)}>
+        {label}
+      </button>
+    )
+  }
+
+  ref = player => {
+    this.player = player
+  }
+
+
+  render () {
+    console.log(this.props);
+    const { url, playing, controls, light, volume, muted, loop, played, loaded, duration, playbackRate, pip } = this.state
+    const SEPARATOR = ' · '
+
+    return (
+      <div className='app'>
+        <section className='section'>
+          <h1>ReactPlayer Demo</h1>
+          <div className='player-wrapper'>
+            <ReactPlayer
+              ref={this.ref}
+              className='react-player'
+              width='100%'
+              height='100%'
+              url={url}
+              pip={pip}
+              playing={playing}
+              controls={controls}
+              light={light}
+              loop={loop}
+              playbackRate={playbackRate}
+              volume={volume}
+              muted={muted}
+              onReady={() => console.log('onReady')}
+              onStart={() => console.log('onStart')}
+              onPlay={this.handlePlay}
+              onEnablePIP={this.handleEnablePIP}
+              onDisablePIP={this.handleDisablePIP}
+              onPause={this.handlePause}
+              onBuffer={() => console.log('onBuffer')}
+              onPlaybackRateChange={this.handleOnPlaybackRateChange}
+              onSeek={e => console.log('onSeek', e)}
+              onEnded={this.handleEnded}
+              onError={e => console.log('onError', e)}
+              onProgress={this.handleProgress}
+              onDuration={this.handleDuration}
             />
-          }
-         
-          <Forward seound="50" />
-          <PodPrevBtn />
-        </div>
-      </div>
-    </div>
-  );
-};
+          </div>
 
-export default PodcastVideoPlayer;
+          <table>
+            <tbody>
+              <tr>
+                <th>Controls</th>
+                <td>
+                  <button onClick={this.handleStop}>Stop</button>
+                  <button onClick={this.handlePlayPause}>{playing ? 'Pause' : 'Play'}</button>
+                  <button onClick={this.handleClickFullscreen}>Fullscreen</button>
+                  {light &&
+                    <button onClick={() => this.player.showPreview()}>Show preview</button>}
+                  {ReactPlayer.canEnablePIP(url) &&
+                    <button onClick={this.handleTogglePIP}>{pip ? 'Disable PiP' : 'Enable PiP'}</button>}
+                </td>
+              </tr>
+              <tr>
+                <th>Speed</th>
+                <td>
+                  <button onClick={this.handleSetPlaybackRate} value={1}>1x</button>
+                  <button onClick={this.handleSetPlaybackRate} value={1.5}>1.5x</button>
+                  <button onClick={this.handleSetPlaybackRate} value={2}>2x</button>
+                </td>
+              </tr>
+              <tr>
+                <th>Seek</th>
+                <td>
+                  <input
+                    type='range' min={0} max={0.999999} step='any'
+                    value={played}
+                    onMouseDown={this.handleSeekMouseDown}
+                    onChange={this.handleSeekChange}
+                    onMouseUp={this.handleSeekMouseUp}
+                  />
+                </td>
+              </tr>
+              <tr>
+                <th>Volume</th>
+                <td>
+                  <input type='range' min={0} max={1} step='any' value={volume} onChange={this.handleVolumeChange} />
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <label htmlFor='controls'>Controls</label>
+                </th>
+                <td>
+                  <input id='controls' type='checkbox' checked={controls} onChange={this.handleToggleControls} />
+                  <em>&nbsp; Requires player reload</em>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <label htmlFor='muted'>Muted</label>
+                </th>
+                <td>
+                  <input id='muted' type='checkbox' checked={muted} onChange={this.handleToggleMuted} />
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <label htmlFor='loop'>Loop</label>
+                </th>
+                <td>
+                  <input id='loop' type='checkbox' checked={loop} onChange={this.handleToggleLoop} />
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <label htmlFor='light'>Light mode</label>
+                </th>
+                <td>
+                  <input id='light' type='checkbox' checked={light} onChange={this.handleToggleLight} />
+                </td>
+              </tr>
+              <tr>
+                <th>Played</th>
+                <td><progress max={1} value={played} /></td>
+              </tr>
+              <tr>
+                <th>Loaded</th>
+                <td><progress max={1} value={loaded} /></td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <section className='section'>
+
+          <h2>State</h2>
+
+          <table>
+            <tbody>
+              <tr>
+                <th>url</th>
+                <td className={!url ? 'faded' : ''}>
+                  {(url instanceof Array ? 'Multiple' : url) || 'null'}
+                </td>
+              </tr>
+              <tr>
+                <th>playing</th>
+                <td>{playing ? 'true' : 'false'}</td>
+              </tr>
+              <tr>
+                <th>volume</th>
+                <td>{volume.toFixed(3)}</td>
+              </tr>
+              <tr>
+                <th>speed</th>
+                <td>{playbackRate}</td>
+              </tr>
+              <tr>
+                <th>played</th>
+                <td>{played.toFixed(3)}</td>
+              </tr>
+              <tr>
+                <th>loaded</th>
+                <td>{loaded.toFixed(3)}</td>
+              </tr>
+              <tr>
+                <th>duration</th>
+                {/* <td><Duration seconds={duration} /></td> */}
+              </tr>
+              <tr>
+                <th>elapsed</th>
+                {/* <td><Duration seconds={duration * played} /></td> */}
+              </tr>
+              <tr>
+                <th>remaining</th>
+                {/* <td><Duration seconds={duration * (1 - played)} /></td> */}
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </div>
+    )
+  }
+}
+
+export default App;
+
 
 
