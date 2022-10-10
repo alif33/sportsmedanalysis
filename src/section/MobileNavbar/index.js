@@ -123,13 +123,13 @@ const MobileNavbar = () => {
               {user?.isUser ? (
                 <a onClick={handleLogOut} className={style.signBtn}>
                   <UserIcon />
-                  <span>LOG OUT</span>
+                  <span className="ps-lg-2 fs-lg-3">LOG OUT</span>
                 </a>
               ) : (
                 <Link href="/auth/sign-in">
                   <a className={style.signBtn}>
                     <UserIcon />
-                    <span className="ps-2 fs-3">SIGN IN</span>
+                    <span className="ps-lg-2 fs-lg-3">SIGN IN</span>
                   </a>
                 </Link>
               )}
