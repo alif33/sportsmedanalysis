@@ -24,6 +24,7 @@ const ShareModal = ({ color }) => {
 
   return (
     <Popup
+      className=""
       trigger={
         <button className={style.modalOpenBtn}>
           <ImShare2 style={{ color: color }} />
@@ -33,7 +34,7 @@ const ShareModal = ({ color }) => {
       nested
     >
       {(close) => (
-        <div className={style.modalPopup}>
+        <div className={`border border-0 p-0${style.modalPopup}`}>
           <button className={style.close} onClick={close}>
             &times;
           </button>
