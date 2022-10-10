@@ -6,7 +6,7 @@ import style from "./NewsCard.module.css";
 const NewsCard = ({ _id, slug, title, img, description }) => {
   console.log(img);
   return (
-    <Link href={`${slug}/${_id}`}>
+    <Link href={`/${slug}/${_id}`}>
       <a className={style.news_card}>
         <Image
           src={
