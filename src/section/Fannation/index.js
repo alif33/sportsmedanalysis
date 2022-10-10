@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import slugify from "slugify";
 import { Sortern } from "../../../__lib__/helpers/Validator";
 import Featured from "../Featured";
 import RecentStories from "../RecentStories";
@@ -24,7 +25,7 @@ const Fannation = ({ recentStories }) => {
           </h1>
 
           {recentStories.slice(0, 5)?.map((item, i) => (
-            <Link href="/" key={i}>
+            <Link href={`/${item.slug? item.slug: slugify(item.title, "-")}/${item._id}`} key={i}>
               <a className={`${style.fannationCardNews}`}>
                 <h4>{Sortern(item.title, 10)}</h4>
                 <p className="mt-1">{item._author}</p>
