@@ -25,7 +25,7 @@ const TapWatchNewsCard = ({ item }) => {
         </div>
         <div className={style.tapNewsCardContent}>
           <div>
-            <p>True Gamers</p>
+            <p>{item.league}</p>
             <h3>{Sortern(item.title, 10)}</h3>
           </div>
           <span>1 Hour Ago</span>

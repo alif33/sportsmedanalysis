@@ -20,7 +20,7 @@ const LatestNewsCard = ({ item }) => {
         <div className={style.latestNewsContent}>
           <h3>{Sortern(item.title, 9)}</h3>
           <div className="d-flex align-items-center justify-content-between">
-            <p>John Hollinger</p>
+            <p>{item._author}</p>
             <p>
               <span>1 Hour Ago</span>
             </p>
