@@ -27,7 +27,7 @@ const MobileNavbar = () => {
   return (
     <>
       <nav
-        className={`navbar navbar-expand-lg navbar-dark bg-black pt-0 pb-0 ${style._smd_navbar_border}`}
+        className={`navbar navbar-expand-lg navbar-dark bg-black  ${style._smd_navbar_border}`}
       >
         <div className="container-fluid ">
           <Link href="/">
@@ -35,8 +35,8 @@ const MobileNavbar = () => {
               className={`navbar-brand m-0 me-0 d-flex justify-content-center align-items-center ${style.navBrand}`}
             >
               <Image
-                height="50"
-                width="50"
+                height="70"
+                width="70"
                 src="/images/icon/logo.png"
                 alt=""
               />

@@ -51,8 +51,8 @@ _smd_navbar
   background: #ffffff2b;
 }
 .navBrand {
-  width: 40px;
-  height: 40px;
+  width: 70px;
+  height: 70px;
 }
 
 .menuBtn {
@@ -104,12 +104,25 @@ _smd_navbar
   height: 44px !important;
   font-size: 18px !important;
 }
+@media (max-width: 907px) {
+  .navBrand {
+    width: 50px;
+    height: 50px;
+  }
 
+}
 @media (max-width: 768px) {
+
+  ._smd_navbar_border{
+   /* margin-bottom: 50px; */
+  }
   .menuBtn {
     display: block;
   }
-
+.navBrand {
+  width: 50px;
+  height: 50px;
+}
   ._smd_nav_item.active a {
     background: transparent;
   }
