@@ -165,6 +165,7 @@ _smd_navbar
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-right: 10px;
 }
 
 .navMenu ul {

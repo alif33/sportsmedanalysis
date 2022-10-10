@@ -9,7 +9,7 @@
   font-family: "Poppins";
   font-style: normal;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 20px;
   line-height: 120%;
   letter-spacing: 0.005em;
   color: #9a9ab0;
@@ -46,13 +46,12 @@
     margin-top: 30px;
   }
   .newsCateHour li {
-    font-size: 8px;
+    font-size: 10px;
     margin-right: 12px;
   }
   .title {
     font-weight: 600;
     font-size: 20px;
-    text-align: justify;
   }
 }
 .postMaker {

@@ -25,7 +25,7 @@ const ShareModal = ({ color }) => {
   const contentStyle = { background: "#286ba6" };
   return (
     <Popup
-      className="p-5"
+      className="p-5 m-5"
       trigger={
         <button className={style.modalOpenBtn}>
           <ImShare2 style={{ color: color }} />
