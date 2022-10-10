@@ -26,6 +26,7 @@
     "nodemailer": "^6.7.7",
     "react": "18.1.0",
     "react-alice-carousel": "^2.6.4",
+    "react-device-detect": "^2.2.2",
     "react-dom": "18.1.0",
     "react-feather": "^2.0.10",
     "react-h5-audio-player": "^3.8.5",
