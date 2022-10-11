@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import React from "react";
 import style from "./Podcast.module.css";
+import { Sortern } from "../../../../__lib__/helpers/Validator";
 
 const PodcastCard = ({ item }) => {
   return (
@@ -11,7 +12,7 @@ const PodcastCard = ({ item }) => {
           <Image height="252" width="274" src={item.image} alt="" />
         </div>
         <span>Fantasy & Gambling</span>
-        <h4>{item.title}</h4>
+        <h4>{Sortern(item.title, 10)}</h4>
         <Link
           className="card-footer"
           href={`/podcast/${item.title}/${item._id}`}
