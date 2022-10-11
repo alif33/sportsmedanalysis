@@ -89,6 +89,38 @@ const MobileNavbar = () => {
                     </li>
                   );
                 })}
+
+                <div>
+                  <li>
+                    {user?.isUser ? (
+                      <a onClick={handleLogOut} className={style.signBtn}>
+                        <span className="ps-lg-1 fs-lg-3">LOG OUT</span>
+                      </a>
+                    ) : (
+                      <Link href="/auth/sign-in">
+                        <a className={`bg-dark ${style.signBtn}`}>
+                          <UserIcon />
+                          <span className="ps-lg-1 fs-lg-3">SIGN IN</span>
+                        </a>
+                      </Link>
+                    )}
+                  </li>
+                  <li className="pe-2 ps-2 pt-1">
+                    <div className="input-group container ">
+                      <input
+                        type="text"
+                        className="form-control"
+                        placeholder="Search this blog"
+                      />
+                      <div className="input-group-append">
+                        <button className="btn btn-secondary" type="button">
+                          <SearchIcon className=" w-25" />
+                        </button>
+                      </div>
+                    </div>
+                  </li>
+                  <li className={`nav-item ${style._smd_nav_item}`}></li>
+                </div>
               </ul>
             </div>
 
@@ -114,25 +146,28 @@ const MobileNavbar = () => {
             <div
               className={`d-flex  justify-content-between align-items-center`}
             >
-              <form className={style.formInline}>
-                <button type="submit">
-                  <SearchIcon />
-                </button>
-              </form>
-
-              {user?.isUser ? (
-                <a onClick={handleLogOut} className={style.signBtn}>
-                  <UserIcon />
-                  <span className="ps-lg-2 fs-lg-3">LOG OUT</span>
-                </a>
-              ) : (
-                <Link href="/auth/sign-in">
-                  <a className={style.signBtn}>
+              <div className={`${style._user_and_signBtn_lg_none}`}>
+                <form className={style.formInline}>
+                  <button type="submit">
+                    <SearchIcon />
+                  </button>
+                </form>
+              </div>
+              <div className={`${style._user_and_signBtn_lg_none}`}>
+                {user?.isUser ? (
+                  <a onClick={handleLogOut} className={style.signBtn}>
                     <UserIcon />
-                    <span className="ps-lg-2 fs-lg-3">SIGN IN</span>
+                    <span className="ps-lg-2 fs-lg-3">LOG OUT</span>
                   </a>
-                </Link>
-              )}
+                ) : (
+                  <Link href="/auth/sign-in">
+                    <a className={style.signBtn}>
+                      <UserIcon />
+                      <span className="ps-lg-2 fs-lg-3">SIGN IN</span>
+                    </a>
+                  </Link>
+                )}
+              </div>
               <ul className={style.leangBtn}>
                 <li
                   className={`d-flex align-items-center dropdown ${style.dropdown}`}
