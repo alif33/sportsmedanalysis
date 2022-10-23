@@ -14,7 +14,7 @@ const PodcastCard = ({ item }) => {
         <span>Fantasy & Gambling</span>
         <h4>{Sortern(item.title, 10)}</h4>
         <Link
-          className="card-footer"
+          className={` ${style.podcast_card_footer}`}
           href={`/podcast/${item.title}/${item._id}`}
         >
           <a>FOLLOW PODCASTS</a>

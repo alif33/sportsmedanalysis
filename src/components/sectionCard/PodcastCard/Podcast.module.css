@@ -1,6 +1,7 @@
 .podcast_card {
   border: 1px solid #d9dbde;
   padding: 20px;
+  
 }
 .podcast_card img {
   width: 100%;
@@ -43,6 +44,8 @@
   text-align: center;
   box-sizing: border-box;
   margin-top: 35px;
+  position: absolute;
+  bottom: 0;
   
 }
 
